@@ -16,10 +16,14 @@ namespace Project
             if (sqlConnection.State == System.Data.ConnectionState.Closed)
             {
                 sqlConnection.Open();
-                // dfdf
-                int a;
             }
         }
+
+
+
+
+
+
 
         public void closeConnection()
         {

@@ -19,12 +19,6 @@ namespace Project
             }
         }
 
-
-
-
-
-
-
         public void closeConnection()
         {
             if (sqlConnection.State == System.Data.ConnectionState.Open)

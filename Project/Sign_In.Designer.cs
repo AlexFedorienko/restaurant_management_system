@@ -37,6 +37,7 @@
             // 
             // textBox_Login
             // 
+            this.textBox_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_Login.Location = new System.Drawing.Point(26, 97);
             this.textBox_Login.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Login.Name = "textBox_Login";
@@ -46,6 +47,7 @@
             // 
             // textBox_Psw
             // 
+            this.textBox_Psw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_Psw.Location = new System.Drawing.Point(26, 185);
             this.textBox_Psw.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Psw.Name = "textBox_Psw";

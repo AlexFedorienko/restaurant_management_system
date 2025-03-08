@@ -31,12 +31,5 @@ namespace Project
         {
             return sqlConnection;
         }
-
-
-        //
-        ///////////////
-
-
-
     }
 }

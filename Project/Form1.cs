@@ -18,5 +18,12 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            this.Hide();
+            auth.ShowDialog();
+        }
     }
 }

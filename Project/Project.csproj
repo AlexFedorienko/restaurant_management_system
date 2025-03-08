@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auth.cs">
+    <Compile Include="Sign In.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Auth.Designer.cs">
-      <DependentUpon>Auth.cs</DependentUpon>
+    <Compile Include="Sign In.Designer.cs">
+      <DependentUpon>Sign In.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="Form1.cs">
@@ -76,8 +76,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Auth.resx">
-      <DependentUpon>Auth.cs</DependentUpon>
+    <Compile Include="Sign Up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign Up.Designer.cs">
+      <DependentUpon>Sign Up.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sign In.resx">
+      <DependentUpon>Sign In.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -91,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sign Up.resx">
+      <DependentUpon>Sign Up.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Auth
+    partial class Regestration
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Auth
+            // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 464);
-            this.Name = "Auth";
-            this.Text = "Auth";
+            this.ClientSize = new System.Drawing.Size(482, 603);
+            this.Name = "Regestration";
+            this.Text = "Regestration";
             this.ResumeLayout(false);
 
         }

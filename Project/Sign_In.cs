@@ -29,7 +29,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select id_user, login_user, password_user from users where login_user = '{loginUser}' and password_user = '{passUser}'";
+            string querystring = $"select login_user, password_user from auth where login_user = '{loginUser}' and password_user = '{passUser}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 

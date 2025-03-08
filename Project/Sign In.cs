@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,15 @@ namespace Project
         public Auth()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void btnEnterSignIn_Click(object sender, EventArgs e)
+        {
+            var loginUser = textBox_Login.Text;
+            var passUser = textBox_Psw.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
         }
     }
 }

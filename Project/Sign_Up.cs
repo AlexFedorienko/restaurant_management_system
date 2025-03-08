@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project
 {
@@ -15,7 +16,24 @@ namespace Project
         public Regestration()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
+
+      
+
+        
+
+        
+
+       
+
+        private void btnEnterSignInCreateR_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        
         //
         //
     }

@@ -29,67 +29,32 @@
         private void InitializeComponent()
         {
             this.SignInRButton = new System.Windows.Forms.Button();
-            this.richTextBoxNameR = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxEmailR = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxPasswordR = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxConfirmR = new System.Windows.Forms.RichTextBox();
             this.textBoxFullNameR = new System.Windows.Forms.TextBox();
             this.textBoxEmailR = new System.Windows.Forms.TextBox();
             this.textBoxPasswordR = new System.Windows.Forms.TextBox();
             this.textBoxConfirmPasswordR = new System.Windows.Forms.TextBox();
             this.SignUpRButton = new System.Windows.Forms.Label();
+            this.btnEnterSignInCreateR = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SignInRButton
             // 
             this.SignInRButton.Location = new System.Drawing.Point(60, 10);
-            this.SignInRButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SignInRButton.Margin = new System.Windows.Forms.Padding(2);
             this.SignInRButton.Name = "SignInRButton";
             this.SignInRButton.Size = new System.Drawing.Size(92, 23);
             this.SignInRButton.TabIndex = 6;
             this.SignInRButton.Text = "SIGN IN";
             this.SignInRButton.UseVisualStyleBackColor = true;
             // 
-            // richTextBoxNameR
-            // 
-            this.richTextBoxNameR.Location = new System.Drawing.Point(26, 81);
-            this.richTextBoxNameR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBoxNameR.Name = "richTextBoxNameR";
-            this.richTextBoxNameR.Size = new System.Drawing.Size(312, 54);
-            this.richTextBoxNameR.TabIndex = 8;
-            this.richTextBoxNameR.Text = "";
-            // 
-            // richTextBoxEmailR
-            // 
-            this.richTextBoxEmailR.Location = new System.Drawing.Point(26, 179);
-            this.richTextBoxEmailR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBoxEmailR.Name = "richTextBoxEmailR";
-            this.richTextBoxEmailR.Size = new System.Drawing.Size(312, 54);
-            this.richTextBoxEmailR.TabIndex = 9;
-            this.richTextBoxEmailR.Text = "";
-            // 
-            // richTextBoxPasswordR
-            // 
-            this.richTextBoxPasswordR.Location = new System.Drawing.Point(26, 276);
-            this.richTextBoxPasswordR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBoxPasswordR.Name = "richTextBoxPasswordR";
-            this.richTextBoxPasswordR.Size = new System.Drawing.Size(312, 54);
-            this.richTextBoxPasswordR.TabIndex = 10;
-            this.richTextBoxPasswordR.Text = "";
-            // 
-            // richTextBoxConfirmR
-            // 
-            this.richTextBoxConfirmR.Location = new System.Drawing.Point(26, 374);
-            this.richTextBoxConfirmR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBoxConfirmR.Name = "richTextBoxConfirmR";
-            this.richTextBoxConfirmR.Size = new System.Drawing.Size(312, 54);
-            this.richTextBoxConfirmR.TabIndex = 11;
-            this.richTextBoxConfirmR.Text = "";
-            // 
             // textBoxFullNameR
             // 
             this.textBoxFullNameR.Location = new System.Drawing.Point(34, 58);
-            this.textBoxFullNameR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFullNameR.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFullNameR.Name = "textBoxFullNameR";
             this.textBoxFullNameR.Size = new System.Drawing.Size(118, 20);
             this.textBoxFullNameR.TabIndex = 12;
@@ -98,7 +63,7 @@
             // textBoxEmailR
             // 
             this.textBoxEmailR.Location = new System.Drawing.Point(34, 156);
-            this.textBoxEmailR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmailR.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmailR.Name = "textBoxEmailR";
             this.textBoxEmailR.Size = new System.Drawing.Size(118, 20);
             this.textBoxEmailR.TabIndex = 13;
@@ -107,7 +72,7 @@
             // textBoxPasswordR
             // 
             this.textBoxPasswordR.Location = new System.Drawing.Point(34, 254);
-            this.textBoxPasswordR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPasswordR.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPasswordR.Name = "textBoxPasswordR";
             this.textBoxPasswordR.Size = new System.Drawing.Size(118, 20);
             this.textBoxPasswordR.TabIndex = 14;
@@ -115,8 +80,8 @@
             // 
             // textBoxConfirmPasswordR
             // 
-            this.textBoxConfirmPasswordR.Location = new System.Drawing.Point(26, 351);
-            this.textBoxConfirmPasswordR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxConfirmPasswordR.Location = new System.Drawing.Point(34, 351);
+            this.textBoxConfirmPasswordR.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxConfirmPasswordR.Name = "textBoxConfirmPasswordR";
             this.textBoxConfirmPasswordR.Size = new System.Drawing.Size(126, 20);
             this.textBoxConfirmPasswordR.TabIndex = 15;
@@ -134,23 +99,67 @@
             this.SignUpRButton.Text = "SIGN UP";
             this.SignUpRButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnEnterSignInCreateR
+            // 
+            this.btnEnterSignInCreateR.Location = new System.Drawing.Point(26, 443);
+            this.btnEnterSignInCreateR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnterSignInCreateR.Name = "btnEnterSignInCreateR";
+            this.btnEnterSignInCreateR.Size = new System.Drawing.Size(298, 36);
+            this.btnEnterSignInCreateR.TabIndex = 17;
+            this.btnEnterSignInCreateR.Text = "SIGN UP";
+            this.btnEnterSignInCreateR.UseVisualStyleBackColor = true;
+            this.btnEnterSignInCreateR.Click += new System.EventHandler(this.btnEnterSignInCreateR_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(34, 83);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(313, 54);
+            this.textBox1.TabIndex = 19;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(34, 181);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(313, 54);
+            this.textBox2.TabIndex = 20;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(34, 292);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(313, 54);
+            this.textBox3.TabIndex = 21;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(34, 376);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(313, 54);
+            this.textBox4.TabIndex = 22;
+            // 
             // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 490);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnEnterSignInCreateR);
             this.Controls.Add(this.SignUpRButton);
             this.Controls.Add(this.textBoxConfirmPasswordR);
             this.Controls.Add(this.textBoxPasswordR);
             this.Controls.Add(this.textBoxEmailR);
             this.Controls.Add(this.textBoxFullNameR);
-            this.Controls.Add(this.richTextBoxConfirmR);
-            this.Controls.Add(this.richTextBoxPasswordR);
-            this.Controls.Add(this.richTextBoxEmailR);
-            this.Controls.Add(this.richTextBoxNameR);
             this.Controls.Add(this.SignInRButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regestration";
             this.Text = "Sign Up";
             this.ResumeLayout(false);
@@ -161,14 +170,15 @@
         #endregion
 
         private System.Windows.Forms.Button SignInRButton;
-        private System.Windows.Forms.RichTextBox richTextBoxNameR;
-        private System.Windows.Forms.RichTextBox richTextBoxEmailR;
-        private System.Windows.Forms.RichTextBox richTextBoxPasswordR;
-        private System.Windows.Forms.RichTextBox richTextBoxConfirmR;
         private System.Windows.Forms.TextBox textBoxFullNameR;
         private System.Windows.Forms.TextBox textBoxEmailR;
         private System.Windows.Forms.TextBox textBoxPasswordR;
         private System.Windows.Forms.TextBox textBoxConfirmPasswordR;
         private System.Windows.Forms.Label SignUpRButton;
+        private System.Windows.Forms.Button btnEnterSignInCreateR;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

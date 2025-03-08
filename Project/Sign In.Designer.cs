@@ -30,8 +30,6 @@
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,27 +45,11 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(34, 229);
+            this.richTextBox2.Location = new System.Drawing.Point(34, 228);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(399, 59);
             this.richTextBox2.TabIndex = 2;
             this.richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(34, 341);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(399, 59);
-            this.richTextBox3.TabIndex = 3;
-            this.richTextBox3.Text = "";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(34, 453);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(399, 59);
-            this.richTextBox4.TabIndex = 4;
-            this.richTextBox4.Text = "";
             // 
             // button1
             // 
@@ -89,11 +71,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(34, 536);
+            this.button3.Location = new System.Drawing.Point(34, 493);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(398, 44);
             this.button3.TabIndex = 7;
-            this.button3.Text = "SIGN UP";
+            this.button3.Text = "SIGN IN";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // Auth
@@ -104,8 +86,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Auth";
@@ -117,8 +97,6 @@
         #endregion
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

@@ -36,7 +36,7 @@ namespace Project
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if (table.Rows.Count == 1)
+            if (table.Rows.Count >= 1)
             {
                 MessageBox.Show("You are logged in");
                 Form1 frm1 = new Form1();

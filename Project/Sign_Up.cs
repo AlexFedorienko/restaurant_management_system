@@ -18,15 +18,6 @@ namespace Project
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-
-      
-
-        
-
-        
-
-       
-
         private void btnEnterSignInCreateR_Click(object sender, EventArgs e)
         {
             

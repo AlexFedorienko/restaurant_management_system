@@ -9,7 +9,7 @@ namespace Project
 {
     internal class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-TI5J653\SQLEXPRESS;Initial Catalog=Authentication;Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-TI5J653\SQLEXPRESS;Initial Catalog=authentication;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
         public void openConnection()
         {

@@ -117,7 +117,6 @@
             this.textBoxFlNameR.Name = "textBoxFlNameR";
             this.textBoxFlNameR.Size = new System.Drawing.Size(313, 54);
             this.textBoxFlNameR.TabIndex = 19;
-
             // 
             // textBoxEmaiR
             // 
@@ -126,7 +125,6 @@
             this.textBoxEmaiR.Name = "textBoxEmaiR";
             this.textBoxEmaiR.Size = new System.Drawing.Size(313, 54);
             this.textBoxEmaiR.TabIndex = 20;
-
             // 
             // textBoxPswR
             // 
@@ -135,7 +133,6 @@
             this.textBoxPswR.Name = "textBoxPswR";
             this.textBoxPswR.Size = new System.Drawing.Size(313, 54);
             this.textBoxPswR.TabIndex = 21;
-
             // 
             // textBoxConfirmPswR
             // 
@@ -144,7 +141,6 @@
             this.textBoxConfirmPswR.Name = "textBoxConfirmPswR";
             this.textBoxConfirmPswR.Size = new System.Drawing.Size(313, 54);
             this.textBoxConfirmPswR.TabIndex = 22;
-
             // 
             // Regestration
             // 
@@ -166,6 +162,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regestration";
             this.Text = "Sign Up";
+            this.Load += new System.EventHandler(this.Regestration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

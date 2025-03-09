@@ -35,10 +35,10 @@
             this.textBoxConfirmPasswordR = new System.Windows.Forms.TextBox();
             this.SignUpRButton = new System.Windows.Forms.Label();
             this.btnEnterSignInCreateR = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxFlNameR = new System.Windows.Forms.TextBox();
+            this.textBoxEmaiR = new System.Windows.Forms.TextBox();
+            this.textBoxPswR = new System.Windows.Forms.TextBox();
+            this.textBoxConfirmPswR = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SignInRButton
@@ -101,56 +101,60 @@
             // 
             // btnEnterSignInCreateR
             // 
-            this.btnEnterSignInCreateR.Location = new System.Drawing.Point(26, 443);
+            this.btnEnterSignInCreateR.Location = new System.Drawing.Point(34, 443);
             this.btnEnterSignInCreateR.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnterSignInCreateR.Name = "btnEnterSignInCreateR";
-            this.btnEnterSignInCreateR.Size = new System.Drawing.Size(298, 36);
+            this.btnEnterSignInCreateR.Size = new System.Drawing.Size(313, 36);
             this.btnEnterSignInCreateR.TabIndex = 17;
             this.btnEnterSignInCreateR.Text = "SIGN UP";
             this.btnEnterSignInCreateR.UseVisualStyleBackColor = true;
             this.btnEnterSignInCreateR.Click += new System.EventHandler(this.btnEnterSignInCreateR_Click);
             // 
-            // textBox1
+            // textBoxFlNameR
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 83);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 54);
-            this.textBox1.TabIndex = 19;
+            this.textBoxFlNameR.Location = new System.Drawing.Point(34, 83);
+            this.textBoxFlNameR.Multiline = true;
+            this.textBoxFlNameR.Name = "textBoxFlNameR";
+            this.textBoxFlNameR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxFlNameR.TabIndex = 19;
+            this.textBoxFlNameR.TextChanged += new System.EventHandler(this.textBoxFlNameR_TextChanged);
             // 
-            // textBox2
+            // textBoxEmaiR
             // 
-            this.textBox2.Location = new System.Drawing.Point(34, 181);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 54);
-            this.textBox2.TabIndex = 20;
+            this.textBoxEmaiR.Location = new System.Drawing.Point(34, 181);
+            this.textBoxEmaiR.Multiline = true;
+            this.textBoxEmaiR.Name = "textBoxEmaiR";
+            this.textBoxEmaiR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxEmaiR.TabIndex = 20;
+            this.textBoxEmaiR.TextChanged += new System.EventHandler(this.textBoxEmaiR_TextChanged);
             // 
-            // textBox3
+            // textBoxPswR
             // 
-            this.textBox3.Location = new System.Drawing.Point(34, 292);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(313, 54);
-            this.textBox3.TabIndex = 21;
+            this.textBoxPswR.Location = new System.Drawing.Point(34, 279);
+            this.textBoxPswR.Multiline = true;
+            this.textBoxPswR.Name = "textBoxPswR";
+            this.textBoxPswR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxPswR.TabIndex = 21;
+            this.textBoxPswR.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // textBoxConfirmPswR
             // 
-            this.textBox4.Location = new System.Drawing.Point(34, 376);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(313, 54);
-            this.textBox4.TabIndex = 22;
+            this.textBoxConfirmPswR.Location = new System.Drawing.Point(34, 376);
+            this.textBoxConfirmPswR.Multiline = true;
+            this.textBoxConfirmPswR.Name = "textBoxConfirmPswR";
+            this.textBoxConfirmPswR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxConfirmPswR.TabIndex = 22;
+            this.textBoxConfirmPswR.TextChanged += new System.EventHandler(this.textBoxConfirmPswR_TextChanged);
             // 
             // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 490);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxConfirmPswR);
+            this.Controls.Add(this.textBoxPswR);
+            this.Controls.Add(this.textBoxEmaiR);
+            this.Controls.Add(this.textBoxFlNameR);
             this.Controls.Add(this.btnEnterSignInCreateR);
             this.Controls.Add(this.SignUpRButton);
             this.Controls.Add(this.textBoxConfirmPasswordR);
@@ -176,9 +180,9 @@
         private System.Windows.Forms.TextBox textBoxConfirmPasswordR;
         private System.Windows.Forms.Label SignUpRButton;
         private System.Windows.Forms.Button btnEnterSignInCreateR;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxFlNameR;
+        private System.Windows.Forms.TextBox textBoxEmaiR;
+        private System.Windows.Forms.TextBox textBoxPswR;
+        private System.Windows.Forms.TextBox textBoxConfirmPswR;
     }
 }

@@ -18,31 +18,22 @@ namespace Project
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
+
+
+
+
+
+
+
+
+
         private void btnEnterSignInCreateR_Click(object sender, EventArgs e)
         {
             
             
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxFlNameR_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxEmaiR_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxConfirmPswR_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         //

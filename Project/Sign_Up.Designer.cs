@@ -117,7 +117,7 @@
             this.textBoxFlNameR.Name = "textBoxFlNameR";
             this.textBoxFlNameR.Size = new System.Drawing.Size(313, 54);
             this.textBoxFlNameR.TabIndex = 19;
-            this.textBoxFlNameR.TextChanged += new System.EventHandler(this.textBoxFlNameR_TextChanged);
+
             // 
             // textBoxEmaiR
             // 
@@ -126,7 +126,7 @@
             this.textBoxEmaiR.Name = "textBoxEmaiR";
             this.textBoxEmaiR.Size = new System.Drawing.Size(313, 54);
             this.textBoxEmaiR.TabIndex = 20;
-            this.textBoxEmaiR.TextChanged += new System.EventHandler(this.textBoxEmaiR_TextChanged);
+
             // 
             // textBoxPswR
             // 
@@ -135,7 +135,7 @@
             this.textBoxPswR.Name = "textBoxPswR";
             this.textBoxPswR.Size = new System.Drawing.Size(313, 54);
             this.textBoxPswR.TabIndex = 21;
-            this.textBoxPswR.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+
             // 
             // textBoxConfirmPswR
             // 
@@ -144,7 +144,7 @@
             this.textBoxConfirmPswR.Name = "textBoxConfirmPswR";
             this.textBoxConfirmPswR.Size = new System.Drawing.Size(313, 54);
             this.textBoxConfirmPswR.TabIndex = 22;
-            this.textBoxConfirmPswR.TextChanged += new System.EventHandler(this.textBoxConfirmPswR_TextChanged);
+
             // 
             // Regestration
             // 

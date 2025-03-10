@@ -53,7 +53,7 @@ namespace Project
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             Regestration regestration = new Regestration();
-            this.Hide();
+            this.Close();
             regestration.ShowDialog();
             this.Show();
         }

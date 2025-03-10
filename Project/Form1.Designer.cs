@@ -37,6 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnterUploadImage = new System.Windows.Forms.Button();
             this.comboBox = new System.Windows.Forms.ComboBox();
+            this.SettingsButton = new System.Windows.Forms.Button();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.Controls.Add(this.buttonSignOut);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.label2);
@@ -132,12 +135,36 @@
             this.comboBox.Size = new System.Drawing.Size(121, 26);
             this.comboBox.TabIndex = 3;
             // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
+            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsButton.Location = new System.Drawing.Point(1638, 28);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
+            this.SettingsButton.TabIndex = 4;
+            this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignOut.Location = new System.Drawing.Point(109, 859);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(120, 35);
+            this.buttonSignOut.TabIndex = 5;
+            this.buttonSignOut.Text = "Sign out";
+            this.buttonSignOut.UseVisualStyleBackColor = true;
+            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1851, 1036);
+            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.btnEnterUploadImage);
             this.Controls.Add(this.panel1);
@@ -164,6 +191,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEnterUploadImage;
         private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.Button SettingsButton;
+        private System.Windows.Forms.Button buttonSignOut;
     }
 }
 

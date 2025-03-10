@@ -130,5 +130,18 @@ namespace Project
                 SaveImageToDatabase(imageBytes);
             }
         }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow(this);
+            settingsWindow.Show();
+        }
+
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            this.Hide();
+            auth.ShowDialog();
+        }
     }
 }

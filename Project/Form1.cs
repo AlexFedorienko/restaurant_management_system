@@ -134,7 +134,7 @@ namespace Project
         private void buttonSignOut_Click(object sender, EventArgs e)
         {
             Auth auth = new Auth();
-            this.Close();
+            this.Hide();
             auth.ShowDialog();
         }
 
@@ -142,7 +142,7 @@ namespace Project
         {
             Auth auth = new Auth();
             auth.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

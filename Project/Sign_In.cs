@@ -15,6 +15,7 @@ namespace Project
     public partial class Auth : Form
     {
         DataBase database = new DataBase();
+
         public Auth()
         {
             InitializeComponent();
@@ -56,6 +57,10 @@ namespace Project
             this.Hide();
             regestration.ShowDialog();
             this.Show();
+        }
+
+        private void Auth_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

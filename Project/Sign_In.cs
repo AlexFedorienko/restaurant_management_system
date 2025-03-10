@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project
 {
@@ -17,6 +18,9 @@ namespace Project
         DataBase database = new DataBase();
         Form1 frm1 = new Form1();
         Admin_Panel admin_Panel = new Admin_Panel();
+
+        public static int UserId { get; private set; }
+        public static string UserName { get; private set; }
 
         public Auth()
         {
@@ -41,6 +45,9 @@ namespace Project
 
             if (table.Rows.Count >= 1)
             {
+                UserId = Convert.ToInt32(table.Rows[0]["id"]);
+                UserName = table.Rows[0]["login_user"].ToString();
+
                 this.Close();
                 admin_Panel.Show();
             }

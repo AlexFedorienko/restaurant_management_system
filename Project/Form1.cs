@@ -27,12 +27,7 @@ namespace Project
             MakePictureBoxRound(pictureBox1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Auth auth = new Auth();
-            this.Hide();
-            auth.ShowDialog();
-        }
+        
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
         {
@@ -139,7 +134,7 @@ namespace Project
         private void buttonSignOut_Click(object sender, EventArgs e)
         {
             Auth auth = new Auth();
-            this.Hide();
+            this.Close();
             auth.ShowDialog();
         }
 
@@ -147,7 +142,7 @@ namespace Project
         {
             Auth auth = new Auth();
             auth.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

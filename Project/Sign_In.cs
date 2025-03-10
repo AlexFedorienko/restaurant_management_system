@@ -15,6 +15,8 @@ namespace Project
     public partial class Auth : Form
     {
         DataBase database = new DataBase();
+        Form1 frm1 = new Form1();
+        Admin_Panel admin_Panel = new Admin_Panel();
 
         public Auth()
         {
@@ -39,11 +41,7 @@ namespace Project
 
             if (table.Rows.Count >= 1)
             {
-                MessageBox.Show("You are logged in");
-
-                Form1 frm1 = new Form1();
-                Admin_Panel admin_Panel = new Admin_Panel();
-                this.Hide();
+                this.Close();
                 admin_Panel.Show();
             }
             else
@@ -58,10 +56,6 @@ namespace Project
             this.Hide();
             regestration.ShowDialog();
             this.Show();
-        }
-
-        private void Auth_FormClosing(object sender, FormClosingEventArgs e)
-        {
         }
     }
 }

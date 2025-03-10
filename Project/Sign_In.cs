@@ -8,7 +8,7 @@ namespace Project
     public partial class Auth : Form
     {
         DataBase database = new DataBase();
-        Admin_Panel admin_Panel = new Admin_Panel();
+        //Admin_Panel admin_Panel = new Admin_Panel();
 
         public static string UserName { get; private set; }
         public static int UserId { get; private set; }
@@ -36,6 +36,7 @@ namespace Project
 
             if (table.Rows.Count >= 1)
             {
+                Form1 form1 = new Form1();
                 UserName = table.Rows[0]["login_user"].ToString();
                 UserId = Convert.ToInt32(table.Rows[0]["id"]);
 

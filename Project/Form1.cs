@@ -11,7 +11,6 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
-        Auth auth = new Auth();
 
         public Form1()
         {
@@ -24,7 +23,6 @@ namespace Project
             labelName.Text = Auth.UserName;
             comboBox.Text = Auth.UserName;
 
-            // Убедимся, что метод LoadUserImage вызывается после загрузки формы
             LoadUserImage(Auth.UserId);
             MakePictureBoxRound(pictureBox1);
         }

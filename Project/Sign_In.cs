@@ -19,7 +19,6 @@ namespace Project
         Form1 frm1 = new Form1();
         Admin_Panel admin_Panel = new Admin_Panel();
 
-        public static int UserId { get; private set; }
         public static string UserName { get; private set; }
 
         public Auth()
@@ -45,7 +44,6 @@ namespace Project
 
             if (table.Rows.Count >= 1)
             {
-                UserId = Convert.ToInt32(table.Rows[0]["id"]);
                 UserName = table.Rows[0]["login_user"].ToString();
 
                 this.Close();
@@ -60,9 +58,7 @@ namespace Project
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             Regestration regestration = new Regestration();
-            this.Close();
-            regestration.ShowDialog();
-            this.Show();
+            regestration.Show();
         }
     }
 }

@@ -16,6 +16,8 @@ namespace Project
 
             int radius = 70;
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
+
+            labelName.Text = Auth.UserName;
         }
 
         private void button1_Click(object sender, EventArgs e)

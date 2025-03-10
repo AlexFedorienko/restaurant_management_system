@@ -47,7 +47,6 @@ namespace Project
                     MessageBox.Show("Account successfully created!");
                     Auth frm_auth = new Auth();
                     this.Close();
-                    frm_auth.ShowDialog();
                 }
                 else
                 {

@@ -14,7 +14,7 @@ namespace Project
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
-            int radius = 35;
+            int radius = 70;
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
         }
 

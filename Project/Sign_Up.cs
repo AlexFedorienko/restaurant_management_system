@@ -1,91 +1,85 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Project
 {
     public partial class Regestration : Form
     {
-            DataBase dbsql = new DataBase();
+        DataBase dbsql = new DataBase();
+
         public Regestration()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-
-
-
-
-
-
-
-
         private void btnEnterSignInCreateR_Click(object sender, EventArgs e)
         {
+            var login = textBoxLoginR.Text;
+            var email = textBoxUserEmailR.Text;
+            var password = textBoxPswR.Text;
+            var confirmPassword = textBoxConfirmPswR.Text;
 
-            var login = textBoxEmaiR;
-            var password = textBoxPswR;
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match!");
+                return;
+            }
 
-            string querrystringsql = $"insert into auth(login_user, password_user) values('{login}', '{password}')";
+            if (checkuser(login))
+            {
+                MessageBox.Show("User already exists!");
+                return;
+            }
 
+            string querystring = $"INSERT INTO auth (login_user, password_user, email_user) " +
+                                 $"VALUES ('{login}', '{password}', '{email}')";
 
-            SqlCommand command = new SqlCommand(querrystringsql, dbsql.getConnection());
-
+            SqlCommand command = new SqlCommand(querystring, dbsql.getConnection());
             dbsql.openConnection();
 
-            if (command.ExecuteNonQuery() == 1)
+            try
             {
-                MessageBox.Show("Account succesfuly created!");
-                Auth frm_auth = new Auth();
-                this.Hide();
-                frm_auth.ShowDialog();
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Account successfully created!");
+                    Auth frm_auth = new Auth();
+                    this.Hide();
+                    frm_auth.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Account was not created!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("accound wasnt created!");
+                MessageBox.Show($"Error: {ex.Message}");
             }
-            dbsql.closeConnection();
+            finally
+            {
+                dbsql.closeConnection();
+            }
         }
 
-        private Boolean checkuser()
-        { 
-            var loginUser = textBoxEmaiR.Text;
-            var passUser = textBoxPswR.Text;
-
+        private Boolean checkuser(string loginUser)
+        {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            string querrystring = $"select id_user, login_user, password_user from auth where login_user = '{loginUser}' and password_user = '{passUser}'";
 
-            SqlCommand command = new SqlCommand(querrystring, dbsql.getConnection());
+            string querystring = $"SELECT login_user FROM auth WHERE login_user = '{loginUser}'";
 
+            SqlCommand command = new SqlCommand(querystring, dbsql.getConnection());
             adapter.SelectCommand = command;
             adapter.Fill(dt);
-            if(dt.Rows.Count > 0 )
-            {
-                MessageBox.Show("User already added!");
-                return true;
 
-            }
-            else { return false; }  
+            return dt.Rows.Count > 0;
         }
 
         private void Regestration_Load(object sender, EventArgs e)
         {
-
         }
-
-
-
-
-        //
-        //
     }
 }

@@ -35,8 +35,8 @@
             this.textBoxConfirmPasswordR = new System.Windows.Forms.TextBox();
             this.SignUpRButton = new System.Windows.Forms.Label();
             this.btnEnterSignInCreateR = new System.Windows.Forms.Button();
-            this.textBoxFlNameR = new System.Windows.Forms.TextBox();
-            this.textBoxEmaiR = new System.Windows.Forms.TextBox();
+            this.textBoxLoginR = new System.Windows.Forms.TextBox();
+            this.textBoxUserEmailR = new System.Windows.Forms.TextBox();
             this.textBoxPswR = new System.Windows.Forms.TextBox();
             this.textBoxConfirmPswR = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.textBoxFullNameR.Name = "textBoxFullNameR";
             this.textBoxFullNameR.Size = new System.Drawing.Size(118, 20);
             this.textBoxFullNameR.TabIndex = 12;
-            this.textBoxFullNameR.Text = "FULL NAME";
+            this.textBoxFullNameR.Text = "LOGIN";
             // 
             // textBoxEmailR
             // 
@@ -110,24 +110,27 @@
             this.btnEnterSignInCreateR.UseVisualStyleBackColor = true;
             this.btnEnterSignInCreateR.Click += new System.EventHandler(this.btnEnterSignInCreateR_Click);
             // 
-            // textBoxFlNameR
+            // textBoxLoginR
             // 
-            this.textBoxFlNameR.Location = new System.Drawing.Point(34, 83);
-            this.textBoxFlNameR.Multiline = true;
-            this.textBoxFlNameR.Name = "textBoxFlNameR";
-            this.textBoxFlNameR.Size = new System.Drawing.Size(313, 54);
-            this.textBoxFlNameR.TabIndex = 19;
+            this.textBoxLoginR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLoginR.Location = new System.Drawing.Point(34, 83);
+            this.textBoxLoginR.Multiline = true;
+            this.textBoxLoginR.Name = "textBoxLoginR";
+            this.textBoxLoginR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxLoginR.TabIndex = 19;
             // 
-            // textBoxEmaiR
+            // textBoxUserEmailR
             // 
-            this.textBoxEmaiR.Location = new System.Drawing.Point(34, 181);
-            this.textBoxEmaiR.Multiline = true;
-            this.textBoxEmaiR.Name = "textBoxEmaiR";
-            this.textBoxEmaiR.Size = new System.Drawing.Size(313, 54);
-            this.textBoxEmaiR.TabIndex = 20;
+            this.textBoxUserEmailR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUserEmailR.Location = new System.Drawing.Point(34, 181);
+            this.textBoxUserEmailR.Multiline = true;
+            this.textBoxUserEmailR.Name = "textBoxUserEmailR";
+            this.textBoxUserEmailR.Size = new System.Drawing.Size(313, 54);
+            this.textBoxUserEmailR.TabIndex = 20;
             // 
             // textBoxPswR
             // 
+            this.textBoxPswR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPswR.Location = new System.Drawing.Point(34, 279);
             this.textBoxPswR.Multiline = true;
             this.textBoxPswR.Name = "textBoxPswR";
@@ -136,6 +139,7 @@
             // 
             // textBoxConfirmPswR
             // 
+            this.textBoxConfirmPswR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxConfirmPswR.Location = new System.Drawing.Point(34, 376);
             this.textBoxConfirmPswR.Multiline = true;
             this.textBoxConfirmPswR.Name = "textBoxConfirmPswR";
@@ -149,8 +153,8 @@
             this.ClientSize = new System.Drawing.Size(362, 490);
             this.Controls.Add(this.textBoxConfirmPswR);
             this.Controls.Add(this.textBoxPswR);
-            this.Controls.Add(this.textBoxEmaiR);
-            this.Controls.Add(this.textBoxFlNameR);
+            this.Controls.Add(this.textBoxUserEmailR);
+            this.Controls.Add(this.textBoxLoginR);
             this.Controls.Add(this.btnEnterSignInCreateR);
             this.Controls.Add(this.SignUpRButton);
             this.Controls.Add(this.textBoxConfirmPasswordR);
@@ -177,8 +181,8 @@
         private System.Windows.Forms.TextBox textBoxConfirmPasswordR;
         private System.Windows.Forms.Label SignUpRButton;
         private System.Windows.Forms.Button btnEnterSignInCreateR;
-        private System.Windows.Forms.TextBox textBoxFlNameR;
-        private System.Windows.Forms.TextBox textBoxEmaiR;
+        private System.Windows.Forms.TextBox textBoxLoginR;
+        private System.Windows.Forms.TextBox textBoxUserEmailR;
         private System.Windows.Forms.TextBox textBoxPswR;
         private System.Windows.Forms.TextBox textBoxConfirmPswR;
     }

@@ -49,5 +49,13 @@ namespace Project
                 MessageBox.Show("Login or password is incorrect");
             }
         }
+
+        private void signUpBtn_Click(object sender, EventArgs e)
+        {
+            Regestration regestration = new Regestration();
+            this.Hide();
+            regestration.ShowDialog();
+            this.Show();
+        }
     }
 }

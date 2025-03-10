@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class SettingsWindow : Form
+    public partial class Settings : Form
     {
         DataBase dataBase = new DataBase();
         private Form1 mainForm;
 
-        public SettingsWindow(Form1 form1)
+        public Settings(Form1 form1)
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;

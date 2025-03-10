@@ -11,6 +11,7 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
+        Auth auth = new Auth();
 
         public Form1()
         {
@@ -133,7 +134,7 @@ namespace Project
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            SettingsWindow settingsWindow = new SettingsWindow(this);
+            Settings settingsWindow = new Settings(this);
             settingsWindow.Show();
         }
 
@@ -142,6 +143,12 @@ namespace Project
             Auth auth = new Auth();
             this.Hide();
             auth.ShowDialog();
+        }
+
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.Show();
         }
     }
 }

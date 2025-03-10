@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEnterUploadImage = new System.Windows.Forms.Button();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.buttonSignOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +45,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1752, 67);
+            this.button1.Location = new System.Drawing.Point(1718, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 0;
@@ -67,6 +66,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 1080);
             this.panel1.TabIndex = 1;
+            // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignOut.Location = new System.Drawing.Point(109, 859);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(120, 35);
+            this.buttonSignOut.TabIndex = 5;
+            this.buttonSignOut.Text = "Sign out";
+            this.buttonSignOut.UseVisualStyleBackColor = true;
+            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
             // pictureBox1
             // 
@@ -115,65 +125,44 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
-            // btnEnterUploadImage
-            // 
-            this.btnEnterUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEnterUploadImage.Location = new System.Drawing.Point(1459, 67);
-            this.btnEnterUploadImage.Name = "btnEnterUploadImage";
-            this.btnEnterUploadImage.Size = new System.Drawing.Size(120, 35);
-            this.btnEnterUploadImage.TabIndex = 2;
-            this.btnEnterUploadImage.Text = "Upload";
-            this.btnEnterUploadImage.UseVisualStyleBackColor = true;
-            this.btnEnterUploadImage.Click += new System.EventHandler(this.btnEnterUploadImage_Click);
-            // 
             // comboBox
             // 
             this.comboBox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(1751, 35);
+            this.comboBox.Items.AddRange(new object[] {
+            "Auth"});
+            this.comboBox.Location = new System.Drawing.Point(1718, 35);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(121, 26);
             this.comboBox.TabIndex = 3;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
             this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
             this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsButton.Location = new System.Drawing.Point(1638, 28);
+            this.SettingsButton.Location = new System.Drawing.Point(1658, 28);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(39, 40);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // buttonSignOut
-            // 
-            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignOut.Location = new System.Drawing.Point(109, 859);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(120, 35);
-            this.buttonSignOut.TabIndex = 5;
-            this.buttonSignOut.Text = "Sign out";
-            this.buttonSignOut.UseVisualStyleBackColor = true;
-            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1851, 1036);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.comboBox);
-            this.Controls.Add(this.btnEnterUploadImage);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -189,7 +178,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnEnterUploadImage;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button buttonSignOut;

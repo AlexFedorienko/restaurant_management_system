@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class SettingsWindow
+    partial class Settings
     {
         /// <summary>
         /// Required designer variable.

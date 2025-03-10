@@ -147,6 +147,7 @@ namespace Project
         {
             Auth auth = new Auth();
             auth.Show();
+            this.Hide();
         }
     }
 }

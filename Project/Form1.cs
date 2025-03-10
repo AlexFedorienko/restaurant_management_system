@@ -18,7 +18,11 @@ namespace Project
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            textBox1.Font = new Font("Raleway", 14, FontStyle.Bold);
         }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -35,6 +35,8 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEnterUploadImage = new System.Windows.Forms.Button();
+            this.comboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +44,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1117, 21);
+            this.button1.Location = new System.Drawing.Point(1752, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 0;
@@ -69,6 +71,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(113, 82);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(145, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -100,21 +103,43 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(94, 28);
+            this.label1.Location = new System.Drawing.Point(80, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 32);
+            this.label1.Size = new System.Drawing.Size(208, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
+            // 
+            // btnEnterUploadImage
+            // 
+            this.btnEnterUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEnterUploadImage.Location = new System.Drawing.Point(1459, 67);
+            this.btnEnterUploadImage.Name = "btnEnterUploadImage";
+            this.btnEnterUploadImage.Size = new System.Drawing.Size(120, 35);
+            this.btnEnterUploadImage.TabIndex = 2;
+            this.btnEnterUploadImage.Text = "Upload";
+            this.btnEnterUploadImage.UseVisualStyleBackColor = true;
+            this.btnEnterUploadImage.Click += new System.EventHandler(this.btnEnterUploadImage_Click);
+            // 
+            // comboBox
+            // 
+            this.comboBox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(1751, 35);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(121, 26);
+            this.comboBox.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.comboBox);
+            this.Controls.Add(this.btnEnterUploadImage);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -137,6 +162,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnEnterUploadImage;
+        private System.Windows.Forms.ComboBox comboBox;
     }
 }
 

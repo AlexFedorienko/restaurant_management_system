@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project
 {
     public partial class Auth : Form
     {
         DataBase database = new DataBase();
-        Form1 frm1 = new Form1();
         Admin_Panel admin_Panel = new Admin_Panel();
 
         public static string UserName { get; private set; }
+        public static int UserId { get; private set; }
 
         public Auth()
         {
@@ -35,7 +27,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select login_user, password_user from auth where login_user = '{loginUser}' and password_user = '{passUser}'";
+            string querystring = $"select id, login_user, password_user from auth where login_user = '{loginUser}' and password_user = '{passUser}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
@@ -45,9 +37,11 @@ namespace Project
             if (table.Rows.Count >= 1)
             {
                 UserName = table.Rows[0]["login_user"].ToString();
+                UserId = Convert.ToInt32(table.Rows[0]["id"]);
 
                 this.Close();
-                admin_Panel.Show();
+                Form1 frm1 = new Form1();
+                frm1.Show();
             }
             else
             {

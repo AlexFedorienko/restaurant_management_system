@@ -40,10 +40,11 @@ namespace Project
             if (table.Rows.Count >= 1)
             {
                 MessageBox.Show("You are logged in");
+
                 Form1 frm1 = new Form1();
+                Admin_Panel admin_Panel = new Admin_Panel();
                 this.Hide();
-                frm1.ShowDialog();
-                this.Show();
+                admin_Panel.Show();
             }
             else
             {

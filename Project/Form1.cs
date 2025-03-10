@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Project
@@ -18,17 +13,30 @@ namespace Project
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            textBox1.Font = new Font("Raleway", 14, FontStyle.Bold);
+
+            int radius = 35;
+            panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
         }
-
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
             Auth auth = new Auth();
             this.Hide();
             auth.ShowDialog();
+        }
+
+        private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddLine(rect.Left, rect.Top, rect.Left, rect.Top);
+            path.AddArc(rect.Right - radius, rect.Top, radius, radius, 270, 90);
+            path.AddLine(rect.Right, rect.Top + radius, rect.Right, rect.Bottom - radius);
+            path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+            path.AddLine(rect.Right - radius, rect.Bottom, rect.Left, rect.Bottom);
+            path.AddLine(rect.Left, rect.Bottom, rect.Left, rect.Top);
+            path.CloseFigure();
+            return path;
         }
     }
 }

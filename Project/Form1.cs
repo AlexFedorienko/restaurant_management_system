@@ -40,6 +40,17 @@ namespace Project
             return path;
         }
 
+        private void MenuButton_MouseEnter(object sender, EventArgs e)
+        {
+            ((Panel)sender).BackColor = Color.FromArgb(144, 238, 144) // Подсветка
+        }
+
+        private void MenuButton_MouseLeave(object sender, EventArgs e)
+        {
+            ((Panel)sender).BackColor = Color.Transparent; // Возврат цвета
+        }
+
+
         private void MakePictureBoxRound(PictureBox pictureBox)
         {
             Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
@@ -143,6 +154,11 @@ namespace Project
             Auth auth = new Auth();
             auth.Show();
             this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

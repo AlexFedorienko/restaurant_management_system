@@ -25,9 +25,15 @@ namespace Project
 
             LoadUserImage(Auth.UserId);
             MakePictureBoxRound(pictureBox1);
-        }
 
-        
+            MakeButtonRound(button1, 30);
+            MakeButtonRound(button2, 30);
+            MakeButtonRound(button3, 30);
+            MakeButtonRound(button4, 30);
+            MakeButtonRound(button5, 30);
+            MakeButtonRound(buttonSignOut, 20);
+            MakeButtonRound(SettingsButton, 20);
+        }
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
         {
@@ -42,14 +48,13 @@ namespace Project
 
         private void MenuButton_MouseEnter(object sender, EventArgs e)
         {
-            ((Panel)sender).BackColor = Color.FromArgb(144, 238, 144) // Подсветка
+            ((Panel)sender).BackColor = Color.FromArgb(144, 238, 144);
         }
 
         private void MenuButton_MouseLeave(object sender, EventArgs e)
         {
-            ((Panel)sender).BackColor = Color.Transparent; // Возврат цвета
+            ((Panel)sender).BackColor = Color.Transparent;
         }
-
 
         private void MakePictureBoxRound(PictureBox pictureBox)
         {
@@ -63,6 +68,7 @@ namespace Project
             g.DrawImage(pictureBox.Image, 0, 0, pictureBox.Width, pictureBox.Height);
             pictureBox.Image = bmp;
         }
+
         public void LoadUserImage(int userId)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -147,9 +153,16 @@ namespace Project
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void MakeButtonRound(Button button, int radius)
         {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius - 1, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius - 1, button.Height - radius - 1, radius, radius, 0, 90);
+            path.AddArc(0, button.Height - radius - 1, radius, radius, 90, 90);
+            path.CloseFigure();
 
+            button.Region = new Region(path);
         }
     }
 }

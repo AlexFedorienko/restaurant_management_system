@@ -40,9 +40,9 @@ namespace Project
                 UserName = table.Rows[0]["login_user"].ToString();
                 UserId = Convert.ToInt32(table.Rows[0]["id"]);
 
-                this.Close();
                 Form1 frm1 = new Form1();
                 frm1.Show();
+                this.Hide();
             }
             else
             {
@@ -54,6 +54,7 @@ namespace Project
         {
             Regestration regestration = new Regestration();
             regestration.Show();
+            this.Hide();
         }
     }
 }

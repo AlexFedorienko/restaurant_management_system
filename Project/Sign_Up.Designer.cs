@@ -50,6 +50,7 @@
             this.SignInRButton.TabIndex = 6;
             this.SignInRButton.Text = "SIGN IN";
             this.SignInRButton.UseVisualStyleBackColor = true;
+            this.SignInRButton.Click += new System.EventHandler(this.SignInRButton_Click);
             // 
             // textBoxFullNameR
             // 
@@ -166,7 +167,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regestration";
             this.Text = "Sign Up";
-            this.Load += new System.EventHandler(this.Regestration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

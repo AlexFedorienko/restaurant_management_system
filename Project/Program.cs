@@ -18,7 +18,6 @@ namespace Project
             Application.SetCompatibleTextRenderingDefault(false);
             Console.WriteLine("Application is starting...");
             Application.Run(new Auth());
-            Application.Run(new Form1());
         }
     }
 }

@@ -52,18 +52,15 @@ namespace Project
             g.DrawImage(pictureBox.Image, 0, 0, pictureBox.Width, pictureBox.Height);
             pictureBox.Image = bmp;
         }
-
-        // Загрузка изображения пользователя
         public void LoadUserImage(int userId)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            // Запрос на получение изображения пользователя
             string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
-            command.Parameters.AddWithValue("@userId", userId); // Добавление параметра для безопасности
+            command.Parameters.AddWithValue("@userId", userId);
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
@@ -72,21 +69,19 @@ namespace Project
                 byte[] imageData = table.Rows[0]["image_user"] as byte[];
                 if (imageData != null)
                 {
-                    // Преобразуем бинарные данные в изображение и отображаем в PictureBox
                     MemoryStream ms = new MemoryStream(imageData);
                     pictureBox1.Image = Image.FromStream(ms);
                 }
             }
         }
 
-        // Метод для сохранения изображения в базе данных
         private void SaveImageToDatabase(byte[] imageBytes)
         {
             string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
-            command.Parameters.Add("@userId", SqlDbType.Int).Value = Auth.UserId;  // Используйте UserId текущего пользователя
+            command.Parameters.Add("@userId", SqlDbType.Int).Value = Auth.UserId;
 
             dataBase.openConnection();
 
@@ -101,7 +96,6 @@ namespace Project
             dataBase.closeConnection();
         }
 
-        // Загрузка изображения после загрузки формы
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadUserImage(Auth.UserId);
@@ -109,7 +103,6 @@ namespace Project
 
         private void btnEnterUploadImage_Click(object sender, EventArgs e)
         {
-            // Открываем диалоговое окно для выбора изображения
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
 
@@ -117,10 +110,8 @@ namespace Project
             {
                 string imagePath = openFileDialog.FileName;
 
-                // Преобразуем изображение в массив байтов
                 byte[] imageBytes = File.ReadAllBytes(imagePath);
 
-                // Сохраняем изображение в базу данных
                 SaveImageToDatabase(imageBytes);
             }
         }

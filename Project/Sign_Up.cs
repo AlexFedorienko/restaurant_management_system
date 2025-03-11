@@ -8,6 +8,7 @@ namespace Project
     public partial class Regestration : Form
     {
         DataBase dbsql = new DataBase();
+        Auth frm_auth = new Auth();
 
         public Regestration()
         {
@@ -45,8 +46,8 @@ namespace Project
                 if (command.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Account successfully created!");
-                    Auth frm_auth = new Auth();
                     this.Close();
+                    frm_auth.Show();
                 }
                 else
                 {
@@ -77,8 +78,10 @@ namespace Project
             return dt.Rows.Count > 0;
         }
 
-        private void Regestration_Load(object sender, EventArgs e)
+        private void SignInRButton_Click(object sender, EventArgs e)
         {
+            frm_auth.Show();
+            this.Close();
         }
     }
 }

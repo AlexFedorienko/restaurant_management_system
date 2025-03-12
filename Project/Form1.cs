@@ -11,7 +11,6 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
-
         public Form1()
         {
             InitializeComponent();
@@ -163,6 +162,11 @@ namespace Project
             path.CloseFigure();
 
             button.Region = new Region(path);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

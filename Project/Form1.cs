@@ -171,29 +171,32 @@ namespace Project
 
         // Наведення курсором. Зміна кольору
 
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.White;
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.SeaGreen;
-        }
-
         private void button2_MouseEnter(object sender, EventArgs e)
         {
             button2.BackColor = Color.White;
+
+            button1.BackColor = Color.SeaGreen;
+
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
             button2.BackColor = Color.SeaGreen;
+
+            button1.BackColor = Color.White;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
         {
             button3.BackColor = Color.White;
+
+            button1.BackColor = Color.SeaGreen;
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
         }
 
         private void button3_MouseLeave(object sender, EventArgs e)
@@ -219,6 +222,11 @@ namespace Project
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             button5.BackColor = Color.SeaGreen;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

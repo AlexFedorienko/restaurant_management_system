@@ -34,7 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.signUpBtn = new System.Windows.Forms.Button();
             this.btnEnterSignIn = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.btnEnterMainForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_Login
@@ -80,6 +81,7 @@
             // 
             // btnEnterSignIn
             // 
+            this.btnEnterSignIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterSignIn.Location = new System.Drawing.Point(26, 401);
             this.btnEnterSignIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnterSignIn.Name = "btnEnterSignIn";
@@ -89,24 +91,37 @@
             this.btnEnterSignIn.UseVisualStyleBackColor = true;
             this.btnEnterSignIn.Click += new System.EventHandler(this.btnEnterSignIn_Click);
             // 
-            // button6
+            // exitButton
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(322, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 20);
-            this.button6.TabIndex = 8;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.exitButton.BackColor = System.Drawing.Color.Transparent;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitButton.Image = ((System.Drawing.Image)(resources.GetObject("exitButton.Image")));
+            this.exitButton.Location = new System.Drawing.Point(322, 8);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(35, 20);
+            this.exitButton.TabIndex = 8;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // btnEnterMainForm
+            // 
+            this.btnEnterMainForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEnterMainForm.Location = new System.Drawing.Point(28, 441);
+            this.btnEnterMainForm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnterMainForm.Name = "btnEnterMainForm";
+            this.btnEnterMainForm.Size = new System.Drawing.Size(298, 36);
+            this.btnEnterMainForm.TabIndex = 9;
+            this.btnEnterMainForm.Text = "MAIN FORM";
+            this.btnEnterMainForm.UseVisualStyleBackColor = true;
+            this.btnEnterMainForm.Click += new System.EventHandler(this.btnEnterMainForm_Click);
             // 
             // Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 490);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnEnterMainForm);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.btnEnterSignIn);
             this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.button1);
@@ -126,6 +141,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button signUpBtn;
         private System.Windows.Forms.Button btnEnterSignIn;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button btnEnterMainForm;
     }
 }

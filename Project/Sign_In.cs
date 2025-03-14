@@ -8,6 +8,7 @@ namespace Project
     public partial class Auth : Form
     {
         DataBase database = new DataBase();
+        Form1 form1 = new Form1();
         //Admin_Panel admin_Panel = new Admin_Panel();
 
         public static string UserName { get; private set; }
@@ -40,8 +41,7 @@ namespace Project
                 UserName = table.Rows[0]["login_user"].ToString();
                 UserId = Convert.ToInt32(table.Rows[0]["id"]);
 
-                Form1 frm1 = new Form1();
-                frm1.Show();
+                form1.Show();
                 this.Hide();
             }
             else
@@ -57,9 +57,15 @@ namespace Project
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void btnEnterMainForm_Click(object sender, EventArgs e)
+        {
+            form1.Show();
+            this.Hide();
         }
     }
 }

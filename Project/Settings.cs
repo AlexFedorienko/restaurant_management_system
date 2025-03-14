@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
 
@@ -17,6 +18,11 @@ namespace Project
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             mainForm = form1;
+
+            LoadUserImage(Auth.UserId);
+
+            MakePictureBoxRound(UserImage);
+            MakeButtonRound(PensilButton, 20);
         }
 
         private void SaveImageToDatabase(byte[] imageBytes)
@@ -31,7 +37,7 @@ namespace Project
             if (command.ExecuteNonQuery() > 0)
             {
                 MessageBox.Show("Image uploaded successfully.");
-                mainForm.LoadUserImage(Auth.UserId); // Обновляем фото в Form1
+                mainForm.LoadUserImage(Auth.UserId);
             }
             else
             {
@@ -40,7 +46,59 @@ namespace Project
             dataBase.closeConnection();
         }
 
-        private void btnEnterUploadImageWs_Click(object sender, EventArgs e)
+        private void MakeButtonRound(Button button, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius - 1, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius - 1, button.Height - radius - 1, radius, radius, 0, 90);
+            path.AddArc(0, button.Height - radius - 1, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            button.Region = new Region(path);
+        }
+        public void LoadUserImage(int userId)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
+
+            SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
+            command.Parameters.AddWithValue("@userId", userId);
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                byte[] imageData = table.Rows[0]["image_user"] as byte[];
+                if (imageData != null)
+                {
+                    MemoryStream ms = new MemoryStream(imageData);
+                    UserImage.Image = Image.FromStream(ms);
+                }
+            }
+        }
+
+        private void MakePictureBoxRound(PictureBox pictureBox)
+        {
+            Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.Clear(Color.Transparent);
+                GraphicsPath path = new GraphicsPath();
+                path.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+                pictureBox.Region = new Region(path);
+                g.SetClip(path);
+                if (pictureBox.Image != null)
+                {
+                    g.DrawImage(pictureBox.Image, 0, 0, pictureBox.Width, pictureBox.Height);
+                }
+            }
+            pictureBox.Image = bmp;
+        }
+
+        private void PensilButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";

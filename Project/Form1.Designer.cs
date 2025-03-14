@@ -37,11 +37,11 @@ namespace Project
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.fifthIcon = new System.Windows.Forms.PictureBox();
+            this.fourthIcon = new System.Windows.Forms.PictureBox();
+            this.thirdIcon = new System.Windows.Forms.PictureBox();
+            this.secondIcon = new System.Windows.Forms.PictureBox();
+            this.firstIcon = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,11 +56,11 @@ namespace Project
             this.SettingsButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,11 +72,11 @@ namespace Project
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.fifthIcon);
+            this.panel1.Controls.Add(this.fourthIcon);
+            this.panel1.Controls.Add(this.thirdIcon);
+            this.panel1.Controls.Add(this.secondIcon);
+            this.panel1.Controls.Add(this.firstIcon);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -150,54 +150,54 @@ namespace Project
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             // 
-            // pictureBox6
+            // fifthIcon
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(26, 605);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
+            this.fifthIcon.Location = new System.Drawing.Point(26, 605);
+            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fifthIcon.Name = "fifthIcon";
+            this.fifthIcon.Size = new System.Drawing.Size(26, 25);
+            this.fifthIcon.TabIndex = 15;
+            this.fifthIcon.TabStop = false;
             // 
-            // pictureBox5
+            // fourthIcon
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(26, 544);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
+            this.fourthIcon.Location = new System.Drawing.Point(26, 544);
+            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fourthIcon.Name = "fourthIcon";
+            this.fourthIcon.Size = new System.Drawing.Size(26, 25);
+            this.fourthIcon.TabIndex = 14;
+            this.fourthIcon.TabStop = false;
             // 
-            // pictureBox4
+            // thirdIcon
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(26, 482);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
+            this.thirdIcon.Location = new System.Drawing.Point(26, 482);
+            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.thirdIcon.Name = "thirdIcon";
+            this.thirdIcon.Size = new System.Drawing.Size(26, 25);
+            this.thirdIcon.TabIndex = 13;
+            this.thirdIcon.TabStop = false;
             // 
-            // pictureBox3
+            // secondIcon
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(26, 421);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.secondIcon.Location = new System.Drawing.Point(26, 421);
+            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.secondIcon.Name = "secondIcon";
+            this.secondIcon.Size = new System.Drawing.Size(26, 25);
+            this.secondIcon.TabIndex = 12;
+            this.secondIcon.TabStop = false;
             // 
-            // pictureBox2
+            // firstIcon
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::Project.Properties.Resources.dashboard_green;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 358);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.firstIcon.BackColor = System.Drawing.Color.Transparent;
+            this.firstIcon.BackgroundImage = global::Project.Properties.Resources.dashboard_green;
+            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firstIcon.Location = new System.Drawing.Point(26, 358);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.firstIcon.Name = "firstIcon";
+            this.firstIcon.Size = new System.Drawing.Size(26, 25);
+            this.firstIcon.TabIndex = 11;
+            this.firstIcon.TabStop = false;
+            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button5
             // 
@@ -376,11 +376,11 @@ namespace Project
             this.Text = "Main";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -400,11 +400,11 @@ namespace Project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox firstIcon;
+        private System.Windows.Forms.PictureBox fifthIcon;
+        private System.Windows.Forms.PictureBox fourthIcon;
+        private System.Windows.Forms.PictureBox thirdIcon;
+        private System.Windows.Forms.PictureBox secondIcon;
         private System.Windows.Forms.Button exitButton;
         private Label label3;
         private Label label6;

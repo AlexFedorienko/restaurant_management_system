@@ -11,6 +11,7 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
+
         public Form1()
         {
             InitializeComponent();
@@ -176,9 +177,13 @@ namespace Project
             button2.BackColor = Color.White;
 
             button1.BackColor = Color.SeaGreen;
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
 
             label4.BackColor = Color.White;
             label4.ForeColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_green;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -186,8 +191,14 @@ namespace Project
             button2.BackColor = Color.SeaGreen;
 
             button1.BackColor = Color.White;
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
             label4.BackColor = Color.SeaGreen;
             label4.ForeColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_white;
+
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
@@ -197,31 +208,69 @@ namespace Project
             button1.BackColor = Color.SeaGreen;
             label3.BackColor = Color.SeaGreen;
             label3.ForeColor = Color.White;
+
+            label5.BackColor = Color.White;
+            label5.ForeColor = Color.SeaGreen;
         }
 
         private void button3_MouseLeave(object sender, EventArgs e)
         {
             button3.BackColor = Color.SeaGreen;
+
+            button1.BackColor = Color.White;
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
+            label5.BackColor = Color.SeaGreen;
+            label5.ForeColor = Color.White;
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
         {
             button4.BackColor = Color.White;
+
+            button1.BackColor = Color.SeaGreen;
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
+
+            label6.BackColor = Color.White;
+            label6.ForeColor = Color.SeaGreen;
         }
 
         private void button4_MouseLeave(object sender, EventArgs e)
         {
             button4.BackColor = Color.SeaGreen;
+
+            button1.BackColor = Color.White;
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
+            label6.BackColor = Color.SeaGreen;
+            label6.ForeColor = Color.White;
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)
         {
             button5.BackColor = Color.White;
+
+            button1.BackColor = Color.SeaGreen;
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
+
+            label7.BackColor = Color.White;
+            label7.ForeColor = Color.SeaGreen;
         }
 
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             button5.BackColor = Color.SeaGreen;
+
+            button1.BackColor = Color.White;
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
+            label7.BackColor = Color.SeaGreen;
+            label7.ForeColor = Color.White;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

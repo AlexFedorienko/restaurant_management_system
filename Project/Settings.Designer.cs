@@ -69,7 +69,6 @@
             this.textBoxLoginS.Name = "textBoxLoginS";
             this.textBoxLoginS.Size = new System.Drawing.Size(200, 40);
             this.textBoxLoginS.TabIndex = 8;
-            this.textBoxLoginS.TextChanged += new System.EventHandler(this.textBoxLoginS_TextChanged);
             // 
             // labelLoginS
             // 
@@ -98,7 +97,6 @@
             this.textBoxEmailS.Name = "textBoxEmailS";
             this.textBoxEmailS.Size = new System.Drawing.Size(200, 40);
             this.textBoxEmailS.TabIndex = 10;
-            this.textBoxEmailS.TextChanged += new System.EventHandler(this.textBoxEmailS_TextChanged);
             // 
             // labelPasswordS
             // 
@@ -117,7 +115,6 @@
             this.textBoxPasswordS.Name = "textBoxPasswordS";
             this.textBoxPasswordS.Size = new System.Drawing.Size(200, 40);
             this.textBoxPasswordS.TabIndex = 12;
-            this.textBoxPasswordS.TextChanged += new System.EventHandler(this.textBoxPasswordS_TextChanged);
             // 
             // buttonSaveExitS
             // 
@@ -136,7 +133,6 @@
             this.VisibleButtonS.TabIndex = 15;
             this.VisibleButtonS.Text = "vis";
             this.VisibleButtonS.UseVisualStyleBackColor = true;
-            this.VisibleButtonS.Click += new System.EventHandler(this.VisibleButtonS_Click);
             // 
             // Settings
             // 

@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.UserImage = new System.Windows.Forms.PictureBox();
             this.PensilButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLoginS = new System.Windows.Forms.TextBox();
+            this.labelLoginS = new System.Windows.Forms.Label();
+            this.labelEmailS = new System.Windows.Forms.Label();
+            this.textBoxEmailS = new System.Windows.Forms.TextBox();
+            this.labelPasswordS = new System.Windows.Forms.Label();
+            this.textBoxPasswordS = new System.Windows.Forms.TextBox();
+            this.buttonSaveExitS = new System.Windows.Forms.Button();
+            this.VisibleButtonS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,71 +62,91 @@
             this.PensilButton.UseVisualStyleBackColor = true;
             this.PensilButton.Click += new System.EventHandler(this.PensilButton_Click);
             // 
-            // textBox1
+            // textBoxLoginS
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 219);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 40);
-            this.textBox1.TabIndex = 8;
+            this.textBoxLoginS.Location = new System.Drawing.Point(110, 219);
+            this.textBoxLoginS.Multiline = true;
+            this.textBoxLoginS.Name = "textBoxLoginS";
+            this.textBoxLoginS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxLoginS.TabIndex = 8;
             // 
-            // label1
+            // labelLoginS
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(105, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Login";
+            this.labelLoginS.AutoSize = true;
+            this.labelLoginS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLoginS.Location = new System.Drawing.Point(105, 191);
+            this.labelLoginS.Name = "labelLoginS";
+            this.labelLoginS.Size = new System.Drawing.Size(60, 25);
+            this.labelLoginS.TabIndex = 9;
+            this.labelLoginS.Text = "Login";
             // 
-            // label2
+            // labelEmailS
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(105, 273);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 25);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Login";
+            this.labelEmailS.AutoSize = true;
+            this.labelEmailS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmailS.Location = new System.Drawing.Point(105, 273);
+            this.labelEmailS.Name = "labelEmailS";
+            this.labelEmailS.Size = new System.Drawing.Size(60, 25);
+            this.labelEmailS.TabIndex = 11;
+            this.labelEmailS.Text = "Email";
             // 
-            // textBox2
+            // textBoxEmailS
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 301);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 40);
-            this.textBox2.TabIndex = 10;
+            this.textBoxEmailS.Location = new System.Drawing.Point(110, 301);
+            this.textBoxEmailS.Multiline = true;
+            this.textBoxEmailS.Name = "textBoxEmailS";
+            this.textBoxEmailS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxEmailS.TabIndex = 10;
             // 
-            // label3
+            // labelPasswordS
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(105, 357);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 25);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Login";
+            this.labelPasswordS.AutoSize = true;
+            this.labelPasswordS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPasswordS.Location = new System.Drawing.Point(105, 357);
+            this.labelPasswordS.Name = "labelPasswordS";
+            this.labelPasswordS.Size = new System.Drawing.Size(98, 25);
+            this.labelPasswordS.TabIndex = 13;
+            this.labelPasswordS.Text = "Password";
             // 
-            // textBox3
+            // textBoxPasswordS
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 385);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 40);
-            this.textBox3.TabIndex = 12;
+            this.textBoxPasswordS.Location = new System.Drawing.Point(110, 385);
+            this.textBoxPasswordS.Multiline = true;
+            this.textBoxPasswordS.Name = "textBoxPasswordS";
+            this.textBoxPasswordS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxPasswordS.TabIndex = 12;
+            // 
+            // buttonSaveExitS
+            // 
+            this.buttonSaveExitS.Location = new System.Drawing.Point(137, 436);
+            this.buttonSaveExitS.Name = "buttonSaveExitS";
+            this.buttonSaveExitS.Size = new System.Drawing.Size(152, 42);
+            this.buttonSaveExitS.TabIndex = 14;
+            this.buttonSaveExitS.Text = "Save, Exit";
+            this.buttonSaveExitS.UseVisualStyleBackColor = true;
+            // 
+            // VisibleButtonS
+            // 
+            this.VisibleButtonS.Location = new System.Drawing.Point(332, 358);
+            this.VisibleButtonS.Name = "VisibleButtonS";
+            this.VisibleButtonS.Size = new System.Drawing.Size(32, 23);
+            this.VisibleButtonS.TabIndex = 15;
+            this.VisibleButtonS.Text = "vis";
+            this.VisibleButtonS.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 490);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.VisibleButtonS);
+            this.Controls.Add(this.buttonSaveExitS);
+            this.Controls.Add(this.labelPasswordS);
+            this.Controls.Add(this.textBoxPasswordS);
+            this.Controls.Add(this.labelEmailS);
+            this.Controls.Add(this.textBoxEmailS);
+            this.Controls.Add(this.labelLoginS);
+            this.Controls.Add(this.textBoxLoginS);
             this.Controls.Add(this.PensilButton);
             this.Controls.Add(this.UserImage);
             this.Name = "Settings";
@@ -138,11 +160,13 @@
         #endregion
         private System.Windows.Forms.PictureBox UserImage;
         private System.Windows.Forms.Button PensilButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLoginS;
+        private System.Windows.Forms.Label labelLoginS;
+        private System.Windows.Forms.Label labelEmailS;
+        private System.Windows.Forms.TextBox textBoxEmailS;
+        private System.Windows.Forms.Label labelPasswordS;
+        private System.Windows.Forms.TextBox textBoxPasswordS;
+        private System.Windows.Forms.Button buttonSaveExitS;
+        private System.Windows.Forms.Button VisibleButtonS;
     }
 }

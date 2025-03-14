@@ -12,6 +12,9 @@ namespace Project
     {
         DataBase dataBase = new DataBase();
         private Form1 mainForm;
+        private string originalLogin;
+        private string originalEmail;
+        private string originalPassword;
 
         public Settings(Form1 form1)
         {
@@ -19,10 +22,66 @@ namespace Project
             StartPosition = FormStartPosition.CenterScreen;
             mainForm = form1;
 
+            LoadUserData(Auth.UserId);
             LoadUserImage(Auth.UserId);
 
             MakePictureBoxRound(UserImage);
             MakeButtonRound(PensilButton, 20);
+        }
+
+        private void LoadUserData(int userId)
+        {
+            string query = "SELECT login_user, email_user, password_user FROM auth WHERE id = @userId";
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+            command.Parameters.AddWithValue("@userId", userId);
+
+            dataBase.openConnection();
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                originalLogin = reader["login_user"].ToString();
+                originalEmail = reader["email_user"].ToString();
+                originalPassword = reader["password_user"].ToString();
+
+                textBoxLoginS.Text = originalLogin;
+                textBoxEmailS.Text = originalEmail;
+                textBoxPasswordS.Text = originalPassword;
+            }
+            reader.Close();
+            dataBase.closeConnection();
+        }
+
+        private void SaveExitButton_Click(object sender, EventArgs e)
+        {
+            string newLogin = textBoxLoginS.Text;
+            string newEmail = textBoxEmailS.Text;
+            string newPassword = textBoxPasswordS.Text;
+
+            if (newLogin == originalLogin && newEmail == originalEmail && newPassword == originalPassword)
+            {
+                Application.Exit();
+                return;
+            }
+
+            string query = "UPDATE auth SET login_user = @login, email_user = @email, password_user = @password WHERE id = @userId";
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+            command.Parameters.AddWithValue("@login", newLogin);
+            command.Parameters.AddWithValue("@email", newEmail);
+            command.Parameters.AddWithValue("@password", newPassword);
+            command.Parameters.AddWithValue("@userId", Auth.UserId);
+
+            dataBase.openConnection();
+            if (command.ExecuteNonQuery() > 0)
+            {
+                MessageBox.Show("Data updated successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Error updating data.");
+            }
+            dataBase.closeConnection();
+            Application.Exit();
         }
 
         private void SaveImageToDatabase(byte[] imageBytes)
@@ -57,12 +116,13 @@ namespace Project
 
             button.Region = new Region(path);
         }
+
         public void LoadUserImage(int userId)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
+            string querystring = "SELECT image_user FROM auth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             command.Parameters.AddWithValue("@userId", userId);

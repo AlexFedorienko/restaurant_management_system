@@ -198,7 +198,6 @@ namespace Project
             label4.ForeColor = Color.White;
 
             firstIcon.Image = Properties.Resources.dashboard_white;
-
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)

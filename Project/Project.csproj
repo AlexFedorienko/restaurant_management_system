@@ -149,7 +149,7 @@
     <None Include="Resources\dashboard_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\dashboard_white.png" />
+    <None Include="Resources\dashboard_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

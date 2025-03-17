@@ -11,19 +11,24 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
+        private string userName;
+        private int userId;
 
-        public Form1()
+        public Form1(string userName, int userId)
         {
             InitializeComponent();
+            this.userName = userName;
+            this.userId = userId;
+
             StartPosition = FormStartPosition.CenterScreen;
 
             int radius = 70;
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
 
-            labelName.Text = Auth.UserName;
-            comboBox.Text = Auth.UserName;
+            labelName.Text = userName;
+            comboBox.Text = userName;
 
-            LoadUserImage(Auth.UserId);
+            LoadUserImage(userId);
             MakePictureBoxRound(pictureBox1);
 
             MakeButtonRound(button1, 30);
@@ -44,16 +49,6 @@ namespace Project
             path.AddArc(rect.Left, rect.Bottom - radius, radius, radius, 90, 90);
             path.CloseFigure();
             return path;
-        }
-
-        private void MenuButton_MouseEnter(object sender, EventArgs e)
-        {
-            ((Panel)sender).BackColor = Color.FromArgb(144, 238, 144);
-        }
-
-        private void MenuButton_MouseLeave(object sender, EventArgs e)
-        {
-            ((Panel)sender).BackColor = Color.Transparent;
         }
 
         private void MakePictureBoxRound(PictureBox pictureBox)
@@ -169,8 +164,6 @@ namespace Project
         {
             Application.Exit();
         }
-
-        // Наведення курсором. Зміна кольору
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {

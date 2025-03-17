@@ -12,8 +12,6 @@ namespace Project
 {
     public partial class Admin_Panel : Form
     {
-        public Form1 form1 = new Form1();
-
         public Admin_Panel()
         {
             InitializeComponent();
@@ -23,7 +21,6 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            form1.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -11,7 +11,6 @@ namespace Project
     public partial class Settings : Form
     {
         DataBase dataBase = new DataBase();
-        Form1 form1 = new Form1();
 
         private Form1 mainForm;
         private string originalLogin;
@@ -22,7 +21,7 @@ namespace Project
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            mainForm = form1;
+            mainForm = new Form1(Auth.UserName, Auth.UserId);
 
             LoadUserData(Auth.UserId);
             LoadUserImage(Auth.UserId);
@@ -79,7 +78,7 @@ namespace Project
             }
             dataBase.closeConnection();
 
-            form1.Refresh();
+            mainForm.Refresh();
             this.Close();
         }
 

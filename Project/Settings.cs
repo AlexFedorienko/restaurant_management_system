@@ -11,6 +11,8 @@ namespace Project
     public partial class Settings : Form
     {
         DataBase dataBase = new DataBase();
+        Form1 form1 = new Form1();
+
         private Form1 mainForm;
         private string originalLogin;
         private string originalEmail;
@@ -31,9 +33,8 @@ namespace Project
 
         private void LoadUserData(int userId)
         {
-            string query = "SELECT login_user, email_user, password_user FROM auth WHERE id = @userId";
+            string query = $"SELECT login_user, email_user, password_user FROM auth WHERE id = {userId}";
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
-            command.Parameters.AddWithValue("@userId", userId);
 
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();
@@ -60,16 +61,12 @@ namespace Project
 
             if (newLogin == originalLogin && newEmail == originalEmail && newPassword == originalPassword)
             {
-                Application.Exit();
+                this.Close();
                 return;
             }
 
-            string query = "UPDATE auth SET login_user = @login, email_user = @email, password_user = @password WHERE id = @userId";
+            string query = $"UPDATE auth SET login_user = '{newLogin}', email_user = '{newEmail}', password_user = '{newPassword}' WHERE id = {Auth.UserId}";
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
-            command.Parameters.AddWithValue("@login", newLogin);
-            command.Parameters.AddWithValue("@email", newEmail);
-            command.Parameters.AddWithValue("@password", newPassword);
-            command.Parameters.AddWithValue("@userId", Auth.UserId);
 
             dataBase.openConnection();
             if (command.ExecuteNonQuery() > 0)
@@ -81,15 +78,16 @@ namespace Project
                 MessageBox.Show("Error updating data.");
             }
             dataBase.closeConnection();
-            Application.Exit();
+
+            form1.Refresh();
+            this.Close();
         }
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+            string query = $"UPDATE auth SET image_user = @image WHERE id = {Auth.UserId}";
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
-            command.Parameters.Add("@userId", SqlDbType.Int).Value = Auth.UserId;
 
             dataBase.openConnection();
 
@@ -122,10 +120,9 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = "SELECT image_user FROM auth WHERE id = @userId";
+            string query = $"SELECT image_user FROM auth WHERE id = {userId}";
 
-            SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
-            command.Parameters.AddWithValue("@userId", userId);
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
 

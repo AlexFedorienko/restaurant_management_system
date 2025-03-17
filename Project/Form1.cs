@@ -183,7 +183,8 @@ namespace Project
             label4.BackColor = Color.White;
             label4.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_green;
+            firstIcon.Image = Properties.Resources.dashboard_white;
+            firstIcon.BackColor = Color.SeaGreen;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -197,7 +198,8 @@ namespace Project
             label4.BackColor = Color.SeaGreen;
             label4.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_white;
+            firstIcon.Image = Properties.Resources.dashboard_green;
+            firstIcon.BackColor = Color.White;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)

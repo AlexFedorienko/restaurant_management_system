@@ -62,6 +62,8 @@ namespace Project
 
         private void btnEnterMainForm_Click(object sender, EventArgs e)
         {
+            form1 = new Form1(UserName, UserId);
+
             form1.Show();
             this.Hide();
         }

@@ -11,6 +11,9 @@ namespace Project
     public partial class Form1 : Form
     {
         DataBase dataBase = new DataBase();
+        Auth auth = new Auth();
+        Admin_Panel adminPanel = new Admin_Panel();
+
         private string userName;
         private int userId;
 
@@ -36,7 +39,6 @@ namespace Project
             MakeButtonRound(button3, 30);
             MakeButtonRound(button4, 30);
             MakeButtonRound(button5, 30);
-            MakeButtonRound(buttonSignOut, 20);
             MakeButtonRound(SettingsButton, 20);
         }
 
@@ -134,16 +136,14 @@ namespace Project
             settingsWindow.Show();
         }
 
-        private void buttonSignOut_Click(object sender, EventArgs e)
+        private void buttonAdminPanel_Click(object sender, EventArgs e)
         {
-            Auth auth = new Auth();
-            this.Hide();
-            auth.ShowDialog();
+            this.Close();
+            adminPanel.ShowDialog();
         }
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Auth auth = new Auth();
             auth.Show();
             this.Hide();
         }

@@ -154,5 +154,14 @@
   <ItemGroup>
     <None Include="Resources\iconDashboard_grey-32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconDashboard_grey-32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCalendar_grey-32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCalendar_grey-32px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

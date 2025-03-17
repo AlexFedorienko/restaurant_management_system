@@ -83,9 +83,39 @@ namespace Project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconCalendar_grey_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconCalendar_grey-32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconCalendar_grey_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconCalendar_grey-32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconDashboard_grey_32px {
             get {
                 object obj = ResourceManager.GetObject("iconDashboard_grey-32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDashboard_grey_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconDashboard_grey-32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

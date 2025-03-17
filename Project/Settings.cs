@@ -11,6 +11,7 @@ namespace Project
     public partial class Settings : Form
     {
         DataBase dataBase = new DataBase();
+        Auth auth = new Auth();
 
         private Form1 mainForm;
         private string originalLogin;
@@ -78,7 +79,7 @@ namespace Project
             }
             dataBase.closeConnection();
 
-            mainForm.Refresh();
+            auth.Show();
             this.Close();
         }
 

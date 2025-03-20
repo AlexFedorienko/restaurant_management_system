@@ -8,20 +8,16 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class Gallery : Form
     {
         DataBase dataBase = new DataBase();
-
         Auth auth = new Auth();
         Admin_Panel adminPanel = new Admin_Panel();
-        Finance finance;
-        News news;
-        Gallery gallery;
 
         private string userName;
         private int userId;
 
-        public Form1(string userName, int userId)
+        public Gallery(string userName, int userId)
         {
             InitializeComponent();
             this.userName = userName;
@@ -139,12 +135,6 @@ namespace Project
             }
         }
 
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            Settings settingsWindow = new Settings(this);  // Передаем ссылку на текущую форму
-            settingsWindow.Show();
-        }
-
         private void buttonAdminPanel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -172,6 +162,42 @@ namespace Project
         private void exitButton_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.White;
+
+            button1.BackColor = Color.SeaGreen;
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
+
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_white1;
+            firstIcon.BackColor = Color.SeaGreen;
+
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.SeaGreen;
+
+            button1.BackColor = Color.White;
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_green1;
+            firstIcon.BackColor = Color.White;
+
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
@@ -321,31 +347,6 @@ namespace Project
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        // Перехід між формами
-        private void button2_Click(object sender, EventArgs e)
-        {
-            finance = new Finance(userName, userId);
-
-            this.Hide();
-            finance.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            news = new News(userName, userId);
-
-            this.Hide();
-            news.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            gallery = new Gallery(userName, userId);
-
-            this.Hide();
-            gallery.Show();
         }
     }
 }

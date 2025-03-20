@@ -2,7 +2,7 @@
 
 namespace Project
 {
-    partial class Form1
+    partial class Finance
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Finance));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,7 +54,6 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.SettingsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -129,9 +128,9 @@ namespace Project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
             this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 33);
@@ -155,9 +154,9 @@ namespace Project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.SeaGreen;
             this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(78, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 33);
@@ -199,7 +198,8 @@ namespace Project
             // 
             // secondIcon
             // 
-            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
+            this.secondIcon.BackColor = System.Drawing.Color.White;
+            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_green;
             this.secondIcon.Location = new System.Drawing.Point(26, 428);
             this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
             this.secondIcon.Name = "secondIcon";
@@ -210,9 +210,9 @@ namespace Project
             // 
             // firstIcon
             // 
-            this.firstIcon.BackColor = System.Drawing.Color.White;
+            this.firstIcon.BackColor = System.Drawing.Color.SeaGreen;
             this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
+            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_white1;
             this.firstIcon.Location = new System.Drawing.Point(26, 367);
             this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
             this.firstIcon.Name = "firstIcon";
@@ -246,7 +246,6 @@ namespace Project
             this.button4.TabIndex = 9;
             this.button4.Text = "\r\n\r\n\r\n\r\n\r\n";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
@@ -260,13 +259,12 @@ namespace Project
             this.button3.Size = new System.Drawing.Size(352, 61);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(9, 410);
@@ -275,13 +273,12 @@ namespace Project
             this.button2.Size = new System.Drawing.Size(352, 61);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(9, 350);
@@ -290,6 +287,8 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -362,32 +361,19 @@ namespace Project
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
             // 
-            // SettingsButton
-            // 
-            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
-            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsButton.Location = new System.Drawing.Point(1658, 56);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
-            this.SettingsButton.TabIndex = 4;
-            this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
-            // Form1
+            // Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Finance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.panel1.ResumeLayout(false);
@@ -409,7 +395,6 @@ namespace Project
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox;
-        private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button buttonAdminPanel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;

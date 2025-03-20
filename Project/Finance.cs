@@ -8,20 +8,16 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class Finance : Form
     {
         DataBase dataBase = new DataBase();
-
         Auth auth = new Auth();
         Admin_Panel adminPanel = new Admin_Panel();
-        Finance finance;
-        News news;
-        Gallery gallery;
 
         private string userName;
         private int userId;
 
-        public Form1(string userName, int userId)
+        public Finance(string userName, int userId)
         {
             InitializeComponent();
             this.userName = userName;
@@ -43,7 +39,6 @@ namespace Project
             MakeButtonRound(button3, 30);
             MakeButtonRound(button4, 30);
             MakeButtonRound(button5, 30);
-            MakeButtonRound(SettingsButton, 20);
         }
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
@@ -114,6 +109,7 @@ namespace Project
             dataBase.closeConnection();
         }
 
+        // Оставляем только один метод для обновления изображения
         public void UpdateUserImage()
         {
             LoadUserImage(Auth.UserId);
@@ -137,12 +133,6 @@ namespace Project
 
                 SaveImageToDatabase(imageBytes);
             }
-        }
-
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            Settings settingsWindow = new Settings(this);  // Передаем ссылку на текущую форму
-            settingsWindow.Show();
         }
 
         private void buttonAdminPanel_Click(object sender, EventArgs e)
@@ -174,19 +164,58 @@ namespace Project
             Application.Exit();
         }
 
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+            button1.ForeColor = Color.SeaGreen;
+
+            button2.BackColor = Color.SeaGreen;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
+
+            label3.BackColor = Color.White;
+            label3.ForeColor = Color.SeaGreen;
+
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_green1;
+            firstIcon.BackColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.SeaGreen;
+            button1.ForeColor = Color.White;
+
+            button2.BackColor = Color.White;
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
+
+            label3.BackColor = Color.SeaGreen;
+            label3.ForeColor = Color.White;
+
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_white1;
+            firstIcon.BackColor = Color.SeaGreen;
+        }
+
         private void button2_MouseEnter(object sender, EventArgs e)
         {
             button2.BackColor = Color.White;
+            button2.ForeColor = Color.SeaGreen;
 
             button1.BackColor = Color.SeaGreen;
-            label3.BackColor = Color.SeaGreen;
-            label3.ForeColor = Color.White;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
 
             label4.BackColor = Color.White;
             label4.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_white1;
-            firstIcon.BackColor = Color.SeaGreen;
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
 
             secondIcon.Image = Properties.Resources.creditcards_green;
             secondIcon.BackColor = Color.White;
@@ -194,17 +223,17 @@ namespace Project
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            button2.BackColor = Color.SeaGreen;
+            button2.BackColor = Color.White;
 
-            button1.BackColor = Color.White;
-            label3.BackColor = Color.White;
-            label3.ForeColor = Color.SeaGreen;
+            button1.BackColor = Color.SeaGreen;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
 
             label4.BackColor = Color.SeaGreen;
             label4.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_green1;
-            firstIcon.BackColor = Color.White;
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
 
             secondIcon.Image = Properties.Resources.creditcards_white;
             secondIcon.BackColor = Color.SeaGreen;
@@ -213,34 +242,36 @@ namespace Project
         private void button3_MouseEnter(object sender, EventArgs e)
         {
             button3.BackColor = Color.White;
+            button3.ForeColor = Color.SeaGreen;
 
-            button1.BackColor = Color.SeaGreen;
-            label3.BackColor = Color.SeaGreen;
-            label3.ForeColor = Color.White;
+            button2.BackColor = Color.SeaGreen;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
 
             label5.BackColor = Color.White;
             label5.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_white1;
-            firstIcon.BackColor = Color.SeaGreen;
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
 
             thirdIcon.Image = Properties.Resources.news_green;
             thirdIcon.BackColor = Color.White;
         }
-
+        
         private void button3_MouseLeave(object sender, EventArgs e)
         {
             button3.BackColor = Color.SeaGreen;
+            button3.ForeColor = Color.White;
 
-            button1.BackColor = Color.White;
-            label3.BackColor = Color.White;
-            label3.ForeColor = Color.SeaGreen;
+            button2.BackColor = Color.White;
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
 
             label5.BackColor = Color.SeaGreen;
             label5.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_green1;
-            firstIcon.BackColor = Color.White;
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
 
             thirdIcon.Image = Properties.Resources.news_white;
             thirdIcon.BackColor = Color.SeaGreen;
@@ -249,16 +280,17 @@ namespace Project
         private void button4_MouseEnter(object sender, EventArgs e)
         {
             button4.BackColor = Color.White;
+            button4.ForeColor = Color.SeaGreen;
 
-            button1.BackColor = Color.SeaGreen;
-            label3.BackColor = Color.SeaGreen;
-            label3.ForeColor = Color.White;
+            button2.BackColor = Color.SeaGreen;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
 
             label6.BackColor = Color.White;
             label6.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_white1;
-            firstIcon.BackColor = Color.SeaGreen;
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
 
             fourthIcon.Image = Properties.Resources.gallery_green;
             fourthIcon.BackColor = Color.White;
@@ -267,16 +299,17 @@ namespace Project
         private void button4_MouseLeave(object sender, EventArgs e)
         {
             button4.BackColor = Color.SeaGreen;
+            button4.ForeColor = Color.White;
 
-            button1.BackColor = Color.White;
-            label3.BackColor = Color.White;
-            label3.ForeColor = Color.SeaGreen;
+            button2.BackColor = Color.White;
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
 
             label6.BackColor = Color.SeaGreen;
             label6.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_green1;
-            firstIcon.BackColor = Color.White;
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
 
             fourthIcon.Image = Properties.Resources.gallery_white;
             fourthIcon.BackColor = Color.SeaGreen;
@@ -285,16 +318,17 @@ namespace Project
         private void button5_MouseEnter(object sender, EventArgs e)
         {
             button5.BackColor = Color.White;
+            button5.ForeColor = Color.SeaGreen;
 
-            button1.BackColor = Color.SeaGreen;
-            label3.BackColor = Color.SeaGreen;
-            label3.ForeColor = Color.White;
+            button2.BackColor = Color.SeaGreen;
+            label4.BackColor = Color.SeaGreen;
+            label4.ForeColor = Color.White;
 
             label7.BackColor = Color.White;
             label7.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_white1;
-            firstIcon.BackColor = Color.SeaGreen;
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
 
             fifthIcon.Image = Properties.Resources.logout_green;
             fifthIcon.BackColor = Color.White;
@@ -303,49 +337,26 @@ namespace Project
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             button5.BackColor = Color.SeaGreen;
+            button5.ForeColor = Color.White;
 
-            button1.BackColor = Color.White;
-            label3.BackColor = Color.White;
-            label3.ForeColor = Color.SeaGreen;
+            button2.BackColor = Color.White;
+            label4.BackColor = Color.White;
+            label4.ForeColor = Color.SeaGreen;
 
             label7.BackColor = Color.SeaGreen;
             label7.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_green1;
-            firstIcon.BackColor = Color.White;
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
 
             fifthIcon.Image = Properties.Resources.logout_white;
             fifthIcon.BackColor = Color.SeaGreen;
         }
 
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        // Перехід між формами
-        private void button2_Click(object sender, EventArgs e)
-        {
-            finance = new Finance(userName, userId);
-
-            this.Hide();
-            finance.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            news = new News(userName, userId);
-
-            this.Hide();
-            news.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            gallery = new Gallery(userName, userId);
-
-            this.Hide();
-            gallery.Show();
         }
     }
 }

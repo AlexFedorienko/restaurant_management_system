@@ -2,7 +2,7 @@
 
 namespace Project
 {
-    partial class Form1
+    partial class News
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(News));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -118,9 +118,10 @@ namespace Project
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(82, 481);
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(82, 483);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 33);
             this.label5.TabIndex = 18;
@@ -155,9 +156,9 @@ namespace Project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.SeaGreen;
             this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(78, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 33);
@@ -188,7 +189,8 @@ namespace Project
             // 
             // thirdIcon
             // 
-            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
+            this.thirdIcon.BackColor = System.Drawing.Color.White;
+            this.thirdIcon.Image = global::Project.Properties.Resources.news_green;
             this.thirdIcon.Location = new System.Drawing.Point(26, 487);
             this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
             this.thirdIcon.Name = "thirdIcon";
@@ -210,9 +212,9 @@ namespace Project
             // 
             // firstIcon
             // 
-            this.firstIcon.BackColor = System.Drawing.Color.White;
+            this.firstIcon.BackColor = System.Drawing.Color.SeaGreen;
             this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
+            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_white1;
             this.firstIcon.Location = new System.Drawing.Point(26, 367);
             this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
             this.firstIcon.Name = "firstIcon";
@@ -246,12 +248,12 @@ namespace Project
             this.button4.TabIndex = 9;
             this.button4.Text = "\r\n\r\n\r\n\r\n\r\n";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(9, 470);
@@ -259,10 +261,7 @@ namespace Project
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(352, 61);
             this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -275,13 +274,12 @@ namespace Project
             this.button2.Size = new System.Drawing.Size(352, 61);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(9, 350);
@@ -290,6 +288,8 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -372,9 +372,8 @@ namespace Project
             this.SettingsButton.Size = new System.Drawing.Size(39, 40);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // Form1
+            // News
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -387,7 +386,7 @@ namespace Project
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "News";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.panel1.ResumeLayout(false);

@@ -176,8 +176,11 @@ namespace Project
             label4.BackColor = Color.White;
             label4.ForeColor = Color.SeaGreen;
 
-            firstIcon.Image = Properties.Resources.dashboard_white;
+            firstIcon.Image = Properties.Resources.dashboard_white1;
             firstIcon.BackColor = Color.SeaGreen;
+
+            secondIcon.Image = Properties.Resources.creditcards_green;
+            secondIcon.BackColor = Color.White;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -191,8 +194,11 @@ namespace Project
             label4.BackColor = Color.SeaGreen;
             label4.ForeColor = Color.White;
 
-            firstIcon.Image = Properties.Resources.dashboard_green;
+            firstIcon.Image = Properties.Resources.dashboard_green1;
             firstIcon.BackColor = Color.White;
+
+            secondIcon.Image = Properties.Resources.creditcards_white;
+            secondIcon.BackColor = Color.SeaGreen;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
@@ -205,6 +211,12 @@ namespace Project
 
             label5.BackColor = Color.White;
             label5.ForeColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_white1;
+            firstIcon.BackColor = Color.SeaGreen;
+
+            thirdIcon.Image = Properties.Resources.news_green;
+            thirdIcon.BackColor = Color.White;
         }
 
         private void button3_MouseLeave(object sender, EventArgs e)
@@ -217,6 +229,12 @@ namespace Project
 
             label5.BackColor = Color.SeaGreen;
             label5.ForeColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_green1;
+            firstIcon.BackColor = Color.White;
+
+            thirdIcon.Image = Properties.Resources.news_white;
+            thirdIcon.BackColor = Color.SeaGreen;
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
@@ -229,6 +247,12 @@ namespace Project
 
             label6.BackColor = Color.White;
             label6.ForeColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_white1;
+            firstIcon.BackColor = Color.SeaGreen;
+
+            fourthIcon.Image = Properties.Resources.gallery_green;
+            fourthIcon.BackColor = Color.White;
         }
 
         private void button4_MouseLeave(object sender, EventArgs e)
@@ -241,6 +265,12 @@ namespace Project
 
             label6.BackColor = Color.SeaGreen;
             label6.ForeColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_green1;
+            firstIcon.BackColor = Color.White;
+
+            fourthIcon.Image = Properties.Resources.gallery_white;
+            fourthIcon.BackColor = Color.SeaGreen;
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)
@@ -253,6 +283,12 @@ namespace Project
 
             label7.BackColor = Color.White;
             label7.ForeColor = Color.SeaGreen;
+
+            firstIcon.Image = Properties.Resources.dashboard_white1;
+            firstIcon.BackColor = Color.SeaGreen;
+
+            fifthIcon.Image = Properties.Resources.logout_green;
+            fifthIcon.BackColor = Color.White;
         }
 
         private void button5_MouseLeave(object sender, EventArgs e)
@@ -265,6 +301,12 @@ namespace Project
 
             label7.BackColor = Color.SeaGreen;
             label7.ForeColor = Color.White;
+
+            firstIcon.Image = Properties.Resources.dashboard_green1;
+            firstIcon.BackColor = Color.White;
+
+            fifthIcon.Image = Properties.Resources.logout_white;
+            fifthIcon.BackColor = Color.SeaGreen;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -36,6 +36,7 @@ namespace Project
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonAdminPanel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.fifthIcon = new System.Windows.Forms.PictureBox();
             this.fourthIcon = new System.Windows.Forms.PictureBox();
@@ -47,14 +48,13 @@ namespace Project
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonAdminPanel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
-            this.SettingsButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -98,7 +98,7 @@ namespace Project
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(81, 608);
+            this.label7.Location = new System.Drawing.Point(81, 602);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 33);
             this.label7.TabIndex = 20;
@@ -109,22 +109,22 @@ namespace Project
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(82, 547);
+            this.label6.Location = new System.Drawing.Point(82, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 33);
+            this.label6.Size = new System.Drawing.Size(102, 33);
             this.label6.TabIndex = 19;
-            this.label6.Text = "label6";
+            this.label6.Text = "Gallery";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(82, 484);
+            this.label5.Location = new System.Drawing.Point(82, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 33);
+            this.label5.Size = new System.Drawing.Size(84, 33);
             this.label5.TabIndex = 18;
-            this.label5.Text = "label5";
+            this.label5.Text = "News";
             // 
             // label4
             // 
@@ -132,138 +132,11 @@ namespace Project
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(81, 423);
+            this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 33);
+            this.label4.Size = new System.Drawing.Size(115, 33);
             this.label4.TabIndex = 17;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(78, 360);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Dashboard";
-            // 
-            // fifthIcon
-            // 
-            this.fifthIcon.Location = new System.Drawing.Point(26, 612);
-            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fifthIcon.Name = "fifthIcon";
-            this.fifthIcon.Size = new System.Drawing.Size(26, 25);
-            this.fifthIcon.TabIndex = 15;
-            this.fifthIcon.TabStop = false;
-            // 
-            // fourthIcon
-            // 
-            this.fourthIcon.Location = new System.Drawing.Point(26, 551);
-            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fourthIcon.Name = "fourthIcon";
-            this.fourthIcon.Size = new System.Drawing.Size(26, 25);
-            this.fourthIcon.TabIndex = 14;
-            this.fourthIcon.TabStop = false;
-            // 
-            // thirdIcon
-            // 
-            this.thirdIcon.Location = new System.Drawing.Point(26, 489);
-            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.thirdIcon.Name = "thirdIcon";
-            this.thirdIcon.Size = new System.Drawing.Size(26, 25);
-            this.thirdIcon.TabIndex = 13;
-            this.thirdIcon.TabStop = false;
-            // 
-            // secondIcon
-            // 
-            this.secondIcon.Location = new System.Drawing.Point(26, 428);
-            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.secondIcon.Name = "secondIcon";
-            this.secondIcon.Size = new System.Drawing.Size(26, 25);
-            this.secondIcon.TabIndex = 12;
-            this.secondIcon.TabStop = false;
-            // 
-            // firstIcon
-            // 
-            this.firstIcon.BackColor = System.Drawing.Color.White;
-            this.firstIcon.BackgroundImage = global::Project.Properties.Resources.dashboard_green;
-            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Location = new System.Drawing.Point(26, 365);
-            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.firstIcon.Name = "firstIcon";
-            this.firstIcon.Size = new System.Drawing.Size(26, 25);
-            this.firstIcon.TabIndex = 11;
-            this.firstIcon.TabStop = false;
-            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(9, 597);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(352, 57);
-            this.button5.TabIndex = 10;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(9, 536);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(352, 57);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "\r\n\r\n\r\n\r\n\r\n";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 474);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(352, 57);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(9, 412);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(352, 57);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(9, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(352, 57);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = false;
+            this.label4.Text = "Finance";
             // 
             // buttonAdminPanel
             // 
@@ -278,6 +151,142 @@ namespace Project
             this.buttonAdminPanel.Text = "Admin Panel";
             this.buttonAdminPanel.UseVisualStyleBackColor = false;
             this.buttonAdminPanel.Click += new System.EventHandler(this.buttonAdminPanel_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(78, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 33);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Dashboard";
+            // 
+            // fifthIcon
+            // 
+            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
+            this.fifthIcon.Location = new System.Drawing.Point(26, 608);
+            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fifthIcon.Name = "fifthIcon";
+            this.fifthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fifthIcon.TabIndex = 15;
+            this.fifthIcon.TabStop = false;
+            // 
+            // fourthIcon
+            // 
+            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
+            this.fourthIcon.Location = new System.Drawing.Point(26, 547);
+            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fourthIcon.Name = "fourthIcon";
+            this.fourthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fourthIcon.TabIndex = 14;
+            this.fourthIcon.TabStop = false;
+            // 
+            // thirdIcon
+            // 
+            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
+            this.thirdIcon.Location = new System.Drawing.Point(26, 487);
+            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.thirdIcon.Name = "thirdIcon";
+            this.thirdIcon.Size = new System.Drawing.Size(30, 30);
+            this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.thirdIcon.TabIndex = 13;
+            this.thirdIcon.TabStop = false;
+            // 
+            // secondIcon
+            // 
+            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
+            this.secondIcon.Location = new System.Drawing.Point(26, 428);
+            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.secondIcon.Name = "secondIcon";
+            this.secondIcon.Size = new System.Drawing.Size(30, 30);
+            this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.secondIcon.TabIndex = 12;
+            this.secondIcon.TabStop = false;
+            // 
+            // firstIcon
+            // 
+            this.firstIcon.BackColor = System.Drawing.Color.White;
+            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
+            this.firstIcon.Location = new System.Drawing.Point(26, 367);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.firstIcon.Name = "firstIcon";
+            this.firstIcon.Size = new System.Drawing.Size(30, 30);
+            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstIcon.TabIndex = 11;
+            this.firstIcon.TabStop = false;
+            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(9, 590);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(352, 61);
+            this.button5.TabIndex = 10;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(9, 530);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(352, 61);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "\r\n\r\n\r\n\r\n\r\n";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(9, 470);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(352, 61);
+            this.button3.TabIndex = 8;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(9, 410);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(352, 61);
+            this.button2.TabIndex = 7;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(9, 350);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(352, 61);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -338,18 +347,6 @@ namespace Project
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // SettingsButton
-            // 
-            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
-            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsButton.Location = new System.Drawing.Point(1658, 56);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
-            this.SettingsButton.TabIndex = 4;
-            this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Transparent;
@@ -361,6 +358,18 @@ namespace Project
             this.exitButton.TabIndex = 5;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
+            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsButton.Location = new System.Drawing.Point(1658, 56);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
+            this.SettingsButton.TabIndex = 4;
+            this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // Form1
             // 

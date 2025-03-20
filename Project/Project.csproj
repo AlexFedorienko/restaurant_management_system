@@ -163,5 +163,41 @@
   <ItemGroup>
     <None Include="Resources\iconCalendar_grey-32px1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditcards_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditcards_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallery_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_green2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallery_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

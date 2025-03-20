@@ -11,6 +11,7 @@ namespace Project
     public partial class Settings : Form
     {
         DataBase dataBase = new DataBase();
+        private Form1 form1;
         Auth auth = new Auth();
 
         private Form1 mainForm;
@@ -29,6 +30,8 @@ namespace Project
 
             MakePictureBoxRound(UserImage);
             MakeButtonRound(PensilButton, 20);
+
+            this.form1 = form1;
         }
 
         private void LoadUserData(int userId)
@@ -85,16 +88,18 @@ namespace Project
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = $"UPDATE auth SET image_user = @image WHERE id = {Auth.UserId}";
+            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
+            command.Parameters.Add("@userId", SqlDbType.Int).Value = Auth.UserId;
 
             dataBase.openConnection();
 
             if (command.ExecuteNonQuery() > 0)
             {
                 MessageBox.Show("Image uploaded successfully.");
-                mainForm.LoadUserImage(Auth.UserId);
+                mainForm.UpdateUserImage();
             }
             else
             {
@@ -102,6 +107,7 @@ namespace Project
             }
             dataBase.closeConnection();
         }
+
 
         private void MakeButtonRound(Button button, int radius)
         {
@@ -163,9 +169,17 @@ namespace Project
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
+
                 byte[] imageBytes = File.ReadAllBytes(imagePath);
+
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    UserImage.Image = Image.FromStream(ms);
+                }
+
                 SaveImageToDatabase(imageBytes);
             }
         }
+
     }
 }

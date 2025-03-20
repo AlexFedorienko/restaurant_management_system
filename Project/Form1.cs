@@ -110,6 +110,12 @@ namespace Project
             dataBase.closeConnection();
         }
 
+        // Оставляем только один метод для обновления изображения
+        public void UpdateUserImage()
+        {
+            LoadUserImage(Auth.UserId);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadUserImage(Auth.UserId);
@@ -132,7 +138,7 @@ namespace Project
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            Settings settingsWindow = new Settings(this);
+            Settings settingsWindow = new Settings(this);  // Передаем ссылку на текущую форму
             settingsWindow.Show();
         }
 

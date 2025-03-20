@@ -1,21 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace Project
 {
     internal class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-TI5J653\SQLEXPRESS;Initial Catalog=Authentication;Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=mssql-194469-0.cloudclusters.net,10050;Initial Catalog=Authentification;User ID=user;Password=Ytrewq321;Encrypt=True;TrustServerCertificate=True;");
 
         public void openConnection()
         {
             if (sqlConnection.State == System.Data.ConnectionState.Closed)
             {
-                sqlConnection.Open();
+                try
+                {
+                    sqlConnection.Open();
+                    Console.WriteLine("Соединение успешно открыто.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ошибка при открытии соединения: " + ex.Message);
+                }
             }
         }
 
@@ -23,7 +27,15 @@ namespace Project
         {
             if (sqlConnection.State == System.Data.ConnectionState.Open)
             {
-                sqlConnection.Close();
+                try
+                {
+                    sqlConnection.Close();
+                    Console.WriteLine("Соединение успешно закрыто.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ошибка при закрытии соединения: " + ex.Message);
+                }
             }
         }
 

@@ -62,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingPanel.Designer.cs">
+      <DependentUpon>BookingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersPanel.Designer.cs">
+      <DependentUpon>OrdersPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Panel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookingPanel.resx">
+      <DependentUpon>BookingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersPanel.resx">
+      <DependentUpon>OrdersPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </EmbeddedResource>

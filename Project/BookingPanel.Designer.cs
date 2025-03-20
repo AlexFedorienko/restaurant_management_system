@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    partial class Admin_Panel
+    partial class BookingPanel
     {
         /// <summary>
         /// Required designer variable.

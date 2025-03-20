@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    partial class Admin_Panel
+    partial class OrdersPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Panel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersPanel));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDashBoardAP = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@ namespace Project
             // 
             // buttonDashBoardAP
             // 
-            this.buttonDashBoardAP.BackColor = System.Drawing.Color.Black;
+            this.buttonDashBoardAP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.buttonDashBoardAP.FlatAppearance.BorderSize = 0;
             this.buttonDashBoardAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDashBoardAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -89,7 +89,7 @@ namespace Project
             // 
             // buttonActiveOrdersAP
             // 
-            this.buttonActiveOrdersAP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.buttonActiveOrdersAP.BackColor = System.Drawing.Color.Black;
             this.buttonActiveOrdersAP.FlatAppearance.BorderSize = 0;
             this.buttonActiveOrdersAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonActiveOrdersAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -199,7 +199,7 @@ namespace Project
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Admin_Panel
+            // OrdersPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +218,7 @@ namespace Project
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Admin_Panel";
+            this.Name = "OrdersPanel";
             this.Text = "Admin_Panel";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

@@ -147,7 +147,8 @@ namespace Project
 
         private void buttonAdminPanel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Admin_Panel adminPanel = new Admin_Panel(userName, userId);
             adminPanel.ShowDialog();
         }
 

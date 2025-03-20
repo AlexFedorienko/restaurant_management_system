@@ -11,17 +11,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project
 {
-    public partial class Admin_Panel : Form
+    public partial class OrdersPanel : Form
     {
         private Form1 form1;
         private string userName;
         private int userId;
 
-        public Admin_Panel()
+        public OrdersPanel()
         {
         }
 
-        public Admin_Panel(string userName, int userId)
+        public OrdersPanel(string userName, int userId)
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;

@@ -62,6 +62,9 @@ namespace Project
 
         private void btnEnterMainForm_Click(object sender, EventArgs e)
         {
+            UserName = "DefaultUser";
+            UserId = 0;
+
             form1 = new Form1(UserName, UserId);
 
             form1.Show();

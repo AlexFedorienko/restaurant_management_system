@@ -70,7 +70,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
+            string querystring = $"SELECT image_user FROM Auth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             command.Parameters.AddWithValue("@userId", userId);
@@ -90,7 +90,7 @@ namespace Project
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+            string query = "UPDATE Auth SET image_user = @image WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
@@ -200,43 +200,6 @@ namespace Project
 
             firstIcon.Image = Properties.Resources.dashboard_white1;
             firstIcon.BackColor = Color.SeaGreen;
-        }
-
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-            button2.BackColor = Color.White;
-            button2.ForeColor = Color.SeaGreen;
-
-            button1.BackColor = Color.SeaGreen;
-            label4.BackColor = Color.SeaGreen;
-            label4.ForeColor = Color.White;
-
-            label4.BackColor = Color.White;
-            label4.ForeColor = Color.SeaGreen;
-
-            secondIcon.Image = Properties.Resources.creditcards_white;
-            secondIcon.BackColor = Color.SeaGreen;
-
-            secondIcon.Image = Properties.Resources.creditcards_green;
-            secondIcon.BackColor = Color.White;
-        }
-
-        private void button2_MouseLeave(object sender, EventArgs e)
-        {
-            button2.BackColor = Color.White;
-
-            button1.BackColor = Color.SeaGreen;
-            label4.BackColor = Color.SeaGreen;
-            label4.ForeColor = Color.White;
-
-            label4.BackColor = Color.SeaGreen;
-            label4.ForeColor = Color.White;
-
-            secondIcon.Image = Properties.Resources.creditcards_green;
-            secondIcon.BackColor = Color.White;
-
-            secondIcon.Image = Properties.Resources.creditcards_white;
-            secondIcon.BackColor = Color.SeaGreen;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)

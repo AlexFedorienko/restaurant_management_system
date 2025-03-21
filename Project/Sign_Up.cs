@@ -35,7 +35,7 @@ namespace Project
                 return;
             }
 
-            string querystring = $"INSERT INTO auth (login_user, password_user, email_user) " +
+            string querystring = $"INSERT INTO Auth (login_user, password_user, email_user) " +
                                  $"VALUES ('{login}', '{password}', '{email}')";
 
             SqlCommand command = new SqlCommand(querystring, dbsql.getConnection());
@@ -69,7 +69,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable dt = new DataTable();
 
-            string querystring = $"SELECT login_user FROM auth WHERE login_user = '{loginUser}'";
+            string querystring = $"SELECT login_user FROM Auth WHERE login_user = '{loginUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dbsql.getConnection());
             adapter.SelectCommand = command;

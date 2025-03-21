@@ -273,8 +273,6 @@ namespace Project
             this.button2.Size = new System.Drawing.Size(352, 61);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // button1
             // 

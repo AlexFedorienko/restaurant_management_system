@@ -5,7 +5,7 @@ namespace Project
 {
     internal class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=mssql-194469-0.cloudclusters.net,10050;Initial Catalog=Authentification;User ID=user;Password=Ytrewq321;Encrypt=True;TrustServerCertificate=True;");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=mssql-194469-0.cloudclusters.net,10050;Initial Catalog=FoodDelivery;User ID=user;Password=Ytrewq321;Encrypt=True;TrustServerCertificate=True;");
 
         public void openConnection()
         {

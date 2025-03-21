@@ -75,7 +75,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
+            string querystring = $"SELECT image_user FROM Auth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             command.Parameters.AddWithValue("@userId", userId);
@@ -95,7 +95,7 @@ namespace Project
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+            string query = "UPDATE Auth SET image_user = @image WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
@@ -323,6 +323,41 @@ namespace Project
         {
 
         }
+
+        /*
+        private void LoadUserMenu()
+        {
+            flowLayoutPanelMenu.Controls.Clear();
+            using (SqlConnection conn = new SqlConnection("Server=YOUR_SERVER;Database=YOUR_DB;Integrated Security=True;"))
+            {
+                conn.Open();
+                string query = "SELECT Id, Name, Price, Image FROM MenuItems";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Panel panel = new Panel { Width = 200, Height = 250 };
+                        PictureBox pic = new PictureBox { Width = 180, Height = 120 };
+
+                        byte[] imageData = reader["Image"] as byte[];
+                        if (imageData != null)
+                        {
+                            MemoryStream ms = new MemoryStream(imageData);
+                            pic.Image = Image.FromStream(ms);
+                        }
+
+                        Label lbl = new Label { Text = $"{reader["Name"]} - {reader["Price"]} грн" };
+                        Button btn = new Button { Text = "Добавить в корзину" };
+                        btn.Click += (s, e) => AddToCart((int)reader["Id"]);
+
+                        panel.Controls.AddRange(new Control[] { pic, lbl, btn });
+                        flowLayoutPanelMenu.Controls.Add(panel);
+                    }
+                }
+            }
+        }
+        */
 
         // Перехід між формами
         private void button2_Click(object sender, EventArgs e)

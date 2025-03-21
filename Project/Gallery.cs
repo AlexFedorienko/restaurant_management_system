@@ -71,7 +71,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT image_user FROM auth WHERE id = @userId";
+            string querystring = $"SELECT image_user FROM aAuthuth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             command.Parameters.AddWithValue("@userId", userId);
@@ -91,7 +91,7 @@ namespace Project
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+            string query = "UPDATE Auth SET image_user = @image WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;

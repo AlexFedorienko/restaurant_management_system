@@ -32,7 +32,6 @@ namespace Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Panel));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDashBoardAP = new System.Windows.Forms.Button();
             this.buttonActiveOrdersAP = new System.Windows.Forms.Button();
@@ -44,20 +43,20 @@ namespace Project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.MenuList = new System.Windows.Forms.DataGridView();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.buttonAddItem = new System.Windows.Forms.Button();
+            this.ItemImage = new System.Windows.Forms.Button();
+            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(226, 7);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 711);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -184,7 +183,6 @@ namespace Project
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // button1
             // 
@@ -199,12 +197,79 @@ namespace Project
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // MenuList
+            // 
+            this.MenuList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MenuList.Location = new System.Drawing.Point(677, 9);
+            this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
+            this.MenuList.Name = "MenuList";
+            this.MenuList.Size = new System.Drawing.Size(593, 362);
+            this.MenuList.TabIndex = 0;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(321, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(132, 20);
+            this.textBoxName.TabIndex = 13;
+            // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.Location = new System.Drawing.Point(321, 79);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(132, 20);
+            this.textBoxDescription.TabIndex = 14;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(321, 112);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(132, 20);
+            this.textBoxPrice.TabIndex = 15;
+            // 
+            // buttonAddItem
+            // 
+            this.buttonAddItem.Location = new System.Drawing.Point(321, 205);
+            this.buttonAddItem.Name = "buttonAddItem";
+            this.buttonAddItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddItem.TabIndex = 17;
+            this.buttonAddItem.Text = "button2";
+            this.buttonAddItem.UseVisualStyleBackColor = true;
+            this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
+            // 
+            // ItemImage
+            // 
+            this.ItemImage.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemImage.Location = new System.Drawing.Point(321, 152);
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.Size = new System.Drawing.Size(132, 30);
+            this.ItemImage.TabIndex = 18;
+            this.ItemImage.Text = "Upload";
+            this.ItemImage.UseVisualStyleBackColor = true;
+            this.ItemImage.Click += new System.EventHandler(this.buttonSelectImage_Click);
+            // 
+            // pictureBoxPreview
+            // 
+            this.pictureBoxPreview.Location = new System.Drawing.Point(484, 45);
+            this.pictureBoxPreview.Name = "pictureBoxPreview";
+            this.pictureBoxPreview.Size = new System.Drawing.Size(143, 148);
+            this.pictureBoxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPreview.TabIndex = 19;
+            this.pictureBoxPreview.TabStop = false;
+            // 
             // Admin_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBoxPreview);
+            this.Controls.Add(this.ItemImage);
+            this.Controls.Add(this.buttonAddItem);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.MenuList);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
@@ -216,7 +281,6 @@ namespace Project
             this.Controls.Add(this.buttonDashBoardAP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_Panel";
             this.Text = "Admin_Panel";
@@ -224,6 +288,8 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +298,6 @@ namespace Project
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonDashBoardAP;
         private System.Windows.Forms.Button buttonActiveOrdersAP;
@@ -243,5 +308,12 @@ namespace Project
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DataGridView MenuList;
+        private TextBox textBoxName;
+        private TextBox textBoxDescription;
+        private TextBox textBoxPrice;
+        private Button buttonAddItem;
+        private Button ItemImage;
+        private PictureBox pictureBoxPreview;
     }
 }

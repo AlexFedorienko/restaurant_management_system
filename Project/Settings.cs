@@ -36,7 +36,7 @@ namespace Project
 
         private void LoadUserData(int userId)
         {
-            string query = $"SELECT login_user, email_user, password_user FROM auth WHERE id = {userId}";
+            string query = $"SELECT login_user, email_user, password_user FROM Auth WHERE id = {userId}";
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
 
             dataBase.openConnection();
@@ -88,7 +88,7 @@ namespace Project
 
         private void SaveImageToDatabase(byte[] imageBytes)
         {
-            string query = "UPDATE auth SET image_user = @image WHERE id = @userId";
+            string query = "UPDATE Auth SET image_user = @image WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             command.Parameters.Add("@image", SqlDbType.VarBinary).Value = imageBytes;
@@ -126,7 +126,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string query = $"SELECT image_user FROM auth WHERE id = {userId}";
+            string query = $"SELECT image_user FROM Auth WHERE id = {userId}";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
             adapter.SelectCommand = command;
@@ -180,6 +180,5 @@ namespace Project
                 SaveImageToDatabase(imageBytes);
             }
         }
-
     }
 }

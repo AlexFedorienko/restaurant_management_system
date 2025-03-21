@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Project
 {
@@ -20,6 +24,15 @@ namespace Project
 
         private string userName;
         private int userId;
+        private List<CartItem> cart = new List<CartItem>();
+
+        public class CartItem
+        {
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+            public int Quantity { get; set; }
+            public string Category { get; set; }
+        }
 
         public Form1(string userName, int userId)
         {
@@ -119,11 +132,6 @@ namespace Project
             LoadUserImage(Auth.UserId);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoadUserImage(Auth.UserId);
-        }
-
         private void btnEnterUploadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -141,7 +149,7 @@ namespace Project
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            Settings settingsWindow = new Settings(this);  // Передаем ссылку на текущую форму
+            Settings settingsWindow = new Settings(this);
             settingsWindow.Show();
         }
 
@@ -324,40 +332,153 @@ namespace Project
 
         }
 
-        /*
-        private void LoadUserMenu()
+        private void LoadMenuItems()
         {
+            dataBase.openConnection();
+            string query = "SELECT * FROM Menu";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, dataBase.getConnection());
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
             flowLayoutPanelMenu.Controls.Clear();
-            using (SqlConnection conn = new SqlConnection("Server=YOUR_SERVER;Database=YOUR_DB;Integrated Security=True;"))
+
+            foreach (DataRow row in table.Rows)
             {
-                conn.Open();
-                string query = "SELECT Id, Name, Price, Image FROM MenuItems";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                Panel productPanel = new Panel();
+                productPanel.Size = new Size(200, 280);  // Adjust the height for the button
+                productPanel.Margin = new Padding(10);
+                productPanel.BackColor = Color.White;
+
+                PictureBox pictureBox = new PictureBox();
+                pictureBox.Size = new Size(150, 150);
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (row["Image"] != DBNull.Value)
                 {
-                    while (reader.Read())
+                    byte[] imageData = (byte[])row["Image"];
+                    using (MemoryStream ms = new MemoryStream(imageData))
                     {
-                        Panel panel = new Panel { Width = 200, Height = 250 };
-                        PictureBox pic = new PictureBox { Width = 180, Height = 120 };
-
-                        byte[] imageData = reader["Image"] as byte[];
-                        if (imageData != null)
-                        {
-                            MemoryStream ms = new MemoryStream(imageData);
-                            pic.Image = Image.FromStream(ms);
-                        }
-
-                        Label lbl = new Label { Text = $"{reader["Name"]} - {reader["Price"]} грн" };
-                        Button btn = new Button { Text = "Добавить в корзину" };
-                        btn.Click += (s, e) => AddToCart((int)reader["Id"]);
-
-                        panel.Controls.AddRange(new Control[] { pic, lbl, btn });
-                        flowLayoutPanelMenu.Controls.Add(panel);
+                        pictureBox.Image = Image.FromStream(ms);
                     }
                 }
+
+                Label labelName = new Label();
+                labelName.Text = row["Name"].ToString();
+                labelName.TextAlign = ContentAlignment.MiddleCenter;
+                labelName.Size = new Size(150, 30);
+                labelName.Font = new Font("Century Gothic", 15, FontStyle.Bold);
+                labelName.Location = new Point((productPanel.Width - labelName.Width) / 2, pictureBox.Bottom + 5);
+
+                Label labelPrice = new Label();
+                labelPrice.Text = "$" + row["Price"].ToString();
+                labelPrice.TextAlign = ContentAlignment.MiddleCenter;
+                labelPrice.Size = new Size(150, 30);
+                labelPrice.Font = new Font("Century Gothic", 15, FontStyle.Bold);
+                labelPrice.Location = new Point((productPanel.Width - labelPrice.Width) / 2, labelName.Bottom + 5);
+
+                Button addToCartButton = new Button();
+                addToCartButton.Text = "Add to cart";
+                addToCartButton.Size = new Size(150, 32);
+                addToCartButton.BackColor = Color.SeaGreen;
+                addToCartButton.ForeColor = Color.White;
+                addToCartButton.FlatStyle = FlatStyle.Flat;
+                addToCartButton.Font = new Font("Arial", 12, FontStyle.Bold);
+                addToCartButton.Location = new Point((productPanel.Width - addToCartButton.Width) / 2, labelPrice.Bottom + 10);
+                addToCartButton.Click += (sender, e) => AddToCart(row);
+
+                productPanel.Controls.Add(pictureBox);
+                productPanel.Controls.Add(labelName);
+                productPanel.Controls.Add(labelPrice);
+                productPanel.Controls.Add(addToCartButton);
+
+                flowLayoutPanelMenu.Controls.Add(productPanel);
             }
+
+            dataBase.closeConnection();
         }
-        */
+
+        private void UpdateCartDisplay()
+        {
+            flowLayoutPanelCart.Controls.Clear();
+
+            decimal totalAmount = 0;
+
+            foreach (CartItem item in cart)
+            {
+                Panel itemPanel = new Panel();
+                itemPanel.Size = new Size(300, 100);
+                itemPanel.Margin = new Padding(10);
+                itemPanel.BackColor = Color.LightGray;
+
+                Label labelName = new Label();
+                labelName.Text = $"{item.Name}";
+                labelName.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                labelName.Size = new Size(200, 30);
+                labelName.Location = new Point(10, 10);
+
+                Label labelQuantity = new Label();
+                labelQuantity.Text = $"Количество: {item.Quantity}";
+                labelQuantity.Font = new Font("Arial", 10);
+                labelQuantity.Size = new Size(200, 30);
+                labelQuantity.Location = new Point(10, labelName.Bottom + 5);
+
+                Label labelPrice = new Label();
+                labelPrice.Text = $"Цена: ${item.Price}";
+                labelPrice.Font = new Font("Arial", 10);
+                labelPrice.Size = new Size(200, 30);
+                labelPrice.Location = new Point(10, labelQuantity.Bottom + 5);
+
+                Label labelTotal = new Label();
+                labelTotal.Text = $"Итого: ${item.Price * item.Quantity}";
+                labelTotal.Font = new Font("Arial", 10);
+                labelTotal.Size = new Size(200, 30);
+                labelTotal.Location = new Point(10, labelPrice.Bottom + 5);
+
+                itemPanel.Controls.Add(labelName);
+                itemPanel.Controls.Add(labelQuantity);
+                itemPanel.Controls.Add(labelPrice);
+                itemPanel.Controls.Add(labelTotal);
+
+                flowLayoutPanelCart.Controls.Add(itemPanel);
+
+                totalAmount += item.Price * item.Quantity;
+            }
+
+            Label totalAmountLabel = new Label();
+            totalAmountLabel.Text = $"Общая сумма: ${totalAmount}";
+            totalAmountLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+            totalAmountLabel.Size = new Size(300, 30);
+            totalAmountLabel.Location = new Point(10, flowLayoutPanelCart.Bottom + 10);
+            flowLayoutPanelCart.Controls.Add(totalAmountLabel);
+        }
+
+
+        private void AddToCart(DataRow productRow)
+        {
+            string productName = productRow["Name"].ToString();
+            decimal productPrice = Convert.ToDecimal(productRow["Price"]);
+            string productCategory = productRow.Table.Columns.Contains("Category") ? productRow["Category"].ToString() : "Unknown";
+
+            CartItem existingItem = cart.FirstOrDefault(item => item.Name == productName && item.Category == productCategory);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantity++;
+            }
+            else
+            {
+                CartItem newItem = new CartItem
+                {
+                    Name = productName,
+                    Price = productPrice,
+                    Quantity = 1,
+                    Category = productCategory
+                };
+                cart.Add(newItem);
+            }
+
+            UpdateCartDisplay();
+        }
+
 
         // Перехід між формами
         private void button2_Click(object sender, EventArgs e)
@@ -382,6 +503,12 @@ namespace Project
 
             this.Hide();
             gallery.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadUserImage(Auth.UserId);
+            LoadMenuItems();
         }
     }
 }

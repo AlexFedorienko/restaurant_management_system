@@ -332,11 +332,23 @@ namespace Project
 
         }
 
-        private void LoadMenuItems()
+        private void LoadMenuItems(string searchText = "")
         {
             dataBase.openConnection();
             string query = "SELECT * FROM Menu";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, dataBase.getConnection());
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                query += " WHERE Name LIKE @SearchText";
+            }
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                command.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
 
@@ -344,14 +356,18 @@ namespace Project
 
             foreach (DataRow row in table.Rows)
             {
-                Panel productPanel = new Panel();
-                productPanel.Size = new Size(200, 280);  // Adjust the height for the button
-                productPanel.Margin = new Padding(10);
-                productPanel.BackColor = Color.White;
+                Panel productPanel = new Panel
+                {
+                    Size = new Size(200, 280),
+                    Margin = new Padding(10),
+                    BackColor = Color.White
+                };
 
-                PictureBox pictureBox = new PictureBox();
-                pictureBox.Size = new Size(150, 150);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                PictureBox pictureBox = new PictureBox
+                {
+                    Size = new Size(150, 150),
+                    SizeMode = PictureBoxSizeMode.StretchImage
+                };
                 if (row["Image"] != DBNull.Value)
                 {
                     byte[] imageData = (byte[])row["Image"];
@@ -361,28 +377,34 @@ namespace Project
                     }
                 }
 
-                Label labelName = new Label();
-                labelName.Text = row["Name"].ToString();
-                labelName.TextAlign = ContentAlignment.MiddleCenter;
-                labelName.Size = new Size(150, 30);
-                labelName.Font = new Font("Century Gothic", 15, FontStyle.Bold);
-                labelName.Location = new Point((productPanel.Width - labelName.Width) / 2, pictureBox.Bottom + 5);
+                Label labelName = new Label
+                {
+                    Text = row["Name"].ToString(),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(150, 30),
+                    Font = new Font("Century Gothic", 15, FontStyle.Bold),
+                    Location = new Point((productPanel.Width - 150) / 2, pictureBox.Bottom + 5)
+                };
 
-                Label labelPrice = new Label();
-                labelPrice.Text = "$" + row["Price"].ToString();
-                labelPrice.TextAlign = ContentAlignment.MiddleCenter;
-                labelPrice.Size = new Size(150, 30);
-                labelPrice.Font = new Font("Century Gothic", 15, FontStyle.Bold);
-                labelPrice.Location = new Point((productPanel.Width - labelPrice.Width) / 2, labelName.Bottom + 5);
+                Label labelPrice = new Label
+                {
+                    Text = "$" + row["Price"].ToString(),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(150, 30),
+                    Font = new Font("Century Gothic", 15, FontStyle.Bold),
+                    Location = new Point((productPanel.Width - 150) / 2, labelName.Bottom + 5)
+                };
 
-                Button addToCartButton = new Button();
-                addToCartButton.Text = "Add to cart";
-                addToCartButton.Size = new Size(150, 32);
-                addToCartButton.BackColor = Color.SeaGreen;
-                addToCartButton.ForeColor = Color.White;
-                addToCartButton.FlatStyle = FlatStyle.Flat;
-                addToCartButton.Font = new Font("Arial", 12, FontStyle.Bold);
-                addToCartButton.Location = new Point((productPanel.Width - addToCartButton.Width) / 2, labelPrice.Bottom + 10);
+                Button addToCartButton = new Button
+                {
+                    Text = "Add to cart",
+                    Size = new Size(150, 32),
+                    BackColor = Color.SeaGreen,
+                    ForeColor = Color.White,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("Arial", 12, FontStyle.Bold),
+                    Location = new Point((productPanel.Width - 150) / 2, labelPrice.Bottom + 10)
+                };
                 addToCartButton.Click += (sender, e) => AddToCart(row);
 
                 productPanel.Controls.Add(pictureBox);
@@ -395,6 +417,7 @@ namespace Project
 
             dataBase.closeConnection();
         }
+
 
         private void UpdateCartDisplay()
         {
@@ -520,6 +543,16 @@ namespace Project
         {
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
+        }
+
+        private void textBoxSearchF_TextChanged(object sender, EventArgs e)
+        {
+            LoadMenuItems(textBoxSearchF.Text);
+        }
+
+        private void flowLayoutPanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

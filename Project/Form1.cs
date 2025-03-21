@@ -413,25 +413,25 @@ namespace Project
                 labelName.Text = $"{item.Name}";
                 labelName.Font = new Font("Century Gothic", 12, FontStyle.Bold);
                 labelName.Size = new Size(200, 30);
-                labelName.Location = new Point(10, 10);
+                labelName.Location = new Point(15, 10);
 
                 Label labelQuantity = new Label();
                 labelQuantity.Text = $"Количество: {item.Quantity}";
                 labelQuantity.Font = new Font("Arial", 10);
                 labelQuantity.Size = new Size(200, 30);
-                labelQuantity.Location = new Point(10, labelName.Bottom + 5);
+                labelQuantity.Location = new Point(15, labelName.Bottom + 5);
 
                 Label labelPrice = new Label();
                 labelPrice.Text = $"Цена: ${item.Price}";
                 labelPrice.Font = new Font("Arial", 10);
                 labelPrice.Size = new Size(200, 30);
-                labelPrice.Location = new Point(10, labelQuantity.Bottom + 5);
+                labelPrice.Location = new Point(15, labelQuantity.Bottom + 5);
 
                 Label labelTotal = new Label();
                 labelTotal.Text = $"Итого: ${item.Price * item.Quantity}";
                 labelTotal.Font = new Font("Arial", 10);
                 labelTotal.Size = new Size(200, 30);
-                labelTotal.Location = new Point(10, labelPrice.Bottom + 5);
+                labelTotal.Location = new Point(15, labelPrice.Bottom + 5);
 
                 itemPanel.Controls.Add(labelName);
                 itemPanel.Controls.Add(labelQuantity);
@@ -449,6 +449,8 @@ namespace Project
             totalAmountLabel.Size = new Size(300, 30);
             totalAmountLabel.Location = new Point(10, flowLayoutPanelCart.Bottom + 10);
             flowLayoutPanelCart.Controls.Add(totalAmountLabel);
+
+            flowLayoutPanelCart.AutoScrollPosition = new Point(0, flowLayoutPanelCart.VerticalScroll.Maximum);
         }
 
 

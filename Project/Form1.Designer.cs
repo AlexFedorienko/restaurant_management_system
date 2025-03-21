@@ -57,6 +57,7 @@ namespace Project
             this.SettingsButton = new System.Windows.Forms.Button();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelMyOrder = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -90,7 +91,7 @@ namespace Project
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 1080);
             this.panel1.TabIndex = 1;
@@ -170,7 +171,7 @@ namespace Project
             // 
             this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
             this.fifthIcon.Location = new System.Drawing.Point(26, 602);
-            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
             this.fifthIcon.Name = "fifthIcon";
             this.fifthIcon.Size = new System.Drawing.Size(30, 30);
             this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +182,7 @@ namespace Project
             // 
             this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
             this.fourthIcon.Location = new System.Drawing.Point(26, 542);
-            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
             this.fourthIcon.Name = "fourthIcon";
             this.fourthIcon.Size = new System.Drawing.Size(30, 30);
             this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +193,7 @@ namespace Project
             // 
             this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
             this.thirdIcon.Location = new System.Drawing.Point(26, 481);
-            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
             this.thirdIcon.Name = "thirdIcon";
             this.thirdIcon.Size = new System.Drawing.Size(30, 30);
             this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +204,7 @@ namespace Project
             // 
             this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
             this.secondIcon.Location = new System.Drawing.Point(26, 422);
-            this.secondIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
             this.secondIcon.Name = "secondIcon";
             this.secondIcon.Size = new System.Drawing.Size(30, 30);
             this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,7 +217,7 @@ namespace Project
             this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
             this.firstIcon.Location = new System.Drawing.Point(26, 367);
-            this.firstIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
             this.firstIcon.Name = "firstIcon";
             this.firstIcon.Size = new System.Drawing.Size(30, 30);
             this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +230,7 @@ namespace Project
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(9, 590);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(352, 61);
             this.button5.TabIndex = 10;
@@ -242,7 +243,7 @@ namespace Project
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(9, 530);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(352, 61);
             this.button4.TabIndex = 9;
@@ -257,7 +258,7 @@ namespace Project
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(9, 470);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(352, 61);
             this.button3.TabIndex = 8;
@@ -272,7 +273,7 @@ namespace Project
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(9, 410);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(352, 61);
             this.button2.TabIndex = 7;
@@ -287,7 +288,7 @@ namespace Project
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(9, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
@@ -385,10 +386,24 @@ namespace Project
             // 
             // flowLayoutPanelCart
             // 
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(1592, 155);
+            this.flowLayoutPanelCart.AutoScroll = true;
+            this.flowLayoutPanelCart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(1579, 196);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(289, 741);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(299, 571);
             this.flowLayoutPanelCart.TabIndex = 7;
+            // 
+            // labelMyOrder
+            // 
+            this.labelMyOrder.AutoSize = true;
+            this.labelMyOrder.BackColor = System.Drawing.Color.Transparent;
+            this.labelMyOrder.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMyOrder.ForeColor = System.Drawing.Color.Black;
+            this.labelMyOrder.Location = new System.Drawing.Point(1572, 135);
+            this.labelMyOrder.Name = "labelMyOrder";
+            this.labelMyOrder.Size = new System.Drawing.Size(175, 38);
+            this.labelMyOrder.TabIndex = 17;
+            this.labelMyOrder.Text = "My Order";
             // 
             // Form1
             // 
@@ -396,6 +411,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.labelMyOrder);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.flowLayoutPanelMenu);
             this.Controls.Add(this.exitButton);
@@ -403,7 +419,7 @@ namespace Project
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -418,6 +434,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -448,6 +465,7 @@ namespace Project
         private Label label7;
         private FlowLayoutPanel flowLayoutPanelMenu;
         private FlowLayoutPanel flowLayoutPanelCart;
+        private Label labelMyOrder;
     }
 }
 

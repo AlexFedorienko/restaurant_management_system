@@ -58,6 +58,8 @@ namespace Project
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBoxSearchF = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -384,6 +386,7 @@ namespace Project
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
             this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1101, 692);
             this.flowLayoutPanelMenu.TabIndex = 6;
+            this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
             // flowLayoutPanelCart
             // 
@@ -407,12 +410,34 @@ namespace Project
             this.label8.TabIndex = 8;
             this.label8.Text = "What would you like to eat?";
             // 
+            // textBoxSearchF
+            // 
+            this.textBoxSearchF.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSearchF.Location = new System.Drawing.Point(566, 40);
+            this.textBoxSearchF.Multiline = true;
+            this.textBoxSearchF.Name = "textBoxSearchF";
+            this.textBoxSearchF.Size = new System.Drawing.Size(403, 44);
+            this.textBoxSearchF.TabIndex = 9;
+            this.textBoxSearchF.TextChanged += new System.EventHandler(this.textBoxSearchF_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(406, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 39);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Search";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBoxSearchF);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.flowLayoutPanelMenu);
@@ -468,6 +493,8 @@ namespace Project
         private FlowLayoutPanel flowLayoutPanelMenu;
         private FlowLayoutPanel flowLayoutPanelCart;
         private Label label8;
+        private TextBox textBoxSearchF;
+        private Label label9;
     }
 }
 

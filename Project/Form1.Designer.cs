@@ -57,7 +57,7 @@ namespace Project
             this.SettingsButton = new System.Windows.Forms.Button();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelMyOrder = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -347,9 +347,9 @@ namespace Project
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Log out"});
-            this.comboBox.Location = new System.Drawing.Point(1719, 61);
+            this.comboBox.Location = new System.Drawing.Point(1723, 62);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(121, 28);
+            this.comboBox.Size = new System.Drawing.Size(150, 28);
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -370,40 +370,42 @@ namespace Project
             this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
             this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
             this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsButton.Location = new System.Drawing.Point(1658, 56);
+            this.SettingsButton.Location = new System.Drawing.Point(1655, 58);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
+            this.SettingsButton.Size = new System.Drawing.Size(35, 35);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // flowLayoutPanelMenu
             // 
-            this.flowLayoutPanelMenu.Location = new System.Drawing.Point(412, 61);
+            this.flowLayoutPanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flowLayoutPanelMenu.Location = new System.Drawing.Point(413, 193);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
-            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1105, 835);
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1101, 692);
             this.flowLayoutPanelMenu.TabIndex = 6;
             // 
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
-            this.flowLayoutPanelCart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(1579, 196);
+            this.flowLayoutPanelCart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(1569, 141);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(299, 571);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(320, 626);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
-            // labelMyOrder
+            // label8
             // 
-            this.labelMyOrder.AutoSize = true;
-            this.labelMyOrder.BackColor = System.Drawing.Color.Transparent;
-            this.labelMyOrder.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMyOrder.ForeColor = System.Drawing.Color.Black;
-            this.labelMyOrder.Location = new System.Drawing.Point(1572, 135);
-            this.labelMyOrder.Name = "labelMyOrder";
-            this.labelMyOrder.Size = new System.Drawing.Size(175, 38);
-            this.labelMyOrder.TabIndex = 17;
-            this.labelMyOrder.Text = "My Order";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(406, 131);
+            this.label8.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(483, 41);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "What would you like to eat?";
             // 
             // Form1
             // 
@@ -411,7 +413,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.labelMyOrder);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.flowLayoutPanelMenu);
             this.Controls.Add(this.exitButton);
@@ -465,7 +467,7 @@ namespace Project
         private Label label7;
         private FlowLayoutPanel flowLayoutPanelMenu;
         private FlowLayoutPanel flowLayoutPanelCart;
-        private Label labelMyOrder;
+        private Label label8;
     }
 }
 

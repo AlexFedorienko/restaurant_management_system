@@ -400,14 +400,22 @@ namespace Project
         {
             flowLayoutPanelCart.Controls.Clear();
 
+            Label myOrderLabel = new Label();
+            myOrderLabel.Text = "My Order";
+            myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
+            myOrderLabel.ForeColor = Color.Black;
+            myOrderLabel.Size = new Size(300, 40);
+            myOrderLabel.TextAlign = ContentAlignment.MiddleCenter;
+            flowLayoutPanelCart.Controls.Add(myOrderLabel);
+
             decimal totalAmount = 0;
 
             foreach (CartItem item in cart)
             {
                 Panel itemPanel = new Panel();
-                itemPanel.Size = new Size(300, 100);
-                itemPanel.Margin = new Padding(10);
-                itemPanel.BackColor = Color.LightGray;
+                itemPanel.Size = new Size(270, 100);
+                itemPanel.Margin = new Padding(20);
+                itemPanel.BackColor = Color.Gainsboro;
 
                 Label labelName = new Label();
                 labelName.Text = $"{item.Name}";
@@ -452,6 +460,7 @@ namespace Project
 
             flowLayoutPanelCart.AutoScrollPosition = new Point(0, flowLayoutPanelCart.VerticalScroll.Maximum);
         }
+
 
 
         private void AddToCart(DataRow productRow)

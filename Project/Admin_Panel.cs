@@ -122,5 +122,20 @@ namespace Project
             form1 = new Form1(userName, userId);
             form1.Show();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.pictureBox5 = FromArgb
+        }
+
+        private void buttonBookingAP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDashBoardAP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

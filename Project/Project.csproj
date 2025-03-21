@@ -244,5 +244,14 @@
   <ItemGroup>
     <None Include="Resources\gallery_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCalendar_grey-32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconOrderTelephone_grey-32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconTags_grey-32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

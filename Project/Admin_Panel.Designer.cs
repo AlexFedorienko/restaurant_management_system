@@ -153,7 +153,7 @@ namespace Project
             this.MenuList.Name = "MenuList";
             this.MenuList.RowHeadersWidth = 47;
             this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.MenuList.Size = new System.Drawing.Size(1173, 485);
+            this.MenuList.Size = new System.Drawing.Size(1173, 852);
             this.MenuList.TabIndex = 0;
             // 
             // textBoxName

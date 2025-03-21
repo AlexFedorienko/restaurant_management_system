@@ -199,50 +199,56 @@ namespace Project
             // 
             // MenuList
             // 
-            this.MenuList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MenuList.Location = new System.Drawing.Point(677, 9);
+            this.MenuList.ColumnHeadersHeight = 50;
+            this.MenuList.Location = new System.Drawing.Point(565, 24);
             this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.MenuList.Name = "MenuList";
-            this.MenuList.Size = new System.Drawing.Size(593, 362);
+            this.MenuList.RowHeadersWidth = 47;
+            this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.MenuList.Size = new System.Drawing.Size(599, 386);
             this.MenuList.TabIndex = 0;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(321, 45);
+            this.textBoxName.Location = new System.Drawing.Point(309, 45);
+            this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(132, 20);
+            this.textBoxName.Size = new System.Drawing.Size(149, 30);
             this.textBoxName.TabIndex = 13;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(321, 79);
+            this.textBoxDescription.Location = new System.Drawing.Point(309, 88);
+            this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(132, 20);
+            this.textBoxDescription.Size = new System.Drawing.Size(149, 30);
             this.textBoxDescription.TabIndex = 14;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(321, 112);
+            this.textBoxPrice.Location = new System.Drawing.Point(309, 131);
+            this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(132, 20);
+            this.textBoxPrice.Size = new System.Drawing.Size(149, 30);
             this.textBoxPrice.TabIndex = 15;
             // 
             // buttonAddItem
             // 
-            this.buttonAddItem.Location = new System.Drawing.Point(321, 205);
+            this.buttonAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddItem.Location = new System.Drawing.Point(309, 355);
             this.buttonAddItem.Name = "buttonAddItem";
-            this.buttonAddItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddItem.Size = new System.Drawing.Size(149, 30);
             this.buttonAddItem.TabIndex = 17;
-            this.buttonAddItem.Text = "button2";
+            this.buttonAddItem.Text = "Save";
             this.buttonAddItem.UseVisualStyleBackColor = true;
             this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
             // 
             // ItemImage
             // 
             this.ItemImage.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemImage.Location = new System.Drawing.Point(321, 152);
+            this.ItemImage.Location = new System.Drawing.Point(309, 315);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(132, 30);
+            this.ItemImage.Size = new System.Drawing.Size(149, 30);
             this.ItemImage.TabIndex = 18;
             this.ItemImage.Text = "Upload";
             this.ItemImage.UseVisualStyleBackColor = true;
@@ -250,9 +256,9 @@ namespace Project
             // 
             // pictureBoxPreview
             // 
-            this.pictureBoxPreview.Location = new System.Drawing.Point(484, 45);
+            this.pictureBoxPreview.Location = new System.Drawing.Point(320, 174);
             this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.Size = new System.Drawing.Size(143, 148);
+            this.pictureBoxPreview.Size = new System.Drawing.Size(130, 130);
             this.pictureBoxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPreview.TabIndex = 19;
             this.pictureBoxPreview.TabStop = false;

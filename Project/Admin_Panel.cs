@@ -44,14 +44,13 @@ namespace Project
                 DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
                 imgCol.Name = "Image";
                 imgCol.HeaderText = "Image";
-                imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom; // Используем Zoom для масштабирования
+                imgCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 MenuList.Columns.Add(imgCol);
             }
 
-            // Устанавливаем высоту строки, чтобы фото не были сжатыми
             foreach (DataGridViewRow row in MenuList.Rows)
             {
-                row.Height = 150; // Устанавливаем нужную высоту для отображения изображений
+                row.Height = 150; 
             }
 
             foreach (DataGridViewRow row in MenuList.Rows)

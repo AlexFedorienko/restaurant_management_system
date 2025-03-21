@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -39,6 +38,17 @@ namespace Project
             adapter.Fill(table);
             MenuList.DataSource = table;
 
+            if (MenuList.Columns.Contains("id"))
+            {
+                MenuList.Columns["id"].Visible = false;
+            }
+
+            comboBoxNames.Items.Clear();
+            foreach (DataRow row in table.Rows)
+            {
+                comboBoxNames.Items.Add(row["Name"].ToString());
+            }
+
             if (!MenuList.Columns.Contains("Image"))
             {
                 DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
@@ -50,7 +60,7 @@ namespace Project
 
             foreach (DataGridViewRow row in MenuList.Rows)
             {
-                row.Height = 150; 
+                row.Height = 150;
             }
 
             foreach (DataGridViewRow row in MenuList.Rows)
@@ -64,17 +74,11 @@ namespace Project
                             row.Cells["Image"].Value = Image.FromStream(ms);
                         }
                     }
-                    else if (row.Cells["Image"].Value is Bitmap image)
-                    {
-                        row.Cells["Image"].Value = image;
-                    }
                 }
             }
 
             dataBase.closeConnection();
         }
-
-
 
         private void buttonSelectImage_Click(object sender, EventArgs e)
         {
@@ -116,26 +120,32 @@ namespace Project
             LoadMenuItems();
         }
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (comboBoxNames.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите название для удаления.");
+                return;
+            }
+
+            string name = comboBoxNames.SelectedItem.ToString();
+
+            string deleteQuery = "DELETE FROM Menu WHERE Name = @Name";
+            SqlCommand deleteCommand = new SqlCommand(deleteQuery, dataBase.getConnection());
+            deleteCommand.Parameters.AddWithValue("@Name", name);
+
+            dataBase.openConnection();
+            deleteCommand.ExecuteNonQuery();
+            dataBase.closeConnection();
+
+            LoadMenuItems();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             form1 = new Form1(userName, userId);
             form1.Show();
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonBookingAP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonDashBoardAP_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

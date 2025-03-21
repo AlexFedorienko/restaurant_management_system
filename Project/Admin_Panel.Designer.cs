@@ -54,6 +54,8 @@ namespace Project
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxNames = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,9 +70,10 @@ namespace Project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(40, 9);
+            this.label1.Location = new System.Drawing.Point(30, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 34);
+            this.label1.Size = new System.Drawing.Size(147, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Panel";
             // 
@@ -81,13 +84,12 @@ namespace Project
             this.buttonDashBoardAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDashBoardAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.buttonDashBoardAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonDashBoardAP.Location = new System.Drawing.Point(12, 55);
-            this.buttonDashBoardAP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDashBoardAP.Location = new System.Drawing.Point(9, 45);
+            this.buttonDashBoardAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDashBoardAP.Name = "buttonDashBoardAP";
-            this.buttonDashBoardAP.Size = new System.Drawing.Size(251, 50);
+            this.buttonDashBoardAP.Size = new System.Drawing.Size(188, 41);
             this.buttonDashBoardAP.TabIndex = 2;
             this.buttonDashBoardAP.UseVisualStyleBackColor = false;
-            this.buttonDashBoardAP.Click += new System.EventHandler(this.buttonDashBoardAP_Click);
             // 
             // buttonActiveOrdersAP
             // 
@@ -96,10 +98,10 @@ namespace Project
             this.buttonActiveOrdersAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonActiveOrdersAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonActiveOrdersAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonActiveOrdersAP.Location = new System.Drawing.Point(12, 121);
-            this.buttonActiveOrdersAP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonActiveOrdersAP.Location = new System.Drawing.Point(9, 98);
+            this.buttonActiveOrdersAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonActiveOrdersAP.Name = "buttonActiveOrdersAP";
-            this.buttonActiveOrdersAP.Size = new System.Drawing.Size(251, 50);
+            this.buttonActiveOrdersAP.Size = new System.Drawing.Size(188, 41);
             this.buttonActiveOrdersAP.TabIndex = 3;
             this.buttonActiveOrdersAP.UseVisualStyleBackColor = false;
             // 
@@ -110,13 +112,12 @@ namespace Project
             this.buttonBookingAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookingAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBookingAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonBookingAP.Location = new System.Drawing.Point(12, 187);
-            this.buttonBookingAP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBookingAP.Location = new System.Drawing.Point(9, 152);
+            this.buttonBookingAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBookingAP.Name = "buttonBookingAP";
-            this.buttonBookingAP.Size = new System.Drawing.Size(251, 50);
+            this.buttonBookingAP.Size = new System.Drawing.Size(188, 41);
             this.buttonBookingAP.TabIndex = 4;
             this.buttonBookingAP.UseVisualStyleBackColor = false;
-            this.buttonBookingAP.Click += new System.EventHandler(this.buttonBookingAP_Click);
             // 
             // buttonMoneyCostAP
             // 
@@ -125,10 +126,10 @@ namespace Project
             this.buttonMoneyCostAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoneyCostAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMoneyCostAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonMoneyCostAP.Location = new System.Drawing.Point(12, 253);
-            this.buttonMoneyCostAP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMoneyCostAP.Location = new System.Drawing.Point(9, 206);
+            this.buttonMoneyCostAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoneyCostAP.Name = "buttonMoneyCostAP";
-            this.buttonMoneyCostAP.Size = new System.Drawing.Size(251, 50);
+            this.buttonMoneyCostAP.Size = new System.Drawing.Size(188, 41);
             this.buttonMoneyCostAP.TabIndex = 5;
             this.buttonMoneyCostAP.Text = "\r\n";
             this.buttonMoneyCostAP.UseVisualStyleBackColor = false;
@@ -138,58 +139,54 @@ namespace Project
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(12, 320);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(9, 260);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(251, 50);
+            this.button6.Size = new System.Drawing.Size(188, 41);
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = false;
             // 
             // MenuList
             // 
             this.MenuList.ColumnHeadersHeight = 50;
-            this.MenuList.Location = new System.Drawing.Point(521, 9);
-            this.MenuList.Margin = new System.Windows.Forms.Padding(600, 4, 4, 4);
+            this.MenuList.Location = new System.Drawing.Point(441, 28);
+            this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.MenuList.Name = "MenuList";
             this.MenuList.RowHeadersWidth = 47;
             this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.MenuList.Size = new System.Drawing.Size(1173, 852);
+            this.MenuList.Size = new System.Drawing.Size(808, 659);
             this.MenuList.TabIndex = 0;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(306, 60);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxName.Location = new System.Drawing.Point(243, 49);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(197, 36);
+            this.textBoxName.Size = new System.Drawing.Size(149, 30);
             this.textBoxName.TabIndex = 13;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(306, 104);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDescription.Location = new System.Drawing.Point(243, 84);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(197, 36);
+            this.textBoxDescription.Size = new System.Drawing.Size(149, 30);
             this.textBoxDescription.TabIndex = 14;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(306, 148);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPrice.Location = new System.Drawing.Point(243, 120);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(197, 36);
+            this.textBoxPrice.Size = new System.Drawing.Size(149, 30);
             this.textBoxPrice.TabIndex = 15;
             // 
             // buttonAddItem
             // 
             this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddItem.Location = new System.Drawing.Point(306, 405);
-            this.buttonAddItem.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAddItem.Location = new System.Drawing.Point(243, 329);
             this.buttonAddItem.Name = "buttonAddItem";
-            this.buttonAddItem.Size = new System.Drawing.Size(199, 37);
+            this.buttonAddItem.Size = new System.Drawing.Size(149, 30);
             this.buttonAddItem.TabIndex = 17;
             this.buttonAddItem.Text = "Save";
             this.buttonAddItem.UseVisualStyleBackColor = true;
@@ -198,10 +195,9 @@ namespace Project
             // ItemImage
             // 
             this.ItemImage.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ItemImage.Location = new System.Drawing.Point(306, 360);
-            this.ItemImage.Margin = new System.Windows.Forms.Padding(4);
+            this.ItemImage.Location = new System.Drawing.Point(243, 292);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(199, 37);
+            this.ItemImage.Size = new System.Drawing.Size(149, 30);
             this.ItemImage.TabIndex = 18;
             this.ItemImage.Text = "Upload";
             this.ItemImage.UseVisualStyleBackColor = true;
@@ -209,10 +205,9 @@ namespace Project
             // 
             // pictureBoxPreview
             // 
-            this.pictureBoxPreview.Location = new System.Drawing.Point(321, 192);
-            this.pictureBoxPreview.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxPreview.Location = new System.Drawing.Point(254, 156);
             this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.Size = new System.Drawing.Size(173, 160);
+            this.pictureBoxPreview.Size = new System.Drawing.Size(130, 130);
             this.pictureBoxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPreview.TabIndex = 19;
             this.pictureBoxPreview.TabStop = false;
@@ -220,8 +215,8 @@ namespace Project
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project.Properties.Resources.iconDashboard_grey_32px1;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -232,20 +227,19 @@ namespace Project
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.pictureBox5.Image = global::Project.Properties.Resources.iconTags_grey_32px;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 263);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(18, 214);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Project.Properties.Resources.iconOrderTelephone_grey_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(23, 130);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 106);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -255,8 +249,8 @@ namespace Project
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Project.Properties.Resources.iconCalendar_grey_32px2;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 198);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 161);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -268,10 +262,10 @@ namespace Project
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(19, 833);
+            this.button1.Location = new System.Drawing.Point(14, 677);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 28);
+            this.button1.Size = new System.Drawing.Size(32, 23);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -281,9 +275,10 @@ namespace Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(62, 267);
+            this.label2.Location = new System.Drawing.Point(46, 217);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 27);
+            this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Money Cost";
             // 
@@ -292,9 +287,10 @@ namespace Project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(62, 135);
+            this.label3.Location = new System.Drawing.Point(46, 110);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 27);
+            this.label3.Size = new System.Drawing.Size(71, 23);
             this.label3.TabIndex = 21;
             this.label3.Text = "Orders";
             // 
@@ -303,9 +299,10 @@ namespace Project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(62, 201);
+            this.label4.Location = new System.Drawing.Point(46, 163);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 27);
+            this.label4.Size = new System.Drawing.Size(85, 23);
             this.label4.TabIndex = 22;
             this.label4.Text = "Booking\r\n";
             // 
@@ -315,18 +312,39 @@ namespace Project
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(62, 69);
+            this.label5.Location = new System.Drawing.Point(46, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 27);
+            this.label5.Size = new System.Drawing.Size(112, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Dashboard";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(269, 504);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // comboBoxNames
+            // 
+            this.comboBoxNames.FormattingEnabled = true;
+            this.comboBoxNames.Location = new System.Drawing.Point(243, 446);
+            this.comboBoxNames.Name = "comboBoxNames";
+            this.comboBoxNames.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNames.TabIndex = 25;
+            // 
             // Admin_Panel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1707, 886);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.comboBoxNames);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -350,7 +368,6 @@ namespace Project
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Admin_Panel";
             this.Text = "Admin_Panel";
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
@@ -388,5 +405,7 @@ namespace Project
         private Label label3;
         private Label label4;
         private Label label5;
+        private Button button2;
+        private ComboBox comboBoxNames;
     }
 }

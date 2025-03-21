@@ -56,6 +56,7 @@ namespace Project
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBoxNames = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,17 +150,17 @@ namespace Project
             // MenuList
             // 
             this.MenuList.ColumnHeadersHeight = 50;
-            this.MenuList.Location = new System.Drawing.Point(441, 28);
+            this.MenuList.Location = new System.Drawing.Point(569, 29);
             this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.MenuList.Name = "MenuList";
             this.MenuList.RowHeadersWidth = 47;
             this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.MenuList.Size = new System.Drawing.Size(808, 659);
+            this.MenuList.Size = new System.Drawing.Size(600, 659);
             this.MenuList.TabIndex = 0;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(243, 49);
+            this.textBoxName.Location = new System.Drawing.Point(258, 49);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(149, 30);
@@ -167,7 +168,7 @@ namespace Project
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(243, 84);
+            this.textBoxDescription.Location = new System.Drawing.Point(258, 84);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(149, 30);
@@ -175,7 +176,7 @@ namespace Project
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(243, 120);
+            this.textBoxPrice.Location = new System.Drawing.Point(258, 120);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(149, 30);
@@ -184,7 +185,7 @@ namespace Project
             // buttonAddItem
             // 
             this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddItem.Location = new System.Drawing.Point(243, 329);
+            this.buttonAddItem.Location = new System.Drawing.Point(258, 199);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(149, 30);
             this.buttonAddItem.TabIndex = 17;
@@ -195,7 +196,7 @@ namespace Project
             // ItemImage
             // 
             this.ItemImage.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ItemImage.Location = new System.Drawing.Point(243, 292);
+            this.ItemImage.Location = new System.Drawing.Point(258, 163);
             this.ItemImage.Name = "ItemImage";
             this.ItemImage.Size = new System.Drawing.Size(149, 30);
             this.ItemImage.TabIndex = 18;
@@ -205,9 +206,9 @@ namespace Project
             // 
             // pictureBoxPreview
             // 
-            this.pictureBoxPreview.Location = new System.Drawing.Point(254, 156);
+            this.pictureBoxPreview.Location = new System.Drawing.Point(18, 282);
             this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.Size = new System.Drawing.Size(130, 130);
+            this.pictureBoxPreview.Size = new System.Drawing.Size(159, 147);
             this.pictureBoxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPreview.TabIndex = 19;
             this.pictureBoxPreview.TabStop = false;
@@ -321,21 +322,39 @@ namespace Project
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 504);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(258, 484);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(149, 27);
             this.button2.TabIndex = 24;
-            this.button2.Text = "button2";
+            this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // comboBoxNames
             // 
+            this.comboBoxNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNames.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxNames.FormattingEnabled = true;
-            this.comboBoxNames.Location = new System.Drawing.Point(243, 446);
+            this.comboBoxNames.IntegralHeight = false;
+            this.comboBoxNames.ItemHeight = 20;
+            this.comboBoxNames.Location = new System.Drawing.Point(258, 443);
             this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNames.Size = new System.Drawing.Size(149, 28);
             this.comboBoxNames.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(255, 401);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 28);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Delete";
             // 
             // Admin_Panel
             // 
@@ -343,6 +362,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxNames);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -407,5 +427,6 @@ namespace Project
         private Label label5;
         private Button button2;
         private ComboBox comboBoxNames;
+        private Label label6;
     }
 }

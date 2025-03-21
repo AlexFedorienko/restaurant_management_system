@@ -38,6 +38,12 @@ namespace Project
             adapter.Fill(table);
             MenuList.DataSource = table;
 
+            MenuList.DefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
+            MenuList.Columns["Name"].Width = 200;
+            MenuList.Columns["Image"].Width = 230;
+            MenuList.RowTemplate.Height = 200;
+
+
             if (MenuList.Columns.Contains("id"))
             {
                 MenuList.Columns["id"].Visible = false;
@@ -54,13 +60,8 @@ namespace Project
                 DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
                 imgCol.Name = "Image";
                 imgCol.HeaderText = "Image";
-                imgCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
                 MenuList.Columns.Add(imgCol);
-            }
-
-            foreach (DataGridViewRow row in MenuList.Rows)
-            {
-                row.Height = 150;
             }
 
             foreach (DataGridViewRow row in MenuList.Rows)
@@ -71,13 +72,16 @@ namespace Project
                     {
                         using (MemoryStream ms = new MemoryStream(imageData))
                         {
-                            row.Cells["Image"].Value = Image.FromStream(ms);
+                            Image originalImage = Image.FromStream(ms);
+                            int desiredWidth = 230;
+                            int desiredHeight = 200;
+                            row.Cells["Image"].Value = originalImage.GetThumbnailImage(desiredWidth, desiredHeight, null, IntPtr.Zero);
                         }
                     }
                 }
-            }
 
-            dataBase.closeConnection();
+                dataBase.closeConnection();
+            }
         }
 
         private void buttonSelectImage_Click(object sender, EventArgs e)

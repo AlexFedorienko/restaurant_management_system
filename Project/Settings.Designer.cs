@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            this.UserImage = new System.Windows.Forms.PictureBox();
-            this.PensilButton = new System.Windows.Forms.Button();
             this.textBoxLoginS = new System.Windows.Forms.TextBox();
             this.labelLoginS = new System.Windows.Forms.Label();
             this.labelEmailS = new System.Windows.Forms.Label();
@@ -39,54 +37,36 @@
             this.textBoxPasswordS = new System.Windows.Forms.TextBox();
             this.buttonSaveExitS = new System.Windows.Forms.Button();
             this.VisibleButtonS = new System.Windows.Forms.Button();
+            this.PensilButton = new System.Windows.Forms.Button();
+            this.UserImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.UserImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // UserImage
-            // 
-            this.UserImage.Image = ((System.Drawing.Image)(resources.GetObject("UserImage.Image")));
-            this.UserImage.Location = new System.Drawing.Point(144, 15);
-            this.UserImage.Name = "UserImage";
-            this.UserImage.Size = new System.Drawing.Size(145, 132);
-            this.UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserImage.TabIndex = 5;
-            this.UserImage.TabStop = false;
-            // 
-            // PensilButton
-            // 
-            this.PensilButton.Image = ((System.Drawing.Image)(resources.GetObject("PensilButton.Image")));
-            this.PensilButton.Location = new System.Drawing.Point(254, 112);
-            this.PensilButton.Name = "PensilButton";
-            this.PensilButton.Size = new System.Drawing.Size(35, 35);
-            this.PensilButton.TabIndex = 7;
-            this.PensilButton.UseVisualStyleBackColor = true;
-            this.PensilButton.Click += new System.EventHandler(this.PensilButton_Click);
-            // 
             // textBoxLoginS
             // 
-            this.textBoxLoginS.Location = new System.Drawing.Point(110, 197);
+            this.textBoxLoginS.Location = new System.Drawing.Point(110, 218);
             this.textBoxLoginS.Multiline = true;
             this.textBoxLoginS.Name = "textBoxLoginS";
-            this.textBoxLoginS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxLoginS.Size = new System.Drawing.Size(200, 30);
             this.textBoxLoginS.TabIndex = 8;
             // 
             // labelLoginS
             // 
             this.labelLoginS.AutoSize = true;
-            this.labelLoginS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLoginS.Location = new System.Drawing.Point(105, 169);
+            this.labelLoginS.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLoginS.Location = new System.Drawing.Point(106, 192);
             this.labelLoginS.Name = "labelLoginS";
-            this.labelLoginS.Size = new System.Drawing.Size(60, 25);
+            this.labelLoginS.Size = new System.Drawing.Size(65, 23);
             this.labelLoginS.TabIndex = 9;
             this.labelLoginS.Text = "Login";
             // 
             // labelEmailS
             // 
             this.labelEmailS.AutoSize = true;
-            this.labelEmailS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmailS.Location = new System.Drawing.Point(105, 251);
+            this.labelEmailS.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmailS.Location = new System.Drawing.Point(106, 253);
             this.labelEmailS.Name = "labelEmailS";
-            this.labelEmailS.Size = new System.Drawing.Size(60, 25);
+            this.labelEmailS.Size = new System.Drawing.Size(65, 23);
             this.labelEmailS.TabIndex = 11;
             this.labelEmailS.Text = "Email";
             // 
@@ -95,32 +75,33 @@
             this.textBoxEmailS.Location = new System.Drawing.Point(110, 279);
             this.textBoxEmailS.Multiline = true;
             this.textBoxEmailS.Name = "textBoxEmailS";
-            this.textBoxEmailS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxEmailS.Size = new System.Drawing.Size(200, 30);
             this.textBoxEmailS.TabIndex = 10;
             // 
             // labelPasswordS
             // 
             this.labelPasswordS.AutoSize = true;
-            this.labelPasswordS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPasswordS.Location = new System.Drawing.Point(105, 335);
+            this.labelPasswordS.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPasswordS.Location = new System.Drawing.Point(106, 314);
             this.labelPasswordS.Name = "labelPasswordS";
-            this.labelPasswordS.Size = new System.Drawing.Size(98, 25);
+            this.labelPasswordS.Size = new System.Drawing.Size(98, 23);
             this.labelPasswordS.TabIndex = 13;
             this.labelPasswordS.Text = "Password";
             // 
             // textBoxPasswordS
             // 
-            this.textBoxPasswordS.Location = new System.Drawing.Point(110, 363);
+            this.textBoxPasswordS.Location = new System.Drawing.Point(110, 340);
             this.textBoxPasswordS.Multiline = true;
             this.textBoxPasswordS.Name = "textBoxPasswordS";
-            this.textBoxPasswordS.Size = new System.Drawing.Size(200, 40);
+            this.textBoxPasswordS.Size = new System.Drawing.Size(200, 30);
             this.textBoxPasswordS.TabIndex = 12;
             // 
             // buttonSaveExitS
             // 
-            this.buttonSaveExitS.Location = new System.Drawing.Point(137, 432);
+            this.buttonSaveExitS.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveExitS.Location = new System.Drawing.Point(144, 408);
             this.buttonSaveExitS.Name = "buttonSaveExitS";
-            this.buttonSaveExitS.Size = new System.Drawing.Size(152, 42);
+            this.buttonSaveExitS.Size = new System.Drawing.Size(145, 42);
             this.buttonSaveExitS.TabIndex = 14;
             this.buttonSaveExitS.Text = "Save, Exit";
             this.buttonSaveExitS.UseVisualStyleBackColor = true;
@@ -128,12 +109,33 @@
             // 
             // VisibleButtonS
             // 
-            this.VisibleButtonS.Location = new System.Drawing.Point(332, 358);
+            this.VisibleButtonS.Image = global::Project.Properties.Resources.iconEye_dark_blue_32px3917159;
+            this.VisibleButtonS.Location = new System.Drawing.Point(310, 339);
             this.VisibleButtonS.Name = "VisibleButtonS";
-            this.VisibleButtonS.Size = new System.Drawing.Size(32, 23);
+            this.VisibleButtonS.Size = new System.Drawing.Size(40, 32);
             this.VisibleButtonS.TabIndex = 15;
-            this.VisibleButtonS.Text = "vis";
             this.VisibleButtonS.UseVisualStyleBackColor = true;
+            this.VisibleButtonS.Click += new System.EventHandler(this.VisibleButtonS_Click);
+            // 
+            // PensilButton
+            // 
+            this.PensilButton.Image = ((System.Drawing.Image)(resources.GetObject("PensilButton.Image")));
+            this.PensilButton.Location = new System.Drawing.Point(254, 137);
+            this.PensilButton.Name = "PensilButton";
+            this.PensilButton.Size = new System.Drawing.Size(35, 35);
+            this.PensilButton.TabIndex = 7;
+            this.PensilButton.UseVisualStyleBackColor = true;
+            this.PensilButton.Click += new System.EventHandler(this.PensilButton_Click);
+            // 
+            // UserImage
+            // 
+            this.UserImage.Image = ((System.Drawing.Image)(resources.GetObject("UserImage.Image")));
+            this.UserImage.Location = new System.Drawing.Point(144, 40);
+            this.UserImage.Name = "UserImage";
+            this.UserImage.Size = new System.Drawing.Size(145, 132);
+            this.UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserImage.TabIndex = 5;
+            this.UserImage.TabStop = false;
             // 
             // Settings
             // 

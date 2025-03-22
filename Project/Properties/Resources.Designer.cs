@@ -183,6 +183,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconCrossedEye_dark_blue_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconCrossedEye_dark-blue-32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconDashboard_grey_32px {
             get {
                 object obj = ResourceManager.GetObject("iconDashboard_grey-32px", resourceCulture);
@@ -196,6 +206,26 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap iconDashboard_grey_32px1 {
             get {
                 object obj = ResourceManager.GetObject("iconDashboard_grey-32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconEye_dark_blue_32px3917159 {
+            get {
+                object obj = ResourceManager.GetObject("iconEye_dark-blue-32px3917159", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconEyeCrossed_dark_blue_monolit__32px {
+            get {
+                object obj = ResourceManager.GetObject("iconEyeCrossed_dark-blue(monolit)-32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

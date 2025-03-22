@@ -253,5 +253,17 @@
   <ItemGroup>
     <None Include="Resources\iconTags_grey-32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconEye_dark-blue-32px3917159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCrossedEye_dark-blue-32px.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCrossedEye_dark-blue-32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconEyeCrossed_dark-blue%28monolit%29-32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -180,5 +180,10 @@ namespace Project
                 SaveImageToDatabase(imageBytes);
             }
         }
+
+        private void VisibleButtonS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

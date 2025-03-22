@@ -39,9 +39,9 @@ namespace Project
             MenuList.DataSource = table;
 
             MenuList.DefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
-            MenuList.Columns["Name"].Width = 200;
-            MenuList.Columns["Image"].Width = 230;
-            MenuList.RowTemplate.Height = 200;
+            MenuList.Columns["Name"].Width = 150;
+            MenuList.Columns["Image"].Width = 195;
+            MenuList.RowTemplate.Height = 150;
 
 
             if (MenuList.Columns.Contains("id"))
@@ -73,8 +73,8 @@ namespace Project
                         using (MemoryStream ms = new MemoryStream(imageData))
                         {
                             Image originalImage = Image.FromStream(ms);
-                            int desiredWidth = 230;
-                            int desiredHeight = 200;
+                            int desiredWidth = 195;
+                            int desiredHeight = 150;
                             row.Cells["Image"].Value = originalImage.GetThumbnailImage(desiredWidth, desiredHeight, null, IntPtr.Zero);
                         }
                     }

@@ -150,7 +150,7 @@ namespace Project
             // MenuList
             // 
             this.MenuList.ColumnHeadersHeight = 50;
-            this.MenuList.Location = new System.Drawing.Point(569, 29);
+            this.MenuList.Location = new System.Drawing.Point(653, 28);
             this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.MenuList.Name = "MenuList";
             this.MenuList.RowHeadersWidth = 47;

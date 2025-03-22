@@ -155,9 +155,9 @@ namespace Project
 
         private void buttonAdminPanel_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Admin_Panel adminPanel = new Admin_Panel(userName, userId);
             adminPanel.ShowDialog();
+            this.Hide();
         }
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)

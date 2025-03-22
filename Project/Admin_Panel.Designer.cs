@@ -153,7 +153,7 @@ namespace Project
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(257, 131);
+            this.textBoxName.Location = new System.Drawing.Point(259, 131);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(157, 28);
@@ -161,7 +161,7 @@ namespace Project
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(257, 218);
+            this.textBoxDescription.Location = new System.Drawing.Point(259, 218);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(157, 30);
@@ -169,7 +169,7 @@ namespace Project
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(257, 301);
+            this.textBoxPrice.Location = new System.Drawing.Point(259, 301);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(157, 30);
@@ -182,7 +182,7 @@ namespace Project
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddItem.ForeColor = System.Drawing.Color.White;
-            this.buttonAddItem.Location = new System.Drawing.Point(257, 404);
+            this.buttonAddItem.Location = new System.Drawing.Point(259, 404);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 58);
             this.buttonAddItem.TabIndex = 17;
@@ -197,7 +197,7 @@ namespace Project
             this.UploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadImage.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UploadImage.ForeColor = System.Drawing.Color.White;
-            this.UploadImage.Location = new System.Drawing.Point(257, 350);
+            this.UploadImage.Location = new System.Drawing.Point(259, 350);
             this.UploadImage.Name = "UploadImage";
             this.UploadImage.Size = new System.Drawing.Size(157, 35);
             this.UploadImage.TabIndex = 18;
@@ -325,7 +325,7 @@ namespace Project
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteItem.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteItem.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteItem.Location = new System.Drawing.Point(457, 179);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(455, 179);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(162, 29);
             this.buttonDeleteItem.TabIndex = 24;
@@ -340,7 +340,7 @@ namespace Project
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.IntegralHeight = false;
             this.comboBoxNames.ItemHeight = 20;
-            this.comboBoxNames.Location = new System.Drawing.Point(457, 131);
+            this.comboBoxNames.Location = new System.Drawing.Point(455, 131);
             this.comboBoxNames.Name = "comboBoxNames";
             this.comboBoxNames.Size = new System.Drawing.Size(162, 28);
             this.comboBoxNames.TabIndex = 25;
@@ -351,7 +351,7 @@ namespace Project
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(454, 45);
+            this.label6.Location = new System.Drawing.Point(452, 45);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(178, 36);
@@ -364,7 +364,7 @@ namespace Project
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(252, 42);
+            this.label7.Location = new System.Drawing.Point(254, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 36);
@@ -377,7 +377,7 @@ namespace Project
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(252, 95);
+            this.label8.Location = new System.Drawing.Point(254, 95);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 26);
@@ -390,7 +390,7 @@ namespace Project
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(253, 182);
+            this.label9.Location = new System.Drawing.Point(255, 182);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 26);
@@ -403,7 +403,7 @@ namespace Project
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(252, 268);
+            this.label10.Location = new System.Drawing.Point(254, 268);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 26);
@@ -416,7 +416,7 @@ namespace Project
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(455, 95);
+            this.label11.Location = new System.Drawing.Point(453, 95);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 26);

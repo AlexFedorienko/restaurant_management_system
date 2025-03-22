@@ -387,7 +387,7 @@ namespace Project
             this.flowLayoutPanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(413, 193);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
-            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1101, 692);
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1101, 813);
             this.flowLayoutPanelMenu.TabIndex = 6;
             this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
@@ -434,9 +434,9 @@ namespace Project
             // 
             // flowLayoutPanelPayment
             // 
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 463);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 619);
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 271);
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 241);
             this.flowLayoutPanelPayment.TabIndex = 11;
             // 
             // panel2
@@ -447,7 +447,7 @@ namespace Project
             this.panel2.Controls.Add(this.flowLayoutPanelCart);
             this.panel2.Location = new System.Drawing.Point(1577, 144);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(320, 741);
+            this.panel2.Size = new System.Drawing.Size(320, 862);
             this.panel2.TabIndex = 0;
             // 
             // Form1

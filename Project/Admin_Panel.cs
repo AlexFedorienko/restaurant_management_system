@@ -14,6 +14,8 @@ namespace Project
         private string userName;
         private int userId;
         private byte[] imageBytes;
+        private Panel previewPanel;
+        private Label labelPreview;
 
         public Admin_Panel()
         {
@@ -27,6 +29,27 @@ namespace Project
             this.userName = userName;
             this.userId = userId;
             LoadMenuItems();
+
+            labelPreview = new Label
+            {
+                Text = "Preview",
+                Font = new Font("Century Gothic", 18, FontStyle.Bold),
+                ForeColor = Color.White,
+                AutoSize = true,
+                Location = new Point(10, 10)
+            };
+
+            previewPanel = new Panel
+            {
+                Size = new Size(162, 230),
+                Location = new Point(457, 250),
+                BackColor = Color.FromArgb(48, 57, 76),
+                BorderStyle = BorderStyle.None
+            };
+
+            previewPanel.Paint += PreviewPanel_Paint;
+            previewPanel.Controls.Add(labelPreview);
+            Controls.Add(previewPanel);
         }
 
         private void LoadMenuItems()
@@ -40,9 +63,8 @@ namespace Project
 
             MenuList.DefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
             MenuList.Columns["Name"].Width = 150;
-            MenuList.Columns["Image"].Width = 195;
+            MenuList.Columns["Image"].Width = 200;
             MenuList.RowTemplate.Height = 150;
-
 
             if (MenuList.Columns.Contains("id"))
             {
@@ -66,21 +88,67 @@ namespace Project
 
             foreach (DataGridViewRow row in MenuList.Rows)
             {
-                if (row.Cells["Image"].Value != null)
+                if (row.Cells["Image"].Value != null && row.Cells["Image"].Value is byte[] imageData)
                 {
-                    if (row.Cells["Image"].Value is byte[] imageData)
+                    using (MemoryStream ms = new MemoryStream(imageData))
                     {
-                        using (MemoryStream ms = new MemoryStream(imageData))
-                        {
-                            Image originalImage = Image.FromStream(ms);
-                            int desiredWidth = 195;
-                            int desiredHeight = 150;
-                            row.Cells["Image"].Value = originalImage.GetThumbnailImage(desiredWidth, desiredHeight, null, IntPtr.Zero);
-                        }
+                        Image originalImage = Image.FromStream(ms);
+                        int desiredWidth = 200;
+                        int desiredHeight = 150;
+                        row.Cells["Image"].Value = originalImage.GetThumbnailImage(desiredWidth, desiredHeight, null, IntPtr.Zero);
                     }
                 }
+            }
 
-                dataBase.closeConnection();
+            dataBase.closeConnection();
+        }
+
+        private void UpdatePreview()
+        {
+            previewPanel.Controls.Clear();
+            previewPanel.Controls.Add(labelPreview);
+
+            if (imageBytes != null)
+            {
+                PictureBox pictureBox = new PictureBox
+                {
+                    Size = new Size(120, 100),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Location = new Point((previewPanel.Width - 120) / 2, labelPreview.Bottom + 10)
+                };
+
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    pictureBox.Image = Image.FromStream(ms);
+                }
+
+                Label labelName = new Label
+                {
+                    Text = textBoxName.Text,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(150, 30),
+                    Font = new Font("Century Gothic", 15, FontStyle.Bold),
+                    ForeColor = Color.White,
+                    Location = new Point((previewPanel.Width - 150) / 2, pictureBox.Bottom + 5)
+                };
+
+                Label labelPrice = new Label
+                {
+                    Text = "$" + textBoxPrice.Text,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(150, 30),
+                    Font = new Font("Century Gothic", 15, FontStyle.Bold),
+                    ForeColor = Color.White,
+                    Location = new Point((previewPanel.Width - 150) / 2, labelName.Bottom + 5)
+                };
+
+                previewPanel.Controls.Add(pictureBox);
+                previewPanel.Controls.Add(labelName);
+                previewPanel.Controls.Add(labelPrice);
+            }
+            else
+            {
+                labelPreview.Visible = false;
             }
         }
 
@@ -93,8 +161,7 @@ namespace Project
             {
                 string imagePath = openFileDialog.FileName;
                 imageBytes = File.ReadAllBytes(imagePath);
-                pictureBoxPreview.Image = Image.FromFile(imagePath);
-                pictureBoxPreview.Visible = true;
+                UpdatePreview();
             }
         }
 
@@ -106,7 +173,7 @@ namespace Project
 
             if (imageBytes == null)
             {
-                MessageBox.Show("Пожалуйста, выберите изображение.");
+                MessageBox.Show("Please select an image.");
                 return;
             }
 
@@ -150,6 +217,24 @@ namespace Project
             this.Close();
             form1 = new Form1(userName, userId);
             form1.Show();
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePreview();
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePreview();
+        }
+
+        private void PreviewPanel_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen pen = new Pen(Color.FromArgb(24, 26, 51), 2))
+            {
+                e.Graphics.DrawRectangle(pen, 0, 0, previewPanel.Width - 1, previewPanel.Height - 1);
+            }
         }
     }
 }

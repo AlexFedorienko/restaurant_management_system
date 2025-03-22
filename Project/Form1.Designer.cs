@@ -60,6 +60,8 @@ namespace Project
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -67,6 +69,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -391,10 +394,9 @@ namespace Project
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
-            this.flowLayoutPanelCart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(1569, 141);
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(2, 3);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(320, 626);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(311, 454);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
             // label8
@@ -430,16 +432,34 @@ namespace Project
             this.label9.TabIndex = 10;
             this.label9.Text = "Search";
             // 
+            // flowLayoutPanelPayment
+            // 
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 463);
+            this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 271);
+            this.flowLayoutPanelPayment.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.flowLayoutPanelPayment);
+            this.panel2.Controls.Add(this.flowLayoutPanelCart);
+            this.panel2.Location = new System.Drawing.Point(1577, 144);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(320, 741);
+            this.panel2.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxSearchF);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.flowLayoutPanelMenu);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.SettingsButton);
@@ -460,6 +480,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,6 +516,8 @@ namespace Project
         private Label label8;
         private TextBox textBoxSearchF;
         private Label label9;
+        private Panel panel2;
+        private Panel flowLayoutPanelPayment;
     }
 }
 

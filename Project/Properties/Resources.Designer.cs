@@ -183,6 +183,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconCamera_empty_dark_blue_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconCamera_empty-dark-blue-32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconCrossedEye_dark_blue_32px {
             get {
                 object obj = ResourceManager.GetObject("iconCrossedEye_dark-blue-32px", resourceCulture);
@@ -236,6 +246,76 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap iconOrderTelephone_grey_32px {
             get {
                 object obj = ResourceManager.GetObject("iconOrderTelephone_grey-32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_empty_64px {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_empty-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_empty_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_empty-64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_empty_white_64px {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_empty-white-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_full_64px {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_full-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_full_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_full-64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_full_yellow_64px {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_full-yellow-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStar_full_yellow_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconStar_full-yellow-64px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -118,76 +118,100 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconCalendar_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCalendar_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconOrderTelephone_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconOrderTelephone_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="creditcards_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\creditcards_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconCalendar_grey-32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCalendar_grey-32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="news_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\news_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconDashboard_grey-32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconDashboard_grey-32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gallery_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gallery_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="news_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\news_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gallery_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gallery_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconCrossedEye_dark-blue-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCrossedEye_dark-blue-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconCalendar_grey-32px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCalendar_grey-32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gallery_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gallery_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="news_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\news_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconEye_dark-blue-32px3917159" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconEye_dark-blue-32px3917159.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_green2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_green2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="creditcards_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\creditcards_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconDashboard_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconDashboard_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconTags_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconTags_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconEye_dark-blue-32px3917159" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconEye_dark-blue-32px3917159.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="creditcards_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\creditcards_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashboard_green2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_green2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_full-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_full-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconOrderTelephone_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconOrderTelephone_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_empty-64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_empty-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_empty-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_empty-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_full-yellow-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_full-yellow-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCalendar_grey-32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCalendar_grey-32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconTags_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconTags_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCalendar_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCalendar_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconStar_full-yellow-64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_full-yellow-64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gallery_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gallery_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_full-64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_full-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconDashboard_grey-32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconDashboard_grey-32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconEyeCrossed_dark-blue(monolit)-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconEyeCrossed_dark-blue(monolit)-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStar_empty-white-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStar_empty-white-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCamera_empty-dark-blue-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCamera_empty-dark-blue-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

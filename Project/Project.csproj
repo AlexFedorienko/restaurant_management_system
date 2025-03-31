@@ -98,6 +98,11 @@
     <Compile Include="Finance.Designer.cs">
       <DependentUpon>Finance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,14 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +264,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconEyeCrossed_dark-blue%28monolit%29-32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStar_empty-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStar_full-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStar_empty-white-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStar_full-yellow-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStar_full-yellow-64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCamera_empty-dark-blue-32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

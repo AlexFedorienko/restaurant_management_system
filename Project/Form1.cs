@@ -10,6 +10,21 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Project
 {
     public partial class Form1 : Form

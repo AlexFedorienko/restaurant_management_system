@@ -13,7 +13,7 @@ namespace Project
         DataBase dataBase = new DataBase();
         Auth auth = new Auth();
         Admin_Panel adminPanel = new Admin_Panel();
-
+        
         private string userName;
         private int userId;
 
@@ -320,6 +320,35 @@ namespace Project
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            auth.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(userName, userId);
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            News news = new News(userName, userId);
+
+            this.Hide();
+            news.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Gallery gallery = new Gallery(userName, userId);
+
+            this.Hide();
+            gallery.Show();
         }
     }
 }

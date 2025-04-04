@@ -320,5 +320,34 @@ namespace Project
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            auth.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(userName, userId);
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Finance finance = new Finance(userName, userId);
+
+            this.Hide();
+            finance.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Gallery gallery = new Gallery(userName, userId);
+
+            this.Hide();
+            gallery.Show();
+        }
     }
 }

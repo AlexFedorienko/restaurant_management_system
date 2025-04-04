@@ -71,7 +71,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT image_user FROM aAuthuth WHERE id = @userId";
+            string querystring = $"SELECT image_user FROM Auth WHERE id = @userId";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             command.Parameters.AddWithValue("@userId", userId);
@@ -367,6 +367,40 @@ namespace Project
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            auth.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(userName, userId);
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Finance finance = new Finance(userName, userId);
+
+            this.Hide();
+            finance.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            News news = new News(userName, userId);
+
+            this.Hide();
+            news.Show();
         }
     }
 }

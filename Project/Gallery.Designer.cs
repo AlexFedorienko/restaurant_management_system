@@ -152,6 +152,7 @@ namespace Project
             this.label7.Size = new System.Drawing.Size(93, 29);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -281,6 +282,7 @@ namespace Project
             this.button5.Size = new System.Drawing.Size(352, 61);
             this.button5.TabIndex = 10;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
             this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
@@ -308,6 +310,7 @@ namespace Project
             this.button3.Size = new System.Drawing.Size(352, 61);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
@@ -322,6 +325,7 @@ namespace Project
             this.button2.Size = new System.Drawing.Size(352, 61);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
@@ -336,6 +340,7 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 

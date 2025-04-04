@@ -240,6 +240,7 @@ namespace Project
             this.button5.Size = new System.Drawing.Size(352, 61);
             this.button5.TabIndex = 10;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
             this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 

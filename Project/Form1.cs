@@ -607,5 +607,11 @@ namespace Project
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            auth.Show();
+            this.Hide();
+        }
     }
 }

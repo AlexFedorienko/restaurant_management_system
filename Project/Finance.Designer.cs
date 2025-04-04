@@ -95,33 +95,33 @@ namespace Project
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.Location = new System.Drawing.Point(81, 602);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 33);
+            this.label7.Size = new System.Drawing.Size(93, 29);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(82, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 33);
+            this.label6.Size = new System.Drawing.Size(96, 29);
             this.label6.TabIndex = 19;
             this.label6.Text = "Gallery";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(82, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 33);
+            this.label5.Size = new System.Drawing.Size(79, 29);
             this.label5.TabIndex = 18;
             this.label5.Text = "News";
             // 
@@ -129,11 +129,11 @@ namespace Project
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.SeaGreen;
             this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 33);
+            this.label4.Size = new System.Drawing.Size(106, 29);
             this.label4.TabIndex = 17;
             this.label4.Text = "Finance";
             // 
@@ -141,7 +141,7 @@ namespace Project
             // 
             this.buttonAdminPanel.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonAdminPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdminPanel.Font = new System.Drawing.Font("Espion Rounded", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdminPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdminPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAdminPanel.Location = new System.Drawing.Point(26, 1027);
             this.buttonAdminPanel.Name = "buttonAdminPanel";
@@ -155,11 +155,11 @@ namespace Project
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.SeaGreen;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(78, 362);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 33);
+            this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             // 
@@ -232,6 +232,7 @@ namespace Project
             this.button5.Size = new System.Drawing.Size(352, 61);
             this.button5.TabIndex = 10;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
             this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
@@ -246,6 +247,7 @@ namespace Project
             this.button4.TabIndex = 9;
             this.button4.Text = "\r\n\r\n\r\n\r\n\r\n";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
@@ -259,6 +261,7 @@ namespace Project
             this.button3.Size = new System.Drawing.Size(352, 61);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
@@ -285,6 +288,7 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 

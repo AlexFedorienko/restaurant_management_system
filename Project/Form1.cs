@@ -596,6 +596,7 @@ namespace Project
         {
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
+            buttonAdminPanel.Visible = Auth.IsAdmin;
         }
 
         private void textBoxSearchF_TextChanged(object sender, EventArgs e)

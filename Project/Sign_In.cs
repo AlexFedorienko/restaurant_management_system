@@ -9,7 +9,7 @@ namespace Project
     {
         DataBase database = new DataBase();
         Form1 form1;
-
+        public static bool IsAdmin { get; private set; }
         public static string UserName { get; private set; }
         public static int UserId { get; private set; }
 
@@ -27,7 +27,7 @@ namespace Project
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select id, login_user, password_user from Auth where login_user = '{loginUser}' and password_user = '{passUser}'";
+            string querystring = $"select id, login_user, password_user, IsTrue from Auth where login_user = '{loginUser}' and password_user = '{passUser}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
@@ -38,6 +38,7 @@ namespace Project
             {
                 UserName = table.Rows[0]["login_user"].ToString();
                 UserId = Convert.ToInt32(table.Rows[0]["id"]);
+                IsAdmin = Convert.ToBoolean(table.Rows[0]["IsTrue"]);
                 form1 = new Form1(UserName, UserId);
                 form1.Show();
                 this.Hide();

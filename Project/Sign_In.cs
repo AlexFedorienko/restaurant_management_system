@@ -70,5 +70,37 @@ namespace Project
             form1.Show();
             this.Hide();
         }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Login_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+        }
+
+        private void gradientPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

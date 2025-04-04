@@ -39,6 +39,8 @@
             this.textBoxUserEmailR = new System.Windows.Forms.TextBox();
             this.textBoxPswR = new System.Windows.Forms.TextBox();
             this.textBoxConfirmPswR = new System.Windows.Forms.TextBox();
+            this.gradientPanel1 = new Project.GradientPanel();
+            this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SignInRButton
@@ -123,7 +125,7 @@
             // textBoxUserEmailR
             // 
             this.textBoxUserEmailR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxUserEmailR.Location = new System.Drawing.Point(34, 181);
+            this.textBoxUserEmailR.Location = new System.Drawing.Point(37, 181);
             this.textBoxUserEmailR.Multiline = true;
             this.textBoxUserEmailR.Name = "textBoxUserEmailR";
             this.textBoxUserEmailR.Size = new System.Drawing.Size(313, 54);
@@ -147,15 +149,27 @@
             this.textBoxConfirmPswR.Size = new System.Drawing.Size(313, 54);
             this.textBoxConfirmPswR.TabIndex = 22;
             // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.Angle = 40F;
+            this.gradientPanel1.BackColor = System.Drawing.Color.Indigo;
+            this.gradientPanel1.BottomColor = System.Drawing.Color.Empty;
+            this.gradientPanel1.Controls.Add(this.textBoxPswR);
+            this.gradientPanel1.Controls.Add(this.textBoxLoginR);
+            this.gradientPanel1.Controls.Add(this.textBoxUserEmailR);
+            this.gradientPanel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(363, 494);
+            this.gradientPanel1.TabIndex = 23;
+            this.gradientPanel1.TopColor = System.Drawing.Color.BlueViolet;
+            // 
             // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 490);
             this.Controls.Add(this.textBoxConfirmPswR);
-            this.Controls.Add(this.textBoxPswR);
-            this.Controls.Add(this.textBoxUserEmailR);
-            this.Controls.Add(this.textBoxLoginR);
             this.Controls.Add(this.btnEnterSignInCreateR);
             this.Controls.Add(this.SignUpRButton);
             this.Controls.Add(this.textBoxConfirmPasswordR);
@@ -163,10 +177,13 @@
             this.Controls.Add(this.textBoxEmailR);
             this.Controls.Add(this.textBoxFullNameR);
             this.Controls.Add(this.SignInRButton);
+            this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regestration";
             this.Text = "Sign Up";
+            this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +202,6 @@
         private System.Windows.Forms.TextBox textBoxUserEmailR;
         private System.Windows.Forms.TextBox textBoxPswR;
         private System.Windows.Forms.TextBox textBoxConfirmPswR;
+        private GradientPanel gradientPanel1;
     }
 }

@@ -72,7 +72,6 @@ namespace Project
             this.Sentence1 = new System.Windows.Forms.Label();
             this.Question1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.SettingsButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -395,9 +394,9 @@ namespace Project
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Log out"});
-            this.comboBox.Location = new System.Drawing.Point(1719, 61);
+            this.comboBox.Location = new System.Drawing.Point(1723, 62);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(121, 28);
+            this.comboBox.Size = new System.Drawing.Size(150, 28);
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -422,11 +421,10 @@ namespace Project
             this.panel2.Controls.Add(this.Sentence1);
             this.panel2.Controls.Add(this.Question1);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.SettingsButton);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(390, 0);
+            this.panel2.Location = new System.Drawing.Point(390, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1298, 342);
+            this.panel2.Size = new System.Drawing.Size(1318, 342);
             this.panel2.TabIndex = 6;
             // 
             // button12
@@ -435,7 +433,7 @@ namespace Project
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = global::Project.Properties.Resources.iconCamera_empty_dark_blue_32px;
-            this.button12.Location = new System.Drawing.Point(463, 244);
+            this.button12.Location = new System.Drawing.Point(470, 244);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 44);
             this.button12.TabIndex = 27;
@@ -445,7 +443,7 @@ namespace Project
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.Location = new System.Drawing.Point(20, 295);
+            this.button11.Location = new System.Drawing.Point(27, 295);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(483, 34);
             this.button11.TabIndex = 26;
@@ -455,7 +453,7 @@ namespace Project
             // pictureBox17
             // 
             this.pictureBox17.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox17.Location = new System.Drawing.Point(799, 38);
+            this.pictureBox17.Location = new System.Drawing.Point(806, 38);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(64, 64);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -465,7 +463,7 @@ namespace Project
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox16.Location = new System.Drawing.Point(731, 38);
+            this.pictureBox16.Location = new System.Drawing.Point(738, 38);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(64, 64);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -475,7 +473,7 @@ namespace Project
             // pictureBox15
             // 
             this.pictureBox15.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox15.Location = new System.Drawing.Point(661, 38);
+            this.pictureBox15.Location = new System.Drawing.Point(668, 38);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(64, 64);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -485,7 +483,7 @@ namespace Project
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox14.Location = new System.Drawing.Point(591, 38);
+            this.pictureBox14.Location = new System.Drawing.Point(598, 38);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(64, 64);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -495,7 +493,7 @@ namespace Project
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox13.Location = new System.Drawing.Point(521, 38);
+            this.pictureBox13.Location = new System.Drawing.Point(528, 38);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(64, 64);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -508,7 +506,7 @@ namespace Project
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(516, 9);
+            this.label10.Location = new System.Drawing.Point(523, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(248, 25);
             this.label10.TabIndex = 20;
@@ -530,7 +528,7 @@ namespace Project
             this.button9.BackColor = System.Drawing.Color.SeaGreen;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(661, 37);
+            this.button9.Location = new System.Drawing.Point(668, 37);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(64, 64);
             this.button9.TabIndex = 18;
@@ -541,7 +539,7 @@ namespace Project
             this.button8.BackColor = System.Drawing.Color.SeaGreen;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(591, 37);
+            this.button8.Location = new System.Drawing.Point(598, 37);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(64, 64);
             this.button8.TabIndex = 17;
@@ -564,7 +562,7 @@ namespace Project
             this.button6.BackColor = System.Drawing.Color.SeaGreen;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(521, 37);
+            this.button6.Location = new System.Drawing.Point(528, 37);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(64, 64);
             this.button6.TabIndex = 9;
@@ -573,7 +571,7 @@ namespace Project
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox12.Location = new System.Drawing.Point(20, 135);
+            this.pictureBox12.Location = new System.Drawing.Point(27, 135);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(483, 154);
             this.pictureBox12.TabIndex = 8;
@@ -584,7 +582,7 @@ namespace Project
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(15, 82);
+            this.label9.Location = new System.Drawing.Point(22, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(409, 50);
             this.label9.TabIndex = 7;
@@ -595,7 +593,7 @@ namespace Project
             this.Sentence1.AutoSize = true;
             this.Sentence1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Sentence1.ForeColor = System.Drawing.Color.White;
-            this.Sentence1.Location = new System.Drawing.Point(325, 10);
+            this.Sentence1.Location = new System.Drawing.Point(332, 10);
             this.Sentence1.Name = "Sentence1";
             this.Sentence1.Size = new System.Drawing.Size(178, 25);
             this.Sentence1.TabIndex = 6;
@@ -606,7 +604,7 @@ namespace Project
             this.Question1.AutoSize = true;
             this.Question1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Question1.ForeColor = System.Drawing.Color.White;
-            this.Question1.Location = new System.Drawing.Point(15, 9);
+            this.Question1.Location = new System.Drawing.Point(22, 9);
             this.Question1.Name = "Question1";
             this.Question1.Size = new System.Drawing.Size(317, 25);
             this.Question1.TabIndex = 5;
@@ -614,22 +612,11 @@ namespace Project
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 38);
+            this.textBox1.Location = new System.Drawing.Point(27, 38);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(483, 41);
             this.textBox1.TabIndex = 0;
-            // 
-            // SettingsButton
-            // 
-            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
-            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsButton.Location = new System.Drawing.Point(1245, 12);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(39, 40);
-            this.SettingsButton.TabIndex = 4;
-            this.SettingsButton.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -645,9 +632,9 @@ namespace Project
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(390, 348);
+            this.panel3.Location = new System.Drawing.Point(390, 360);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1298, 707);
+            this.panel3.Size = new System.Drawing.Size(1318, 707);
             this.panel3.TabIndex = 7;
             // 
             // label8
@@ -664,7 +651,7 @@ namespace Project
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox11.Location = new System.Drawing.Point(1109, 260);
+            this.pictureBox11.Location = new System.Drawing.Point(1117, 260);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(175, 180);
             this.pictureBox11.TabIndex = 9;
@@ -673,7 +660,7 @@ namespace Project
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox10.Location = new System.Drawing.Point(878, 460);
+            this.pictureBox10.Location = new System.Drawing.Point(886, 460);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(406, 180);
             this.pictureBox10.TabIndex = 8;
@@ -682,7 +669,7 @@ namespace Project
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox9.Location = new System.Drawing.Point(443, 460);
+            this.pictureBox9.Location = new System.Drawing.Point(451, 460);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(420, 180);
             this.pictureBox9.TabIndex = 7;
@@ -691,7 +678,7 @@ namespace Project
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox8.Location = new System.Drawing.Point(20, 460);
+            this.pictureBox8.Location = new System.Drawing.Point(28, 460);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(408, 180);
             this.pictureBox8.TabIndex = 6;
@@ -700,7 +687,7 @@ namespace Project
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox7.Location = new System.Drawing.Point(660, 260);
+            this.pictureBox7.Location = new System.Drawing.Point(668, 260);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(429, 180);
             this.pictureBox7.TabIndex = 5;
@@ -709,7 +696,7 @@ namespace Project
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox6.Location = new System.Drawing.Point(216, 260);
+            this.pictureBox6.Location = new System.Drawing.Point(224, 260);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(429, 180);
             this.pictureBox6.TabIndex = 4;
@@ -718,7 +705,7 @@ namespace Project
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 260);
+            this.pictureBox5.Location = new System.Drawing.Point(28, 260);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(175, 180);
             this.pictureBox5.TabIndex = 3;
@@ -727,7 +714,7 @@ namespace Project
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox4.Location = new System.Drawing.Point(878, 62);
+            this.pictureBox4.Location = new System.Drawing.Point(886, 62);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(406, 180);
             this.pictureBox4.TabIndex = 2;
@@ -736,7 +723,7 @@ namespace Project
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox3.Location = new System.Drawing.Point(443, 62);
+            this.pictureBox3.Location = new System.Drawing.Point(451, 62);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(420, 180);
             this.pictureBox3.TabIndex = 1;
@@ -745,7 +732,7 @@ namespace Project
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(408, 180);
             this.pictureBox2.TabIndex = 0;
@@ -767,8 +754,8 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1700, 1070);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.exitButton);
@@ -820,7 +807,6 @@ namespace Project
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox;
-        private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button buttonAdminPanel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;

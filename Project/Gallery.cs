@@ -39,7 +39,6 @@ namespace Project
             MakeButtonRound(button3, 30);
             MakeButtonRound(button4, 30);
             MakeButtonRound(button5, 30);
-            MakeButtonRound(SettingsButton, 20);
         }
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)

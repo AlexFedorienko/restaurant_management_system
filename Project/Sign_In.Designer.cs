@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gradientPanel1 = new Project.GradientPanel();
             this.roundedTextBox1 = new RoundedTextBox();
+            this.roundedButton1 = new RoundedButton();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +148,7 @@
             this.gradientPanel1.Angle = 40F;
             this.gradientPanel1.BackColor = System.Drawing.Color.Indigo;
             this.gradientPanel1.BottomColor = System.Drawing.Color.Empty;
+            this.gradientPanel1.Controls.Add(this.roundedButton1);
             this.gradientPanel1.Controls.Add(this.roundedTextBox1);
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Controls.Add(this.label2);
@@ -162,12 +164,24 @@
             // 
             // roundedTextBox1
             // 
+            this.roundedTextBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.roundedTextBox1.BorderRadius = 40;
             this.roundedTextBox1.Location = new System.Drawing.Point(13, 287);
             this.roundedTextBox1.Multiline = true;
             this.roundedTextBox1.Name = "roundedTextBox1";
-            this.roundedTextBox1.Size = new System.Drawing.Size(324, 47);
+            this.roundedTextBox1.Size = new System.Drawing.Size(338, 47);
             this.roundedTextBox1.TabIndex = 12;
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.Blue;
+            this.roundedButton1.BorderRadius = 40;
+            this.roundedButton1.Location = new System.Drawing.Point(13, 354);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(330, 36);
+            this.roundedButton1.TabIndex = 13;
+            this.roundedButton1.Text = "roundedButton1";
+            this.roundedButton1.UseVisualStyleBackColor = false;
             // 
             // Auth
             // 
@@ -201,5 +215,6 @@
         private System.Windows.Forms.Label label2;
         private GradientPanel gradientPanel1;
         private RoundedTextBox roundedTextBox1;
+        private RoundedButton roundedButton1;
     }
 }

@@ -82,6 +82,8 @@ namespace Project
         {
             frm_auth.Show();
             this.Close();
+            
+
         }
     }
 }

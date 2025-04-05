@@ -103,5 +103,10 @@ namespace Project
         {
 
         }
+
+        private void roundedTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

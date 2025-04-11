@@ -37,4 +37,19 @@ public class RoundedTextBox : TextBox
 
 
 
+    public RoundedTextBox()
+    {
+        this.ForeColor = Color.Black; // Устанавливаем фиксированный цвет текста
+        this.BorderStyle = BorderStyle.FixedSingle; // Убираем возможные стили границы
+        this.Padding = new Padding(8); // Задаём отступы внутри текстового поля
+    }
+
+    protected override void OnTextChanged(EventArgs e)
+    {
+        base.OnTextChanged(e);
+        // Здесь можно добавить логику для обработки изменений текста
+    }
 }
+
+
+

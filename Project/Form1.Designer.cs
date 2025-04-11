@@ -61,6 +61,10 @@ namespace Project
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
+            this.totalAmountLabel = new System.Windows.Forms.Label();
+            this.checkoutButton = new System.Windows.Forms.Button();
+            this.totalTextLabel = new System.Windows.Forms.Label();
+            this.rectPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
@@ -69,6 +73,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanelPayment.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -388,7 +393,7 @@ namespace Project
             this.flowLayoutPanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(413, 193);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
-            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1101, 813);
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1120, 813);
             this.flowLayoutPanelMenu.TabIndex = 6;
             this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
@@ -397,7 +402,7 @@ namespace Project
             this.flowLayoutPanelCart.AutoScroll = true;
             this.flowLayoutPanelCart.Location = new System.Drawing.Point(2, 3);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(311, 454);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(311, 543);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
             // label8
@@ -435,10 +440,53 @@ namespace Project
             // 
             // flowLayoutPanelPayment
             // 
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 720);
+            this.flowLayoutPanelPayment.Controls.Add(this.totalAmountLabel);
+            this.flowLayoutPanelPayment.Controls.Add(this.checkoutButton);
+            this.flowLayoutPanelPayment.Controls.Add(this.totalTextLabel);
+            this.flowLayoutPanelPayment.Controls.Add(this.rectPanel);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(2, 552);
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 140);
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 299);
             this.flowLayoutPanelPayment.TabIndex = 11;
+            // 
+            // totalAmountLabel
+            // 
+            this.totalAmountLabel.AutoSize = true;
+            this.totalAmountLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
+            this.totalAmountLabel.Name = "totalAmountLabel";
+            this.totalAmountLabel.Size = new System.Drawing.Size(0, 34);
+            this.totalAmountLabel.TabIndex = 3;
+            // 
+            // checkoutButton
+            // 
+            this.checkoutButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkoutButton.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutButton.ForeColor = System.Drawing.Color.White;
+            this.checkoutButton.Location = new System.Drawing.Point(0, 261);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(310, 37);
+            this.checkoutButton.TabIndex = 2;
+            this.checkoutButton.Text = "Checkout";
+            this.checkoutButton.UseVisualStyleBackColor = false;
+            // 
+            // totalTextLabel
+            // 
+            this.totalTextLabel.AutoSize = true;
+            this.totalTextLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextLabel.Location = new System.Drawing.Point(3, 213);
+            this.totalTextLabel.Name = "totalTextLabel";
+            this.totalTextLabel.Size = new System.Drawing.Size(66, 34);
+            this.totalTextLabel.TabIndex = 1;
+            this.totalTextLabel.Text = "Total";
+            // 
+            // rectPanel
+            // 
+            this.rectPanel.BackColor = System.Drawing.Color.SeaGreen;
+            this.rectPanel.Location = new System.Drawing.Point(3, 50);
+            this.rectPanel.Name = "rectPanel";
+            this.rectPanel.Size = new System.Drawing.Size(310, 150);
+            this.rectPanel.TabIndex = 0;
             // 
             // panel2
             // 
@@ -481,6 +529,8 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanelPayment.ResumeLayout(false);
+            this.flowLayoutPanelPayment.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -519,6 +569,10 @@ namespace Project
         private Label label9;
         private Panel panel2;
         private Panel flowLayoutPanelPayment;
+        private Panel rectPanel;
+        private Label totalTextLabel;
+        private Button checkoutButton;
+        private Label totalAmountLabel;
     }
 }
 

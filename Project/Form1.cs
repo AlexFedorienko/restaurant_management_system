@@ -10,21 +10,6 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 namespace Project
 {
     public partial class Form1 : Form
@@ -433,14 +418,45 @@ namespace Project
             dataBase.closeConnection();
         }
 
+        private void LoadCartPanel()
+        {
+            // Создание панели для общей суммы
+            rectPanel.Size = new Size(310, 150);
+            rectPanel.BackColor = Color.SeaGreen;
+            rectPanel.Margin = new Padding(0, 20, 0, 0);
+            flowLayoutPanelPayment.Controls.Add(rectPanel);
+
+            // Обновление метки totalAmountLabel
+            totalAmountLabel.Text = "$0";  // Начальная сумма
+            totalAmountLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+            totalAmountLabel.Size = new Size(300, 30);
+            totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
+            totalAmountLabel.Margin = new Padding(5, 10, 5, 0);
+            flowLayoutPanelPayment.Controls.Add(totalAmountLabel);
+
+            // Кнопка оформления заказа
+            checkoutButton.Text = "Checkout";
+            checkoutButton.Size = new Size(310, 37);
+            checkoutButton.BackColor = Color.SeaGreen;
+            checkoutButton.ForeColor = Color.White;
+            checkoutButton.FlatStyle = FlatStyle.Flat;
+            checkoutButton.Click += CheckoutButton_Click;
+            checkoutButton.Margin = new Padding((flowLayoutPanelPayment.Width - 180) / 2, 10, 0, 0);
+            flowLayoutPanelPayment.Controls.Add(checkoutButton);
+
+            // Установка положения и размера панели оплаты
+            flowLayoutPanelPayment.Location = new Point(3, 463);
+            flowLayoutPanelPayment.Size = new Size(310, 380);
+            flowLayoutPanelPayment.AutoScroll = true;
+        }
+
+
 
         private void UpdateCartDisplay()
         {
-            // Очищаем перед добавлением общей суммы
-            flowLayoutPanelCart.Controls.Clear();
-            flowLayoutPanelPayment.Controls.Clear();
+            flowLayoutPanelCart.Controls.Clear(); // Очищаем панель с товарами корзины
 
-            // Добавление заголовка "My Order"
+            // Заголовок "My Order"
             Label myOrderLabel = new Label();
             myOrderLabel.Text = "My Order";
             myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
@@ -451,7 +467,7 @@ namespace Project
 
             decimal totalAmount = 0;
 
-            // Добавляем товары в корзину
+            // Отображаем все товары в корзине
             foreach (CartItem item in cart)
             {
                 Panel itemPanel = new Panel();
@@ -493,45 +509,10 @@ namespace Project
                 totalAmount += item.Price * item.Quantity;
             }
 
-            // 🔹 1. Создаём прямоугольник вместо изображения
-            Panel rectPanel = new Panel();
-            rectPanel.Size = new Size(310, 150); // Размер панели
-            rectPanel.BackColor = Color.SeaGreen;
-            flowLayoutPanelPayment.Controls.Add(rectPanel);
-
-            // 🔹 2. Метка общей суммы
-            Label totalAmountLabel = new Label();
-            totalAmountLabel.Text = $"Общая сумма: ${totalAmount}";
-            totalAmountLabel.Font = new Font("Arial", 14, FontStyle.Bold);
-            totalAmountLabel.Size = new Size(300, 30);
-            totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
-            totalAmountLabel.Padding = new Padding(0, 5, 0, 5);
-            flowLayoutPanelPayment.Controls.Add(totalAmountLabel);
-
-            // 🔹 3. Кнопка "Checkout"
-            Button checkoutButton = new Button();
-            checkoutButton.Text = "Checkout";
-            checkoutButton.Size = new Size(180, 60);
-            checkoutButton.BackColor = Color.SeaGreen;
-            checkoutButton.ForeColor = Color.White;
-            checkoutButton.FlatStyle = FlatStyle.Flat;
-            checkoutButton.Click += CheckoutButton_Click;
-
-            // Центрируем кнопку в панель
-            checkoutButton.Anchor = AnchorStyles.None;
-            flowLayoutPanelPayment.Controls.Add(checkoutButton);
-
-            // 🔹 Позиционирование элементов вручную
-            totalAmountLabel.Location = new Point(5, rectPanel.Bottom + 10); // Метка общей суммы расположена ниже зелёного прямоугольника
-            checkoutButton.Location = new Point((flowLayoutPanelPayment.Width - checkoutButton.Width) / 2, totalAmountLabel.Bottom + 10); // Кнопка по центру
-
-            // 🔹 Исправление ошибки (убираем FlowDirection и WrapContents)
-            flowLayoutPanelPayment.Location = new Point(3, 463); // Закрепляем координаты
-            flowLayoutPanelPayment.Size = new Size(310, 250); // Устанавливаем размер для достаточного места для всех элементов
-            flowLayoutPanelPayment.AutoScroll = true; // Добавляем прокрутку, если элементов много
+            // Обновляем метку с общей суммой
+            totalAmountLabel.Text = $"${totalAmount}";
         }
 
-        // Обработчик кнопки "Checkout"
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Покупка успешно оформлена!", "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -543,11 +524,12 @@ namespace Project
             decimal productPrice = Convert.ToDecimal(productRow["Price"]);
             string productCategory = productRow.Table.Columns.Contains("Category") ? productRow["Category"].ToString() : "Unknown";
 
+            // Проверка, если товар уже есть в корзине
             CartItem existingItem = cart.FirstOrDefault(item => item.Name == productName && item.Category == productCategory);
 
             if (existingItem != null)
             {
-                existingItem.Quantity++;
+                existingItem.Quantity++; // Увеличиваем количество товара
             }
             else
             {
@@ -558,13 +540,12 @@ namespace Project
                     Quantity = 1,
                     Category = productCategory
                 };
-                cart.Add(newItem);
+                cart.Add(newItem); // Добавляем новый товар
             }
 
+            // Обновляем отображение корзины
             UpdateCartDisplay();
         }
-
-
 
 
         // Перехід між формами
@@ -597,7 +578,11 @@ namespace Project
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
             buttonAdminPanel.Visible = Auth.IsAdmin;
+
+            // Создаем панель с общей суммой и кнопкой оформления заказа
+            LoadCartPanel();
         }
+
 
         private void textBoxSearchF_TextChanged(object sender, EventArgs e)
         {

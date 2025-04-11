@@ -435,9 +435,9 @@ namespace Project
             // 
             // flowLayoutPanelPayment
             // 
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 619);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 720);
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 241);
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 140);
             this.flowLayoutPanelPayment.TabIndex = 11;
             // 
             // panel2

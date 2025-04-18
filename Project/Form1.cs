@@ -503,13 +503,45 @@ namespace Project
                 totalAmount += item.Price * item.Quantity;
             }
 
-            // Обновляем метку с общей суммой
             totalAmountLabel.Text = $"${totalAmount}";
         }
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();
+
+            string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
+            SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
+            commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
+
+            SqlDataReader reader = commandPaymentInfo.ExecuteReader();
+
+            string cardNumber = null, expireMonth = null, expireYear = null, cvv = null, userAddress = null;
+
+            if (reader.Read())
+            {
+                cardNumber = reader["card_number"]?.ToString();
+                expireMonth = reader["expire_month"]?.ToString();
+                expireYear = reader["expire_year"]?.ToString();
+                cvv = reader["cvv"]?.ToString();
+                userAddress = reader["user_adress"]?.ToString();
+            }
+
+            reader.Close();
+
+            if (string.IsNullOrWhiteSpace(cardNumber) || string.IsNullOrWhiteSpace(expireMonth) ||
+                string.IsNullOrWhiteSpace(expireYear) || string.IsNullOrWhiteSpace(cvv) || string.IsNullOrWhiteSpace(userAddress))
+            {
+                dataBase.closeConnection();
+
+                MessageBox.Show("Пожалуйста, заполните все платёжные данные перед оформлением заказа.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                finance = new Finance(userName, userId);
+                this.Hide();
+                finance.Show();
+
+                return;
+            }
 
             decimal totalAmount = cart.Sum(item => item.Price * item.Quantity);
             string queryOrder = "INSERT INTO Orders (UserId, TotalAmount) OUTPUT INSERTED.OrderId VALUES (@UserId, @TotalAmount)";
@@ -535,11 +567,11 @@ namespace Project
             dataBase.closeConnection();
 
             cart.Clear();
-
             UpdateCartDisplay();
 
             MessageBox.Show("Покупка успешно оформлена!", "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         private void AddToCart(DataRow productRow)
         {
@@ -598,12 +630,42 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
+            // Запрос для получения платёжных данных пользователя
+            string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
+            SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
+            commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
+
+            SqlDataReader reader = commandPaymentInfo.ExecuteReader();
+
+            string cardNumber = "0", expireMonth = "0", expireYear = "0", cvv = "0";
+
+            if (reader.Read())
+            {
+                cardNumber = reader["card_number"]?.ToString();
+                expireMonth = reader["expire_month"]?.ToString();
+                expireYear = reader["expire_year"]?.ToString();
+                cvv = reader["cvv"]?.ToString();
+                
+            }
+
+            reader.Close();
+            dataBase.closeConnection();
+
+            // Обновление лейблов с полученными данными
+            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0" : cardNumber;
+            labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "0" : expireMonth;
+            labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "0" : expireYear;
+            labelCvv.Text = string.IsNullOrEmpty(cvv) ? "0" : cvv;
+            
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
             buttonAdminPanel.Visible = Auth.IsAdmin;
 
             // Создаем панель с общей суммой и кнопкой оформления заказа
             LoadCartPanel();
+
         }
 
 

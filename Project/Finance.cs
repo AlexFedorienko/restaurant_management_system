@@ -453,6 +453,19 @@ namespace Project
             reader.Close();
             dataBase.closeConnection();
         }
+        public Finance(string userName, int userId, string cardNumber, string expireMonth, string expireYear, string cvv, string userAddress)
+        {
+            InitializeComponent();
+            this.userName = userName;
+            this.userId = userId;
+
+            // Отображаем данные в текстбоксах
+            textBoxCardNumberF.Text = cardNumber;
+            textBoxCardMonthF.Text = expireMonth;
+            textBoxCardYearF.Text = expireYear;
+            textBoxCardCvvF.Text = cvv;
+            textBoxFullAdressF.Text = userAddress;
+        }
 
         private void Finance_Load(object sender, EventArgs e)
         {

@@ -432,6 +432,7 @@ namespace Project
             totalAmountLabel.Size = new Size(300, 30);
             totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
             totalAmountLabel.Margin = new Padding(5, 10, 5, 0);
+            totalAmountLabel.Location = new Point(230, 220);
             flowLayoutPanelPayment.Controls.Add(totalAmountLabel);
 
             // Кнопка оформления заказа

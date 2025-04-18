@@ -483,9 +483,9 @@ namespace Project
             // rectPanel
             // 
             this.rectPanel.BackColor = System.Drawing.Color.SeaGreen;
-            this.rectPanel.Location = new System.Drawing.Point(3, 50);
+            this.rectPanel.Location = new System.Drawing.Point(-4, 50);
             this.rectPanel.Name = "rectPanel";
-            this.rectPanel.Size = new System.Drawing.Size(310, 150);
+            this.rectPanel.Size = new System.Drawing.Size(317, 150);
             this.rectPanel.TabIndex = 0;
             // 
             // panel2

@@ -16,7 +16,7 @@ namespace Project
         private byte[] imageBytes;
         private Panel previewPanel;
         private Label labelPreview;
-
+         
         public Admin_Panel()
         {
             InitializeComponent();
@@ -212,13 +212,6 @@ namespace Project
             LoadMenuItems();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            form1 = new Form1(userName, userId);
-            form1.Show();
-        }
-
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
             UpdatePreview();
@@ -242,6 +235,14 @@ namespace Project
             Orders_Panel orders_Panel = new Orders_Panel(userName, userId);
             orders_Panel.Show();
             this.Hide();
+        }
+
+        private void quit_Click(object sender, EventArgs e)
+        {
+            form1 = new Form1(userName, userId);
+
+            form1.Show();
+            this.Close();
         }
     }
 }

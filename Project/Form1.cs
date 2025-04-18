@@ -446,8 +446,6 @@ namespace Project
             flowLayoutPanelPayment.AutoScroll = true;
         }
 
-
-
         private void UpdateCartDisplay()
         {
             flowLayoutPanelCart.Controls.Clear(); // Очищаем панель с товарами корзины

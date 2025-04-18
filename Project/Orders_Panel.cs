@@ -9,6 +9,7 @@ namespace Project
     public partial class Orders_Panel : Form
     {
         private DataBase dataBase = new DataBase();
+        private Form1 form1;
         private string userName;
         private int userId;
 
@@ -169,7 +170,15 @@ namespace Project
             this.Hide();
         }
 
-        private void buttonSelectImage_Click(object sender, EventArgs e)
+        private void quit_Click(object sender, EventArgs e)
+        {
+            form1 = new Form1(userName, userId);
+
+            form1.Show();
+            this.Close();
+        }
+
+        private void Orders_Panel_Load_1(object sender, EventArgs e)
         {
 
         }

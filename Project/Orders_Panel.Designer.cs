@@ -38,24 +38,27 @@ namespace Project
             this.buttonBookingAP = new System.Windows.Forms.Button();
             this.buttonMoneyCostAP = new System.Windows.Forms.Button();
             this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.dataGridViewOrderItems = new System.Windows.Forms.DataGridView();
+            this.latestOrdersPanel = new System.Windows.Forms.Label();
+            this.firstIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
+            this.LeftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.LeftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).BeginInit();
             this.SuspendLayout();
             // 
             // article
@@ -133,73 +136,13 @@ namespace Project
             // 
             this.dataGridViewOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.dataGridViewOrder.ColumnHeadersHeight = 50;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(296, 18);
+            this.dataGridViewOrder.Location = new System.Drawing.Point(272, 82);
             this.dataGridViewOrder.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
             this.dataGridViewOrder.RowHeadersWidth = 47;
             this.dataGridViewOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewOrder.Size = new System.Drawing.Size(736, 256);
             this.dataGridViewOrder.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Project.Properties.Resources.iconDashboard_grey_32px;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.pictureBox5.Image = global::Project.Properties.Resources.iconTags_grey_32px;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 240);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.pictureBox3.Image = global::Project.Properties.Resources.iconOrderTelephone_grey_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 132);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.pictureBox2.Image = global::Project.Properties.Resources.iconCalendar_grey_32px2;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 187);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(14, 677);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 23);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -266,7 +209,7 @@ namespace Project
             // 
             this.dataGridViewOrderItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.dataGridViewOrderItems.ColumnHeadersHeight = 50;
-            this.dataGridViewOrderItems.Location = new System.Drawing.Point(296, 290);
+            this.dataGridViewOrderItems.Location = new System.Drawing.Point(272, 353);
             this.dataGridViewOrderItems.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.dataGridViewOrderItems.Name = "dataGridViewOrderItems";
             this.dataGridViewOrderItems.RowHeadersWidth = 47;
@@ -274,12 +217,101 @@ namespace Project
             this.dataGridViewOrderItems.Size = new System.Drawing.Size(736, 336);
             this.dataGridViewOrderItems.TabIndex = 33;
             // 
+            // latestOrdersPanel
+            // 
+            this.latestOrdersPanel.AutoSize = true;
+            this.latestOrdersPanel.BackColor = System.Drawing.Color.Transparent;
+            this.latestOrdersPanel.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.latestOrdersPanel.ForeColor = System.Drawing.Color.White;
+            this.latestOrdersPanel.Location = new System.Drawing.Point(316, 21);
+            this.latestOrdersPanel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.latestOrdersPanel.Name = "latestOrdersPanel";
+            this.latestOrdersPanel.Size = new System.Drawing.Size(198, 36);
+            this.latestOrdersPanel.TabIndex = 34;
+            this.latestOrdersPanel.Text = "Latest Orders";
+            // 
+            // firstIcon
+            // 
+            this.firstIcon.BackColor = System.Drawing.Color.Transparent;
+            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firstIcon.Image = global::Project.Properties.Resources.cart;
+            this.firstIcon.Location = new System.Drawing.Point(274, 23);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.firstIcon.Name = "firstIcon";
+            this.firstIcon.Size = new System.Drawing.Size(35, 35);
+            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstIcon.TabIndex = 35;
+            this.firstIcon.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Project.Properties.Resources.iconDashboard_grey_32px;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 78);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.pictureBox5.Image = global::Project.Properties.Resources.iconTags_grey_32px;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 240);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.pictureBox3.Image = global::Project.Properties.Resources.iconOrderTelephone_grey_32px;
+            this.pictureBox3.Location = new System.Drawing.Point(17, 132);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.pictureBox2.Image = global::Project.Properties.Resources.iconCalendar_grey_32px2;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 187);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(14, 677);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 23);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.quit_Click);
+            // 
             // Orders_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.firstIcon);
+            this.Controls.Add(this.latestOrdersPanel);
             this.Controls.Add(this.dataGridViewOrderItems);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -298,15 +330,18 @@ namespace Project
             this.Controls.Add(this.LeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Orders_Panel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Panel";
+            this.Load += new System.EventHandler(this.Orders_Panel_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
+            this.LeftPanel.ResumeLayout(false);
+            this.LeftPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.LeftPanel.ResumeLayout(false);
-            this.LeftPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +366,7 @@ namespace Project
         private Label label5;
         private Panel LeftPanel;
         private DataGridView dataGridViewOrderItems;
+        private Label latestOrdersPanel;
+        private PictureBox firstIcon;
     }
 }

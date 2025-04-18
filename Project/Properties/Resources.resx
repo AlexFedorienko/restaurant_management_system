@@ -136,6 +136,9 @@
   <data name="creditcards_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\creditcards_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconCamera_empty-dark-blue-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCamera_empty-dark-blue-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconDashboard_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconDashboard_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +214,7 @@
   <data name="iconStar_empty-white-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_empty-white-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconCamera_empty-dark-blue-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCamera_empty-dark-blue-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

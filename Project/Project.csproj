@@ -305,5 +305,8 @@
   <ItemGroup>
     <None Include="Resources\iconCamera_empty-dark-blue-32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

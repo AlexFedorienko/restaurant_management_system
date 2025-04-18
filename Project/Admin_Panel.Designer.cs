@@ -47,7 +47,7 @@ namespace Project
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.quit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -254,18 +254,18 @@ namespace Project
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // quit
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(14, 677);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 23);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.quit.Image = ((System.Drawing.Image)(resources.GetObject("quit.Image")));
+            this.quit.Location = new System.Drawing.Point(14, 677);
+            this.quit.Margin = new System.Windows.Forms.Padding(0);
+            this.quit.Name = "quit";
+            this.quit.Size = new System.Drawing.Size(32, 23);
+            this.quit.TabIndex = 0;
+            this.quit.UseVisualStyleBackColor = true;
+            this.quit.Click += new System.EventHandler(this.quit_Click);
             // 
             // label2
             // 
@@ -465,7 +465,7 @@ namespace Project
             this.Controls.Add(this.buttonBookingAP);
             this.Controls.Add(this.buttonActiveOrdersAP);
             this.Controls.Add(this.buttonDashBoardAP);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.quit);
             this.Controls.Add(this.LeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_Panel";
@@ -484,7 +484,7 @@ namespace Project
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button quit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonDashBoardAP;
         private System.Windows.Forms.Button buttonActiveOrdersAP;

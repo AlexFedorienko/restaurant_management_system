@@ -236,5 +236,12 @@ namespace Project
                 e.Graphics.DrawRectangle(pen, 0, 0, previewPanel.Width - 1, previewPanel.Height - 1);
             }
         }
+
+        private void buttonActiveOrdersAP_Click(object sender, EventArgs e)
+        {
+            Orders_Panel orders_Panel = new Orders_Panel(userName, userId);
+            orders_Panel.Show();
+            this.Hide();
+        }
     }
 }

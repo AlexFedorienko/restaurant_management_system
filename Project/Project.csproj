@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Orders_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders_Panel.Designer.cs">
+      <DependentUpon>Orders_Panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,12 +85,6 @@
     </Compile>
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="OrdersPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdersPanel.Designer.cs">
-      <DependentUpon>OrdersPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Panel.cs">
       <SubType>Form</SubType>
@@ -148,11 +148,11 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Orders_Panel.resx">
+      <DependentUpon>Orders_Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingPanel.resx">
       <DependentUpon>BookingPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrdersPanel.resx">
-      <DependentUpon>OrdersPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.cs</DependentUpon>

@@ -233,7 +233,6 @@ namespace Project
             this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.firstIcon.TabIndex = 11;
             this.firstIcon.TabStop = false;
-            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button5
             // 

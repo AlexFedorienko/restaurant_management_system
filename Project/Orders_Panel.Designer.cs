@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    partial class Admin_Panel
+    partial class Orders_Panel
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,13 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Panel));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders_Panel));
+            this.article = new System.Windows.Forms.Label();
             this.buttonDashBoardAP = new System.Windows.Forms.Button();
             this.buttonActiveOrdersAP = new System.Windows.Forms.Button();
             this.buttonBookingAP = new System.Windows.Forms.Button();
             this.buttonMoneyCostAP = new System.Windows.Forms.Button();
-            this.MenuList = new System.Windows.Forms.DataGridView();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.buttonAddItem = new System.Windows.Forms.Button();
-            this.UploadImage = new System.Windows.Forms.Button();
+            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,35 +47,29 @@ namespace Project
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonDeleteItem = new System.Windows.Forms.Button();
-            this.comboBoxNames = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
+            this.dataGridViewOrderItems = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LeftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // article
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin Panel";
+            this.article.AutoSize = true;
+            this.article.BackColor = System.Drawing.Color.Transparent;
+            this.article.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.article.ForeColor = System.Drawing.Color.White;
+            this.article.Location = new System.Drawing.Point(19, 18);
+            this.article.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.article.Name = "article";
+            this.article.Size = new System.Drawing.Size(182, 32);
+            this.article.TabIndex = 0;
+            this.article.Text = "Orders Panel";
             // 
             // buttonDashBoardAP
             // 
@@ -95,6 +84,7 @@ namespace Project
             this.buttonDashBoardAP.Size = new System.Drawing.Size(188, 41);
             this.buttonDashBoardAP.TabIndex = 2;
             this.buttonDashBoardAP.UseVisualStyleBackColor = false;
+            this.buttonDashBoardAP.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // buttonActiveOrdersAP
             // 
@@ -109,7 +99,6 @@ namespace Project
             this.buttonActiveOrdersAP.Size = new System.Drawing.Size(188, 41);
             this.buttonActiveOrdersAP.TabIndex = 3;
             this.buttonActiveOrdersAP.UseVisualStyleBackColor = false;
-            this.buttonActiveOrdersAP.Click += new System.EventHandler(this.buttonActiveOrdersAP_Click);
             // 
             // buttonBookingAP
             // 
@@ -140,71 +129,17 @@ namespace Project
             this.buttonMoneyCostAP.Text = "\r\n";
             this.buttonMoneyCostAP.UseVisualStyleBackColor = false;
             // 
-            // MenuList
+            // dataGridViewOrder
             // 
-            this.MenuList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.MenuList.ColumnHeadersHeight = 50;
-            this.MenuList.Location = new System.Drawing.Point(657, 28);
-            this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
-            this.MenuList.Name = "MenuList";
-            this.MenuList.RowHeadersWidth = 47;
-            this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.MenuList.Size = new System.Drawing.Size(600, 659);
-            this.MenuList.TabIndex = 0;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(259, 131);
-            this.textBoxName.Multiline = true;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(157, 28);
-            this.textBoxName.TabIndex = 13;
-            // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.Location = new System.Drawing.Point(259, 218);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(157, 30);
-            this.textBoxDescription.TabIndex = 14;
-            // 
-            // textBoxPrice
-            // 
-            this.textBoxPrice.Location = new System.Drawing.Point(259, 301);
-            this.textBoxPrice.Multiline = true;
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(157, 30);
-            this.textBoxPrice.TabIndex = 15;
-            // 
-            // buttonAddItem
-            // 
-            this.buttonAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.buttonAddItem.FlatAppearance.BorderSize = 0;
-            this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddItem.ForeColor = System.Drawing.Color.White;
-            this.buttonAddItem.Location = new System.Drawing.Point(259, 404);
-            this.buttonAddItem.Name = "buttonAddItem";
-            this.buttonAddItem.Size = new System.Drawing.Size(157, 58);
-            this.buttonAddItem.TabIndex = 17;
-            this.buttonAddItem.Text = "Save and create";
-            this.buttonAddItem.UseVisualStyleBackColor = false;
-            this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
-            // 
-            // UploadImage
-            // 
-            this.UploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.UploadImage.FlatAppearance.BorderSize = 0;
-            this.UploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadImage.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UploadImage.ForeColor = System.Drawing.Color.White;
-            this.UploadImage.Location = new System.Drawing.Point(259, 350);
-            this.UploadImage.Name = "UploadImage";
-            this.UploadImage.Size = new System.Drawing.Size(157, 35);
-            this.UploadImage.TabIndex = 18;
-            this.UploadImage.Text = "Upload image";
-            this.UploadImage.UseVisualStyleBackColor = false;
-            this.UploadImage.Click += new System.EventHandler(this.buttonSelectImage_Click);
+            this.dataGridViewOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.dataGridViewOrder.ColumnHeadersHeight = 50;
+            this.dataGridViewOrder.Location = new System.Drawing.Point(296, 18);
+            this.dataGridViewOrder.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
+            this.dataGridViewOrder.Name = "dataGridViewOrder";
+            this.dataGridViewOrder.RowHeadersWidth = 47;
+            this.dataGridViewOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewOrder.Size = new System.Drawing.Size(736, 256);
+            this.dataGridViewOrder.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -265,7 +200,6 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(32, 23);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -319,144 +253,39 @@ namespace Project
             this.label5.TabIndex = 23;
             this.label5.Text = "Dashboard";
             // 
-            // buttonDeleteItem
-            // 
-            this.buttonDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.buttonDeleteItem.FlatAppearance.BorderSize = 0;
-            this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteItem.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteItem.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteItem.Location = new System.Drawing.Point(455, 179);
-            this.buttonDeleteItem.Name = "buttonDeleteItem";
-            this.buttonDeleteItem.Size = new System.Drawing.Size(162, 29);
-            this.buttonDeleteItem.TabIndex = 24;
-            this.buttonDeleteItem.Text = "Delete";
-            this.buttonDeleteItem.UseVisualStyleBackColor = false;
-            this.buttonDeleteItem.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // comboBoxNames
-            // 
-            this.comboBoxNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNames.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxNames.FormattingEnabled = true;
-            this.comboBoxNames.IntegralHeight = false;
-            this.comboBoxNames.ItemHeight = 20;
-            this.comboBoxNames.Location = new System.Drawing.Point(455, 131);
-            this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(162, 28);
-            this.comboBoxNames.TabIndex = 25;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(452, 45);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 36);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Delete item";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(254, 42);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 36);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Add item";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(254, 95);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 26);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(255, 182);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 26);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Description";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(254, 268);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 26);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Price";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(453, 95);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 26);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Select by name";
-            // 
             // LeftPanel
             // 
             this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(25)))));
-            this.LeftPanel.Controls.Add(this.label1);
+            this.LeftPanel.Controls.Add(this.article);
             this.LeftPanel.Location = new System.Drawing.Point(-1, 0);
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(223, 723);
             this.LeftPanel.TabIndex = 32;
             // 
-            // Admin_Panel
+            // dataGridViewOrderItems
+            // 
+            this.dataGridViewOrderItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.dataGridViewOrderItems.ColumnHeadersHeight = 50;
+            this.dataGridViewOrderItems.Location = new System.Drawing.Point(296, 290);
+            this.dataGridViewOrderItems.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
+            this.dataGridViewOrderItems.Name = "dataGridViewOrderItems";
+            this.dataGridViewOrderItems.RowHeadersWidth = 47;
+            this.dataGridViewOrderItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewOrderItems.Size = new System.Drawing.Size(736, 336);
+            this.dataGridViewOrderItems.TabIndex = 33;
+            // 
+            // Orders_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.dataGridViewOrderItems);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBoxNames);
-            this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.UploadImage);
-            this.Controls.Add(this.buttonAddItem);
-            this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.MenuList);
+            this.Controls.Add(this.dataGridViewOrder);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
@@ -468,15 +297,16 @@ namespace Project
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Admin_Panel";
+            this.Name = "Orders_Panel";
             this.Text = "Admin_Panel";
-            ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LeftPanel.ResumeLayout(false);
             this.LeftPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,7 +315,7 @@ namespace Project
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label article;
         private System.Windows.Forms.Button buttonDashBoardAP;
         private System.Windows.Forms.Button buttonActiveOrdersAP;
         private System.Windows.Forms.Button buttonBookingAP;
@@ -494,24 +324,12 @@ namespace Project
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DataGridView MenuList;
-        private TextBox textBoxName;
-        private TextBox textBoxDescription;
-        private TextBox textBoxPrice;
-        private Button buttonAddItem;
-        private Button UploadImage;
+        private DataGridView dataGridViewOrder;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button buttonDeleteItem;
-        private ComboBox comboBoxNames;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
         private Panel LeftPanel;
+        private DataGridView dataGridViewOrderItems;
     }
 }

@@ -54,6 +54,17 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.textBoxCardNumberF = new System.Windows.Forms.TextBox();
+            this.textBoxFullAdressF = new System.Windows.Forms.TextBox();
+            this.textBoxCardMonthF = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxCardYearF = new System.Windows.Forms.TextBox();
+            this.textBoxCardCvvF = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonSaveChangesF = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -363,12 +374,129 @@ namespace Project
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
             // 
+            // textBoxCardNumberF
+            // 
+            this.textBoxCardNumberF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCardNumberF.Location = new System.Drawing.Point(534, 205);
+            this.textBoxCardNumberF.Multiline = true;
+            this.textBoxCardNumberF.Name = "textBoxCardNumberF";
+            this.textBoxCardNumberF.Size = new System.Drawing.Size(367, 34);
+            this.textBoxCardNumberF.TabIndex = 6;
+            this.textBoxCardNumberF.TextChanged += new System.EventHandler(this.textBoxCardNumberF_TextChanged);
+            // 
+            // textBoxFullAdressF
+            // 
+            this.textBoxFullAdressF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFullAdressF.Location = new System.Drawing.Point(534, 410);
+            this.textBoxFullAdressF.Multiline = true;
+            this.textBoxFullAdressF.Name = "textBoxFullAdressF";
+            this.textBoxFullAdressF.Size = new System.Drawing.Size(367, 34);
+            this.textBoxFullAdressF.TabIndex = 7;
+            this.textBoxFullAdressF.TextChanged += new System.EventHandler(this.textBoxFullAdressF_TextChanged);
+            // 
+            // textBoxCardMonthF
+            // 
+            this.textBoxCardMonthF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCardMonthF.Location = new System.Drawing.Point(534, 286);
+            this.textBoxCardMonthF.Multiline = true;
+            this.textBoxCardMonthF.Name = "textBoxCardMonthF";
+            this.textBoxCardMonthF.Size = new System.Drawing.Size(37, 34);
+            this.textBoxCardMonthF.TabIndex = 8;
+            this.textBoxCardMonthF.TextChanged += new System.EventHandler(this.textBoxCardMonthF_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(577, 289);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 31);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "/";
+            // 
+            // textBoxCardYearF
+            // 
+            this.textBoxCardYearF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCardYearF.Location = new System.Drawing.Point(605, 289);
+            this.textBoxCardYearF.Multiline = true;
+            this.textBoxCardYearF.Name = "textBoxCardYearF";
+            this.textBoxCardYearF.Size = new System.Drawing.Size(37, 34);
+            this.textBoxCardYearF.TabIndex = 10;
+            this.textBoxCardYearF.TextChanged += new System.EventHandler(this.textBoxCardYearF_TextChanged);
+            // 
+            // textBoxCardCvvF
+            // 
+            this.textBoxCardCvvF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCardCvvF.Location = new System.Drawing.Point(534, 351);
+            this.textBoxCardCvvF.Multiline = true;
+            this.textBoxCardCvvF.Name = "textBoxCardCvvF";
+            this.textBoxCardCvvF.Size = new System.Drawing.Size(59, 34);
+            this.textBoxCardCvvF.TabIndex = 11;
+            this.textBoxCardCvvF.TextChanged += new System.EventHandler(this.textBoxCardCvvF_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(602, 362);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "CVV";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(927, 212);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Card number";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(930, 422);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Full adress";
+            // 
+            // buttonSaveChangesF
+            // 
+            this.buttonSaveChangesF.Location = new System.Drawing.Point(534, 487);
+            this.buttonSaveChangesF.Name = "buttonSaveChangesF";
+            this.buttonSaveChangesF.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveChangesF.TabIndex = 15;
+            this.buttonSaveChangesF.Text = "Save";
+            this.buttonSaveChangesF.UseVisualStyleBackColor = true;
+            this.buttonSaveChangesF.Click += new System.EventHandler(this.buttonSaveChangesF_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(653, 304);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Month/Year";
+            // 
             // Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.buttonSaveChangesF);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBoxCardCvvF);
+            this.Controls.Add(this.textBoxCardYearF);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxCardMonthF);
+            this.Controls.Add(this.textBoxFullAdressF);
+            this.Controls.Add(this.textBoxCardNumberF);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.panel1);
@@ -378,6 +506,7 @@ namespace Project
             this.Name = "Finance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Finance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).EndInit();
@@ -387,6 +516,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -414,6 +544,17 @@ namespace Project
         private Label label5;
         private Label label4;
         private Label label7;
+        private TextBox textBoxCardNumberF;
+        private TextBox textBoxFullAdressF;
+        private TextBox textBoxCardMonthF;
+        private Label label8;
+        private TextBox textBoxCardYearF;
+        private TextBox textBoxCardCvvF;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Button buttonSaveChangesF;
+        private Label label12;
     }
 }
 

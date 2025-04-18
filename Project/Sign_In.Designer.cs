@@ -31,30 +31,17 @@ namespace Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
-            this.textBox_Login = new System.Windows.Forms.RichTextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Project.GradientPanel();
-            this.roundedTextBox1 = new RoundedTextBox();
-            this.btnEnterSignIn = new System.Windows.Forms.Button();
+            this.textBox_Login = new RoundedRichTextBox();
             this.roundedButton1 = new RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.signUpBtn = new System.Windows.Forms.Button();
-            this.textBox_Psw = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox_Psw = new RoundedRichTextBox();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox_Login
-            // 
-            this.textBox_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Login.Location = new System.Drawing.Point(26, 109);
-            this.textBox_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_Login.Name = "textBox_Login";
-            this.textBox_Login.Size = new System.Drawing.Size(300, 49);
-            this.textBox_Login.TabIndex = 1;
-            this.textBox_Login.Text = "";
-            this.textBox_Login.TextChanged += new System.EventHandler(this.textBox_Login_TextChanged);
             // 
             // exitButton
             // 
@@ -73,13 +60,12 @@ namespace Project
             this.gradientPanel1.Angle = 80F;
             this.gradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(93)))), ((int)(((byte)(150)))));
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(96)))));
-            this.gradientPanel1.Controls.Add(this.roundedTextBox1);
-            this.gradientPanel1.Controls.Add(this.btnEnterSignIn);
+            this.gradientPanel1.Controls.Add(this.textBox_Psw);
+            this.gradientPanel1.Controls.Add(this.textBox_Login);
             this.gradientPanel1.Controls.Add(this.roundedButton1);
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.signUpBtn);
-            this.gradientPanel1.Controls.Add(this.textBox_Psw);
             this.gradientPanel1.Controls.Add(this.button1);
             this.gradientPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gradientPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -90,34 +76,25 @@ namespace Project
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(92)))), ((int)(((byte)(123)))));
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint_1);
             // 
-            // roundedTextBox1
+            // textBox_Login
             // 
-            this.roundedTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.roundedTextBox1.BorderRadius = 35;
-            this.roundedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.roundedTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.roundedTextBox1.Location = new System.Drawing.Point(25, 275);
-            this.roundedTextBox1.Multiline = true;
-            this.roundedTextBox1.Name = "roundedTextBox1";
-            this.roundedTextBox1.Size = new System.Drawing.Size(302, 42);
-            this.roundedTextBox1.TabIndex = 14;
-            // 
-            // btnEnterSignIn
-            // 
-            this.btnEnterSignIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnterSignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEnterSignIn.Location = new System.Drawing.Point(27, 359);
-            this.btnEnterSignIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEnterSignIn.Name = "btnEnterSignIn";
-            this.btnEnterSignIn.Size = new System.Drawing.Size(298, 36);
-            this.btnEnterSignIn.TabIndex = 7;
-            this.btnEnterSignIn.Text = "SIGN IN";
-            this.btnEnterSignIn.UseVisualStyleBackColor = true;
-            this.btnEnterSignIn.Click += new System.EventHandler(this.btnEnterSignIn_Click);
+            this.textBox_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(117)))), ((int)(((byte)(150)))));
+            this.textBox_Login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Login.BulletIndent = 1;
+            this.textBox_Login.CornerRadius = 20;
+            this.textBox_Login.ForeColor = System.Drawing.SystemColors.Menu;
+            this.textBox_Login.Location = new System.Drawing.Point(24, 114);
+            this.textBox_Login.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Login.MaximumSize = new System.Drawing.Size(100000, 100000);
+            this.textBox_Login.Name = "textBox_Login";
+            this.textBox_Login.Size = new System.Drawing.Size(326, 40);
+            this.textBox_Login.TabIndex = 15;
+            this.textBox_Login.Text = "";
+            this.textBox_Login.TextChanged += new System.EventHandler(this.loginTextBox_TextChanged);
             // 
             // roundedButton1
             // 
-            this.roundedButton1.BackColor = System.Drawing.Color.MediumBlue;
+            this.roundedButton1.BackColor = System.Drawing.Color.Blue;
             this.roundedButton1.BorderRadius = 40;
             this.roundedButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.roundedButton1.Location = new System.Drawing.Point(13, 415);
@@ -163,16 +140,6 @@ namespace Project
             this.signUpBtn.UseVisualStyleBackColor = true;
             this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
-            // textBox_Psw
-            // 
-            this.textBox_Psw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Psw.Location = new System.Drawing.Point(25, 200);
-            this.textBox_Psw.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_Psw.Name = "textBox_Psw";
-            this.textBox_Psw.Size = new System.Drawing.Size(300, 49);
-            this.textBox_Psw.TabIndex = 2;
-            this.textBox_Psw.Text = "";
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -184,13 +151,27 @@ namespace Project
             this.button1.Text = "SIGN IN";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // textBox_Psw
+            // 
+            this.textBox_Psw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(117)))), ((int)(((byte)(150)))));
+            this.textBox_Psw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Psw.BulletIndent = 1;
+            this.textBox_Psw.CornerRadius = 20;
+            this.textBox_Psw.ForeColor = System.Drawing.SystemColors.Menu;
+            this.textBox_Psw.Location = new System.Drawing.Point(24, 202);
+            this.textBox_Psw.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Psw.MaximumSize = new System.Drawing.Size(100000, 100000);
+            this.textBox_Psw.Name = "textBox_Psw";
+            this.textBox_Psw.Size = new System.Drawing.Size(326, 40);
+            this.textBox_Psw.TabIndex = 16;
+            this.textBox_Psw.Text = "";
+            // 
             // Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 490);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.textBox_Login);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -203,16 +184,14 @@ namespace Project
         }
 
         #endregion
-        private System.Windows.Forms.RichTextBox textBox_Login;
-        private System.Windows.Forms.RichTextBox textBox_Psw;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button signUpBtn;
-        private System.Windows.Forms.Button btnEnterSignIn;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private GradientPanel gradientPanel1;
         private RoundedButton roundedButton1;
-        private RoundedTextBox roundedTextBox1;
+        private RoundedRichTextBox textBox_Login;
+        private RoundedRichTextBox textBox_Psw;
     }
 }

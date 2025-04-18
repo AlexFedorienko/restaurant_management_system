@@ -516,6 +516,35 @@ namespace Project
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
+            decimal totalAmount = cart.Sum(item => item.Price * item.Quantity);
+            string queryOrder = "INSERT INTO Orders (UserId, TotalAmount) OUTPUT INSERTED.OrderId VALUES (@UserId, @TotalAmount)";
+            SqlCommand commandOrder = new SqlCommand(queryOrder, dataBase.getConnection());
+            commandOrder.Parameters.AddWithValue("@UserId", userId);
+            commandOrder.Parameters.AddWithValue("@TotalAmount", totalAmount);
+
+            int orderId = (int)commandOrder.ExecuteScalar();
+
+            foreach (var item in cart)
+            {
+                string queryOrderItems = "INSERT INTO OrderItems (OrderId, ProductName, ProductPrice, Quantity, TotalPrice) VALUES (@OrderId, @ProductName, @ProductPrice, @Quantity, @TotalPrice)";
+                SqlCommand commandOrderItems = new SqlCommand(queryOrderItems, dataBase.getConnection());
+                commandOrderItems.Parameters.AddWithValue("@OrderId", orderId);
+                commandOrderItems.Parameters.AddWithValue("@ProductName", item.Name);
+                commandOrderItems.Parameters.AddWithValue("@ProductPrice", item.Price);
+                commandOrderItems.Parameters.AddWithValue("@Quantity", item.Quantity);
+                commandOrderItems.Parameters.AddWithValue("@TotalPrice", item.Price * item.Quantity);
+
+                commandOrderItems.ExecuteNonQuery();
+            }
+
+            dataBase.closeConnection();
+
+            cart.Clear();
+
+            UpdateCartDisplay();
+
             MessageBox.Show("Покупка успешно оформлена!", "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

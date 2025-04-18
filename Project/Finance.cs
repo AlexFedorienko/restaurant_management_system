@@ -350,5 +350,113 @@ namespace Project
             this.Hide();
             gallery.Show();
         }
+
+        private void textBoxCardNumberF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCardMonthF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCardYearF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCardCvvF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxFullAdressF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSaveChangesF_Click(object sender, EventArgs e)
+        {
+            var cardNumber = textBoxCardNumberF.Text;
+            var cardMonth = textBoxCardMonthF.Text;
+            var cardYear = textBoxCardYearF.Text;
+            var cvv = textBoxCardCvvF.Text;
+            var userAddress = textBoxFullAdressF.Text;
+
+            // Простенька валідація
+            if (cardNumber.Length < 13 || cvv.Length != 3 || cardMonth.Length != 2 || cardYear.Length != 2)
+            {
+                MessageBox.Show("Please enter valid card details.");
+                return;
+            }
+
+            string query = "UPDATE Auth SET " +
+                           "card_number = @cardNumber, " +
+                           "expire_month = @month, " +
+                           "expire_year = @year, " +
+                           "cvv = @cvv, " +
+                           "user_adress = @address " +
+                           "WHERE id = @userId";
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+
+            command.Parameters.AddWithValue("@cardNumber", cardNumber);
+            command.Parameters.AddWithValue("@month", cardMonth);
+            command.Parameters.AddWithValue("@year", cardYear);
+            command.Parameters.AddWithValue("@cvv", cvv);
+            command.Parameters.AddWithValue("@address", userAddress);
+            command.Parameters.AddWithValue("@userId", userId);
+
+            dataBase.openConnection();
+
+            try
+            {
+                int result = command.ExecuteNonQuery();
+                if (result > 0)
+                {
+                    MessageBox.Show("Payment information updated successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update information.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                dataBase.closeConnection();
+            }
+        }
+
+
+        private void LoadUserFinanceData()
+        {
+            dataBase.openConnection();
+            string query = $"SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = {userId}";
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                textBoxCardNumberF.Text = reader["card_number"]?.ToString();
+                textBoxCardMonthF.Text = reader["expire_month"]?.ToString();
+                textBoxCardYearF.Text = reader["expire_year"]?.ToString();
+                textBoxCardCvvF.Text = reader["cvv"]?.ToString();
+                textBoxFullAdressF.Text = reader["user_adress"]?.ToString();
+            }
+
+            reader.Close();
+            dataBase.closeConnection();
+        }
+
+        private void Finance_Load(object sender, EventArgs e)
+        {
+            LoadUserFinanceData();
+        }
     }
 }

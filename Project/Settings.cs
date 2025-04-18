@@ -10,6 +10,7 @@ namespace Project
 {
     public partial class Settings : Form
     {
+        private bool isPasswordHidden = true;
         DataBase dataBase = new DataBase();
         private Form1 form1;
         Auth auth = new Auth();
@@ -183,7 +184,16 @@ namespace Project
 
         private void VisibleButtonS_Click(object sender, EventArgs e)
         {
-
+            if (isPasswordHidden)
+            {
+                textBoxPasswordS.PasswordChar = '\0'; 
+                isPasswordHidden = false;
+            }
+            else
+            {
+                textBoxPasswordS.PasswordChar = '*'; 
+                isPasswordHidden = true;
+            }
         }
     }
 }

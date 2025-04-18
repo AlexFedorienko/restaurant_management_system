@@ -118,6 +118,9 @@
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RoundedRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RoundedTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

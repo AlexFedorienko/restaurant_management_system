@@ -600,6 +600,35 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
+            // Запрос для получения платёжных данных пользователя
+            string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
+            SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
+            commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
+
+            SqlDataReader reader = commandPaymentInfo.ExecuteReader();
+
+            string cardNumber = "0", expireMonth = "0", expireYear = "0", cvv = "0";
+
+            if (reader.Read())
+            {
+                cardNumber = reader["card_number"]?.ToString();
+                expireMonth = reader["expire_month"]?.ToString();
+                expireYear = reader["expire_year"]?.ToString();
+                cvv = reader["cvv"]?.ToString();
+                
+            }
+
+            reader.Close();
+            dataBase.closeConnection();
+
+            // Обновление лейблов с полученными данными
+            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0" : cardNumber;
+            labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "0" : expireMonth;
+            labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "0" : expireYear;
+            labelCvv.Text = string.IsNullOrEmpty(cvv) ? "0" : cvv;
+            
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
             buttonAdminPanel.Visible = Auth.IsAdmin;

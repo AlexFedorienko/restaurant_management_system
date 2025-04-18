@@ -65,6 +65,11 @@ namespace Project
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalTextLabel = new System.Windows.Forms.Label();
             this.rectPanel = new System.Windows.Forms.Panel();
+            this.labelCvv = new System.Windows.Forms.Label();
+            this.labelCardYear = new System.Windows.Forms.Label();
+            this.labeli = new System.Windows.Forms.Label();
+            this.labelCardMonth = new System.Windows.Forms.Label();
+            this.labelCardNumber = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
@@ -74,6 +79,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanelPayment.SuspendLayout();
+            this.rectPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -482,10 +488,70 @@ namespace Project
             // rectPanel
             // 
             this.rectPanel.BackColor = System.Drawing.Color.SeaGreen;
+            this.rectPanel.Controls.Add(this.labelCvv);
+            this.rectPanel.Controls.Add(this.labelCardYear);
+            this.rectPanel.Controls.Add(this.labelCardNumber);
+            this.rectPanel.Controls.Add(this.labeli);
+            this.rectPanel.Controls.Add(this.labelCardMonth);
             this.rectPanel.Location = new System.Drawing.Point(-4, 50);
             this.rectPanel.Name = "rectPanel";
             this.rectPanel.Size = new System.Drawing.Size(317, 150);
             this.rectPanel.TabIndex = 0;
+            // 
+            // labelCvv
+            // 
+            this.labelCvv.AutoSize = true;
+            this.labelCvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCvv.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCvv.Location = new System.Drawing.Point(217, 57);
+            this.labelCvv.Name = "labelCvv";
+            this.labelCvv.Size = new System.Drawing.Size(70, 24);
+            this.labelCvv.TabIndex = 4;
+            this.labelCvv.Text = "label10";
+            // 
+            // labelCardYear
+            // 
+            this.labelCardYear.AutoSize = true;
+            this.labelCardYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCardYear.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCardYear.Location = new System.Drawing.Point(110, 56);
+            this.labelCardYear.Name = "labelCardYear";
+            this.labelCardYear.Size = new System.Drawing.Size(70, 24);
+            this.labelCardYear.TabIndex = 3;
+            this.labelCardYear.Text = "label10";
+            // 
+            // labeli
+            // 
+            this.labeli.AutoSize = true;
+            this.labeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeli.ForeColor = System.Drawing.SystemColors.Control;
+            this.labeli.Location = new System.Drawing.Point(98, 57);
+            this.labeli.Name = "labeli";
+            this.labeli.Size = new System.Drawing.Size(15, 24);
+            this.labeli.TabIndex = 2;
+            this.labeli.Text = "/";
+            // 
+            // labelCardMonth
+            // 
+            this.labelCardMonth.AutoSize = true;
+            this.labelCardMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCardMonth.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCardMonth.Location = new System.Drawing.Point(74, 56);
+            this.labelCardMonth.Name = "labelCardMonth";
+            this.labelCardMonth.Size = new System.Drawing.Size(70, 24);
+            this.labelCardMonth.TabIndex = 1;
+            this.labelCardMonth.Text = "label10";
+            // 
+            // labelCardNumber
+            // 
+            this.labelCardNumber.AutoSize = true;
+            this.labelCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCardNumber.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCardNumber.Location = new System.Drawing.Point(74, 21);
+            this.labelCardNumber.Name = "labelCardNumber";
+            this.labelCardNumber.Size = new System.Drawing.Size(70, 24);
+            this.labelCardNumber.TabIndex = 0;
+            this.labelCardNumber.Text = "label10";
             // 
             // panel2
             // 
@@ -530,6 +596,8 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanelPayment.ResumeLayout(false);
             this.flowLayoutPanelPayment.PerformLayout();
+            this.rectPanel.ResumeLayout(false);
+            this.rectPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -572,6 +640,11 @@ namespace Project
         private Label totalTextLabel;
         private Button checkoutButton;
         private Label totalAmountLabel;
+        private Label labelCardMonth;
+        private Label labelCardNumber;
+        private Label labelCardYear;
+        private Label labeli;
+        private Label labelCvv;
     }
 }
 

@@ -193,7 +193,13 @@ namespace Project
             {
                 textBoxPasswordS.PasswordChar = '*'; 
                 isPasswordHidden = true;
+                
             }
+        }
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            textBoxPasswordS.PasswordChar = '*'; 
         }
     }
 }

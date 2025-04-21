@@ -42,7 +42,7 @@ namespace Project
             previewPanel = new Panel
             {
                 Size = new Size(162, 230),
-                Location = new Point(457, 250),
+                Location = new Point(457, 150),
                 BackColor = Color.FromArgb(48, 57, 76),
                 BorderStyle = BorderStyle.None
             };
@@ -150,6 +150,7 @@ namespace Project
             {
                 labelPreview.Visible = false;
             }
+
         }
 
         private void buttonSelectImage_Click(object sender, EventArgs e)

@@ -62,6 +62,11 @@ namespace Project
             this.label11 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.line1 = new Project.Line();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -145,17 +150,19 @@ namespace Project
             // 
             this.MenuList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.MenuList.ColumnHeadersHeight = 50;
-            this.MenuList.Location = new System.Drawing.Point(675, 28);
+            this.MenuList.Location = new System.Drawing.Point(688, 28);
             this.MenuList.Margin = new System.Windows.Forms.Padding(450, 3, 3, 3);
             this.MenuList.Name = "MenuList";
             this.MenuList.RowHeadersWidth = 47;
             this.MenuList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.MenuList.Size = new System.Drawing.Size(582, 657);
+            this.MenuList.Size = new System.Drawing.Size(569, 657);
             this.MenuList.TabIndex = 0;
             // 
             // textBoxName
             // 
-            this.textBoxName.BackColor = System.Drawing.Color.Silver;
+            this.textBoxName.BackColor = System.Drawing.Color.SlateGray;
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxName.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.Location = new System.Drawing.Point(265, 118);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
@@ -164,7 +171,9 @@ namespace Project
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.BackColor = System.Drawing.Color.Silver;
+            this.textBoxDescription.BackColor = System.Drawing.Color.SlateGray;
+            this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescription.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxDescription.Location = new System.Drawing.Point(264, 192);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
@@ -173,7 +182,9 @@ namespace Project
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.BackColor = System.Drawing.Color.Silver;
+            this.textBoxPrice.BackColor = System.Drawing.Color.SlateGray;
+            this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPrice.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice.Location = new System.Drawing.Point(265, 268);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
@@ -340,27 +351,30 @@ namespace Project
             // 
             // comboBoxNames
             // 
-            this.comboBoxNames.BackColor = System.Drawing.Color.Silver;
+            this.comboBoxNames.BackColor = System.Drawing.Color.SlateGray;
+            this.comboBoxNames.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNames.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxNames.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxNames.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNames.ForeColor = System.Drawing.Color.Black;
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.IntegralHeight = false;
             this.comboBoxNames.ItemHeight = 20;
             this.comboBoxNames.Location = new System.Drawing.Point(259, 529);
             this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(162, 28);
+            this.comboBoxNames.Size = new System.Drawing.Size(162, 26);
             this.comboBoxNames.TabIndex = 25;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(243, 431);
+            this.label6.Location = new System.Drawing.Point(238, 438);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 36);
+            this.label6.Size = new System.Drawing.Size(180, 40);
             this.label6.TabIndex = 26;
             this.label6.Text = "Delete item";
             // 
@@ -442,14 +456,73 @@ namespace Project
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(466, 484);
+            this.label12.Location = new System.Drawing.Point(468, 438);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(176, 36);
+            this.label12.Size = new System.Drawing.Size(182, 40);
             this.label12.TabIndex = 33;
             this.label12.Text = "New Promo";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(245, 412);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(425, 10);
+            this.line1.TabIndex = 34;
+            this.line1.Text = "line1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(495, 529);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 26);
+            this.textBox1.TabIndex = 35;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(490, 493);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 26);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Code";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(614, 558);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 35);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "%";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.SlateGray;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(495, 565);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(118, 26);
+            this.textBox2.TabIndex = 38;
             // 
             // Admin_Panel
             // 
@@ -457,6 +530,11 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.line1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
@@ -533,5 +611,10 @@ namespace Project
         private Label label11;
         private Panel LeftPanel;
         private Label label12;
+        private Line line1;
+        private TextBox textBox1;
+        private Label label13;
+        private Label label14;
+        private TextBox textBox2;
     }
 }

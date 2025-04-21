@@ -16,6 +16,12 @@ namespace Project
 
         private string userName;
         private int userId;
+        private int selectedStars = 0;
+        private byte[] attachedReviewImage;
+        private byte[] imageUserBytes; // аватар пользователя
+
+
+
 
         public Gallery(string userName, int userId)
         {
@@ -39,6 +45,7 @@ namespace Project
             MakeButtonRound(button3, 30);
             MakeButtonRound(button4, 30);
             MakeButtonRound(button5, 30);
+            LoadUserAvatar();
         }
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
@@ -324,7 +331,6 @@ namespace Project
             fifthIcon.Image = Properties.Resources.logout_green;
             fifthIcon.BackColor = Color.White;
         }
-
         private void button5_MouseLeave(object sender, EventArgs e)
         {
             button5.BackColor = Color.SeaGreen;
@@ -342,50 +348,41 @@ namespace Project
             fifthIcon.Image = Properties.Resources.logout_white;
             fifthIcon.BackColor = Color.SeaGreen;
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Gallery_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
 
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label7_Click(object sender, EventArgs e)
         {
 
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             auth.Show();
             this.Hide();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1(userName, userId);
             form1.Show();
             this.Hide();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Finance finance = new Finance(userName, userId);
@@ -393,7 +390,6 @@ namespace Project
             this.Hide();
             finance.Show();
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             News news = new News(userName, userId);
@@ -401,5 +397,199 @@ namespace Project
             this.Hide();
             news.Show();
         }
+        private void buttonStar1_Click(object sender, EventArgs e) => UpdateStarButtons(1);
+        private void buttonStar2_Click(object sender, EventArgs e) => UpdateStarButtons(2);
+        private void buttonStar3_Click(object sender, EventArgs e) => UpdateStarButtons(3);
+        private void buttonStar4_Click(object sender, EventArgs e) => UpdateStarButtons(4);
+        private void buttonStar5_Click(object sender, EventArgs e) => UpdateStarButtons(5);
+        private void buttonSend_Click(object sender, EventArgs e)
+        {
+            if (selectedStars == 0)
+            {
+                MessageBox.Show("Пожалуйста, выберите рейтинг звёздами.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBoxReview.Text))
+            {
+                MessageBox.Show("Введите текст отзыва.");
+                return;
+            }
+            if (attachedReviewImage == null)
+            {
+                MessageBox.Show("Прикрепите изображение.");
+                return;
+            }
+            byte[] imageUserBytes = null;
+            using (SqlCommand cmd = new SqlCommand("SELECT image_user FROM Auth WHERE id = @userId", dataBase.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+                dataBase.openConnection();
+                object result = cmd.ExecuteScalar();
+                if (result != DBNull.Value)
+                    imageUserBytes = (byte[])result;
+                dataBase.closeConnection();
+            }
+            using (SqlCommand command = new SqlCommand("INSERT INTO Reviews (review_text, stars, entity_id, review_date, review_image, image_user, username) VALUES (@text, @stars, @entity_id, @date, @review_image, @image_user, @username)", dataBase.getConnection()))
+            {
+                command.Parameters.Add("@text", SqlDbType.NVarChar).Value = textBoxReview.Text;
+                command.Parameters.Add("@stars", SqlDbType.Int).Value = selectedStars;
+                command.Parameters.Add("@entity_id", SqlDbType.Int).Value = userId;
+                command.Parameters.Add("@date", SqlDbType.DateTime).Value = DateTime.Now;
+                command.Parameters.Add("@review_image", SqlDbType.VarBinary).Value = attachedReviewImage;
+                command.Parameters.Add("@image_user", SqlDbType.VarBinary).Value = (object)imageUserBytes ?? DBNull.Value;
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = userName;
+
+                dataBase.openConnection();
+                int result = command.ExecuteNonQuery();
+                dataBase.closeConnection();
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Отзыв успешно добавлен!");
+                    textBoxReview.Clear();
+                    pictureBoxReview.Image = null;
+                    UpdateStarButtons(0);
+                    attachedReviewImage = null;
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при добавлении отзыва.");
+                }
+            }
+        }
+        private void pictureBoxReview_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void buttonAttachPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                attachedReviewImage = File.ReadAllBytes(imagePath);
+
+                using (Image original = Image.FromFile(imagePath))
+                {
+                    pictureBoxReview.Image = new Bitmap(original, pictureBoxReview.Width, pictureBoxReview.Height);
+                    pictureBoxReview.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+            }
+        }
+        private void UpdateStarButtons(int stars)
+        {
+            Button[] buttons = { buttonStar1, buttonStar2, buttonStar3, buttonStar4, buttonStar5 };
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].Image = (i < stars) ?
+                    Properties.Resources.iconStar_full_yellow_64px :
+                    Properties.Resources.iconStar_empty_64px;
+            }
+            selectedStars = stars;
+        }
+
+        private void textBoxReview_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadUserAvatar()
+        {
+            try
+            {
+                DataBase db = new DataBase();
+                string query = "SELECT image_user FROM Auth WHERE id = @id";
+
+                using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
+                {
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = userId;
+                    db.openConnection();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read() && !reader.IsDBNull(0))
+                    {
+                        imageUserBytes = (byte[])reader["image_user"];
+                    }
+
+                    reader.Close();
+                    db.closeConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке аватара: " + ex.Message);
+            }
+        }
+
+        private void buttonSend_Click_1(object sender, EventArgs e)
+        {
+            if (attachedReviewImage == null)
+            {
+                MessageBox.Show("Пожалуйста, прикрепите изображение к отзыву.");
+                return;
+            }
+
+            if (selectedStars == 0)
+            {
+                MessageBox.Show("Пожалуйста, поставьте рейтинг от 1 до 5 звёзд.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBoxReview.Text))
+            {
+                MessageBox.Show("Пожалуйста, напишите текст отзыва.");
+                return;
+            }
+
+            try
+            {
+                DataBase dataBase = new DataBase();
+
+                string insertQuery = "INSERT INTO Reviews (review_text, stars, entity_id, review_date, review_image, image_user, username) " +
+                                     "VALUES (@text, @stars, @entity_id, @date, @review_image, @image_user, @username)";
+
+                using (SqlCommand command = new SqlCommand(insertQuery, dataBase.getConnection()))
+                {
+                    command.Parameters.Add("@text", SqlDbType.NVarChar).Value = textBoxReview.Text;
+                    command.Parameters.Add("@stars", SqlDbType.Int).Value = selectedStars;
+                    command.Parameters.Add("@entity_id", SqlDbType.Int).Value = userId; // Убедись, что userId определён
+                    command.Parameters.Add("@date", SqlDbType.DateTime).Value = DateTime.Now;
+                    command.Parameters.Add("@review_image", SqlDbType.VarBinary).Value = attachedReviewImage;
+
+                    // Если у пользователя нет аватара — сохраняем null
+                    if (imageUserBytes != null)
+                        command.Parameters.Add("@image_user", SqlDbType.VarBinary).Value = imageUserBytes;
+                    else
+                        command.Parameters.Add("@image_user", SqlDbType.VarBinary).Value = DBNull.Value;
+
+                    command.Parameters.Add("@username", SqlDbType.NVarChar).Value = userName;
+
+                    dataBase.openConnection();
+
+                    int result = command.ExecuteNonQuery();
+
+                    dataBase.closeConnection();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Отзыв успешно добавлен!");
+                        textBoxReview.Clear();
+                        pictureBoxReview.Image = null;
+                        UpdateStarButtons(0);
+                        attachedReviewImage = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не удалось добавить отзыв.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при добавлении отзыва: " + ex.Message);
+            }
+        }
+
     }
 }

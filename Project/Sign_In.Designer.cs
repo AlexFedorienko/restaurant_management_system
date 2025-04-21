@@ -33,6 +33,9 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
             this.exitButton = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Project.GradientPanel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.line1 = new Project.Line();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,7 +43,8 @@ namespace Project
             this.textBox_Psw = new RoundedRichTextBox();
             this.textBox_Login = new RoundedRichTextBox();
             this.roundedButton1 = new RoundedButton();
-            this.line1 = new Project.Line();
+            this.line2 = new Project.Line();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +65,10 @@ namespace Project
             this.gradientPanel1.Angle = 80F;
             this.gradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(93)))), ((int)(((byte)(150)))));
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(96)))));
+            this.gradientPanel1.Controls.Add(this.guna2HtmlLabel6);
+            this.gradientPanel1.Controls.Add(this.line2);
+            this.gradientPanel1.Controls.Add(this.guna2HtmlLabel5);
+            this.gradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
             this.gradientPanel1.Controls.Add(this.line1);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel3);
@@ -77,6 +85,44 @@ namespace Project
             this.gradientPanel1.TabIndex = 12;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(92)))), ((int)(((byte)(123)))));
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint_1);
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(100, 279);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(107, 17);
+            this.guna2HtmlLabel5.TabIndex = 21;
+            this.guna2HtmlLabel5.Text = "KEEP ME SIGNED IN";
+            // 
+            // guna2ToggleSwitch1
+            // 
+            this.guna2ToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(24, 277);
+            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
+            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(56, 19);
+            this.guna2ToggleSwitch1.TabIndex = 13;
+            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.LineColor = System.Drawing.Color.RoyalBlue;
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(19, 55);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(75, 10);
+            this.line1.TabIndex = 13;
+            this.line1.Text = "line1";
             // 
             // guna2HtmlLabel4
             // 
@@ -160,7 +206,7 @@ namespace Project
             this.roundedButton1.BorderRadius = 40;
             this.roundedButton1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.roundedButton1.Location = new System.Drawing.Point(13, 415);
+            this.roundedButton1.Location = new System.Drawing.Point(19, 330);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(330, 36);
             this.roundedButton1.TabIndex = 13;
@@ -169,16 +215,27 @@ namespace Project
             this.roundedButton1.UseVisualStyleBackColor = false;
             this.roundedButton1.Click += new System.EventHandler(this.btnEnterSignIn_Click);
             // 
-            // line1
+            // line2
             // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.LineColor = System.Drawing.Color.Blue;
-            this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(19, 56);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(75, 10);
-            this.line1.TabIndex = 13;
-            this.line1.Text = "line1";
+            this.line2.BackColor = System.Drawing.Color.Transparent;
+            this.line2.LineColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.line2.LineThickness = 2;
+            this.line2.Location = new System.Drawing.Point(19, 386);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(320, 10);
+            this.line2.TabIndex = 22;
+            this.line2.Text = "line2";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(115, 413);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(123, 17);
+            this.guna2HtmlLabel6.TabIndex = 23;
+            this.guna2HtmlLabel6.Text = "Forgot your password?";
             // 
             // Auth
             // 
@@ -208,5 +265,9 @@ namespace Project
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Line line1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Line line2;
     }
 }

@@ -415,36 +415,34 @@ namespace Project
 
         private void LoadCartPanel()
         {
-            // Создание панели для общей суммы
-            rectPanel.Size = new Size(310, 150);
-            rectPanel.BackColor = Color.SeaGreen;
-            rectPanel.Margin = new Padding(0, 20, 0, 0);
-            flowLayoutPanelPayment.Controls.Add(rectPanel);
+            // Убеждаемся, что автопрокрутка отключена, чтобы координаты из дизайнера не сбивались
+            flowLayoutPanelPayment.AutoScroll = false;
 
-            // Обновление метки totalAmountLabel
-            totalAmountLabel.Text = "$0";  // Начальная сумма
+            // Очищаем только динамические элементы, если они были (если ты их создаёшь вручную в рантайме)
+            // Важно: НЕ удаляй статичные элементы типа totalAmountLabel, checkoutButton и т.п.
+
+            // Обновляем текст общей суммы (например, при первом запуске)
+            totalAmountLabel.Text = "$0";
+
+            // Настраиваем стиль, если надо (опционально)
             totalAmountLabel.Font = new Font("Arial", 14, FontStyle.Bold);
-            totalAmountLabel.Size = new Size(300, 30);
+            totalAmountLabel.ForeColor = Color.Black;
+            totalAmountLabel.Location = new Point(220, 170);
             totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
-            totalAmountLabel.Margin = new Padding(5, 10, 5, 0);
-            totalAmountLabel.Location = new Point(230, 220);
-            flowLayoutPanelPayment.Controls.Add(totalAmountLabel);
 
-            // Кнопка оформления заказа
             checkoutButton.Text = "Checkout";
-            checkoutButton.Size = new Size(310, 37);
             checkoutButton.BackColor = Color.SeaGreen;
             checkoutButton.ForeColor = Color.White;
             checkoutButton.FlatStyle = FlatStyle.Flat;
-            checkoutButton.Click += CheckoutButton_Click;
-            checkoutButton.Margin = new Padding((flowLayoutPanelPayment.Width - 180) / 2, 10, 0, 0);
-            flowLayoutPanelPayment.Controls.Add(checkoutButton);
 
-            // Установка положения и размера панели оплаты
-            flowLayoutPanelPayment.Location = new Point(3, 463);
-            flowLayoutPanelPayment.Size = new Size(310, 380);
-            flowLayoutPanelPayment.AutoScroll = true;
+            // Назначаем обработчик (если ещё не назначен)
+            checkoutButton.Click -= CheckoutButton_Click; // убираем дубли
+            checkoutButton.Click += CheckoutButton_Click;
+
+            // rectPanel можно тоже стилизовать при необходимости
+            rectPanel.BackColor = Color.SeaGreen;
         }
+
 
         private void UpdateCartDisplay()
         {
@@ -505,6 +503,81 @@ namespace Project
 
             totalAmountLabel.Text = $"${totalAmount}";
         }
+
+        private void LoadOrderHistory()
+        {
+            flowLayoutPanelMyOrders.Controls.Clear();
+
+            dataBase.openConnection();
+
+            string queryOrders = "SELECT * FROM Orders WHERE UserId = @UserId ORDER BY OrderId DESC";
+            SqlCommand commandOrders = new SqlCommand(queryOrders, dataBase.getConnection());
+            commandOrders.Parameters.AddWithValue("@UserId", userId);
+
+            SqlDataReader orderReader = commandOrders.ExecuteReader();
+            List<int> orderIds = new List<int>();
+
+            DataTable ordersTable = new DataTable();
+            ordersTable.Load(orderReader);
+
+            foreach (DataRow orderRow in ordersTable.Rows)
+            {
+                int orderId = Convert.ToInt32(orderRow["OrderId"]);
+                decimal totalAmount = Convert.ToDecimal(orderRow["TotalAmount"]);
+
+                Panel orderPanel = new Panel
+                {
+                    Size = new Size(300, 150),
+                    BackColor = Color.LightGray,
+                    Margin = new Padding(10)
+                };
+
+                Label labelOrder = new Label
+                {
+                    Text = $"Order #{orderId} - Total: ${totalAmount}",
+                    Font = new Font("Arial", 12, FontStyle.Bold),
+                    AutoSize = false,
+                    Size = new Size(280, 30),
+                    Location = new Point(10, 10)
+                };
+                orderPanel.Controls.Add(labelOrder);
+
+                // Get order items
+                string queryItems = "SELECT * FROM OrderItems WHERE OrderId = @OrderId";
+                SqlCommand commandItems = new SqlCommand(queryItems, dataBase.getConnection());
+                commandItems.Parameters.AddWithValue("@OrderId", orderId);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(commandItems);
+                DataTable itemsTable = new DataTable();
+                adapter.Fill(itemsTable);
+
+                int yOffset = 45;
+
+                foreach (DataRow itemRow in itemsTable.Rows)
+                {
+                    string itemName = itemRow["ProductName"].ToString();
+                    int quantity = Convert.ToInt32(itemRow["Quantity"]);
+                    decimal price = Convert.ToDecimal(itemRow["ProductPrice"]);
+                    decimal total = Convert.ToDecimal(itemRow["TotalPrice"]);
+
+                    Label labelItem = new Label
+                    {
+                        Text = $"{itemName} x{quantity} - ${total}",
+                        Font = new Font("Arial", 10),
+                        Location = new Point(10, yOffset),
+                        AutoSize = true
+                    };
+
+                    orderPanel.Controls.Add(labelItem);
+                    yOffset += 20;
+                }
+
+                flowLayoutPanelMyOrders.Controls.Add(orderPanel);
+            }
+
+            dataBase.closeConnection();
+        }
+
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
@@ -661,9 +734,9 @@ namespace Project
             
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
+            LoadOrderHistory();
             buttonAdminPanel.Visible = Auth.IsAdmin;
 
-            // Создаем панель с общей суммой и кнопкой оформления заказа
             LoadCartPanel();
 
         }

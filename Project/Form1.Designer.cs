@@ -60,17 +60,18 @@ namespace Project
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
-            this.totalAmountLabel = new System.Windows.Forms.Label();
-            this.checkoutButton = new System.Windows.Forms.Button();
-            this.totalTextLabel = new System.Windows.Forms.Label();
-            this.rectPanel = new System.Windows.Forms.Panel();
-            this.labelCvv = new System.Windows.Forms.Label();
-            this.labelCardYear = new System.Windows.Forms.Label();
-            this.labeli = new System.Windows.Forms.Label();
-            this.labelCardMonth = new System.Windows.Forms.Label();
-            this.labelCardNumber = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rectPanel = new System.Windows.Forms.Panel();
+            this.labelCardMonth = new System.Windows.Forms.Label();
+            this.labeli = new System.Windows.Forms.Label();
+            this.labelCardNumber = new System.Windows.Forms.Label();
+            this.labelCardYear = new System.Windows.Forms.Label();
+            this.labelCvv = new System.Windows.Forms.Label();
+            this.totalTextLabel = new System.Windows.Forms.Label();
+            this.checkoutButton = new System.Windows.Forms.Button();
+            this.totalAmountLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelMyOrders = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -78,9 +79,9 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanelPayment.SuspendLayout();
-            this.rectPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.rectPanel.SuspendLayout();
+            this.flowLayoutPanelPayment.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -398,16 +399,16 @@ namespace Project
             this.flowLayoutPanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(413, 193);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
-            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1120, 813);
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1120, 852);
             this.flowLayoutPanelMenu.TabIndex = 6;
             this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(2, 3);
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(2, 344);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(311, 543);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(311, 298);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
             // label8
@@ -443,47 +444,17 @@ namespace Project
             this.label9.TabIndex = 10;
             this.label9.Text = "Search";
             // 
-            // flowLayoutPanelPayment
+            // panel2
             // 
-            this.flowLayoutPanelPayment.Controls.Add(this.totalAmountLabel);
-            this.flowLayoutPanelPayment.Controls.Add(this.checkoutButton);
-            this.flowLayoutPanelPayment.Controls.Add(this.totalTextLabel);
-            this.flowLayoutPanelPayment.Controls.Add(this.rectPanel);
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(2, 552);
-            this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 299);
-            this.flowLayoutPanelPayment.TabIndex = 11;
-            // 
-            // totalAmountLabel
-            // 
-            this.totalAmountLabel.AutoSize = true;
-            this.totalAmountLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
-            this.totalAmountLabel.Name = "totalAmountLabel";
-            this.totalAmountLabel.Size = new System.Drawing.Size(0, 34);
-            this.totalAmountLabel.TabIndex = 3;
-            // 
-            // checkoutButton
-            // 
-            this.checkoutButton.BackColor = System.Drawing.Color.SeaGreen;
-            this.checkoutButton.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutButton.ForeColor = System.Drawing.Color.White;
-            this.checkoutButton.Location = new System.Drawing.Point(0, 261);
-            this.checkoutButton.Name = "checkoutButton";
-            this.checkoutButton.Size = new System.Drawing.Size(310, 37);
-            this.checkoutButton.TabIndex = 2;
-            this.checkoutButton.Text = "Checkout";
-            this.checkoutButton.UseVisualStyleBackColor = false;
-            // 
-            // totalTextLabel
-            // 
-            this.totalTextLabel.AutoSize = true;
-            this.totalTextLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextLabel.Location = new System.Drawing.Point(3, 213);
-            this.totalTextLabel.Name = "totalTextLabel";
-            this.totalTextLabel.Size = new System.Drawing.Size(66, 34);
-            this.totalTextLabel.TabIndex = 1;
-            this.totalTextLabel.Text = "Total";
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.flowLayoutPanelMyOrders);
+            this.panel2.Controls.Add(this.flowLayoutPanelPayment);
+            this.panel2.Controls.Add(this.flowLayoutPanelCart);
+            this.panel2.Location = new System.Drawing.Point(1568, 144);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(320, 901);
+            this.panel2.TabIndex = 0;
             // 
             // rectPanel
             // 
@@ -493,43 +464,10 @@ namespace Project
             this.rectPanel.Controls.Add(this.labelCardNumber);
             this.rectPanel.Controls.Add(this.labeli);
             this.rectPanel.Controls.Add(this.labelCardMonth);
-            this.rectPanel.Location = new System.Drawing.Point(-4, 50);
+            this.rectPanel.Location = new System.Drawing.Point(3, 3);
             this.rectPanel.Name = "rectPanel";
-            this.rectPanel.Size = new System.Drawing.Size(317, 150);
+            this.rectPanel.Size = new System.Drawing.Size(304, 150);
             this.rectPanel.TabIndex = 0;
-            // 
-            // labelCvv
-            // 
-            this.labelCvv.AutoSize = true;
-            this.labelCvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCvv.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCvv.Location = new System.Drawing.Point(217, 57);
-            this.labelCvv.Name = "labelCvv";
-            this.labelCvv.Size = new System.Drawing.Size(70, 24);
-            this.labelCvv.TabIndex = 4;
-            this.labelCvv.Text = "label10";
-            // 
-            // labelCardYear
-            // 
-            this.labelCardYear.AutoSize = true;
-            this.labelCardYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCardYear.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCardYear.Location = new System.Drawing.Point(110, 56);
-            this.labelCardYear.Name = "labelCardYear";
-            this.labelCardYear.Size = new System.Drawing.Size(70, 24);
-            this.labelCardYear.TabIndex = 3;
-            this.labelCardYear.Text = "label10";
-            // 
-            // labeli
-            // 
-            this.labeli.AutoSize = true;
-            this.labeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labeli.ForeColor = System.Drawing.SystemColors.Control;
-            this.labeli.Location = new System.Drawing.Point(98, 57);
-            this.labeli.Name = "labeli";
-            this.labeli.Size = new System.Drawing.Size(15, 24);
-            this.labeli.TabIndex = 2;
-            this.labeli.Text = "/";
             // 
             // labelCardMonth
             // 
@@ -542,6 +480,17 @@ namespace Project
             this.labelCardMonth.TabIndex = 1;
             this.labelCardMonth.Text = "label10";
             // 
+            // labeli
+            // 
+            this.labeli.AutoSize = true;
+            this.labeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labeli.ForeColor = System.Drawing.SystemColors.Control;
+            this.labeli.Location = new System.Drawing.Point(98, 57);
+            this.labeli.Name = "labeli";
+            this.labeli.Size = new System.Drawing.Size(15, 24);
+            this.labeli.TabIndex = 2;
+            this.labeli.Text = "/";
+            // 
             // labelCardNumber
             // 
             this.labelCardNumber.AutoSize = true;
@@ -553,16 +502,76 @@ namespace Project
             this.labelCardNumber.TabIndex = 0;
             this.labelCardNumber.Text = "label10";
             // 
-            // panel2
+            // labelCardYear
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.flowLayoutPanelPayment);
-            this.panel2.Controls.Add(this.flowLayoutPanelCart);
-            this.panel2.Location = new System.Drawing.Point(1577, 144);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(320, 862);
-            this.panel2.TabIndex = 0;
+            this.labelCardYear.AutoSize = true;
+            this.labelCardYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCardYear.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCardYear.Location = new System.Drawing.Point(110, 56);
+            this.labelCardYear.Name = "labelCardYear";
+            this.labelCardYear.Size = new System.Drawing.Size(70, 24);
+            this.labelCardYear.TabIndex = 3;
+            this.labelCardYear.Text = "label10";
+            // 
+            // labelCvv
+            // 
+            this.labelCvv.AutoSize = true;
+            this.labelCvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCvv.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCvv.Location = new System.Drawing.Point(217, 57);
+            this.labelCvv.Name = "labelCvv";
+            this.labelCvv.Size = new System.Drawing.Size(70, 24);
+            this.labelCvv.TabIndex = 4;
+            this.labelCvv.Text = "label10";
+            // 
+            // totalTextLabel
+            // 
+            this.totalTextLabel.AutoSize = true;
+            this.totalTextLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextLabel.Location = new System.Drawing.Point(3, 162);
+            this.totalTextLabel.Name = "totalTextLabel";
+            this.totalTextLabel.Size = new System.Drawing.Size(66, 34);
+            this.totalTextLabel.TabIndex = 1;
+            this.totalTextLabel.Text = "Total";
+            // 
+            // checkoutButton
+            // 
+            this.checkoutButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.checkoutButton.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutButton.ForeColor = System.Drawing.Color.White;
+            this.checkoutButton.Location = new System.Drawing.Point(0, 203);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(310, 37);
+            this.checkoutButton.TabIndex = 2;
+            this.checkoutButton.Text = "Checkout";
+            this.checkoutButton.UseVisualStyleBackColor = false;
+            // 
+            // totalAmountLabel
+            // 
+            this.totalAmountLabel.AutoSize = true;
+            this.totalAmountLabel.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
+            this.totalAmountLabel.Name = "totalAmountLabel";
+            this.totalAmountLabel.Size = new System.Drawing.Size(0, 34);
+            this.totalAmountLabel.TabIndex = 3;
+            // 
+            // flowLayoutPanelPayment
+            // 
+            this.flowLayoutPanelPayment.Controls.Add(this.totalAmountLabel);
+            this.flowLayoutPanelPayment.Controls.Add(this.checkoutButton);
+            this.flowLayoutPanelPayment.Controls.Add(this.totalTextLabel);
+            this.flowLayoutPanelPayment.Controls.Add(this.rectPanel);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 648);
+            this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(310, 246);
+            this.flowLayoutPanelPayment.TabIndex = 11;
+            // 
+            // flowLayoutPanelMyOrders
+            // 
+            this.flowLayoutPanelMyOrders.Location = new System.Drawing.Point(2, 3);
+            this.flowLayoutPanelMyOrders.Name = "flowLayoutPanelMyOrders";
+            this.flowLayoutPanelMyOrders.Size = new System.Drawing.Size(311, 335);
+            this.flowLayoutPanelMyOrders.TabIndex = 12;
             // 
             // Form1
             // 
@@ -594,11 +603,11 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanelPayment.ResumeLayout(false);
-            this.flowLayoutPanelPayment.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.rectPanel.ResumeLayout(false);
             this.rectPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.flowLayoutPanelPayment.ResumeLayout(false);
+            this.flowLayoutPanelPayment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,16 +644,17 @@ namespace Project
         private TextBox textBoxSearchF;
         private Label label9;
         private Panel panel2;
+        private FlowLayoutPanel flowLayoutPanelMyOrders;
         private Panel flowLayoutPanelPayment;
-        private Panel rectPanel;
-        private Label totalTextLabel;
-        private Button checkoutButton;
         private Label totalAmountLabel;
-        private Label labelCardMonth;
-        private Label labelCardNumber;
-        private Label labelCardYear;
-        private Label labeli;
+        private Button checkoutButton;
+        private Label totalTextLabel;
+        private Panel rectPanel;
         private Label labelCvv;
+        private Label labelCardYear;
+        private Label labelCardNumber;
+        private Label labeli;
+        private Label labelCardMonth;
     }
 }
 

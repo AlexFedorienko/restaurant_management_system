@@ -33,13 +33,14 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
             this.exitButton = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Project.GradientPanel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox_Psw = new RoundedRichTextBox();
             this.textBox_Login = new RoundedRichTextBox();
             this.roundedButton1 = new RoundedButton();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.line1 = new Project.Line();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@ namespace Project
             this.gradientPanel1.Angle = 80F;
             this.gradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(93)))), ((int)(((byte)(150)))));
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(96)))));
+            this.gradientPanel1.Controls.Add(this.line1);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel3);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel2);
@@ -69,12 +71,57 @@ namespace Project
             this.gradientPanel1.Controls.Add(this.roundedButton1);
             this.gradientPanel1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gradientPanel1.Location = new System.Drawing.Point(-1, -3);
+            this.gradientPanel1.Location = new System.Drawing.Point(-1, -5);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(369, 496);
             this.gradientPanel1.TabIndex = 12;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(92)))), ((int)(((byte)(123)))));
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint_1);
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.Control;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(131, 35);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(63, 23);
+            this.guna2HtmlLabel4.TabIndex = 20;
+            this.guna2HtmlLabel4.Text = "SIGN UP";
+            this.guna2HtmlLabel4.Click += new System.EventHandler(this.signUpBtn_Click);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.Control;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 35);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(59, 23);
+            this.guna2HtmlLabel3.TabIndex = 19;
+            this.guna2HtmlLabel3.Text = "SIGN IN";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(29, 173);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(70, 23);
+            this.guna2HtmlLabel2.TabIndex = 18;
+            this.guna2HtmlLabel2.Text = "Password";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 85);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(74, 23);
+            this.guna2HtmlLabel1.TabIndex = 17;
+            this.guna2HtmlLabel1.Text = "Username";
             // 
             // textBox_Psw
             // 
@@ -122,50 +169,16 @@ namespace Project
             this.roundedButton1.UseVisualStyleBackColor = false;
             this.roundedButton1.Click += new System.EventHandler(this.btnEnterSignIn_Click);
             // 
-            // guna2HtmlLabel1
+            // line1
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 85);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(74, 23);
-            this.guna2HtmlLabel1.TabIndex = 17;
-            this.guna2HtmlLabel1.Text = "Username";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(29, 173);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(70, 23);
-            this.guna2HtmlLabel2.TabIndex = 18;
-            this.guna2HtmlLabel2.Text = "Password";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.Control;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 35);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(59, 23);
-            this.guna2HtmlLabel3.TabIndex = 19;
-            this.guna2HtmlLabel3.Text = "SIGN IN";
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.Control;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(131, 35);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(63, 23);
-            this.guna2HtmlLabel4.TabIndex = 20;
-            this.guna2HtmlLabel4.Text = "SIGN UP";
-            this.guna2HtmlLabel4.Click += new System.EventHandler(this.signUpBtn_Click);
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.LineColor = System.Drawing.Color.Blue;
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(19, 56);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(75, 10);
+            this.line1.TabIndex = 13;
+            this.line1.Text = "line1";
             // 
             // Auth
             // 
@@ -194,5 +207,6 @@ namespace Project
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Line line1;
     }
 }

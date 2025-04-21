@@ -7,11 +7,18 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace Project
 {
-    
+
+   
     public class Line : Control
     {
         public Color LineColor { get; set; } = Color.Blue;
         public int LineThickness { get; set; } = 2;
+
+        public Line()
+        {
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            BackColor = Color.Transparent; // Устанавливаем прозрачность
+        }
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -19,11 +26,11 @@ namespace Project
 
             using (Pen pen = new Pen(LineColor, LineThickness))
             {
+                // Рисуем линию в нижней части элемента
                 e.Graphics.DrawLine(pen, 0, Height - LineThickness / 2, Width, Height - LineThickness / 2);
             }
         }
     }
-
 
     public partial class Form1 : Form
     {
@@ -34,15 +41,18 @@ namespace Project
             Line line = new Line
             {
                 Width = 200,
-                Height = 30,
-                LineColor = Color.Blue,
+                Height = 10, // Задаём высоту, если нужна только линия
+                LineColor = Color.Red,
                 LineThickness = 2,
-                Location = new Point(50, 50)
+                Location = new Point(50, 50),
+                BackColor = Color.Transparent // Убедитесь, что фон прозрачный
             };
 
             Controls.Add(line);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
     }
+
 
 
 

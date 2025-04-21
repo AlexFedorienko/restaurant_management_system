@@ -61,6 +61,7 @@ namespace Project
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -155,7 +156,7 @@ namespace Project
             // textBoxName
             // 
             this.textBoxName.BackColor = System.Drawing.Color.Silver;
-            this.textBoxName.Location = new System.Drawing.Point(265, 117);
+            this.textBoxName.Location = new System.Drawing.Point(265, 118);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(156, 28);
@@ -164,7 +165,7 @@ namespace Project
             // textBoxDescription
             // 
             this.textBoxDescription.BackColor = System.Drawing.Color.Silver;
-            this.textBoxDescription.Location = new System.Drawing.Point(264, 194);
+            this.textBoxDescription.Location = new System.Drawing.Point(264, 192);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(157, 30);
@@ -173,7 +174,7 @@ namespace Project
             // textBoxPrice
             // 
             this.textBoxPrice.BackColor = System.Drawing.Color.Silver;
-            this.textBoxPrice.Location = new System.Drawing.Point(265, 270);
+            this.textBoxPrice.Location = new System.Drawing.Point(265, 268);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(156, 30);
@@ -184,11 +185,11 @@ namespace Project
             this.buttonAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.buttonAddItem.FlatAppearance.BorderSize = 0;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddItem.ForeColor = System.Drawing.Color.White;
-            this.buttonAddItem.Location = new System.Drawing.Point(265, 382);
+            this.buttonAddItem.Location = new System.Drawing.Point(265, 363);
             this.buttonAddItem.Name = "buttonAddItem";
-            this.buttonAddItem.Size = new System.Drawing.Size(157, 58);
+            this.buttonAddItem.Size = new System.Drawing.Size(156, 27);
             this.buttonAddItem.TabIndex = 17;
             this.buttonAddItem.Text = "Save and create";
             this.buttonAddItem.UseVisualStyleBackColor = false;
@@ -199,11 +200,11 @@ namespace Project
             this.UploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.UploadImage.FlatAppearance.BorderSize = 0;
             this.UploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadImage.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UploadImage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UploadImage.ForeColor = System.Drawing.Color.White;
-            this.UploadImage.Location = new System.Drawing.Point(265, 328);
+            this.UploadImage.Location = new System.Drawing.Point(265, 320);
             this.UploadImage.Name = "UploadImage";
-            this.UploadImage.Size = new System.Drawing.Size(157, 35);
+            this.UploadImage.Size = new System.Drawing.Size(156, 27);
             this.UploadImage.TabIndex = 18;
             this.UploadImage.Text = "Upload image";
             this.UploadImage.UseVisualStyleBackColor = false;
@@ -329,7 +330,7 @@ namespace Project
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteItem.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteItem.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteItem.Location = new System.Drawing.Point(262, 630);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(259, 577);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(162, 29);
             this.buttonDeleteItem.TabIndex = 24;
@@ -345,7 +346,7 @@ namespace Project
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.IntegralHeight = false;
             this.comboBoxNames.ItemHeight = 20;
-            this.comboBoxNames.Location = new System.Drawing.Point(262, 582);
+            this.comboBoxNames.Location = new System.Drawing.Point(259, 529);
             this.comboBoxNames.Name = "comboBoxNames";
             this.comboBoxNames.Size = new System.Drawing.Size(162, 28);
             this.comboBoxNames.TabIndex = 25;
@@ -356,7 +357,7 @@ namespace Project
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(246, 484);
+            this.label6.Location = new System.Drawing.Point(243, 431);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(178, 36);
@@ -382,7 +383,7 @@ namespace Project
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(260, 81);
+            this.label8.Location = new System.Drawing.Point(260, 82);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 26);
@@ -395,7 +396,7 @@ namespace Project
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(260, 158);
+            this.label9.Location = new System.Drawing.Point(260, 156);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 26);
@@ -408,7 +409,7 @@ namespace Project
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(261, 237);
+            this.label10.Location = new System.Drawing.Point(261, 235);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 26);
@@ -421,7 +422,7 @@ namespace Project
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(260, 546);
+            this.label11.Location = new System.Drawing.Point(257, 493);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 26);
@@ -437,12 +438,26 @@ namespace Project
             this.LeftPanel.Size = new System.Drawing.Size(223, 723);
             this.LeftPanel.TabIndex = 32;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(466, 484);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(176, 36);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "New Promo";
+            // 
             // Admin_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -517,5 +532,6 @@ namespace Project
         private Label label10;
         private Label label11;
         private Panel LeftPanel;
+        private Label label12;
     }
 }

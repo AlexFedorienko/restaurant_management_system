@@ -54,24 +54,19 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.buttonAttachPhoto = new System.Windows.Forms.Button();
+            this.buttonSend = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.buttonStar4 = new System.Windows.Forms.Button();
+            this.buttonStar3 = new System.Windows.Forms.Button();
+            this.buttonStar2 = new System.Windows.Forms.Button();
+            this.buttonStar5 = new System.Windows.Forms.Button();
+            this.buttonStar1 = new System.Windows.Forms.Button();
+            this.pictureBoxReview = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Sentence1 = new System.Windows.Forms.Label();
             this.Question1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxReview = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -93,12 +88,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReview)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -403,103 +393,49 @@ namespace Project
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.pictureBox17);
-            this.panel2.Controls.Add(this.pictureBox16);
-            this.panel2.Controls.Add(this.pictureBox15);
-            this.panel2.Controls.Add(this.pictureBox14);
-            this.panel2.Controls.Add(this.pictureBox13);
+            this.panel2.Controls.Add(this.buttonAttachPhoto);
+            this.panel2.Controls.Add(this.buttonSend);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.pictureBox12);
+            this.panel2.Controls.Add(this.buttonStar4);
+            this.panel2.Controls.Add(this.buttonStar3);
+            this.panel2.Controls.Add(this.buttonStar2);
+            this.panel2.Controls.Add(this.buttonStar5);
+            this.panel2.Controls.Add(this.buttonStar1);
+            this.panel2.Controls.Add(this.pictureBoxReview);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.Sentence1);
             this.panel2.Controls.Add(this.Question1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBoxReview);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Location = new System.Drawing.Point(390, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1318, 342);
             this.panel2.TabIndex = 6;
             // 
-            // button12
+            // buttonAttachPhoto
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.Window;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = global::Project.Properties.Resources.iconCamera_empty_dark_blue_32px;
-            this.button12.Location = new System.Drawing.Point(470, 244);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(39, 44);
-            this.button12.TabIndex = 27;
-            this.button12.Text = "\r\n";
-            this.button12.UseVisualStyleBackColor = false;
+            this.buttonAttachPhoto.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonAttachPhoto.FlatAppearance.BorderSize = 0;
+            this.buttonAttachPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAttachPhoto.Image = global::Project.Properties.Resources.iconCamera_empty_dark_blue_32px;
+            this.buttonAttachPhoto.Location = new System.Drawing.Point(470, 244);
+            this.buttonAttachPhoto.Name = "buttonAttachPhoto";
+            this.buttonAttachPhoto.Size = new System.Drawing.Size(39, 44);
+            this.buttonAttachPhoto.TabIndex = 27;
+            this.buttonAttachPhoto.Text = "\r\n";
+            this.buttonAttachPhoto.UseVisualStyleBackColor = false;
+            this.buttonAttachPhoto.Click += new System.EventHandler(this.buttonAttachPhoto_Click);
             // 
-            // button11
+            // buttonSend
             // 
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.Location = new System.Drawing.Point(27, 295);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(483, 34);
-            this.button11.TabIndex = 26;
-            this.button11.Text = "Send";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox17.Location = new System.Drawing.Point(806, 38);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox17.TabIndex = 25;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox16.Location = new System.Drawing.Point(738, 38);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox16.TabIndex = 24;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox15.Location = new System.Drawing.Point(668, 38);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox15.TabIndex = 23;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox14.Location = new System.Drawing.Point(598, 38);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox14.TabIndex = 22;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::Project.Properties.Resources.iconStar_empty_white_64px;
-            this.pictureBox13.Location = new System.Drawing.Point(528, 38);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox13.TabIndex = 21;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.buttonSend.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSend.Location = new System.Drawing.Point(27, 295);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(483, 34);
+            this.buttonSend.TabIndex = 26;
+            this.buttonSend.Text = "Send";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click_1);
             // 
             // label10
             // 
@@ -512,70 +448,80 @@ namespace Project
             this.label10.TabIndex = 20;
             this.label10.Text = "Rate our establishment.";
             // 
-            // button10
+            // buttonStar4
             // 
-            this.button10.BackColor = System.Drawing.Color.SeaGreen;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(731, 37);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(64, 64);
-            this.button10.TabIndex = 19;
-            this.button10.UseVisualStyleBackColor = false;
+            this.buttonStar4.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonStar4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStar4.BackgroundImage")));
+            this.buttonStar4.FlatAppearance.BorderSize = 0;
+            this.buttonStar4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStar4.Location = new System.Drawing.Point(731, 37);
+            this.buttonStar4.Name = "buttonStar4";
+            this.buttonStar4.Size = new System.Drawing.Size(64, 64);
+            this.buttonStar4.TabIndex = 19;
+            this.buttonStar4.UseVisualStyleBackColor = false;
+            this.buttonStar4.Click += new System.EventHandler(this.buttonStar4_Click);
             // 
-            // button9
+            // buttonStar3
             // 
-            this.button9.BackColor = System.Drawing.Color.SeaGreen;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(668, 37);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(64, 64);
-            this.button9.TabIndex = 18;
-            this.button9.UseVisualStyleBackColor = false;
+            this.buttonStar3.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonStar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStar3.BackgroundImage")));
+            this.buttonStar3.FlatAppearance.BorderSize = 0;
+            this.buttonStar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStar3.Location = new System.Drawing.Point(668, 37);
+            this.buttonStar3.Name = "buttonStar3";
+            this.buttonStar3.Size = new System.Drawing.Size(64, 64);
+            this.buttonStar3.TabIndex = 18;
+            this.buttonStar3.UseVisualStyleBackColor = false;
+            this.buttonStar3.Click += new System.EventHandler(this.buttonStar3_Click);
             // 
-            // button8
+            // buttonStar2
             // 
-            this.button8.BackColor = System.Drawing.Color.SeaGreen;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(598, 37);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(64, 64);
-            this.button8.TabIndex = 17;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.buttonStar2.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonStar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStar2.BackgroundImage")));
+            this.buttonStar2.FlatAppearance.BorderSize = 0;
+            this.buttonStar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStar2.Location = new System.Drawing.Point(598, 37);
+            this.buttonStar2.Name = "buttonStar2";
+            this.buttonStar2.Size = new System.Drawing.Size(64, 64);
+            this.buttonStar2.TabIndex = 17;
+            this.buttonStar2.UseVisualStyleBackColor = false;
+            this.buttonStar2.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // buttonStar5
             // 
-            this.button7.BackColor = System.Drawing.Color.SeaGreen;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(799, 37);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 64);
-            this.button7.TabIndex = 16;
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonStar5.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonStar5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStar5.BackgroundImage")));
+            this.buttonStar5.FlatAppearance.BorderSize = 0;
+            this.buttonStar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStar5.Location = new System.Drawing.Point(799, 37);
+            this.buttonStar5.Name = "buttonStar5";
+            this.buttonStar5.Size = new System.Drawing.Size(64, 64);
+            this.buttonStar5.TabIndex = 16;
+            this.buttonStar5.UseVisualStyleBackColor = false;
+            this.buttonStar5.Click += new System.EventHandler(this.buttonStar5_Click);
             // 
-            // button6
+            // buttonStar1
             // 
-            this.button6.BackColor = System.Drawing.Color.SeaGreen;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(528, 37);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(64, 64);
-            this.button6.TabIndex = 9;
-            this.button6.UseVisualStyleBackColor = false;
+            this.buttonStar1.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonStar1.BackgroundImage = global::Project.Properties.Resources.iconStar_empty_white_64px;
+            this.buttonStar1.FlatAppearance.BorderSize = 0;
+            this.buttonStar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStar1.Location = new System.Drawing.Point(528, 37);
+            this.buttonStar1.Name = "buttonStar1";
+            this.buttonStar1.Size = new System.Drawing.Size(64, 64);
+            this.buttonStar1.TabIndex = 9;
+            this.buttonStar1.UseVisualStyleBackColor = false;
+            this.buttonStar1.Click += new System.EventHandler(this.buttonStar1_Click);
             // 
-            // pictureBox12
+            // pictureBoxReview
             // 
-            this.pictureBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox12.Location = new System.Drawing.Point(27, 135);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(483, 154);
-            this.pictureBox12.TabIndex = 8;
-            this.pictureBox12.TabStop = false;
+            this.pictureBoxReview.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBoxReview.Location = new System.Drawing.Point(27, 135);
+            this.pictureBoxReview.Name = "pictureBoxReview";
+            this.pictureBoxReview.Size = new System.Drawing.Size(483, 154);
+            this.pictureBoxReview.TabIndex = 8;
+            this.pictureBoxReview.TabStop = false;
+            this.pictureBoxReview.Click += new System.EventHandler(this.pictureBoxReview_Click);
             // 
             // label9
             // 
@@ -610,13 +556,14 @@ namespace Project
             this.Question1.TabIndex = 5;
             this.Question1.Text = "Do you have any complaints?";
             // 
-            // textBox1
+            // textBoxReview
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 38);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 41);
-            this.textBox1.TabIndex = 0;
+            this.textBoxReview.Location = new System.Drawing.Point(27, 38);
+            this.textBoxReview.Multiline = true;
+            this.textBoxReview.Name = "textBoxReview";
+            this.textBoxReview.Size = new System.Drawing.Size(483, 41);
+            this.textBoxReview.TabIndex = 0;
+            this.textBoxReview.TextChanged += new System.EventHandler(this.textBoxReview_TextChanged);
             // 
             // panel3
             // 
@@ -778,12 +725,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReview)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -826,7 +768,7 @@ namespace Project
         private Label label7;
         private Panel panel2;
         private Label Question1;
-        private TextBox textBox1;
+        private TextBox textBoxReview;
         private Label Sentence1;
         private Panel panel3;
         private PictureBox pictureBox7;
@@ -841,20 +783,15 @@ namespace Project
         private PictureBox pictureBox10;
         private PictureBox pictureBox9;
         private PictureBox pictureBox8;
-        private Button button6;
-        private PictureBox pictureBox12;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
+        private Button buttonStar1;
+        private PictureBox pictureBoxReview;
+        private Button buttonStar4;
+        private Button buttonStar3;
+        private Button buttonStar2;
+        private Button buttonStar5;
         private Label label10;
-        private PictureBox pictureBox17;
-        private PictureBox pictureBox16;
-        private PictureBox pictureBox15;
-        private PictureBox pictureBox14;
-        private PictureBox pictureBox13;
-        private Button button12;
-        private Button button11;
+        private Button buttonAttachPhoto;
+        private Button buttonSend;
     }
 }
 

@@ -15,7 +15,7 @@ namespace Project
         public static string UserName { get; private set; }
         public static int UserId { get; private set; }
 
-        private readonly string rememberMeFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "auth_remember.dat");
+        private readonly string rememberMeFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FoodDelivery_AuthRemember.dat");
 
         public Auth()
         {

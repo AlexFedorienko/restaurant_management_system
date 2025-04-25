@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Project
 {
@@ -579,6 +580,8 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.ClientSize = new Size(1920, 1080);
             this.AutoSize = false;
             this.Width = 1920;
             this.Height = 1080;

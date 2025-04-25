@@ -761,5 +761,10 @@ namespace Project
             auth.Show();
             this.Hide();
         }
+
+        private void labelCardYear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

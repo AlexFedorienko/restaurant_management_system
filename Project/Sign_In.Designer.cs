@@ -33,7 +33,7 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
             this.exitButton = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Project.GradientPanel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.sendPasswordToEmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.line2 = new Project.Line();
             this.keepMeSignedIn = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -66,7 +66,7 @@ namespace Project
             this.gradientPanel1.Angle = 80F;
             this.gradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(93)))), ((int)(((byte)(150)))));
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(96)))));
-            this.gradientPanel1.Controls.Add(this.guna2HtmlLabel6);
+            this.gradientPanel1.Controls.Add(this.sendPasswordToEmail);
             this.gradientPanel1.Controls.Add(this.line2);
             this.gradientPanel1.Controls.Add(this.keepMeSignedIn);
             this.gradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
@@ -87,16 +87,17 @@ namespace Project
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(92)))), ((int)(((byte)(123)))));
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint_1);
             // 
-            // guna2HtmlLabel6
+            // sendPasswordToEmail
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(115, 413);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(123, 17);
-            this.guna2HtmlLabel6.TabIndex = 23;
-            this.guna2HtmlLabel6.Text = "Forgot your password?";
+            this.sendPasswordToEmail.BackColor = System.Drawing.Color.Transparent;
+            this.sendPasswordToEmail.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sendPasswordToEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.sendPasswordToEmail.Location = new System.Drawing.Point(115, 413);
+            this.sendPasswordToEmail.Name = "sendPasswordToEmail";
+            this.sendPasswordToEmail.Size = new System.Drawing.Size(123, 17);
+            this.sendPasswordToEmail.TabIndex = 23;
+            this.sendPasswordToEmail.Text = "Forgot your password?";
+            this.sendPasswordToEmail.Click += new System.EventHandler(this.sendPasswordToEmail_Click);
             // 
             // line2
             // 
@@ -268,7 +269,7 @@ namespace Project
         private Line line1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
         private Guna.UI2.WinForms.Guna2HtmlLabel keepMeSignedIn;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel sendPasswordToEmail;
         private Line line2;
     }
 }

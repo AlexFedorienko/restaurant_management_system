@@ -163,11 +163,11 @@ namespace Project
             // 
             this.buttonAdminPanel.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonAdminPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdminPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdminPanel.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdminPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAdminPanel.Location = new System.Drawing.Point(26, 1027);
             this.buttonAdminPanel.Name = "buttonAdminPanel";
-            this.buttonAdminPanel.Size = new System.Drawing.Size(135, 28);
+            this.buttonAdminPanel.Size = new System.Drawing.Size(135, 32);
             this.buttonAdminPanel.TabIndex = 5;
             this.buttonAdminPanel.Text = "Admin Panel";
             this.buttonAdminPanel.UseVisualStyleBackColor = false;

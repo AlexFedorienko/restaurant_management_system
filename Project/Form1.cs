@@ -45,6 +45,8 @@ namespace Project
             int radius = 70;
             this.Width = 1920;
             this.Height = 1080;
+            this.AutoSize = false;
+            this.AutoScaleMode = AutoScaleMode.None;
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
 
             labelName.Text = userName;

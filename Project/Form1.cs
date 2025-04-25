@@ -43,6 +43,8 @@ namespace Project
             StartPosition = FormStartPosition.CenterScreen;
 
             int radius = 70;
+            this.Width = 1920;
+            this.Height = 1080;
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
 
             labelName.Text = userName;

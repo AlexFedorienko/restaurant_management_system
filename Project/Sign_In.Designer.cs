@@ -33,6 +33,8 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
             this.exitButton = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Project.GradientPanel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.line2 = new Project.Line();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.line1 = new Project.Line();
@@ -43,8 +45,6 @@ namespace Project
             this.textBox_Psw = new RoundedRichTextBox();
             this.textBox_Login = new RoundedRichTextBox();
             this.roundedButton1 = new RoundedButton();
-            this.line2 = new Project.Line();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +52,12 @@ namespace Project
             // 
             this.exitButton.BackColor = System.Drawing.Color.Transparent;
             this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.Image = ((System.Drawing.Image)(resources.GetObject("exitButton.Image")));
-            this.exitButton.Location = new System.Drawing.Point(322, 8);
+            this.exitButton.Location = new System.Drawing.Point(316, 10);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(35, 20);
-            this.exitButton.TabIndex = 8;
+            this.exitButton.TabIndex = 24;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
@@ -85,6 +86,28 @@ namespace Project
             this.gradientPanel1.TabIndex = 12;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(92)))), ((int)(((byte)(123)))));
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint_1);
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(115, 413);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(123, 17);
+            this.guna2HtmlLabel6.TabIndex = 23;
+            this.guna2HtmlLabel6.Text = "Forgot your password?";
+            // 
+            // line2
+            // 
+            this.line2.BackColor = System.Drawing.Color.Transparent;
+            this.line2.LineColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.line2.LineThickness = 2;
+            this.line2.Location = new System.Drawing.Point(19, 386);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(320, 10);
+            this.line2.TabIndex = 22;
+            this.line2.Text = "line2";
             // 
             // guna2HtmlLabel5
             // 
@@ -118,7 +141,7 @@ namespace Project
             this.line1.BackColor = System.Drawing.Color.Transparent;
             this.line1.LineColor = System.Drawing.Color.RoyalBlue;
             this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(19, 55);
+            this.line1.Location = new System.Drawing.Point(19, 45);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(75, 10);
             this.line1.TabIndex = 13;
@@ -129,7 +152,7 @@ namespace Project
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.Control;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(131, 35);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(136, 25);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(63, 23);
             this.guna2HtmlLabel4.TabIndex = 20;
@@ -141,7 +164,7 @@ namespace Project
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.Control;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 35);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 25);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(59, 23);
             this.guna2HtmlLabel3.TabIndex = 19;
@@ -176,7 +199,7 @@ namespace Project
             this.textBox_Psw.BulletIndent = 1;
             this.textBox_Psw.CornerRadius = 20;
             this.textBox_Psw.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox_Psw.Location = new System.Drawing.Point(24, 202);
+            this.textBox_Psw.Location = new System.Drawing.Point(19, 203);
             this.textBox_Psw.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Psw.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBox_Psw.Name = "textBox_Psw";
@@ -191,7 +214,7 @@ namespace Project
             this.textBox_Login.BulletIndent = 1;
             this.textBox_Login.CornerRadius = 20;
             this.textBox_Login.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox_Login.Location = new System.Drawing.Point(24, 114);
+            this.textBox_Login.Location = new System.Drawing.Point(19, 115);
             this.textBox_Login.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Login.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBox_Login.Name = "textBox_Login";
@@ -206,7 +229,7 @@ namespace Project
             this.roundedButton1.BorderRadius = 40;
             this.roundedButton1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.roundedButton1.Location = new System.Drawing.Point(19, 330);
+            this.roundedButton1.Location = new System.Drawing.Point(15, 329);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(330, 36);
             this.roundedButton1.TabIndex = 13;
@@ -214,28 +237,6 @@ namespace Project
             this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.roundedButton1.UseVisualStyleBackColor = false;
             this.roundedButton1.Click += new System.EventHandler(this.btnEnterSignIn_Click);
-            // 
-            // line2
-            // 
-            this.line2.BackColor = System.Drawing.Color.Transparent;
-            this.line2.LineColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.line2.LineThickness = 2;
-            this.line2.Location = new System.Drawing.Point(19, 386);
-            this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(320, 10);
-            this.line2.TabIndex = 22;
-            this.line2.Text = "line2";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(115, 413);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(123, 17);
-            this.guna2HtmlLabel6.TabIndex = 23;
-            this.guna2HtmlLabel6.Text = "Forgot your password?";
             // 
             // Auth
             // 

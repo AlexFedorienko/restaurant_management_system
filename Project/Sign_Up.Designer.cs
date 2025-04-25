@@ -76,7 +76,7 @@
             this.line1.BackColor = System.Drawing.Color.Transparent;
             this.line1.LineColor = System.Drawing.Color.RoyalBlue;
             this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(123, 55);
+            this.line1.Location = new System.Drawing.Point(129, 41);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(75, 10);
             this.line1.TabIndex = 35;
@@ -87,7 +87,7 @@
             this.SignInRButton.BackColor = System.Drawing.Color.Transparent;
             this.SignInRButton.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInRButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.SignInRButton.Location = new System.Drawing.Point(29, 35);
+            this.SignInRButton.Location = new System.Drawing.Point(29, 22);
             this.SignInRButton.Name = "SignInRButton";
             this.SignInRButton.Size = new System.Drawing.Size(59, 23);
             this.SignInRButton.TabIndex = 34;
@@ -99,7 +99,7 @@
             this.SignUpRButton.BackColor = System.Drawing.Color.Transparent;
             this.SignUpRButton.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpRButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.SignUpRButton.Location = new System.Drawing.Point(131, 35);
+            this.SignUpRButton.Location = new System.Drawing.Point(136, 22);
             this.SignUpRButton.Name = "SignUpRButton";
             this.SignUpRButton.Size = new System.Drawing.Size(63, 23);
             this.SignUpRButton.TabIndex = 33;
@@ -110,7 +110,7 @@
             this.textBoxPasswordR.BackColor = System.Drawing.Color.Transparent;
             this.textBoxPasswordR.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordR.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxPasswordR.Location = new System.Drawing.Point(34, 266);
+            this.textBoxPasswordR.Location = new System.Drawing.Point(29, 238);
             this.textBoxPasswordR.Name = "textBoxPasswordR";
             this.textBoxPasswordR.Size = new System.Drawing.Size(70, 23);
             this.textBoxPasswordR.TabIndex = 32;
@@ -121,7 +121,7 @@
             this.textBoxConfirmPasswordR.BackColor = System.Drawing.Color.Transparent;
             this.textBoxConfirmPasswordR.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConfirmPasswordR.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxConfirmPasswordR.Location = new System.Drawing.Point(34, 358);
+            this.textBoxConfirmPasswordR.Location = new System.Drawing.Point(29, 325);
             this.textBoxConfirmPasswordR.Name = "textBoxConfirmPasswordR";
             this.textBoxConfirmPasswordR.Size = new System.Drawing.Size(131, 23);
             this.textBoxConfirmPasswordR.TabIndex = 31;
@@ -132,7 +132,7 @@
             this.textBoxEmailR.BackColor = System.Drawing.Color.Transparent;
             this.textBoxEmailR.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailR.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxEmailR.Location = new System.Drawing.Point(34, 161);
+            this.textBoxEmailR.Location = new System.Drawing.Point(29, 161);
             this.textBoxEmailR.Name = "textBoxEmailR";
             this.textBoxEmailR.Size = new System.Drawing.Size(41, 23);
             this.textBoxEmailR.TabIndex = 30;
@@ -171,7 +171,7 @@
             this.textBoxUserEmailR.BulletIndent = 1;
             this.textBoxUserEmailR.CornerRadius = 20;
             this.textBoxUserEmailR.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBoxUserEmailR.Location = new System.Drawing.Point(21, 191);
+            this.textBoxUserEmailR.Location = new System.Drawing.Point(17, 191);
             this.textBoxUserEmailR.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUserEmailR.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBoxUserEmailR.Name = "textBoxUserEmailR";
@@ -186,7 +186,7 @@
             this.textBoxPswR.BulletIndent = 1;
             this.textBoxPswR.CornerRadius = 20;
             this.textBoxPswR.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBoxPswR.Location = new System.Drawing.Point(21, 296);
+            this.textBoxPswR.Location = new System.Drawing.Point(17, 268);
             this.textBoxPswR.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPswR.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBoxPswR.Name = "textBoxPswR";
@@ -201,7 +201,7 @@
             this.textBoxConfirmPswR.BulletIndent = 1;
             this.textBoxConfirmPswR.CornerRadius = 20;
             this.textBoxConfirmPswR.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBoxConfirmPswR.Location = new System.Drawing.Point(21, 388);
+            this.textBoxConfirmPswR.Location = new System.Drawing.Point(17, 355);
             this.textBoxConfirmPswR.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxConfirmPswR.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBoxConfirmPswR.Name = "textBoxConfirmPswR";
@@ -217,7 +217,7 @@
             this.textBoxLoginR.BulletIndent = 1;
             this.textBoxLoginR.CornerRadius = 20;
             this.textBoxLoginR.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBoxLoginR.Location = new System.Drawing.Point(21, 104);
+            this.textBoxLoginR.Location = new System.Drawing.Point(17, 104);
             this.textBoxLoginR.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLoginR.MaximumSize = new System.Drawing.Size(100000, 100000);
             this.textBoxLoginR.Name = "textBoxLoginR";

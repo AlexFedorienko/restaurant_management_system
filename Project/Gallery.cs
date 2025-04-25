@@ -354,7 +354,7 @@ namespace Project
         }
         private void Gallery_Load(object sender, EventArgs e)
         {
-
+            LoadReviews();
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -402,6 +402,112 @@ namespace Project
         private void buttonStar3_Click(object sender, EventArgs e) => UpdateStarButtons(3);
         private void buttonStar4_Click(object sender, EventArgs e) => UpdateStarButtons(4);
         private void buttonStar5_Click(object sender, EventArgs e) => UpdateStarButtons(5);
+        private void LoadReviews()
+        {
+            try
+            {
+                flowLayoutPanelReviews.Controls.Clear(); // Очистим, если вдруг повторно вызывается
+
+                string query = "SELECT TOP 1000 id, review_text, stars, entity_id, review_date, review_image, image_user, username FROM Reviews ORDER BY review_date DESC";
+
+                using (SqlCommand command = new SqlCommand(query, dataBase.getConnection()))
+                {
+                    dataBase.openConnection();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Создаем панель для одного отзыва
+                            Panel reviewPanel = new Panel();
+                            reviewPanel.Width = 600;
+                            reviewPanel.Height = 200;
+                            reviewPanel.BorderStyle = BorderStyle.FixedSingle;
+                            reviewPanel.Padding = new Padding(10);
+                            reviewPanel.Margin = new Padding(5);
+
+                            // Аватар
+                            PictureBox avatar = new PictureBox();
+                            avatar.Width = 50;
+                            avatar.Height = 50;
+                            avatar.SizeMode = PictureBoxSizeMode.Zoom;
+                            if (!reader.IsDBNull(6)) // image_user
+                            {
+                                byte[] avatarBytes = (byte[])reader["image_user"];
+                                using (MemoryStream ms = new MemoryStream(avatarBytes))
+                                {
+                                    avatar.Image = Image.FromStream(ms);
+                                }
+                            }
+
+                            // Логин
+                            Label usernameLabel = new Label();
+                            usernameLabel.Text = reader["username"].ToString();
+                            usernameLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                            usernameLabel.Location = new Point(60, 10);
+                            usernameLabel.AutoSize = true;
+
+                            // Дата
+                            Label dateLabel = new Label();
+                            dateLabel.Text = Convert.ToDateTime(reader["review_date"]).ToString("dd.MM.yyyy HH:mm");
+                            dateLabel.Location = new Point(60, 30);
+                            dateLabel.Font = new Font("Segoe UI", 8, FontStyle.Italic);
+                            dateLabel.AutoSize = true;
+
+                            // Звёзды
+                            int stars = Convert.ToInt32(reader["stars"]);
+                            Label starsLabel = new Label();
+                            starsLabel.Text = new string('★', stars) + new string('☆', 5 - stars);
+                            starsLabel.Font = new Font("Segoe UI", 12);
+                            starsLabel.ForeColor = Color.Gold;
+                            starsLabel.Location = new Point(10, 70);
+                            starsLabel.AutoSize = true;
+
+                            // Текст отзыва
+                            Label reviewTextLabel = new Label();
+                            reviewTextLabel.Text = reader["review_text"].ToString();
+                            reviewTextLabel.Font = new Font("Segoe UI", 10);
+                            reviewTextLabel.Location = new Point(10, 100);
+                            reviewTextLabel.AutoSize = true;
+                            reviewTextLabel.MaximumSize = new Size(400, 0);
+
+                            // Фото отзыва
+                            PictureBox reviewPhoto = new PictureBox();
+                            reviewPhoto.Width = 150;
+                            reviewPhoto.Height = 100;
+                            reviewPhoto.Location = new Point(430, 80);
+                            reviewPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+                            if (!reader.IsDBNull(5)) // review_image
+                            {
+                                byte[] reviewImgBytes = (byte[])reader["review_image"];
+                                using (MemoryStream ms = new MemoryStream(reviewImgBytes))
+                                {
+                                    reviewPhoto.Image = Image.FromStream(ms);
+                                }
+                            }
+
+                            // Добавляем все в панель
+                            reviewPanel.Controls.Add(avatar);
+                            reviewPanel.Controls.Add(usernameLabel);
+                            reviewPanel.Controls.Add(dateLabel);
+                            reviewPanel.Controls.Add(starsLabel);
+                            reviewPanel.Controls.Add(reviewTextLabel);
+                            reviewPanel.Controls.Add(reviewPhoto);
+
+                            // Добавляем панель в FlowLayoutPanel
+                            flowLayoutPanelReviews.Controls.Add(reviewPanel);
+                        }
+                    }
+
+                    dataBase.closeConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке отзывов: " + ex.Message);
+            }
+        }
+
         private void buttonSend_Click(object sender, EventArgs e)
         {
             if (selectedStars == 0)
@@ -553,11 +659,10 @@ namespace Project
                 {
                     command.Parameters.Add("@text", SqlDbType.NVarChar).Value = textBoxReview.Text;
                     command.Parameters.Add("@stars", SqlDbType.Int).Value = selectedStars;
-                    command.Parameters.Add("@entity_id", SqlDbType.Int).Value = userId; // Убедись, что userId определён
+                    command.Parameters.Add("@entity_id", SqlDbType.Int).Value = userId; 
                     command.Parameters.Add("@date", SqlDbType.DateTime).Value = DateTime.Now;
                     command.Parameters.Add("@review_image", SqlDbType.VarBinary).Value = attachedReviewImage;
 
-                    // Если у пользователя нет аватара — сохраняем null
                     if (imageUserBytes != null)
                         command.Parameters.Add("@image_user", SqlDbType.VarBinary).Value = imageUserBytes;
                     else

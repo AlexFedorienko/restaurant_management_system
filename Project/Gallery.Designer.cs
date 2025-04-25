@@ -67,19 +67,10 @@ namespace Project
             this.Sentence1 = new System.Windows.Forms.Label();
             this.Question1 = new System.Windows.Forms.Label();
             this.textBoxReview = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelGallery = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanelReviews = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -89,17 +80,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReview)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelGallery.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -418,7 +399,7 @@ namespace Project
             this.buttonAttachPhoto.FlatAppearance.BorderSize = 0;
             this.buttonAttachPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAttachPhoto.Image = global::Project.Properties.Resources.iconCamera_empty_dark_blue_32px;
-            this.buttonAttachPhoto.Location = new System.Drawing.Point(470, 244);
+            this.buttonAttachPhoto.Location = new System.Drawing.Point(308, 244);
             this.buttonAttachPhoto.Name = "buttonAttachPhoto";
             this.buttonAttachPhoto.Size = new System.Drawing.Size(39, 44);
             this.buttonAttachPhoto.TabIndex = 27;
@@ -431,7 +412,7 @@ namespace Project
             this.buttonSend.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSend.Location = new System.Drawing.Point(27, 295);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(483, 34);
+            this.buttonSend.Size = new System.Drawing.Size(323, 34);
             this.buttonSend.TabIndex = 26;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
@@ -518,7 +499,7 @@ namespace Project
             this.pictureBoxReview.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBoxReview.Location = new System.Drawing.Point(27, 135);
             this.pictureBoxReview.Name = "pictureBoxReview";
-            this.pictureBoxReview.Size = new System.Drawing.Size(483, 154);
+            this.pictureBoxReview.Size = new System.Drawing.Size(323, 154);
             this.pictureBoxReview.TabIndex = 8;
             this.pictureBoxReview.TabStop = false;
             this.pictureBoxReview.Click += new System.EventHandler(this.pictureBoxReview_Click);
@@ -565,24 +546,15 @@ namespace Project
             this.textBoxReview.TabIndex = 0;
             this.textBoxReview.TextChanged += new System.EventHandler(this.textBoxReview_TextChanged);
             // 
-            // panel3
+            // panelGallery
             // 
-            this.panel3.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.pictureBox10);
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(390, 360);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1318, 707);
-            this.panel3.TabIndex = 7;
+            this.panelGallery.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelGallery.Controls.Add(this.flowLayoutPanelReviews);
+            this.panelGallery.Controls.Add(this.label8);
+            this.panelGallery.Location = new System.Drawing.Point(390, 360);
+            this.panelGallery.Name = "panelGallery";
+            this.panelGallery.Size = new System.Drawing.Size(1318, 707);
+            this.panelGallery.TabIndex = 7;
             // 
             // label8
             // 
@@ -594,96 +566,6 @@ namespace Project
             this.label8.Size = new System.Drawing.Size(109, 32);
             this.label8.TabIndex = 10;
             this.label8.Text = "Gallery";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox11.Location = new System.Drawing.Point(1117, 260);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(175, 180);
-            this.pictureBox11.TabIndex = 9;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox10.Location = new System.Drawing.Point(886, 460);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(406, 180);
-            this.pictureBox10.TabIndex = 8;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox9.Location = new System.Drawing.Point(451, 460);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(420, 180);
-            this.pictureBox9.TabIndex = 7;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox8.Location = new System.Drawing.Point(28, 460);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(408, 180);
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox7.Location = new System.Drawing.Point(668, 260);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(429, 180);
-            this.pictureBox7.TabIndex = 5;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox6.Location = new System.Drawing.Point(224, 260);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(429, 180);
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox5.Location = new System.Drawing.Point(28, 260);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(175, 180);
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox4.Location = new System.Drawing.Point(886, 62);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(406, 180);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox3.Location = new System.Drawing.Point(451, 62);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(420, 180);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 62);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(408, 180);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // exitButton
             // 
@@ -697,13 +579,22 @@ namespace Project
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
             // 
+            // flowLayoutPanelReviews
+            // 
+            this.flowLayoutPanelReviews.AutoScroll = true;
+            this.flowLayoutPanelReviews.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelReviews.Location = new System.Drawing.Point(27, 15);
+            this.flowLayoutPanelReviews.Name = "flowLayoutPanelReviews";
+            this.flowLayoutPanelReviews.Size = new System.Drawing.Size(1277, 680);
+            this.flowLayoutPanelReviews.TabIndex = 11;
+            // 
             // Gallery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelGallery);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.comboBox);
@@ -726,18 +617,8 @@ namespace Project
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReview)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelGallery.ResumeLayout(false);
+            this.panelGallery.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -770,19 +651,9 @@ namespace Project
         private Label Question1;
         private TextBox textBoxReview;
         private Label Sentence1;
-        private Panel panel3;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private Panel panelGallery;
         private Label label9;
         private Label label8;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox8;
         private Button buttonStar1;
         private PictureBox pictureBoxReview;
         private Button buttonStar4;
@@ -792,6 +663,7 @@ namespace Project
         private Label label10;
         private Button buttonAttachPhoto;
         private Button buttonSend;
+        private FlowLayoutPanel flowLayoutPanelReviews;
     }
 }
 

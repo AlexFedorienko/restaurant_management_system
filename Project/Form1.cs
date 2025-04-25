@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -50,6 +51,7 @@ namespace Project
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
 
             labelName.Text = userName;
+            labelName2.Text = userName.ToUpper();
             comboBox.Text = userName;
 
             LoadUserImage(userId);
@@ -419,16 +421,11 @@ namespace Project
 
         private void LoadCartPanel()
         {
-            // Убеждаемся, что автопрокрутка отключена, чтобы координаты из дизайнера не сбивались
             flowLayoutPanelPayment.AutoScroll = false;
 
-            // Очищаем только динамические элементы, если они были (если ты их создаёшь вручную в рантайме)
-            // Важно: НЕ удаляй статичные элементы типа totalAmountLabel, checkoutButton и т.п.
-
-            // Обновляем текст общей суммы (например, при первом запуске)
             totalAmountLabel.Text = "$0";
 
-            totalAmountLabel.Font = new Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            totalAmountLabel.Font = new Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             totalAmountLabel.ForeColor = Color.Black;
             totalAmountLabel.Location = new Point(220, 225);
             totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -438,19 +435,15 @@ namespace Project
             checkoutButton.ForeColor = Color.White;
             checkoutButton.FlatStyle = FlatStyle.Flat;
 
-            // Назначаем обработчик (если ещё не назначен)
-            checkoutButton.Click -= CheckoutButton_Click; // убираем дубли
+            checkoutButton.Click -= CheckoutButton_Click;
             checkoutButton.Click += CheckoutButton_Click;
-
-            // rectPanel можно тоже стилизовать при необходимости
         }
 
 
         private void UpdateCartDisplay()
         {
-            flowLayoutPanelCart.Controls.Clear(); // Очищаем панель с товарами корзины
+            flowLayoutPanelCart.Controls.Clear();
 
-            // Заголовок "My Order"
             Label myOrderLabel = new Label();
             myOrderLabel.Text = "My Order";
             myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
@@ -461,7 +454,6 @@ namespace Project
 
             decimal totalAmount = 0;
 
-            // Отображаем все товары в корзине
             foreach (CartItem item in cart)
             {
                 Panel itemPanel = new Panel();
@@ -544,7 +536,6 @@ namespace Project
                 };
                 orderPanel.Controls.Add(labelOrder);
 
-                // Get order items
                 string queryItems = "SELECT * FROM OrderItems WHERE OrderId = @OrderId";
                 SqlCommand commandItems = new SqlCommand(queryItems, dataBase.getConnection());
                 commandItems.Parameters.AddWithValue("@OrderId", orderId);
@@ -703,6 +694,28 @@ namespace Project
             this.Hide();
         }
 
+        private string FormatCardNumber(string cardNumber)
+        {
+            if (string.IsNullOrEmpty(cardNumber) || cardNumber == "0")
+                return "0";
+
+            // Удаляем все пробелы (если они есть)
+            string cleanNumber = cardNumber.Replace(" ", "");
+
+            // Разбиваем на группы по 4 цифры
+            StringBuilder formattedNumber = new StringBuilder();
+            for (int i = 0; i < cleanNumber.Length; i += 4)
+            {
+                int length = Math.Min(4, cleanNumber.Length - i);
+                formattedNumber.Append(cleanNumber.Substring(i, length));
+
+                if (i + 4 < cleanNumber.Length)
+                    formattedNumber.Append(" ");
+            }
+
+            return formattedNumber.ToString();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             dataBase.openConnection();
@@ -727,11 +740,8 @@ namespace Project
             reader.Close();
             dataBase.closeConnection();
 
-            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0" : cardNumber;
-            labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "0" : expireMonth;
-            labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "0" : expireYear;
-            labelCvv.Text = string.IsNullOrEmpty(cvv) ? "0" : cvv;
-
+            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0000 0000 0000 0000" : FormatCardNumber(cardNumber); labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "00" : expireMonth;
+            labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "00" : expireYear;
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
             LoadOrderHistory();

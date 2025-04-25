@@ -35,7 +35,7 @@ namespace Project
             this.gradientPanel1 = new Project.GradientPanel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.line2 = new Project.Line();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.keepMeSignedIn = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.line1 = new Project.Line();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -68,7 +68,7 @@ namespace Project
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(96)))));
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel6);
             this.gradientPanel1.Controls.Add(this.line2);
-            this.gradientPanel1.Controls.Add(this.guna2HtmlLabel5);
+            this.gradientPanel1.Controls.Add(this.keepMeSignedIn);
             this.gradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
             this.gradientPanel1.Controls.Add(this.line1);
             this.gradientPanel1.Controls.Add(this.guna2HtmlLabel4);
@@ -109,16 +109,16 @@ namespace Project
             this.line2.TabIndex = 22;
             this.line2.Text = "line2";
             // 
-            // guna2HtmlLabel5
+            // keepMeSignedIn
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(100, 279);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(107, 17);
-            this.guna2HtmlLabel5.TabIndex = 21;
-            this.guna2HtmlLabel5.Text = "KEEP ME SIGNED IN";
+            this.keepMeSignedIn.BackColor = System.Drawing.Color.Transparent;
+            this.keepMeSignedIn.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.keepMeSignedIn.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.keepMeSignedIn.Location = new System.Drawing.Point(100, 279);
+            this.keepMeSignedIn.Name = "keepMeSignedIn";
+            this.keepMeSignedIn.Size = new System.Drawing.Size(107, 17);
+            this.keepMeSignedIn.TabIndex = 21;
+            this.keepMeSignedIn.Text = "KEEP ME SIGNED IN";
             // 
             // guna2ToggleSwitch1
             // 
@@ -267,7 +267,7 @@ namespace Project
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Line line1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel keepMeSignedIn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Line line2;
     }

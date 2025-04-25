@@ -339,16 +339,16 @@ namespace Project
         {
             News news = new News(userName, userId);
 
-            this.Hide();
             news.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Gallery gallery = new Gallery(userName, userId);
 
-            this.Hide();
             gallery.Show();
+            this.Hide();
         }
 
         private void textBoxCardNumberF_TextChanged(object sender, EventArgs e)
@@ -470,6 +470,7 @@ namespace Project
         private void Finance_Load(object sender, EventArgs e)
         {
             LoadUserFinanceData();
+            buttonAdminPanel.Visible = Auth.IsAdmin;
         }
     }
 }

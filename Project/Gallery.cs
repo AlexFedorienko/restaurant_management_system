@@ -355,6 +355,7 @@ namespace Project
         private void Gallery_Load(object sender, EventArgs e)
         {
             LoadReviews();
+            buttonAdminPanel.Visible = Auth.IsAdmin;
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -387,15 +388,15 @@ namespace Project
         {
             Finance finance = new Finance(userName, userId);
 
-            this.Hide();
             finance.Show();
+            this.Hide();
         }
         private void button3_Click(object sender, EventArgs e)
         {
             News news = new News(userName, userId);
 
-            this.Hide();
             news.Show();
+            this.Hide();
         }
         private void buttonStar1_Click(object sender, EventArgs e) => UpdateStarButtons(1);
         private void buttonStar2_Click(object sender, EventArgs e) => UpdateStarButtons(2);

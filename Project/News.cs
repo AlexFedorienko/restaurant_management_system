@@ -338,16 +338,21 @@ namespace Project
         {
             Finance finance = new Finance(userName, userId);
 
-            this.Hide();
             finance.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Gallery gallery = new Gallery(userName, userId);
 
-            this.Hide();
             gallery.Show();
+            this.Hide();
+        }
+
+        private void News_Load(object sender, EventArgs e)
+        {
+            buttonAdminPanel.Visible = Auth.IsAdmin;
         }
     }
 }

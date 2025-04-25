@@ -74,7 +74,6 @@ namespace Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -455,7 +454,7 @@ namespace Project
             // 
             // flowLayoutPanelPayment
             // 
-            this.flowLayoutPanelPayment.Controls.Add(this.guna2HtmlLabel1);
+            this.flowLayoutPanelPayment.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelPayment.Controls.Add(this.labeli);
             this.flowLayoutPanelPayment.Controls.Add(this.labelName2);
             this.flowLayoutPanelPayment.Controls.Add(this.labelCardNumber);
@@ -473,9 +472,10 @@ namespace Project
             // labeli
             // 
             this.labeli.AutoSize = true;
+            this.labeli.BackColor = System.Drawing.Color.ForestGreen;
             this.labeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labeli.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labeli.Location = new System.Drawing.Point(242, 150);
+            this.labeli.ForeColor = System.Drawing.Color.White;
+            this.labeli.Location = new System.Drawing.Point(257, 168);
             this.labeli.Name = "labeli";
             this.labeli.Size = new System.Drawing.Size(15, 24);
             this.labeli.TabIndex = 2;
@@ -484,9 +484,10 @@ namespace Project
             // labelName2
             // 
             this.labelName2.AutoSize = true;
+            this.labelName2.BackColor = System.Drawing.Color.Green;
             this.labelName2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName2.ForeColor = System.Drawing.Color.Transparent;
-            this.labelName2.Location = new System.Drawing.Point(31, 150);
+            this.labelName2.Location = new System.Drawing.Point(23, 161);
             this.labelName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName2.Name = "labelName2";
             this.labelName2.Size = new System.Drawing.Size(34, 30);
@@ -496,9 +497,10 @@ namespace Project
             // labelCardNumber
             // 
             this.labelCardNumber.AutoSize = true;
+            this.labelCardNumber.BackColor = System.Drawing.Color.ForestGreen;
             this.labelCardNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCardNumber.ForeColor = System.Drawing.Color.Black;
-            this.labelCardNumber.Location = new System.Drawing.Point(18, 100);
+            this.labelCardNumber.ForeColor = System.Drawing.Color.White;
+            this.labelCardNumber.Location = new System.Drawing.Point(19, 106);
             this.labelCardNumber.Name = "labelCardNumber";
             this.labelCardNumber.Size = new System.Drawing.Size(299, 32);
             this.labelCardNumber.TabIndex = 0;
@@ -516,9 +518,10 @@ namespace Project
             // labelCardMonth
             // 
             this.labelCardMonth.AutoSize = true;
+            this.labelCardMonth.BackColor = System.Drawing.Color.ForestGreen;
             this.labelCardMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCardMonth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelCardMonth.Location = new System.Drawing.Point(211, 150);
+            this.labelCardMonth.ForeColor = System.Drawing.Color.White;
+            this.labelCardMonth.Location = new System.Drawing.Point(226, 168);
             this.labelCardMonth.Name = "labelCardMonth";
             this.labelCardMonth.Size = new System.Drawing.Size(30, 24);
             this.labelCardMonth.TabIndex = 1;
@@ -549,9 +552,10 @@ namespace Project
             // labelCardYear
             // 
             this.labelCardYear.AutoSize = true;
+            this.labelCardYear.BackColor = System.Drawing.Color.ForestGreen;
             this.labelCardYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCardYear.ForeColor = System.Drawing.Color.Black;
-            this.labelCardYear.Location = new System.Drawing.Point(257, 149);
+            this.labelCardYear.ForeColor = System.Drawing.Color.White;
+            this.labelCardYear.Location = new System.Drawing.Point(272, 167);
             this.labelCardYear.Name = "labelCardYear";
             this.labelCardYear.Size = new System.Drawing.Size(30, 24);
             this.labelCardYear.TabIndex = 3;
@@ -592,15 +596,6 @@ namespace Project
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(177, 58);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(86, 15);
-            this.guna2HtmlLabel1.TabIndex = 22;
-            this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
             // 
             // Form1
             // 
@@ -684,7 +679,6 @@ namespace Project
         private Label labeli;
         private Label labelCardNumber;
         private Label labelName2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
 

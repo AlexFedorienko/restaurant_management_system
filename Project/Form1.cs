@@ -428,10 +428,9 @@ namespace Project
             // Обновляем текст общей суммы (например, при первом запуске)
             totalAmountLabel.Text = "$0";
 
-            // Настраиваем стиль, если надо (опционально)
-            totalAmountLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+            totalAmountLabel.Font = new Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             totalAmountLabel.ForeColor = Color.Black;
-            totalAmountLabel.Location = new Point(220, 170);
+            totalAmountLabel.Location = new Point(220, 225);
             totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
 
             checkoutButton.Text = "Checkout";
@@ -444,7 +443,6 @@ namespace Project
             checkoutButton.Click += CheckoutButton_Click;
 
             // rectPanel можно тоже стилизовать при необходимости
-            rectPanel.BackColor = Color.SeaGreen;
         }
 
 
@@ -685,31 +683,30 @@ namespace Project
         {
             finance = new Finance(userName, userId);
 
-            this.Hide();
             finance.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             news = new News(userName, userId);
 
-            this.Hide();
             news.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             gallery = new Gallery(userName, userId);
 
-            this.Hide();
             gallery.Show();
+            this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             dataBase.openConnection();
 
-            // Запрос для получения платёжных данных пользователя
             string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
             SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
             commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
@@ -724,18 +721,17 @@ namespace Project
                 expireMonth = reader["expire_month"]?.ToString();
                 expireYear = reader["expire_year"]?.ToString();
                 cvv = reader["cvv"]?.ToString();
-                
+
             }
 
             reader.Close();
             dataBase.closeConnection();
 
-            // Обновление лейблов с полученными данными
             labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0" : cardNumber;
             labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "0" : expireMonth;
             labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "0" : expireYear;
             labelCvv.Text = string.IsNullOrEmpty(cvv) ? "0" : cvv;
-            
+
             LoadUserImage(Auth.UserId);
             LoadMenuItems();
             LoadOrderHistory();
@@ -744,7 +740,6 @@ namespace Project
             LoadCartPanel();
 
         }
-
 
         private void textBoxSearchF_TextChanged(object sender, EventArgs e)
         {

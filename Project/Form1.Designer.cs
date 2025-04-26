@@ -39,11 +39,17 @@ namespace Project
             this.label4 = new System.Windows.Forms.Label();
             this.buttonAdminPanel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.fifthIcon = new System.Windows.Forms.PictureBox();
+            this.fourthIcon = new System.Windows.Forms.PictureBox();
+            this.thirdIcon = new System.Windows.Forms.PictureBox();
+            this.secondIcon = new System.Windows.Forms.PictureBox();
+            this.firstIcon = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,22 +73,17 @@ namespace Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.fifthIcon = new System.Windows.Forms.PictureBox();
-            this.fourthIcon = new System.Windows.Forms.PictureBox();
-            this.thirdIcon = new System.Windows.Forms.PictureBox();
-            this.secondIcon = new System.Windows.Forms.PictureBox();
-            this.firstIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.line1 = new Project.Line();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.flowLayoutPanelPayment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.flowLayoutPanelPayment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -185,6 +186,63 @@ namespace Project
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             // 
+            // fifthIcon
+            // 
+            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
+            this.fifthIcon.Location = new System.Drawing.Point(26, 602);
+            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fifthIcon.Name = "fifthIcon";
+            this.fifthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fifthIcon.TabIndex = 15;
+            this.fifthIcon.TabStop = false;
+            // 
+            // fourthIcon
+            // 
+            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
+            this.fourthIcon.Location = new System.Drawing.Point(26, 542);
+            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fourthIcon.Name = "fourthIcon";
+            this.fourthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fourthIcon.TabIndex = 14;
+            this.fourthIcon.TabStop = false;
+            // 
+            // thirdIcon
+            // 
+            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
+            this.thirdIcon.Location = new System.Drawing.Point(26, 481);
+            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.thirdIcon.Name = "thirdIcon";
+            this.thirdIcon.Size = new System.Drawing.Size(30, 30);
+            this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.thirdIcon.TabIndex = 13;
+            this.thirdIcon.TabStop = false;
+            // 
+            // secondIcon
+            // 
+            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
+            this.secondIcon.Location = new System.Drawing.Point(26, 422);
+            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.secondIcon.Name = "secondIcon";
+            this.secondIcon.Size = new System.Drawing.Size(30, 30);
+            this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.secondIcon.TabIndex = 12;
+            this.secondIcon.TabStop = false;
+            // 
+            // firstIcon
+            // 
+            this.firstIcon.BackColor = System.Drawing.Color.White;
+            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
+            this.firstIcon.Location = new System.Drawing.Point(26, 367);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.firstIcon.Name = "firstIcon";
+            this.firstIcon.Size = new System.Drawing.Size(30, 30);
+            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstIcon.TabIndex = 11;
+            this.firstIcon.TabStop = false;
+            // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
@@ -254,6 +312,16 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 94);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // labelName
             // 
@@ -358,12 +426,13 @@ namespace Project
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.line1);
             this.panel2.Controls.Add(this.flowLayoutPanelMyOrders);
             this.panel2.Controls.Add(this.flowLayoutPanelPayment);
             this.panel2.Controls.Add(this.flowLayoutPanelCart);
-            this.panel2.Location = new System.Drawing.Point(1539, 131);
+            this.panel2.Location = new System.Drawing.Point(1547, 131);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(349, 914);
+            this.panel2.Size = new System.Drawing.Size(335, 914);
             this.panel2.TabIndex = 0;
             // 
             // flowLayoutPanelMyOrders
@@ -518,72 +587,17 @@ namespace Project
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // fifthIcon
+            // line1
             // 
-            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
-            this.fifthIcon.Location = new System.Drawing.Point(26, 602);
-            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fifthIcon.Name = "fifthIcon";
-            this.fifthIcon.Size = new System.Drawing.Size(30, 30);
-            this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fifthIcon.TabIndex = 15;
-            this.fifthIcon.TabStop = false;
-            // 
-            // fourthIcon
-            // 
-            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
-            this.fourthIcon.Location = new System.Drawing.Point(26, 542);
-            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fourthIcon.Name = "fourthIcon";
-            this.fourthIcon.Size = new System.Drawing.Size(30, 30);
-            this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fourthIcon.TabIndex = 14;
-            this.fourthIcon.TabStop = false;
-            // 
-            // thirdIcon
-            // 
-            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
-            this.thirdIcon.Location = new System.Drawing.Point(26, 481);
-            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.thirdIcon.Name = "thirdIcon";
-            this.thirdIcon.Size = new System.Drawing.Size(30, 30);
-            this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.thirdIcon.TabIndex = 13;
-            this.thirdIcon.TabStop = false;
-            // 
-            // secondIcon
-            // 
-            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
-            this.secondIcon.Location = new System.Drawing.Point(26, 422);
-            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.secondIcon.Name = "secondIcon";
-            this.secondIcon.Size = new System.Drawing.Size(30, 30);
-            this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.secondIcon.TabIndex = 12;
-            this.secondIcon.TabStop = false;
-            // 
-            // firstIcon
-            // 
-            this.firstIcon.BackColor = System.Drawing.Color.White;
-            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
-            this.firstIcon.Location = new System.Drawing.Point(26, 367);
-            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.firstIcon.Name = "firstIcon";
-            this.firstIcon.Size = new System.Drawing.Size(30, 30);
-            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.firstIcon.TabIndex = 11;
-            this.firstIcon.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.SystemColors.Control;
+            this.line1.LineColor = System.Drawing.SystemColors.ControlDark;
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(14, 248);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(306, 23);
+            this.line1.TabIndex = 0;
+            this.line1.Text = "line1";
             // 
             // Form1
             // 
@@ -608,16 +622,16 @@ namespace Project
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.flowLayoutPanelPayment.ResumeLayout(false);
-            this.flowLayoutPanelPayment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.flowLayoutPanelPayment.ResumeLayout(false);
+            this.flowLayoutPanelPayment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,6 +679,7 @@ namespace Project
         private Label labeli;
         private Label labelCardNumber;
         private Label labelName2;
+        private Line line1;
     }
 }
 

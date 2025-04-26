@@ -439,67 +439,10 @@ namespace Project
             checkoutButton.Click += CheckoutButton_Click;
         }
 
-
-        private void UpdateCartDisplay()
-        {
-            flowLayoutPanelCart.Controls.Clear();
-
-            Label myOrderLabel = new Label();
-            myOrderLabel.Text = "My Order";
-            myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
-            myOrderLabel.ForeColor = Color.Black;
-            myOrderLabel.Size = new Size(300, 40);
-            myOrderLabel.TextAlign = ContentAlignment.MiddleCenter;
-            flowLayoutPanelCart.Controls.Add(myOrderLabel);
-
-            decimal totalAmount = 0;
-
-            foreach (CartItem item in cart)
-            {
-                Panel itemPanel = new Panel();
-                itemPanel.Size = new Size(270, 100);
-                itemPanel.Margin = new Padding(20);
-                itemPanel.BackColor = Color.Gainsboro;
-
-                Label labelName = new Label();
-                labelName.Text = $"{item.Name}";
-                labelName.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-                labelName.Size = new Size(200, 30);
-                labelName.Location = new Point(15, 10);
-
-                Label labelQuantity = new Label();
-                labelQuantity.Text = $"Количество: {item.Quantity}";
-                labelQuantity.Font = new Font("Arial", 10);
-                labelQuantity.Size = new Size(200, 30);
-                labelQuantity.Location = new Point(15, labelName.Bottom + 5);
-
-                Label labelPrice = new Label();
-                labelPrice.Text = $"Цена: ${item.Price}";
-                labelPrice.Font = new Font("Arial", 10);
-                labelPrice.Size = new Size(200, 30);
-                labelPrice.Location = new Point(15, labelQuantity.Bottom + 5);
-
-                Label labelTotal = new Label();
-                labelTotal.Text = $"Итого: ${item.Price * item.Quantity}";
-                labelTotal.Font = new Font("Arial", 10);
-                labelTotal.Size = new Size(200, 30);
-                labelTotal.Location = new Point(15, labelPrice.Bottom + 5);
-
-                itemPanel.Controls.Add(labelName);
-                itemPanel.Controls.Add(labelQuantity);
-                itemPanel.Controls.Add(labelPrice);
-                itemPanel.Controls.Add(labelTotal);
-
-                flowLayoutPanelCart.Controls.Add(itemPanel);
-
-                totalAmount += item.Price * item.Quantity;
-            }
-
-            totalAmountLabel.Text = $"${totalAmount}";
-        }
-
+        // верхняя часть, сделать общую иформацию, время итд.
         private void LoadOrderHistory()
         {
+            /*
             flowLayoutPanelMyOrders.Controls.Clear();
 
             dataBase.openConnection();
@@ -513,6 +456,14 @@ namespace Project
 
             DataTable ordersTable = new DataTable();
             ordersTable.Load(orderReader);
+
+            Label myOrderLabel = new Label();
+            myOrderLabel.Text = "My Order";
+            myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
+            myOrderLabel.ForeColor = Color.Black;
+            myOrderLabel.Size = new Size(300, 40);
+            myOrderLabel.TextAlign = ContentAlignment.MiddleCenter;
+            flowLayoutPanelMyOrders.Controls.Add(myOrderLabel);
 
             foreach (DataRow orderRow in ordersTable.Rows)
             {
@@ -569,9 +520,58 @@ namespace Project
             }
 
             dataBase.closeConnection();
+            */
         }
+        // Корзина
+        private void UpdateCartDisplay()
+        {
+            flowLayoutPanelCart.Controls.Clear();
 
+            decimal totalAmount = 0;
 
+            foreach (CartItem item in cart)
+            {
+                Panel itemPanel = new Panel();
+                itemPanel.Size = new Size(270, 100);
+                itemPanel.Margin = new Padding(20);
+                itemPanel.BackColor = Color.Gainsboro;
+
+                Label labelName = new Label();
+                labelName.Text = $"{item.Name}";
+                labelName.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                labelName.Size = new Size(200, 30);
+                labelName.Location = new Point(15, 10);
+
+                Label labelQuantity = new Label();
+                labelQuantity.Text = $"Количество: {item.Quantity}";
+                labelQuantity.Font = new Font("Arial", 10);
+                labelQuantity.Size = new Size(200, 30);
+                labelQuantity.Location = new Point(15, labelName.Bottom + 5);
+
+                Label labelPrice = new Label();
+                labelPrice.Text = $"Цена: ${item.Price}";
+                labelPrice.Font = new Font("Arial", 10);
+                labelPrice.Size = new Size(200, 30);
+                labelPrice.Location = new Point(15, labelQuantity.Bottom + 5);
+
+                Label labelTotal = new Label();
+                labelTotal.Text = $"Итого: ${item.Price * item.Quantity}";
+                labelTotal.Font = new Font("Arial", 10);
+                labelTotal.Size = new Size(200, 30);
+                labelTotal.Location = new Point(15, labelPrice.Bottom + 5);
+
+                itemPanel.Controls.Add(labelName);
+                itemPanel.Controls.Add(labelQuantity);
+                itemPanel.Controls.Add(labelPrice);
+                itemPanel.Controls.Add(labelTotal);
+
+                flowLayoutPanelCart.Controls.Add(itemPanel);
+
+                totalAmount += item.Price * item.Quantity;
+            }
+
+            totalAmountLabel.Text = $"${totalAmount}";
+        }
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();

@@ -60,6 +60,7 @@ namespace Project
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.line1 = new Project.Line();
             this.flowLayoutPanelMyOrders = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
             this.labeli = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@ namespace Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.line1 = new Project.Line();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -122,7 +122,7 @@ namespace Project
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.Location = new System.Drawing.Point(81, 600);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 29);
+            this.label7.Size = new System.Drawing.Size(114, 36);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
             // 
@@ -133,7 +133,7 @@ namespace Project
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(82, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 29);
+            this.label6.Size = new System.Drawing.Size(116, 36);
             this.label6.TabIndex = 19;
             this.label6.Text = "Gallery";
             // 
@@ -144,7 +144,7 @@ namespace Project
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(82, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 29);
+            this.label5.Size = new System.Drawing.Size(94, 36);
             this.label5.TabIndex = 18;
             this.label5.Text = "News";
             // 
@@ -156,7 +156,7 @@ namespace Project
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 29);
+            this.label4.Size = new System.Drawing.Size(128, 36);
             this.label4.TabIndex = 17;
             this.label4.Text = "Finance";
             // 
@@ -182,7 +182,7 @@ namespace Project
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
             this.label3.Location = new System.Drawing.Point(81, 367);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 29);
+            this.label3.Size = new System.Drawing.Size(170, 36);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             // 
@@ -331,7 +331,7 @@ namespace Project
             this.labelName.Location = new System.Drawing.Point(142, 275);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(34, 30);
+            this.labelName.Size = new System.Drawing.Size(41, 37);
             this.labelName.TabIndex = 3;
             this.labelName.Text = "...";
             // 
@@ -343,7 +343,7 @@ namespace Project
             this.label2.Location = new System.Drawing.Point(142, 245);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 30);
+            this.label2.Size = new System.Drawing.Size(96, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hello,";
             // 
@@ -356,7 +356,7 @@ namespace Project
             this.label1.Location = new System.Drawing.Point(80, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 36);
+            this.label1.Size = new System.Drawing.Size(265, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
@@ -368,7 +368,7 @@ namespace Project
             "Log out"});
             this.comboBox.Location = new System.Drawing.Point(1723, 59);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(150, 28);
+            this.comboBox.Size = new System.Drawing.Size(150, 33);
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -398,7 +398,7 @@ namespace Project
             this.label8.Location = new System.Drawing.Point(406, 131);
             this.label8.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(483, 41);
+            this.label8.Size = new System.Drawing.Size(611, 51);
             this.label8.TabIndex = 8;
             this.label8.Text = "What would you like to eat?";
             // 
@@ -418,7 +418,7 @@ namespace Project
             this.label9.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(406, 40);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 39);
+            this.label9.Size = new System.Drawing.Size(163, 49);
             this.label9.TabIndex = 10;
             this.label9.Text = "Search";
             // 
@@ -434,6 +434,18 @@ namespace Project
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(335, 914);
             this.panel2.TabIndex = 0;
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.SystemColors.Control;
+            this.line1.LineColor = System.Drawing.SystemColors.ControlDark;
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(14, 248);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(306, 23);
+            this.line1.TabIndex = 0;
+            this.line1.Text = "line1";
             // 
             // flowLayoutPanelMyOrders
             // 
@@ -465,9 +477,9 @@ namespace Project
             this.labeli.BackColor = System.Drawing.Color.ForestGreen;
             this.labeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labeli.ForeColor = System.Drawing.Color.White;
-            this.labeli.Location = new System.Drawing.Point(118, 138);
+            this.labeli.Location = new System.Drawing.Point(261, 134);
             this.labeli.Name = "labeli";
-            this.labeli.Size = new System.Drawing.Size(14, 20);
+            this.labeli.Size = new System.Drawing.Size(19, 25);
             this.labeli.TabIndex = 2;
             this.labeli.Text = "/";
             // 
@@ -475,9 +487,9 @@ namespace Project
             // 
             this.labelName2.AutoSize = true;
             this.labelName2.BackColor = System.Drawing.Color.Green;
-            this.labelName2.Font = new System.Drawing.Font("Dubai", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.Font = new System.Drawing.Font("Dubai", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName2.ForeColor = System.Drawing.Color.Transparent;
-            this.labelName2.Location = new System.Drawing.Point(20, 172);
+            this.labelName2.Location = new System.Drawing.Point(30, 134);
             this.labelName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName2.Name = "labelName2";
             this.labelName2.Size = new System.Drawing.Size(22, 29);
@@ -488,11 +500,11 @@ namespace Project
             // 
             this.labelCardNumber.AutoSize = true;
             this.labelCardNumber.BackColor = System.Drawing.Color.ForestGreen;
-            this.labelCardNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCardNumber.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCardNumber.ForeColor = System.Drawing.Color.White;
-            this.labelCardNumber.Location = new System.Drawing.Point(19, 106);
+            this.labelCardNumber.Location = new System.Drawing.Point(17, 91);
             this.labelCardNumber.Name = "labelCardNumber";
-            this.labelCardNumber.Size = new System.Drawing.Size(299, 32);
+            this.labelCardNumber.Size = new System.Drawing.Size(300, 33);
             this.labelCardNumber.TabIndex = 0;
             this.labelCardNumber.Text = "1111 2222 3333 4444";
             // 
@@ -502,7 +514,7 @@ namespace Project
             this.totalAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
             this.totalAmountLabel.Name = "totalAmountLabel";
-            this.totalAmountLabel.Size = new System.Drawing.Size(0, 29);
+            this.totalAmountLabel.Size = new System.Drawing.Size(0, 36);
             this.totalAmountLabel.TabIndex = 3;
             // 
             // labelCardMonth
@@ -511,9 +523,9 @@ namespace Project
             this.labelCardMonth.BackColor = System.Drawing.Color.ForestGreen;
             this.labelCardMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCardMonth.ForeColor = System.Drawing.Color.White;
-            this.labelCardMonth.Location = new System.Drawing.Point(92, 138);
+            this.labelCardMonth.Location = new System.Drawing.Point(226, 134);
             this.labelCardMonth.Name = "labelCardMonth";
-            this.labelCardMonth.Size = new System.Drawing.Size(29, 20);
+            this.labelCardMonth.Size = new System.Drawing.Size(36, 25);
             this.labelCardMonth.TabIndex = 1;
             this.labelCardMonth.Text = "__";
             // 
@@ -535,7 +547,7 @@ namespace Project
             this.totalTextLabel.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.totalTextLabel.Location = new System.Drawing.Point(6, 220);
             this.totalTextLabel.Name = "totalTextLabel";
-            this.totalTextLabel.Size = new System.Drawing.Size(87, 36);
+            this.totalTextLabel.Size = new System.Drawing.Size(112, 45);
             this.totalTextLabel.TabIndex = 1;
             this.totalTextLabel.Text = "Total:";
             // 
@@ -545,9 +557,9 @@ namespace Project
             this.labelCardYear.BackColor = System.Drawing.Color.ForestGreen;
             this.labelCardYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCardYear.ForeColor = System.Drawing.Color.White;
-            this.labelCardYear.Location = new System.Drawing.Point(131, 138);
+            this.labelCardYear.Location = new System.Drawing.Point(276, 134);
             this.labelCardYear.Name = "labelCardYear";
-            this.labelCardYear.Size = new System.Drawing.Size(29, 20);
+            this.labelCardYear.Size = new System.Drawing.Size(36, 25);
             this.labelCardYear.TabIndex = 3;
             this.labelCardYear.Text = "__";
             this.labelCardYear.Click += new System.EventHandler(this.labelCardYear_Click);
@@ -556,7 +568,7 @@ namespace Project
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Project.Properties.Resources.card2;
-            this.pictureBox2.Location = new System.Drawing.Point(-31, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(-34, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(400, 210);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -586,18 +598,6 @@ namespace Project
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.ForeColor = System.Drawing.SystemColors.Control;
-            this.line1.LineColor = System.Drawing.SystemColors.ControlDark;
-            this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(14, 248);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(306, 23);
-            this.line1.TabIndex = 0;
-            this.line1.Text = "line1";
             // 
             // Form1
             // 

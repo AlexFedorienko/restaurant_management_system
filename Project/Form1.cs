@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static Project.Form1;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
@@ -26,6 +27,35 @@ namespace Project
         private string userName;
         private int userId;
         private List<CartItem> cart = new List<CartItem>();
+
+        public Color Transparent { get; private set; }
+
+        public class TransparentLabel : Label
+        {
+            public TransparentLabel()
+            {
+                SetStyle(ControlStyles.Opaque, true);
+                SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+                BackColor = Color.Transparent;
+            }
+
+            protected override CreateParams CreateParams
+            {
+                get
+                {
+                    CreateParams cp = base.CreateParams;
+                    cp.ExStyle |= 0x20; // WS_EX_TRANSPARENT
+                    return cp;
+                }
+            }
+
+            protected override void OnPaintBackground(PaintEventArgs pevent)
+            {
+                // Не рисуем фон
+            }
+        }
+
+
 
         public class CartItem
         {
@@ -768,6 +798,16 @@ namespace Project
         }
 
         private void labelCardYear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanelMyOrders_Paint(object sender, PaintEventArgs e)
         {
 
         }

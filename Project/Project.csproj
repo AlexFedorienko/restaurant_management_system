@@ -320,5 +320,29 @@
   <ItemGroup>
     <None Include="Resources\card2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconClock_green-512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconClock_green-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-clock-three-128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconLocation_green-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconRegion_green-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-clock-three-128px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFee_green-64px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

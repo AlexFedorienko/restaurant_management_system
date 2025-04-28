@@ -130,6 +130,9 @@
   <data name="iconCalendar_grey-32px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCalendar_grey-32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconRegion_green-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconRegion_green-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="news_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\news_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="dashboard_green2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_green2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="free-icon-font-clock-three-128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-font-clock-three-128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconStar_empty-white-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_empty-white-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,8 +169,11 @@
   <data name="iconStar_full-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_full-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconOrderTelephone_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconOrderTelephone_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="free-icon-font-clock-three-128px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-font-clock-three-128px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconClock_green-512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconClock_green-512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconStar_empty-64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_empty-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,20 +196,32 @@
   <data name="iconCalendar_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCalendar_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconLocation_green-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconLocation_green-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconClock_green-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconClock_green-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconOrderTelephone_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconOrderTelephone_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconCalendar_grey-32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCalendar_grey-32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconStar_full-yellow-64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_full-yellow-64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gallery_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gallery_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,13 +238,16 @@
   <data name="iconCamera_empty-dark-blue-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCamera_empty-dark-blue-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="card2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconStar_full-yellow-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconStar_full-yellow-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconDashboard_grey-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconDashboard_grey-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconFee_green-64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconFee_green-64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

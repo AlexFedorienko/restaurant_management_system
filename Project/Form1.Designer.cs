@@ -400,9 +400,9 @@ namespace Project
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(3, 241);
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(3, 158);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(341, 363);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(341, 352);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
             // label8
@@ -442,8 +442,8 @@ namespace Project
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.flowLayoutPanelMyOrders);
             this.panel2.Controls.Add(this.line1);
+            this.panel2.Controls.Add(this.flowLayoutPanelMyOrders);
             this.panel2.Controls.Add(this.flowLayoutPanelPayment);
             this.panel2.Controls.Add(this.flowLayoutPanelCart);
             this.panel2.Location = new System.Drawing.Point(1547, 131);
@@ -459,7 +459,7 @@ namespace Project
             this.flowLayoutPanelMyOrders.Controls.Add(this.panel5);
             this.flowLayoutPanelMyOrders.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanelMyOrders.Name = "flowLayoutPanelMyOrders";
-            this.flowLayoutPanelMyOrders.Size = new System.Drawing.Size(340, 232);
+            this.flowLayoutPanelMyOrders.Size = new System.Drawing.Size(340, 149);
             this.flowLayoutPanelMyOrders.TabIndex = 12;
             this.flowLayoutPanelMyOrders.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMyOrders_Paint);
             // 
@@ -469,13 +469,13 @@ namespace Project
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(333, 72);
+            this.panel4.Size = new System.Drawing.Size(333, 46);
             this.panel4.TabIndex = 12;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(99, 27);
+            this.label10.Location = new System.Drawing.Point(72, 15);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 1;
@@ -486,8 +486,8 @@ namespace Project
             this.pictureBox3.Image = global::Project.Properties.Resources.e_64px;
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -495,15 +495,15 @@ namespace Project
             // 
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(3, 81);
+            this.panel3.Location = new System.Drawing.Point(3, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 65);
+            this.panel3.Size = new System.Drawing.Size(333, 43);
             this.panel3.TabIndex = 11;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 19);
+            this.label11.Location = new System.Drawing.Point(72, 22);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 2;
@@ -514,8 +514,8 @@ namespace Project
             this.pictureBox4.Image = global::Project.Properties.Resources.iconRegion_green_64px;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
@@ -523,15 +523,15 @@ namespace Project
             // 
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Location = new System.Drawing.Point(3, 152);
+            this.panel5.Location = new System.Drawing.Point(3, 104);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(333, 73);
+            this.panel5.Size = new System.Drawing.Size(333, 41);
             this.panel5.TabIndex = 12;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(97, 11);
+            this.label12.Location = new System.Drawing.Point(72, 5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 3;
@@ -542,8 +542,8 @@ namespace Project
             this.pictureBox5.Image = global::Project.Properties.Resources.iconFee_green_64px;
             this.pictureBox5.Location = new System.Drawing.Point(3, 0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
@@ -553,7 +553,7 @@ namespace Project
             this.line1.ForeColor = System.Drawing.SystemColors.Control;
             this.line1.LineColor = System.Drawing.SystemColors.ControlDark;
             this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(6, 234);
+            this.line1.Location = new System.Drawing.Point(6, 151);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(333, 10);
             this.line1.TabIndex = 0;
@@ -571,9 +571,9 @@ namespace Project
             this.flowLayoutPanelPayment.Controls.Add(this.totalTextLabel);
             this.flowLayoutPanelPayment.Controls.Add(this.labelCardYear);
             this.flowLayoutPanelPayment.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 603);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 516);
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 309);
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 396);
             this.flowLayoutPanelPayment.TabIndex = 11;
             // 
             // labelCardNumber
@@ -640,7 +640,7 @@ namespace Project
             this.checkoutButton.BackColor = System.Drawing.Color.SeaGreen;
             this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutButton.ForeColor = System.Drawing.Color.White;
-            this.checkoutButton.Location = new System.Drawing.Point(3, 262);
+            this.checkoutButton.Location = new System.Drawing.Point(3, 349);
             this.checkoutButton.Name = "checkoutButton";
             this.checkoutButton.Size = new System.Drawing.Size(333, 42);
             this.checkoutButton.TabIndex = 2;
@@ -651,7 +651,7 @@ namespace Project
             // 
             this.totalTextLabel.AutoSize = true;
             this.totalTextLabel.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.totalTextLabel.Location = new System.Drawing.Point(6, 220);
+            this.totalTextLabel.Location = new System.Drawing.Point(6, 307);
             this.totalTextLabel.Name = "totalTextLabel";
             this.totalTextLabel.Size = new System.Drawing.Size(87, 36);
             this.totalTextLabel.TabIndex = 1;

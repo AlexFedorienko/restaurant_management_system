@@ -124,7 +124,7 @@ namespace Project
             this.buttonBookingAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookingAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBookingAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonBookingAP.Location = new System.Drawing.Point(9, 178);
+            this.buttonBookingAP.Location = new System.Drawing.Point(10, 232);
             this.buttonBookingAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBookingAP.Name = "buttonBookingAP";
             this.buttonBookingAP.Size = new System.Drawing.Size(188, 41);
@@ -138,7 +138,7 @@ namespace Project
             this.buttonMoneyCostAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoneyCostAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMoneyCostAP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonMoneyCostAP.Location = new System.Drawing.Point(9, 232);
+            this.buttonMoneyCostAP.Location = new System.Drawing.Point(9, 178);
             this.buttonMoneyCostAP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoneyCostAP.Name = "buttonMoneyCostAP";
             this.buttonMoneyCostAP.Size = new System.Drawing.Size(188, 41);
@@ -237,7 +237,7 @@ namespace Project
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.pictureBox5.Image = global::Project.Properties.Resources.iconTags_grey_32px;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 240);
+            this.pictureBox5.Location = new System.Drawing.Point(18, 186);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
@@ -261,7 +261,7 @@ namespace Project
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.pictureBox2.Image = global::Project.Properties.Resources.iconCalendar_grey_32px2;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 187);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 235);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
@@ -288,12 +288,12 @@ namespace Project
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 243);
+            this.label2.Location = new System.Drawing.Point(55, 189);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Money Cost";
+            this.label2.Text = "Revenue";
             // 
             // label3
             // 
@@ -314,12 +314,12 @@ namespace Project
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 189);
+            this.label4.Location = new System.Drawing.Point(56, 242);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 23);
+            this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Booking\r\n";
+            this.label4.Text = "Settings";
             // 
             // label5
             // 
@@ -447,6 +447,9 @@ namespace Project
             // 
             this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(25)))));
             this.LeftPanel.Controls.Add(this.label1);
+            this.LeftPanel.Controls.Add(this.pictureBox2);
+            this.LeftPanel.Controls.Add(this.label4);
+            this.LeftPanel.Controls.Add(this.buttonBookingAP);
             this.LeftPanel.Location = new System.Drawing.Point(-1, 0);
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(223, 723);
@@ -530,13 +533,14 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.line1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -547,7 +551,6 @@ namespace Project
             this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.UploadImage);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.textBoxPrice);
@@ -555,11 +558,8 @@ namespace Project
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.MenuList);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonMoneyCostAP);
-            this.Controls.Add(this.buttonBookingAP);
             this.Controls.Add(this.buttonActiveOrdersAP);
             this.Controls.Add(this.buttonDashBoardAP);
             this.Controls.Add(this.quit);

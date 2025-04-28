@@ -63,10 +63,11 @@ namespace Project
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.line1 = new Project.Line();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.newPromoTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.percentTextBox = new System.Windows.Forms.TextBox();
+            this.buttonAddNewPromo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -341,7 +342,7 @@ namespace Project
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteItem.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteItem.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteItem.Location = new System.Drawing.Point(259, 577);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(259, 566);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(162, 29);
             this.buttonDeleteItem.TabIndex = 24;
@@ -461,7 +462,7 @@ namespace Project
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(468, 438);
+            this.label12.Location = new System.Drawing.Point(465, 438);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 40);
@@ -479,16 +480,16 @@ namespace Project
             this.line1.TabIndex = 34;
             this.line1.Text = "line1";
             // 
-            // textBox1
+            // newPromoTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(495, 529);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 26);
-            this.textBox1.TabIndex = 35;
+            this.newPromoTextBox.BackColor = System.Drawing.Color.SlateGray;
+            this.newPromoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.newPromoTextBox.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPromoTextBox.Location = new System.Drawing.Point(492, 529);
+            this.newPromoTextBox.Multiline = true;
+            this.newPromoTextBox.Name = "newPromoTextBox";
+            this.newPromoTextBox.Size = new System.Drawing.Size(153, 26);
+            this.newPromoTextBox.TabIndex = 35;
             // 
             // label13
             // 
@@ -496,7 +497,7 @@ namespace Project
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(490, 493);
+            this.label13.Location = new System.Drawing.Point(487, 493);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 26);
@@ -509,23 +510,37 @@ namespace Project
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(614, 558);
+            this.label14.Location = new System.Drawing.Point(611, 558);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 35);
             this.label14.TabIndex = 37;
             this.label14.Text = "%";
             // 
-            // textBox2
+            // percentTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.SlateGray;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(495, 565);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 26);
-            this.textBox2.TabIndex = 38;
+            this.percentTextBox.BackColor = System.Drawing.Color.SlateGray;
+            this.percentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.percentTextBox.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentTextBox.Location = new System.Drawing.Point(492, 565);
+            this.percentTextBox.Multiline = true;
+            this.percentTextBox.Name = "percentTextBox";
+            this.percentTextBox.Size = new System.Drawing.Size(118, 26);
+            this.percentTextBox.TabIndex = 38;
+            // 
+            // buttonAddNewPromo
+            // 
+            this.buttonAddNewPromo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.buttonAddNewPromo.FlatAppearance.BorderSize = 0;
+            this.buttonAddNewPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddNewPromo.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddNewPromo.ForeColor = System.Drawing.Color.White;
+            this.buttonAddNewPromo.Location = new System.Drawing.Point(492, 606);
+            this.buttonAddNewPromo.Name = "buttonAddNewPromo";
+            this.buttonAddNewPromo.Size = new System.Drawing.Size(153, 29);
+            this.buttonAddNewPromo.TabIndex = 39;
+            this.buttonAddNewPromo.Text = "Add new promo";
+            this.buttonAddNewPromo.UseVisualStyleBackColor = false;
             // 
             // Admin_Panel
             // 
@@ -533,12 +548,13 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.buttonAddNewPromo);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.percentTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.newPromoTextBox);
             this.Controls.Add(this.line1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -612,9 +628,10 @@ namespace Project
         private Panel LeftPanel;
         private Label label12;
         private Line line1;
-        private TextBox textBox1;
+        private TextBox newPromoTextBox;
         private Label label13;
         private Label label14;
-        private TextBox textBox2;
+        private TextBox percentTextBox;
+        private Button buttonAddNewPromo;
     }
 }

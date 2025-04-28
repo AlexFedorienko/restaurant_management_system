@@ -836,5 +836,10 @@ namespace Project
         {
 
         }
+
+        private void flowLayoutPanelPayment_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

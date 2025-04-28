@@ -586,6 +586,7 @@ namespace Project
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
             this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 396);
             this.flowLayoutPanelPayment.TabIndex = 11;
+            this.flowLayoutPanelPayment.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelPayment_Paint);
             // 
             // button6
             // 

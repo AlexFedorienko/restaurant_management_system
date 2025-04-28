@@ -811,5 +811,10 @@ namespace Project
         {
 
         }
+
+        private void labelCardNumber_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

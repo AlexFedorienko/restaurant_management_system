@@ -781,7 +781,35 @@ namespace Project
 
         }
 
-        private void textBoxSearchF_TextChanged(object sender, EventArgs e)
+        
+
+        public class RightRoundedButton : Button
+        {
+            protected override void OnPaint(PaintEventArgs pevent)
+            {
+                base.OnPaint(pevent);
+                Graphics graphics = pevent.Graphics;
+                graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+                Rectangle rect = this.ClientRectangle;
+                int radius = 30; // радиус скругления
+
+                GraphicsPath path = new GraphicsPath();
+
+                path.StartFigure();
+                path.AddLine(rect.Left, rect.Top, rect.Right - radius / 2, rect.Top);
+                path.AddArc(rect.Right - radius, rect.Top, radius, radius, 270, 90);
+                path.AddLine(rect.Right, rect.Top + radius / 2, rect.Right, rect.Bottom - radius / 2);
+                path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+                path.AddLine(rect.Right - radius / 2, rect.Bottom, rect.Left, rect.Bottom);
+                path.CloseFigure();
+
+                this.Region = new Region(path);
+            }
+        }
+
+
+    private void textBoxSearchF_TextChanged(object sender, EventArgs e)
         {
             LoadMenuItems(textBoxSearchF.Text);
         }

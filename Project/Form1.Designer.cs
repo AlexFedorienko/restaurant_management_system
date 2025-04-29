@@ -55,6 +55,7 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.myButton = new Project.Form1.RightRoundedButton();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@ namespace Project
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.roundedTextBox1 = new RoundedTextBox();
             this.labelCardNumber = new System.Windows.Forms.Label();
             this.labeli = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@ namespace Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -402,6 +402,19 @@ namespace Project
             this.flowLayoutPanelMenu.TabIndex = 6;
             this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
+            // myButton
+            // 
+            this.myButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.myButton.FlatAppearance.BorderSize = 0;
+            this.myButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.myButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.myButton.Location = new System.Drawing.Point(186, 229);
+            this.myButton.Name = "myButton";
+            this.myButton.Size = new System.Drawing.Size(150, 36);
+            this.myButton.TabIndex = 0;
+            this.myButton.Text = "apply discount";
+            this.myButton.UseVisualStyleBackColor = false;
+            // 
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
@@ -570,8 +583,8 @@ namespace Project
             // flowLayoutPanelPayment
             // 
             this.flowLayoutPanelPayment.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelPayment.Controls.Add(this.myButton);
             this.flowLayoutPanelPayment.Controls.Add(this.label13);
-            this.flowLayoutPanelPayment.Controls.Add(this.button6);
             this.flowLayoutPanelPayment.Controls.Add(this.roundedTextBox1);
             this.flowLayoutPanelPayment.Controls.Add(this.labelCardNumber);
             this.flowLayoutPanelPayment.Controls.Add(this.labeli);
@@ -588,21 +601,17 @@ namespace Project
             this.flowLayoutPanelPayment.TabIndex = 11;
             this.flowLayoutPanelPayment.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelPayment_Paint);
             // 
-            // button6
+            // label13
             // 
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(199, 229);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 36);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "apply discount";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label13.Location = new System.Drawing.Point(45, 237);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 20);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "coupon code";
             // 
             // roundedTextBox1
             // 
@@ -745,18 +754,6 @@ namespace Project
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label13.Location = new System.Drawing.Point(45, 237);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 20);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "coupon code";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -857,9 +854,9 @@ namespace Project
         private Label label11;
         private Panel panel5;
         private Label label12;
-        private Button button6;
         private RoundedTextBox roundedTextBox1;
         private Label label13;
+        private RightRoundedButton myButton;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,7 @@ namespace Project
         DataBase dataBase = new DataBase();
         Auth auth = new Auth();
         Admin_Panel adminPanel = new Admin_Panel();
-        
+
         private string userName;
         private int userId;
 
@@ -29,7 +30,7 @@ namespace Project
             panel1.Region = new Region(CreateRoundRectangle(panel1.ClientRectangle, radius));
 
             labelName.Text = userName;
-            comboBox.Text = userName;
+
 
             LoadUserImage(userId);
             MakePictureBoxRound(pictureBox1);
@@ -220,7 +221,7 @@ namespace Project
             thirdIcon.Image = Properties.Resources.news_green;
             thirdIcon.BackColor = Color.White;
         }
-        
+
         private void button3_MouseLeave(object sender, EventArgs e)
         {
             button3.BackColor = Color.SeaGreen;
@@ -471,6 +472,180 @@ namespace Project
         {
             LoadUserFinanceData();
             buttonAdminPanel.Visible = Auth.IsAdmin;
+
+
+            textBoxFullAdressA.Text = "Street adress";
+            textBoxFullAdressA.ForeColor = Color.Silver;
+
+
+            textBoxFullMail.Text = "Apt,Suite,Bldg,Gate Code(optional)";
+            textBoxFullMail.ForeColor = Color.Silver;
+
+
+            textBoxFullCountry.Text = "State/Country";
+            textBoxFullCountry.ForeColor = Color.Silver;
+
+
+            textBoxFullPostcode.Text = "Postcode/ZIP";
+            textBoxFullPostcode.ForeColor = Color.Silver;
+
+
+            textBoxCardCvvF.Text = "CVV";
+            textBoxCardCvvF.ForeColor = Color.Silver;
+
+
+            textBoxCardNumberF.Text = "Card number";
+            textBoxCardNumberF.ForeColor = Color.Silver;
+
+
+            guna2TextBox1.Text = "Notes about your order,e.g.special notes for dilivery.";
+            guna2TextBox1.ForeColor = Color.Silver;
+
+
+
+        }
+
+        private void textBoxFullAdressA_Enter(object sender, EventArgs e)
+        {
+            if (textBoxFullAdressA.Text == "Street adress")
+            {
+                textBoxFullAdressA.Text = "";
+                textBoxFullAdressA.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxFullAdressA_Leave(object sender, EventArgs e)
+        {
+            if (textBoxFullAdressA.Text == "")
+            {
+                textBoxFullAdressA.Text = "Street adress";
+                textBoxFullAdressA.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxFullMail_Leave(object sender, EventArgs e)
+        {
+            if (textBoxFullMail.Text == "")
+            {
+                textBoxFullMail.Text = "Apt,Suite,Bldg,Gate Code(optional)";
+                textBoxFullMail.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxFullMail_Enter(object sender, EventArgs e)
+        {
+            if (textBoxFullMail.Text == "Apt,Suite,Bldg,Gate Code(optional)")
+            {
+                textBoxFullMail.Text = "";
+                textBoxFullMail.ForeColor = Color.Black;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void textBoxFullCountry_Leave(object sender, EventArgs e)
+        {
+            if   (textBoxFullCountry.Text == "")
+            {
+                textBoxFullCountry.Text = "State/Country";
+                textBoxFullCountry.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxFullCountry_Enter(object sender, EventArgs e)
+        {
+            if (textBoxFullCountry.Text == "State/Country")
+            {
+                textBoxFullCountry.Text = "";
+                textBoxFullCountry.ForeColor = Color.Black;
+            }
+        }
+
+
+
+
+
+        private void textBoxFullPostcode_Leave(object sender, EventArgs e)
+        {
+            if (textBoxFullPostcode.Text == "")
+            {
+                textBoxFullPostcode.Text = "Postcode/ZIP";
+                textBoxFullPostcode.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxFullPostcode_Enter(object sender, EventArgs e)
+        {
+            if (textBoxFullPostcode.Text == "Postcode/ZIP")
+            {
+                textBoxFullPostcode.Text = "";
+                textBoxFullPostcode.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxCardCvvF_Leave(object sender, EventArgs e)
+        {
+            if (textBoxCardCvvF.Text == "")
+            {
+                textBoxCardCvvF.Text = "CVV";
+                textBoxCardCvvF.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxCardCvvF_Enter(object sender, EventArgs e)
+        {
+            if (textBoxCardCvvF.Text == "CVV")
+            {
+                textBoxCardCvvF.Text = "";
+                textBoxCardCvvF.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxCardNumberF_Leave(object sender, EventArgs e)
+        {
+            if (textBoxCardNumberF.Text == "")
+            {
+                textBoxCardNumberF.Text = "Card number";
+                textBoxCardNumberF.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBoxCardNumberF_Enter(object sender, EventArgs e)
+        {
+            if (textBoxCardNumberF.Text == "Card number")
+            {
+                textBoxCardNumberF.Text = "";
+                textBoxCardNumberF.ForeColor = Color.Black;
+            }
+        }
+
+        private void guna2TextBox1_Leave(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text == "")
+            {
+                guna2TextBox1.Text = "Notes about your order,e.g.special notes for dilivery.";
+                guna2TextBox1.ForeColor = Color.Silver;
+            }
+        }
+
+        private void guna2TextBox1_Enter(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text == "Notes about your order,e.g.special notes for dilivery.")
+            {
+                guna2TextBox1.Text = "";
+                guna2TextBox1.ForeColor = Color.Black;
+            }
         }
     }
 }

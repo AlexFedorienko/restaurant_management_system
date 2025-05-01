@@ -62,12 +62,12 @@ namespace Project
             this.label11 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.line1 = new Project.Line();
             this.newPromoTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.percentTextBox = new System.Windows.Forms.TextBox();
             this.buttonAddNewPromo = new System.Windows.Forms.Button();
+            this.line1 = new Project.Line();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -354,17 +354,16 @@ namespace Project
             // comboBoxNames
             // 
             this.comboBoxNames.BackColor = System.Drawing.Color.SlateGray;
-            this.comboBoxNames.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNames.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBoxNames.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNames.Font = new System.Drawing.Font("Georgia", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNames.ForeColor = System.Drawing.Color.Black;
             this.comboBoxNames.FormattingEnabled = true;
             this.comboBoxNames.IntegralHeight = false;
-            this.comboBoxNames.ItemHeight = 20;
+            this.comboBoxNames.ItemHeight = 14;
             this.comboBoxNames.Location = new System.Drawing.Point(259, 529);
             this.comboBoxNames.Name = "comboBoxNames";
-            this.comboBoxNames.Size = new System.Drawing.Size(162, 26);
+            this.comboBoxNames.Size = new System.Drawing.Size(162, 22);
             this.comboBoxNames.TabIndex = 25;
             // 
             // label6
@@ -470,17 +469,6 @@ namespace Project
             this.label12.TabIndex = 33;
             this.label12.Text = "New Promo";
             // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
-            this.line1.LineThickness = 2;
-            this.line1.Location = new System.Drawing.Point(245, 412);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(425, 10);
-            this.line1.TabIndex = 34;
-            this.line1.Text = "line1";
-            // 
             // newPromoTextBox
             // 
             this.newPromoTextBox.BackColor = System.Drawing.Color.SlateGray;
@@ -542,6 +530,17 @@ namespace Project
             this.buttonAddNewPromo.TabIndex = 39;
             this.buttonAddNewPromo.Text = "Add new promo";
             this.buttonAddNewPromo.UseVisualStyleBackColor = false;
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
+            this.line1.LineThickness = 2;
+            this.line1.Location = new System.Drawing.Point(245, 412);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(425, 10);
+            this.line1.TabIndex = 34;
+            this.line1.Text = "line1";
             // 
             // Admin_Panel
             // 

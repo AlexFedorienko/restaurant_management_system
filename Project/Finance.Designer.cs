@@ -52,19 +52,29 @@ namespace Project
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.textBoxCardNumberF = new System.Windows.Forms.TextBox();
-            this.textBoxFullAdressF = new System.Windows.Forms.TextBox();
             this.textBoxCardMonthF = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxCardYearF = new System.Windows.Forms.TextBox();
             this.textBoxCardCvvF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.buttonSaveChangesF = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textBoxFullAdressA = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxFullMail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxFullCountry = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxFullPostcode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -350,18 +360,6 @@ namespace Project
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
-            // comboBox
-            // 
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Items.AddRange(new object[] {
-            "Log out"});
-            this.comboBox.Location = new System.Drawing.Point(1719, 61);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(121, 28);
-            this.comboBox.TabIndex = 3;
-            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Transparent;
@@ -377,27 +375,19 @@ namespace Project
             // textBoxCardNumberF
             // 
             this.textBoxCardNumberF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardNumberF.Location = new System.Drawing.Point(534, 205);
+            this.textBoxCardNumberF.Location = new System.Drawing.Point(1169, 497);
             this.textBoxCardNumberF.Multiline = true;
             this.textBoxCardNumberF.Name = "textBoxCardNumberF";
             this.textBoxCardNumberF.Size = new System.Drawing.Size(367, 34);
             this.textBoxCardNumberF.TabIndex = 6;
             this.textBoxCardNumberF.TextChanged += new System.EventHandler(this.textBoxCardNumberF_TextChanged);
-            // 
-            // textBoxFullAdressF
-            // 
-            this.textBoxFullAdressF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxFullAdressF.Location = new System.Drawing.Point(534, 410);
-            this.textBoxFullAdressF.Multiline = true;
-            this.textBoxFullAdressF.Name = "textBoxFullAdressF";
-            this.textBoxFullAdressF.Size = new System.Drawing.Size(367, 34);
-            this.textBoxFullAdressF.TabIndex = 7;
-            this.textBoxFullAdressF.TextChanged += new System.EventHandler(this.textBoxFullAdressF_TextChanged);
+            this.textBoxCardNumberF.Enter += new System.EventHandler(this.textBoxCardNumberF_Enter);
+            this.textBoxCardNumberF.Leave += new System.EventHandler(this.textBoxCardNumberF_Leave);
             // 
             // textBoxCardMonthF
             // 
             this.textBoxCardMonthF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardMonthF.Location = new System.Drawing.Point(534, 286);
+            this.textBoxCardMonthF.Location = new System.Drawing.Point(1186, 576);
             this.textBoxCardMonthF.Multiline = true;
             this.textBoxCardMonthF.Name = "textBoxCardMonthF";
             this.textBoxCardMonthF.Size = new System.Drawing.Size(37, 34);
@@ -408,7 +398,7 @@ namespace Project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(577, 289);
+            this.label8.Location = new System.Drawing.Point(1229, 579);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 31);
             this.label8.TabIndex = 9;
@@ -417,7 +407,7 @@ namespace Project
             // textBoxCardYearF
             // 
             this.textBoxCardYearF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardYearF.Location = new System.Drawing.Point(605, 289);
+            this.textBoxCardYearF.Location = new System.Drawing.Point(1257, 576);
             this.textBoxCardYearF.Multiline = true;
             this.textBoxCardYearF.Name = "textBoxCardYearF";
             this.textBoxCardYearF.Size = new System.Drawing.Size(37, 34);
@@ -427,85 +417,298 @@ namespace Project
             // textBoxCardCvvF
             // 
             this.textBoxCardCvvF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardCvvF.Location = new System.Drawing.Point(534, 351);
+            this.textBoxCardCvvF.Location = new System.Drawing.Point(1493, 579);
             this.textBoxCardCvvF.Multiline = true;
             this.textBoxCardCvvF.Name = "textBoxCardCvvF";
             this.textBoxCardCvvF.Size = new System.Drawing.Size(59, 34);
             this.textBoxCardCvvF.TabIndex = 11;
             this.textBoxCardCvvF.TextChanged += new System.EventHandler(this.textBoxCardCvvF_TextChanged);
+            this.textBoxCardCvvF.Enter += new System.EventHandler(this.textBoxCardCvvF_Enter);
+            this.textBoxCardCvvF.Leave += new System.EventHandler(this.textBoxCardCvvF_Leave);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(602, 362);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label9.Location = new System.Drawing.Point(1490, 563);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 13);
+            this.label9.Size = new System.Drawing.Size(114, 13);
             this.label9.TabIndex = 12;
-            this.label9.Text = "CVV";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(927, 212);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Card number";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(930, 422);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Full adress";
+            this.label9.Text = "Card Verification Value";
             // 
             // buttonSaveChangesF
             // 
-            this.buttonSaveChangesF.Location = new System.Drawing.Point(534, 487);
+            this.buttonSaveChangesF.BackColor = System.Drawing.Color.Black;
+            this.buttonSaveChangesF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveChangesF.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSaveChangesF.Location = new System.Drawing.Point(1169, 940);
             this.buttonSaveChangesF.Name = "buttonSaveChangesF";
-            this.buttonSaveChangesF.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveChangesF.Size = new System.Drawing.Size(604, 52);
             this.buttonSaveChangesF.TabIndex = 15;
             this.buttonSaveChangesF.Text = "Save";
-            this.buttonSaveChangesF.UseVisualStyleBackColor = true;
+            this.buttonSaveChangesF.UseVisualStyleBackColor = false;
             this.buttonSaveChangesF.Click += new System.EventHandler(this.buttonSaveChangesF_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(653, 304);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label12.Location = new System.Drawing.Point(1211, 551);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 13);
             this.label12.TabIndex = 16;
             this.label12.Text = "Month/Year";
             // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "UK",
+            "UA",
+            "USA"});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(435, 94);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(367, 36);
+            this.guna2ComboBox1.StartIndex = 2;
+            this.guna2ComboBox1.TabIndex = 17;
+            // 
+            // textBoxFullAdressA
+            // 
+            this.textBoxFullAdressA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxFullAdressA.DefaultText = "";
+            this.textBoxFullAdressA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxFullAdressA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxFullAdressA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullAdressA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullAdressA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullAdressA.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxFullAdressA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullAdressA.Location = new System.Drawing.Point(435, 161);
+            this.textBoxFullAdressA.Name = "textBoxFullAdressA";
+            this.textBoxFullAdressA.PlaceholderText = "";
+            this.textBoxFullAdressA.SelectedText = "";
+            this.textBoxFullAdressA.Size = new System.Drawing.Size(367, 36);
+            this.textBoxFullAdressA.TabIndex = 20;
+            this.textBoxFullAdressA.TextChanged += new System.EventHandler(this.textBoxFullAdressF_TextChanged);
+            this.textBoxFullAdressA.Enter += new System.EventHandler(this.textBoxFullAdressA_Enter);
+            this.textBoxFullAdressA.Leave += new System.EventHandler(this.textBoxFullAdressA_Leave);
+            // 
+            // textBoxFullMail
+            // 
+            this.textBoxFullMail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxFullMail.DefaultText = "";
+            this.textBoxFullMail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxFullMail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxFullMail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullMail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullMail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxFullMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullMail.Location = new System.Drawing.Point(435, 227);
+            this.textBoxFullMail.Name = "textBoxFullMail";
+            this.textBoxFullMail.PlaceholderText = "";
+            this.textBoxFullMail.SelectedText = "";
+            this.textBoxFullMail.Size = new System.Drawing.Size(367, 36);
+            this.textBoxFullMail.TabIndex = 21;
+            this.textBoxFullMail.Enter += new System.EventHandler(this.textBoxFullMail_Enter);
+            this.textBoxFullMail.Leave += new System.EventHandler(this.textBoxFullMail_Leave);
+            // 
+            // textBoxFullCountry
+            // 
+            this.textBoxFullCountry.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxFullCountry.DefaultText = "";
+            this.textBoxFullCountry.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxFullCountry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxFullCountry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullCountry.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullCountry.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxFullCountry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullCountry.Location = new System.Drawing.Point(435, 290);
+            this.textBoxFullCountry.Name = "textBoxFullCountry";
+            this.textBoxFullCountry.PlaceholderText = "";
+            this.textBoxFullCountry.SelectedText = "";
+            this.textBoxFullCountry.Size = new System.Drawing.Size(367, 36);
+            this.textBoxFullCountry.TabIndex = 22;
+            this.textBoxFullCountry.Enter += new System.EventHandler(this.textBoxFullCountry_Enter);
+            this.textBoxFullCountry.Leave += new System.EventHandler(this.textBoxFullCountry_Leave);
+            // 
+            // textBoxFullPostcode
+            // 
+            this.textBoxFullPostcode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxFullPostcode.DefaultText = "";
+            this.textBoxFullPostcode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxFullPostcode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxFullPostcode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullPostcode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxFullPostcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullPostcode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxFullPostcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxFullPostcode.Location = new System.Drawing.Point(435, 355);
+            this.textBoxFullPostcode.Name = "textBoxFullPostcode";
+            this.textBoxFullPostcode.PlaceholderText = "";
+            this.textBoxFullPostcode.SelectedText = "";
+            this.textBoxFullPostcode.Size = new System.Drawing.Size(367, 36);
+            this.textBoxFullPostcode.TabIndex = 23;
+            this.textBoxFullPostcode.Enter += new System.EventHandler(this.textBoxFullPostcode_Enter);
+            this.textBoxFullPostcode.Leave += new System.EventHandler(this.textBoxFullPostcode_Leave);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(436, 437);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(150, 22);
+            this.guna2HtmlLabel1.TabIndex = 24;
+            this.guna2HtmlLabel1.Text = "Need gift options?";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(436, 465);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(557, 22);
+            this.guna2HtmlLabel2.TabIndex = 25;
+            this.guna2HtmlLabel2.Text = "All orders are packaged and shipped in 1 gift box (1 box per order, not per item)" +
+    "";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(436, 496);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(316, 22);
+            this.guna2HtmlLabel3.TabIndex = 26;
+            this.guna2HtmlLabel3.Text = "Please add additional gift options here!";
+            // 
+            // materialCheckbox1
+            // 
+            this.materialCheckbox1.AutoSize = true;
+            this.materialCheckbox1.Depth = 0;
+            this.materialCheckbox1.Location = new System.Drawing.Point(436, 540);
+            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox1.Name = "materialCheckbox1";
+            this.materialCheckbox1.ReadOnly = false;
+            this.materialCheckbox1.Ripple = true;
+            this.materialCheckbox1.Size = new System.Drawing.Size(233, 37);
+            this.materialCheckbox1.TabIndex = 28;
+            this.materialCheckbox1.Text = "Stay in the know ! (optional)";
+            this.materialCheckbox1.UseVisualStyleBackColor = true;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1169, 475);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(63, 15);
+            this.guna2HtmlLabel4.TabIndex = 29;
+            this.guna2HtmlLabel4.Text = "Card number";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(1169, 817);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(604, 57);
+            this.guna2TextBox1.TabIndex = 30;
+            this.guna2TextBox1.Enter += new System.EventHandler(this.guna2TextBox1_Enter);
+            this.guna2TextBox1.Leave += new System.EventHandler(this.guna2TextBox1_Leave);
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(1169, 676);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(598, 20);
+            this.guna2HtmlLabel5.TabIndex = 31;
+            this.guna2HtmlLabel5.Text = "Your personal data will be used to process your order, support your experience ";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(1169, 702);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(536, 20);
+            this.guna2HtmlLabel6.TabIndex = 32;
+            this.guna2HtmlLabel6.Text = "on this website, and for other purposes described in our privacy policy.";
+            // 
+            // materialCheckbox2
+            // 
+            this.materialCheckbox2.AutoSize = true;
+            this.materialCheckbox2.Depth = 0;
+            this.materialCheckbox2.Location = new System.Drawing.Point(1169, 753);
+            this.materialCheckbox2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox2.Name = "materialCheckbox2";
+            this.materialCheckbox2.ReadOnly = false;
+            this.materialCheckbox2.Ripple = true;
+            this.materialCheckbox2.Size = new System.Drawing.Size(311, 37);
+            this.materialCheckbox2.TabIndex = 33;
+            this.materialCheckbox2.Text = "I\'ve agreed to the terms and conditions.";
+            this.materialCheckbox2.UseVisualStyleBackColor = true;
+            // 
             // Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.materialCheckbox2);
+            this.Controls.Add(this.guna2HtmlLabel6);
+            this.Controls.Add(this.guna2HtmlLabel5);
+            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.materialCheckbox1);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.textBoxFullPostcode);
+            this.Controls.Add(this.textBoxFullCountry);
+            this.Controls.Add(this.textBoxFullMail);
+            this.Controls.Add(this.textBoxFullAdressA);
+            this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.buttonSaveChangesF);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxCardCvvF);
             this.Controls.Add(this.textBoxCardYearF);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxCardMonthF);
-            this.Controls.Add(this.textBoxFullAdressF);
             this.Controls.Add(this.textBoxCardNumberF);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.comboBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Finance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "`";
             this.Load += new System.EventHandler(this.Finance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -526,7 +729,6 @@ namespace Project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Button buttonAdminPanel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -545,16 +747,27 @@ namespace Project
         private Label label4;
         private Label label7;
         private TextBox textBoxCardNumberF;
-        private TextBox textBoxFullAdressF;
         private TextBox textBoxCardMonthF;
         private Label label8;
         private TextBox textBoxCardYearF;
         private TextBox textBoxCardCvvF;
         private Label label9;
-        private Label label10;
-        private Label label11;
         private Button buttonSaveChangesF;
         private Label label12;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxFullAdressA;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxFullMail;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxFullCountry;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxFullPostcode;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox2;
     }
 }
 

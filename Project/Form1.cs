@@ -23,13 +23,20 @@ namespace Project
         Finance finance;
         News news;
         Gallery gallery;
-        UsersList usersList = new UsersList();
 
         private string userName;
         private int userId;
         private List<CartItem> cart = new List<CartItem>();
 
+        private Button applyButton;
+        private Label originalTotalLabel;
+        private decimal currentTotal = 0;
+        private decimal discountPercent = 0;
+        private bool discountApplied = false;
+        private Timer timeUpdateTimer;
+
         public Color Transparent { get; private set; }
+        public string UserAddress { get; set; }
 
         public class TransparentLabel : Label
         {
@@ -45,18 +52,11 @@ namespace Project
                 get
                 {
                     CreateParams cp = base.CreateParams;
-                    cp.ExStyle |= 0x20; // WS_EX_TRANSPARENT
+                    cp.ExStyle |= 0x20;
                     return cp;
                 }
             }
-
-            protected override void OnPaintBackground(PaintEventArgs pevent)
-            {
-                // Не рисуем фон
-            }
         }
-
-
 
         public class CartItem
         {
@@ -86,6 +86,7 @@ namespace Project
             comboBox.Text = userName;
 
             LoadUserImage(userId);
+            LoadUserAddress();
             MakePictureBoxRound(pictureBox1);
 
             MakeButtonRound(button1, 30);
@@ -94,6 +95,109 @@ namespace Project
             MakeButtonRound(button4, 30);
             MakeButtonRound(button5, 30);
             MakeButtonRound(SettingsButton, 20);
+
+            flowLayoutPanelPayment.Controls.Add(couponcodeTextBox);
+            couponcodeTextBox.Location = new Point(20, 250);
+
+            promoTextBox.TextChanged += (s, e) =>
+            {
+                if (!string.IsNullOrEmpty(promoTextBox.Text))
+                    couponcodeTextBox.Hide();
+                else
+                    couponcodeTextBox.Show();
+            };
+
+            timeUpdateTimer = new Timer();
+            timeUpdateTimer.Interval = 1000;
+            timeUpdateTimer.Tick += UpdateCurrentTime;
+            timeUpdateTimer.Start();
+
+            UpdateCurrentTime(null, null);
+        }
+
+        private void UpdateCurrentTime(object sender, EventArgs e)
+        {
+            timeTextBox.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+        private void LoadUserAddress()
+        {
+            try
+            {
+                dataBase.openConnection();
+
+                using (var cmd = new SqlCommand("SELECT user_adress FROM Auth WHERE id = @userId",
+                                              dataBase.getConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    object result = cmd.ExecuteScalar();
+                    UserAddress = result?.ToString() ?? string.Empty;
+                    adressTextBox.Text = UserAddress;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке адреса: {ex.Message}", "Ошибка",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UserAddress = string.Empty;
+                adressTextBox.Text = string.Empty;
+            }
+            finally
+            {
+                dataBase.closeConnection();
+            }
+        }
+
+        private void ApplyPromoCode_Click(object sender, EventArgs e)
+        {
+            string promoCode = promoTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(promoCode))
+            {
+                MessageBox.Show("Please enter a promo code", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                dataBase.openConnection();
+
+                string query = "SELECT discount_percent FROM Promocodes WHERE code = @PromoCode";
+                SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+                command.Parameters.AddWithValue("@PromoCode", promoCode);
+
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    discountPercent = Convert.ToDecimal(result);
+                    discountApplied = true;
+                    MessageBox.Show($"Discount applied! {discountPercent}% off", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateCartDisplay();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid promo code", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    discountApplied = false;
+                    discountPercent = 0;
+                    UpdateCartDisplay();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error applying promo code: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dataBase.closeConnection();
+            }
+        }
+
+        private void promoTextBox_FontChanged(object sender, EventArgs e)
+        {
+            if (couponcodeTextBox != null)
+            {
+                couponcodeTextBox.Hide();
+            }
         }
 
         private static GraphicsPath CreateRoundRectangle(Rectangle rect, int radius)
@@ -455,10 +559,10 @@ namespace Project
             flowLayoutPanelPayment.AutoScroll = false;
 
             totalAmountLabel.Text = "$0";
-
             totalAmountLabel.Font = new Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             totalAmountLabel.ForeColor = Color.Black;
-            totalAmountLabel.Location = new Point(220, 225);
+            totalAmountLabel.BackColor = Color.Transparent;
+            totalAmountLabel.Location = new Point(220, 295);
             totalAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
 
             checkoutButton.Text = "Checkout";
@@ -470,98 +574,33 @@ namespace Project
             checkoutButton.Click += CheckoutButton_Click;
         }
 
-        // верхняя часть, сделать общую иформацию, время итд.
-        private void LoadOrderHistory()
-        {
-            /*
-            flowLayoutPanelMyOrders.Controls.Clear();
-
-            dataBase.openConnection();
-
-            string queryOrders = "SELECT * FROM Orders WHERE UserId = @UserId ORDER BY OrderId DESC";
-            SqlCommand commandOrders = new SqlCommand(queryOrders, dataBase.getConnection());
-            commandOrders.Parameters.AddWithValue("@UserId", userId);
-
-            SqlDataReader orderReader = commandOrders.ExecuteReader();
-            List<int> orderIds = new List<int>();
-
-            DataTable ordersTable = new DataTable();
-            ordersTable.Load(orderReader);
-
-            Label myOrderLabel = new Label();
-            myOrderLabel.Text = "My Order";
-            myOrderLabel.Font = new Font("Century Gothic", 26, FontStyle.Bold);
-            myOrderLabel.ForeColor = Color.Black;
-            myOrderLabel.Size = new Size(300, 40);
-            myOrderLabel.TextAlign = ContentAlignment.MiddleCenter;
-            flowLayoutPanelMyOrders.Controls.Add(myOrderLabel);
-
-            foreach (DataRow orderRow in ordersTable.Rows)
-            {
-                int orderId = Convert.ToInt32(orderRow["OrderId"]);
-                decimal totalAmount = Convert.ToDecimal(orderRow["TotalAmount"]);
-
-                Panel orderPanel = new Panel
-                {
-                    Size = new Size(300, 150),
-                    BackColor = Color.LightGray,
-                    Margin = new Padding(10)
-                };
-
-                Label labelOrder = new Label
-                {
-                    Text = $"Order #{orderId} - Total: ${totalAmount}",
-                    Font = new Font("Arial", 12, FontStyle.Bold),
-                    AutoSize = false,
-                    Size = new Size(280, 30),
-                    Location = new Point(10, 10)
-                };
-                orderPanel.Controls.Add(labelOrder);
-
-                string queryItems = "SELECT * FROM OrderItems WHERE OrderId = @OrderId";
-                SqlCommand commandItems = new SqlCommand(queryItems, dataBase.getConnection());
-                commandItems.Parameters.AddWithValue("@OrderId", orderId);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(commandItems);
-                DataTable itemsTable = new DataTable();
-                adapter.Fill(itemsTable);
-
-                int yOffset = 45;
-
-                foreach (DataRow itemRow in itemsTable.Rows)
-                {
-                    string itemName = itemRow["ProductName"].ToString();
-                    int quantity = Convert.ToInt32(itemRow["Quantity"]);
-                    decimal price = Convert.ToDecimal(itemRow["ProductPrice"]);
-                    decimal total = Convert.ToDecimal(itemRow["TotalPrice"]);
-
-                    Label labelItem = new Label
-                    {
-                        Text = $"{itemName} x{quantity} - ${total}",
-                        Font = new Font("Arial", 10),
-                        Location = new Point(10, yOffset),
-                        AutoSize = true
-                    };
-
-                    orderPanel.Controls.Add(labelItem);
-                    yOffset += 20;
-                }
-
-                flowLayoutPanelMyOrders.Controls.Add(orderPanel);
-            }
-
-            dataBase.closeConnection();
-            */
-        }
-        // Корзина
         private void UpdateCartDisplay()
         {
             flowLayoutPanelCart.Controls.Clear();
 
-            decimal totalAmount = 0;
+            currentTotal = cart.Sum(item => item.Price * item.Quantity);
+            decimal discountedTotal = Math.Round(currentTotal, 2); // Округляем исходную сумму
+
+            if (discountApplied)
+            {
+                discountedTotal = Math.Round(currentTotal * (1 - discountPercent / 100), 0);
+
+                originalTotalLabel = new Label();
+                originalTotalLabel.Text = $"${currentTotal.ToString("0")}"; // Форматируем с 2 знаками
+                originalTotalLabel.Font = new Font("Arial", 12, FontStyle.Strikeout);
+                originalTotalLabel.ForeColor = Color.Red;
+                originalTotalLabel.Location = new Point(145, 300);
+                originalTotalLabel.TextAlign = ContentAlignment.MiddleCenter;
+                flowLayoutPanelPayment.Controls.Add(originalTotalLabel);
+
+                totalAmountLabel.Location = new Point(220, 295);
+            }
+
+            totalAmountLabel.Text = $"${discountedTotal.ToString("0.00")}"; // Форматируем с 2 знаками
 
             foreach (CartItem item in cart)
             {
+                decimal itemTotal = Math.Round(item.Price * item.Quantity, 2);
                 Panel itemPanel = new Panel();
                 itemPanel.Size = new Size(270, 100);
                 itemPanel.Margin = new Padding(20);
@@ -597,12 +636,9 @@ namespace Project
                 itemPanel.Controls.Add(labelTotal);
 
                 flowLayoutPanelCart.Controls.Add(itemPanel);
-
-                totalAmount += item.Price * item.Quantity;
             }
-
-            totalAmountLabel.Text = $"${totalAmount}";
         }
+
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();
@@ -641,6 +677,13 @@ namespace Project
             }
 
             decimal totalAmount = cart.Sum(item => item.Price * item.Quantity);
+
+            // Apply discount if available
+            if (discountApplied)
+            {
+                totalAmount = Math.Round(totalAmount * (1 - discountPercent / 100), 2);
+            }
+
             string queryOrder = "INSERT INTO Orders (UserId, TotalAmount) OUTPUT INSERTED.OrderId VALUES (@UserId, @TotalAmount)";
             SqlCommand commandOrder = new SqlCommand(queryOrder, dataBase.getConnection());
             commandOrder.Parameters.AddWithValue("@UserId", userId);
@@ -663,12 +706,15 @@ namespace Project
 
             dataBase.closeConnection();
 
+            // Reset cart and discount
             cart.Clear();
+            discountApplied = false;
+            discountPercent = 0;
+            promoTextBox.Text = "";
             UpdateCartDisplay();
 
             MessageBox.Show("Покупка успешно оформлена!", "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
 
         private void AddToCart(DataRow productRow)
         {
@@ -699,8 +745,6 @@ namespace Project
             UpdateCartDisplay();
         }
 
-
-        // Перехід між формами
         private void button2_Click(object sender, EventArgs e)
         {
             finance = new Finance(userName, userId);
@@ -748,15 +792,17 @@ namespace Project
         }
 
         private void Form1_Load(object sender, EventArgs e)
+{
+    dataBase.openConnection();  // Open connection first
+
+    try
+    {
+        string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
+        SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
+        commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
+
+        using (SqlDataReader reader = commandPaymentInfo.ExecuteReader())
         {
-            dataBase.openConnection();
-
-            string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
-            SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
-            commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
-
-            SqlDataReader reader = commandPaymentInfo.ExecuteReader();
-
             string cardNumber = "0", expireMonth = "0", expireYear = "0", cvv = "0";
 
             if (reader.Read())
@@ -765,24 +811,23 @@ namespace Project
                 expireMonth = reader["expire_month"]?.ToString();
                 expireYear = reader["expire_year"]?.ToString();
                 cvv = reader["cvv"]?.ToString();
-
             }
 
-            reader.Close();
-            dataBase.closeConnection();
-
-            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0000 0000 0000 0000" : FormatCardNumber(cardNumber); labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "00" : expireMonth;
+            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0000 0000 0000 0000" : FormatCardNumber(cardNumber);
+            labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "00" : expireMonth;
             labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "00" : expireYear;
-            LoadUserImage(Auth.UserId);
-            LoadMenuItems();
-            LoadOrderHistory();
-            buttonAdminPanel.Visible = Auth.IsAdmin;
-
-            LoadCartPanel();
-
         }
 
-        
+        LoadUserImage(Auth.UserId);
+        LoadMenuItems();
+        buttonAdminPanel.Visible = Auth.IsAdmin;
+        LoadCartPanel();
+    }
+    finally
+    {
+        dataBase.closeConnection();  // Close connection in finally block
+    }
+}
 
         public class RightRoundedButton : Button
         {
@@ -809,15 +854,13 @@ namespace Project
             }
         }
 
-
-    private void textBoxSearchF_TextChanged(object sender, EventArgs e)
+        private void textBoxSearchF_TextChanged(object sender, EventArgs e)
         {
             LoadMenuItems(textBoxSearchF.Text);
         }
 
         private void flowLayoutPanelMenu_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -828,47 +871,39 @@ namespace Project
 
         private void labelCardYear_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void flowLayoutPanelMyOrders_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void labelCardNumber_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void roundedTextBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void flowLayoutPanelPayment_Paint(object sender, PaintEventArgs e)
         {
-
         }
+
     }
 }

@@ -68,9 +68,9 @@ namespace Project
             this.Question1 = new System.Windows.Forms.Label();
             this.textBoxReview = new System.Windows.Forms.TextBox();
             this.panelGallery = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelReviews = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanelReviews = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -327,7 +327,7 @@ namespace Project
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelName.Location = new System.Drawing.Point(142, 275);
+            this.labelName.Location = new System.Drawing.Point(82, 271);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(34, 30);
@@ -556,6 +556,15 @@ namespace Project
             this.panelGallery.Size = new System.Drawing.Size(1318, 707);
             this.panelGallery.TabIndex = 7;
             // 
+            // flowLayoutPanelReviews
+            // 
+            this.flowLayoutPanelReviews.AutoScroll = true;
+            this.flowLayoutPanelReviews.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelReviews.Location = new System.Drawing.Point(27, 15);
+            this.flowLayoutPanelReviews.Name = "flowLayoutPanelReviews";
+            this.flowLayoutPanelReviews.Size = new System.Drawing.Size(1277, 680);
+            this.flowLayoutPanelReviews.TabIndex = 11;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -578,15 +587,6 @@ namespace Project
             this.exitButton.TabIndex = 5;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
-            // 
-            // flowLayoutPanelReviews
-            // 
-            this.flowLayoutPanelReviews.AutoScroll = true;
-            this.flowLayoutPanelReviews.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanelReviews.Location = new System.Drawing.Point(27, 15);
-            this.flowLayoutPanelReviews.Name = "flowLayoutPanelReviews";
-            this.flowLayoutPanelReviews.Size = new System.Drawing.Size(1277, 680);
-            this.flowLayoutPanelReviews.TabIndex = 11;
             // 
             // Gallery
             // 

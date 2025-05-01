@@ -55,7 +55,7 @@ namespace Project
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.myButton = new Project.Form1.RightRoundedButton();
+            this.applyTextBox = new Project.Form1.RightRoundedButton();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
@@ -64,17 +64,16 @@ namespace Project
             this.line1 = new Project.Line();
             this.flowLayoutPanelMyOrders = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.timeTextBox = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.adressTextBox = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.staywarmTextBox = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelPayment = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.roundedTextBox1 = new RoundedTextBox();
+            this.couponcodeTextBox = new System.Windows.Forms.Label();
             this.labelCardNumber = new System.Windows.Forms.Label();
             this.labeli = new System.Windows.Forms.Label();
             this.labelName2 = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@ namespace Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
+            this.promoTextBox = new RoundedRichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -141,7 +141,7 @@ namespace Project
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.Location = new System.Drawing.Point(81, 600);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 36);
+            this.label7.Size = new System.Drawing.Size(93, 29);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
             // 
@@ -152,7 +152,7 @@ namespace Project
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(82, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 36);
+            this.label6.Size = new System.Drawing.Size(96, 29);
             this.label6.TabIndex = 19;
             this.label6.Text = "Gallery";
             // 
@@ -163,7 +163,7 @@ namespace Project
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(82, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 36);
+            this.label5.Size = new System.Drawing.Size(79, 29);
             this.label5.TabIndex = 18;
             this.label5.Text = "News";
             // 
@@ -175,7 +175,7 @@ namespace Project
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 36);
+            this.label4.Size = new System.Drawing.Size(106, 29);
             this.label4.TabIndex = 17;
             this.label4.Text = "Finance";
             // 
@@ -201,7 +201,7 @@ namespace Project
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
             this.label3.Location = new System.Drawing.Point(81, 367);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 36);
+            this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -349,10 +349,10 @@ namespace Project
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelName.Location = new System.Drawing.Point(142, 275);
+            this.labelName.Location = new System.Drawing.Point(104, 275);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(41, 37);
+            this.labelName.Size = new System.Drawing.Size(34, 30);
             this.labelName.TabIndex = 3;
             this.labelName.Text = "...";
             // 
@@ -364,7 +364,7 @@ namespace Project
             this.label2.Location = new System.Drawing.Point(142, 245);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 37);
+            this.label2.Size = new System.Drawing.Size(80, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hello,";
             // 
@@ -377,7 +377,7 @@ namespace Project
             this.label1.Location = new System.Drawing.Point(80, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 44);
+            this.label1.Size = new System.Drawing.Size(208, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
@@ -389,7 +389,7 @@ namespace Project
             "Log out"});
             this.comboBox.Location = new System.Drawing.Point(1723, 59);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(150, 33);
+            this.comboBox.Size = new System.Drawing.Size(150, 28);
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -402,25 +402,27 @@ namespace Project
             this.flowLayoutPanelMenu.TabIndex = 6;
             this.flowLayoutPanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMenu_Paint);
             // 
-            // myButton
+            // applyTextBox
             // 
-            this.myButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.myButton.FlatAppearance.BorderSize = 0;
-            this.myButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.myButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.myButton.Location = new System.Drawing.Point(186, 229);
-            this.myButton.Name = "myButton";
-            this.myButton.Size = new System.Drawing.Size(150, 36);
-            this.myButton.TabIndex = 0;
-            this.myButton.Text = "apply discount";
-            this.myButton.UseVisualStyleBackColor = false;
+            this.applyTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+            this.applyTextBox.FlatAppearance.BorderSize = 0;
+            this.applyTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applyTextBox.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applyTextBox.ForeColor = System.Drawing.Color.White;
+            this.applyTextBox.Location = new System.Drawing.Point(171, 238);
+            this.applyTextBox.Name = "applyTextBox";
+            this.applyTextBox.Size = new System.Drawing.Size(165, 36);
+            this.applyTextBox.TabIndex = 0;
+            this.applyTextBox.Text = "APPLY DISCOUNT";
+            this.applyTextBox.UseVisualStyleBackColor = false;
+            this.applyTextBox.Click += new System.EventHandler(this.ApplyPromoCode_Click);
             // 
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
             this.flowLayoutPanelCart.Location = new System.Drawing.Point(3, 158);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(341, 352);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(341, 354);
             this.flowLayoutPanelCart.TabIndex = 7;
             // 
             // label8
@@ -432,7 +434,7 @@ namespace Project
             this.label8.Location = new System.Drawing.Point(406, 131);
             this.label8.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(611, 51);
+            this.label8.Size = new System.Drawing.Size(483, 41);
             this.label8.TabIndex = 8;
             this.label8.Text = "What would you like to eat?";
             // 
@@ -452,7 +454,7 @@ namespace Project
             this.label9.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(406, 40);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 49);
+            this.label9.Size = new System.Drawing.Size(129, 39);
             this.label9.TabIndex = 10;
             this.label9.Text = "Search";
             // 
@@ -495,22 +497,22 @@ namespace Project
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.timeTextBox);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(333, 46);
             this.panel4.TabIndex = 12;
             // 
-            // label10
+            // timeTextBox
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(63, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "9:20 AM";
+            this.timeTextBox.AutoSize = true;
+            this.timeTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeTextBox.Location = new System.Drawing.Point(62, 13);
+            this.timeTextBox.Name = "timeTextBox";
+            this.timeTextBox.Size = new System.Drawing.Size(84, 21);
+            this.timeTextBox.TabIndex = 1;
+            this.timeTextBox.Text = "9:20 AM";
             // 
             // pictureBox3
             // 
@@ -524,27 +526,27 @@ namespace Project
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.adressTextBox);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(3, 55);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 43);
             this.panel3.TabIndex = 11;
             // 
-            // label11
+            // adressTextBox
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(63, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 20);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "your adress";
+            this.adressTextBox.AutoSize = true;
+            this.adressTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adressTextBox.Location = new System.Drawing.Point(62, 11);
+            this.adressTextBox.Name = "adressTextBox";
+            this.adressTextBox.Size = new System.Drawing.Size(113, 21);
+            this.adressTextBox.TabIndex = 2;
+            this.adressTextBox.Text = "your adress";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Project.Properties.Resources.iconRegion_green_64px;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 1);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -553,27 +555,27 @@ namespace Project
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.staywarmTextBox);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Location = new System.Drawing.Point(3, 104);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(333, 41);
             this.panel5.TabIndex = 12;
             // 
-            // label12
+            // staywarmTextBox
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(64, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 18);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "cashback";
+            this.staywarmTextBox.AutoSize = true;
+            this.staywarmTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staywarmTextBox.Location = new System.Drawing.Point(62, 10);
+            this.staywarmTextBox.Name = "staywarmTextBox";
+            this.staywarmTextBox.Size = new System.Drawing.Size(220, 21);
+            this.staywarmTextBox.TabIndex = 3;
+            this.staywarmTextBox.Text = "Orders must stay warm!";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Project.Properties.Resources.iconFee_green_64px;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -583,9 +585,8 @@ namespace Project
             // flowLayoutPanelPayment
             // 
             this.flowLayoutPanelPayment.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanelPayment.Controls.Add(this.myButton);
-            this.flowLayoutPanelPayment.Controls.Add(this.label13);
-            this.flowLayoutPanelPayment.Controls.Add(this.roundedTextBox1);
+            this.flowLayoutPanelPayment.Controls.Add(this.applyTextBox);
+            this.flowLayoutPanelPayment.Controls.Add(this.couponcodeTextBox);
             this.flowLayoutPanelPayment.Controls.Add(this.labelCardNumber);
             this.flowLayoutPanelPayment.Controls.Add(this.labeli);
             this.flowLayoutPanelPayment.Controls.Add(this.labelName2);
@@ -595,35 +596,24 @@ namespace Project
             this.flowLayoutPanelPayment.Controls.Add(this.totalTextLabel);
             this.flowLayoutPanelPayment.Controls.Add(this.labelCardYear);
             this.flowLayoutPanelPayment.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 516);
+            this.flowLayoutPanelPayment.Controls.Add(this.promoTextBox);
+            this.flowLayoutPanelPayment.Location = new System.Drawing.Point(3, 518);
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
-            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 396);
+            this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 386);
             this.flowLayoutPanelPayment.TabIndex = 11;
             this.flowLayoutPanelPayment.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelPayment_Paint);
             // 
-            // label13
+            // couponcodeTextBox
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label13.Location = new System.Drawing.Point(45, 237);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 20);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "coupon code";
-            // 
-            // roundedTextBox1
-            // 
-            this.roundedTextBox1.BorderRadius = 30;
-            this.roundedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.roundedTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.roundedTextBox1.Location = new System.Drawing.Point(3, 229);
-            this.roundedTextBox1.Multiline = true;
-            this.roundedTextBox1.Name = "roundedTextBox1";
-            this.roundedTextBox1.Size = new System.Drawing.Size(217, 36);
-            this.roundedTextBox1.TabIndex = 11;
-            this.roundedTextBox1.TextChanged += new System.EventHandler(this.roundedTextBox1_TextChanged);
+            this.couponcodeTextBox.AutoSize = true;
+            this.couponcodeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.couponcodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.couponcodeTextBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.couponcodeTextBox.Location = new System.Drawing.Point(20, 248);
+            this.couponcodeTextBox.Name = "couponcodeTextBox";
+            this.couponcodeTextBox.Size = new System.Drawing.Size(101, 17);
+            this.couponcodeTextBox.TabIndex = 24;
+            this.couponcodeTextBox.Text = "coupon code";
             // 
             // labelCardNumber
             // 
@@ -633,7 +623,7 @@ namespace Project
             this.labelCardNumber.ForeColor = System.Drawing.Color.White;
             this.labelCardNumber.Location = new System.Drawing.Point(23, 109);
             this.labelCardNumber.Name = "labelCardNumber";
-            this.labelCardNumber.Size = new System.Drawing.Size(364, 40);
+            this.labelCardNumber.Size = new System.Drawing.Size(291, 32);
             this.labelCardNumber.TabIndex = 22;
             this.labelCardNumber.Text = "1111 2222 3333 4444";
             this.labelCardNumber.Click += new System.EventHandler(this.labelCardNumber_Click);
@@ -646,7 +636,7 @@ namespace Project
             this.labeli.ForeColor = System.Drawing.Color.White;
             this.labeli.Location = new System.Drawing.Point(116, 141);
             this.labeli.Name = "labeli";
-            this.labeli.Size = new System.Drawing.Size(22, 26);
+            this.labeli.Size = new System.Drawing.Size(17, 20);
             this.labeli.TabIndex = 2;
             this.labeli.Text = "/";
             // 
@@ -659,7 +649,7 @@ namespace Project
             this.labelName2.Location = new System.Drawing.Point(18, 182);
             this.labelName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(27, 34);
+            this.labelName2.Size = new System.Drawing.Size(21, 27);
             this.labelName2.TabIndex = 21;
             this.labelName2.Text = "...";
             // 
@@ -669,7 +659,7 @@ namespace Project
             this.totalAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
             this.totalAmountLabel.Name = "totalAmountLabel";
-            this.totalAmountLabel.Size = new System.Drawing.Size(0, 36);
+            this.totalAmountLabel.Size = new System.Drawing.Size(0, 29);
             this.totalAmountLabel.TabIndex = 3;
             // 
             // labelCardMonth
@@ -680,7 +670,7 @@ namespace Project
             this.labelCardMonth.ForeColor = System.Drawing.Color.White;
             this.labelCardMonth.Location = new System.Drawing.Point(93, 141);
             this.labelCardMonth.Name = "labelCardMonth";
-            this.labelCardMonth.Size = new System.Drawing.Size(30, 26);
+            this.labelCardMonth.Size = new System.Drawing.Size(23, 20);
             this.labelCardMonth.TabIndex = 1;
             this.labelCardMonth.Text = "__";
             // 
@@ -689,7 +679,7 @@ namespace Project
             this.checkoutButton.BackColor = System.Drawing.Color.SeaGreen;
             this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutButton.ForeColor = System.Drawing.Color.White;
-            this.checkoutButton.Location = new System.Drawing.Point(3, 349);
+            this.checkoutButton.Location = new System.Drawing.Point(3, 342);
             this.checkoutButton.Name = "checkoutButton";
             this.checkoutButton.Size = new System.Drawing.Size(333, 42);
             this.checkoutButton.TabIndex = 2;
@@ -700,9 +690,9 @@ namespace Project
             // 
             this.totalTextLabel.AutoSize = true;
             this.totalTextLabel.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.totalTextLabel.Location = new System.Drawing.Point(6, 307);
+            this.totalTextLabel.Location = new System.Drawing.Point(3, 289);
             this.totalTextLabel.Name = "totalTextLabel";
-            this.totalTextLabel.Size = new System.Drawing.Size(112, 45);
+            this.totalTextLabel.Size = new System.Drawing.Size(87, 36);
             this.totalTextLabel.TabIndex = 1;
             this.totalTextLabel.Text = "Total:";
             // 
@@ -714,7 +704,7 @@ namespace Project
             this.labelCardYear.ForeColor = System.Drawing.Color.White;
             this.labelCardYear.Location = new System.Drawing.Point(132, 141);
             this.labelCardYear.Name = "labelCardYear";
-            this.labelCardYear.Size = new System.Drawing.Size(30, 26);
+            this.labelCardYear.Size = new System.Drawing.Size(23, 20);
             this.labelCardYear.TabIndex = 3;
             this.labelCardYear.Text = "__";
             this.labelCardYear.Click += new System.EventHandler(this.labelCardYear_Click);
@@ -753,6 +743,22 @@ namespace Project
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // promoTextBox
+            // 
+            this.promoTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.promoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.promoTextBox.BulletIndent = 1;
+            this.promoTextBox.CornerRadius = 20;
+            this.promoTextBox.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.promoTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.promoTextBox.Location = new System.Drawing.Point(6, 239);
+            this.promoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.promoTextBox.MaximumSize = new System.Drawing.Size(100000, 100000);
+            this.promoTextBox.Name = "promoTextBox";
+            this.promoTextBox.Size = new System.Drawing.Size(182, 35);
+            this.promoTextBox.TabIndex = 25;
+            this.promoTextBox.Text = "";
             // 
             // Form1
             // 
@@ -849,14 +855,14 @@ namespace Project
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Panel panel4;
-        private Label label10;
+        private Label timeTextBox;
         private Panel panel3;
-        private Label label11;
+        private Label adressTextBox;
         private Panel panel5;
-        private Label label12;
-        private RoundedTextBox roundedTextBox1;
-        private Label label13;
-        private RightRoundedButton myButton;
+        private Label staywarmTextBox;
+        private RightRoundedButton applyTextBox;
+        private Label couponcodeTextBox;
+        private RoundedRichTextBox promoTextBox;
     }
 }
 

@@ -252,5 +252,12 @@ namespace Project
             usersList.Show();   
             this.Hide();
         }
+
+        private void buttonMoneyCostAP_Click(object sender, EventArgs e)
+        {
+            Revenue revenue = new Revenue(userName, userId);
+            revenue.Show();
+            this.Hide();
+        }
     }
 }

@@ -147,6 +147,7 @@ namespace Project
             this.buttonMoneyCostAP.TabIndex = 5;
             this.buttonMoneyCostAP.Text = "\r\n";
             this.buttonMoneyCostAP.UseVisualStyleBackColor = false;
+            this.buttonMoneyCostAP.Click += new System.EventHandler(this.buttonMoneyCostAP_Click);
             // 
             // MenuList
             // 

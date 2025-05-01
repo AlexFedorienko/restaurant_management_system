@@ -131,6 +131,7 @@ namespace Project
             this.buttonBookingAP.Size = new System.Drawing.Size(188, 41);
             this.buttonBookingAP.TabIndex = 4;
             this.buttonBookingAP.UseVisualStyleBackColor = false;
+            this.buttonBookingAP.Click += new System.EventHandler(this.buttonBookingAP_Click);
             // 
             // buttonMoneyCostAP
             // 

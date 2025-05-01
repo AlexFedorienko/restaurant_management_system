@@ -243,12 +243,12 @@ namespace Project
             form1 = new Form1(userName, userId);
 
             form1.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void buttonBookingAP_Click(object sender, EventArgs e)
         {
-            UsersList usersList = new UsersList();  
+            UsersList usersList = new UsersList(userName, userId);  
             usersList.Show();   
             this.Hide();
         }

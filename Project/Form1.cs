@@ -23,6 +23,7 @@ namespace Project
         Finance finance;
         News news;
         Gallery gallery;
+        UsersList usersList = new UsersList();
 
         private string userName;
         private int userId;

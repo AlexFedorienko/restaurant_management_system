@@ -383,7 +383,7 @@ namespace Project
             var cardMonth = textBoxCardMonthF.Text;
             var cardYear = textBoxCardYearF.Text;
             var cvv = textBoxCardCvvF.Text;
-            var userAddress = textBoxFullAdressF.Text;
+            var userAddress = textBoxFullAdressA.Text;
 
             // Простенька валідація
             if (cardNumber.Length < 13 || cvv.Length != 3 || cardMonth.Length != 2 || cardYear.Length != 2)
@@ -448,7 +448,7 @@ namespace Project
                 textBoxCardMonthF.Text = reader["expire_month"]?.ToString();
                 textBoxCardYearF.Text = reader["expire_year"]?.ToString();
                 textBoxCardCvvF.Text = reader["cvv"]?.ToString();
-                textBoxFullAdressF.Text = reader["user_adress"]?.ToString();
+                textBoxFullAdressA.Text = reader["user_adress"]?.ToString();
             }
 
             reader.Close();
@@ -465,7 +465,7 @@ namespace Project
             textBoxCardMonthF.Text = expireMonth;
             textBoxCardYearF.Text = expireYear;
             textBoxCardCvvF.Text = cvv;
-            textBoxFullAdressF.Text = userAddress;
+            textBoxFullAdressA.Text = userAddress;
         }
 
         private void Finance_Load(object sender, EventArgs e)

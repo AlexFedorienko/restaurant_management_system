@@ -250,10 +250,10 @@ namespace Project
             // 
             // loadButton
             // 
-            this.loadButton.BackColor = System.Drawing.SystemColors.MenuText;
+            this.loadButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.loadButton.BorderRadius = 10;
             this.loadButton.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loadButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.loadButton.Location = new System.Drawing.Point(798, 18);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(131, 26);

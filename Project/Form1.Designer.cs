@@ -65,6 +65,9 @@ namespace Project
             this.btnMinus = new System.Windows.Forms.Button();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.productPictureBox = new System.Windows.Forms.PictureBox();
+            this.emptyCartPictureBox = new System.Windows.Forms.PictureBox();
+            this.emptyCartLabel1 = new System.Windows.Forms.Label();
+            this.emptyCartLabel2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -104,6 +107,7 @@ namespace Project
             this.flowLayoutPanelCart.SuspendLayout();
             this.cartItemPanelTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyCartPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.flowLayoutPanelMyOrders.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -189,6 +193,9 @@ namespace Project
             this.label4.Size = new System.Drawing.Size(106, 29);
             this.label4.TabIndex = 17;
             this.label4.Text = "Finance";
+            this.label4.Click += new System.EventHandler(this.button2_Click);
+            this.label4.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // buttonAdminPanel
             // 
@@ -432,6 +439,9 @@ namespace Project
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
             this.flowLayoutPanelCart.Controls.Add(this.cartItemPanelTemplate);
+            this.flowLayoutPanelCart.Controls.Add(this.emptyCartPictureBox);
+            this.flowLayoutPanelCart.Controls.Add(this.emptyCartLabel1);
+            this.flowLayoutPanelCart.Controls.Add(this.emptyCartLabel2);
             this.flowLayoutPanelCart.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelCart.Location = new System.Drawing.Point(3, 158);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
@@ -523,6 +533,36 @@ namespace Project
             this.productPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productPictureBox.TabIndex = 0;
             this.productPictureBox.TabStop = false;
+            // 
+            // emptyCartPictureBox
+            // 
+            this.emptyCartPictureBox.Image = global::Project.Properties.Resources.emptyCart2;
+            this.emptyCartPictureBox.Location = new System.Drawing.Point(3, 89);
+            this.emptyCartPictureBox.Name = "emptyCartPictureBox";
+            this.emptyCartPictureBox.Size = new System.Drawing.Size(175, 191);
+            this.emptyCartPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.emptyCartPictureBox.TabIndex = 1;
+            this.emptyCartPictureBox.TabStop = false;
+            // 
+            // emptyCartLabel1
+            // 
+            this.emptyCartLabel1.AutoSize = true;
+            this.emptyCartLabel1.Font = new System.Drawing.Font("Ebrima", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyCartLabel1.Location = new System.Drawing.Point(3, 283);
+            this.emptyCartLabel1.Name = "emptyCartLabel1";
+            this.emptyCartLabel1.Size = new System.Drawing.Size(277, 40);
+            this.emptyCartLabel1.TabIndex = 26;
+            this.emptyCartLabel1.Text = "Your cart is empty.";
+            // 
+            // emptyCartLabel2
+            // 
+            this.emptyCartLabel2.AutoSize = true;
+            this.emptyCartLabel2.Font = new System.Drawing.Font("Dubai", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyCartLabel2.Location = new System.Drawing.Point(3, 323);
+            this.emptyCartLabel2.Name = "emptyCartLabel2";
+            this.emptyCartLabel2.Size = new System.Drawing.Size(327, 72);
+            this.emptyCartLabel2.TabIndex = 27;
+            this.emptyCartLabel2.Text = "The products you select will appear here.";
             // 
             // label8
             // 
@@ -889,9 +929,11 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanelCart.ResumeLayout(false);
+            this.flowLayoutPanelCart.PerformLayout();
             this.cartItemPanelTemplate.ResumeLayout(false);
             this.cartItemPanelTemplate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyCartPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanelMyOrders.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -974,6 +1016,9 @@ namespace Project
         private Label lblName;
         private Label lblPrice;
         private Button btnRemove;
+        private PictureBox emptyCartPictureBox;
+        private Label emptyCartLabel1;
+        private Label emptyCartLabel2;
     }
 }
 

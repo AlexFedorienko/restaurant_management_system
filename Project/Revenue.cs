@@ -36,14 +36,14 @@ namespace Project
             {
                 Dock = DockStyle.Fill,
                 BackColor = Color.White,
-                Margin = new Padding(20, 100, 20, 20)
+                Margin = new Padding(20, 120, 20, 20) // Увеличил верхний отступ для графика
             };
             this.Controls.Add(revenueChart);
 
             var controlPanel = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 80,
+                Height = 120, // Увеличил высоту панели управления
                 BackColor = Color.FromArgb(24, 26, 51),
                 Padding = new Padding(20, 15, 20, 15)
             };
@@ -60,7 +60,7 @@ namespace Project
                 Text = "Период с:",
                 ForeColor = Color.White,
                 Font = new Font("Arial", 14, FontStyle.Bold),
-                Location = new Point(225, 20),
+                Location = new Point(225, 15), // Поднял немного выше
                 AutoSize = true
             };
 
@@ -69,7 +69,7 @@ namespace Project
                 Text = "по:",
                 ForeColor = Color.White,
                 Font = new Font("Arial", 14, FontStyle.Bold),
-                Location = new Point(545, 20),
+                Location = new Point(545, 15), // Поднял немного выше
                 AutoSize = true
             };
 
@@ -77,7 +77,7 @@ namespace Project
             {
                 Width = 200,
                 Height = 35,
-                Location = new Point(335, 18),
+                Location = new Point(335, 12), // Поднял немного выше
                 Format = DateTimePickerFormat.Short,
                 Font = new Font("Arial", 12)
             };
@@ -86,16 +86,17 @@ namespace Project
             {
                 Width = 200,
                 Height = 35,
-                Location = new Point(585, 18),
+                Location = new Point(585, 12), // Поднял немного выше
                 Format = DateTimePickerFormat.Short,
                 Value = DateTime.Today,
                 Font = new Font("Arial", 12)
             };
 
-            // Используем кнопку из дизайнера
-            loadButton.Size = new Size(220, 40);
-            loadButton.ForeColor = Color.White;
+            // Настройка кнопки Show
+            loadButton.Location = new Point(335, 55); // Расположил кнопку ниже дат
+            loadButton.Size = new Size(180, 35);
             loadButton.FlatStyle = FlatStyle.Flat;
+            loadButton.Text = "Show";
 
             datePanel.Controls.Add(labelFrom);
             datePanel.Controls.Add(dateFromPicker);

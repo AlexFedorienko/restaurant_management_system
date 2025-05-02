@@ -607,120 +607,135 @@ namespace Project
         {
             flowLayoutPanelCart.Controls.Clear();
             currentTotal = cart.Sum(item => item.Price * item.Quantity);
-
             decimal discountedTotal = discountApplied
                 ? Math.Round(currentTotal * (1 - discountPercent / 100), 2)
                 : currentTotal;
 
             totalAmountLabel.Text = $"${discountedTotal:0.00}";
 
-            foreach (CartItem item in cart)
+            flowLayoutPanelCart.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelCart.WrapContents = false;
+            flowLayoutPanelCart.AutoScroll = true;
+
+            if (cart.Count == 0)
             {
-                Panel itemPanel = new Panel
+                emptyCartPictureBox.Visible = true;
+                emptyCartLabel1.Visible = true;
+                emptyCartLabel2.Visible = true;
+
+                emptyCartPictureBox.Top = 20;
+                emptyCartLabel1.Top = emptyCartPictureBox.Bottom + 10;
+                emptyCartLabel2.Top = emptyCartLabel1.Bottom + 5;
+
+                flowLayoutPanelCart.Controls.Add(emptyCartPictureBox);
+                flowLayoutPanelCart.Controls.Add(emptyCartLabel1);
+                flowLayoutPanelCart.Controls.Add(emptyCartLabel2);
+            }
+            else
+            {
+                emptyCartPictureBox.Visible = false;
+                emptyCartLabel1.Visible = false;
+                emptyCartLabel2.Visible = false;
+
+                foreach (CartItem item in cart)
                 {
-                    Size = new Size(330, 80),
-                    BackColor = Color.Transparent,
-                    Margin = new Padding(5),
-                    BorderStyle = BorderStyle.FixedSingle
-                };
+                    Panel itemPanel = new Panel
+                    {
+                        Size = new Size(flowLayoutPanelCart.Width - 25, 80),
+                        BackColor = Color.Transparent,
+                        Margin = new Padding(5),
+                        BorderStyle = BorderStyle.FixedSingle
+                    };
 
-                // Изображение товара
-                PictureBox picBox = new PictureBox
-                {
-                    Size = new Size(60, 60),
-                    Location = new Point(10, 10),
-                    SizeMode = PictureBoxSizeMode.Zoom,
-                    BorderStyle = BorderStyle.FixedSingle
-                };
-                LoadProductImage(item.Name, picBox);
+                    PictureBox picBox = new PictureBox
+                    {
+                        Size = new Size(60, 60),
+                        Location = new Point(10, 10),
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        BorderStyle = BorderStyle.FixedSingle
+                    };
+                    LoadProductImage(item.Name, picBox);
 
-                // Название товара
-                Label nameLabel = new Label
-                {
-                    Text = item.Name,
-                    Location = new Point(80, 10),
-                    AutoSize = true,
-                    Font = new Font("Arial", 10, FontStyle.Bold),
-                    MaximumSize = new Size(120, 40)
-                };
+                    Label nameLabel = new Label
+                    {
+                        Text = item.Name,
+                        Location = new Point(80, 10),
+                        AutoSize = true,
+                        Font = new Font("Arial", 10, FontStyle.Bold),
+                        MaximumSize = new Size(120, 40)
+                    };
 
-                // Цена товара
-                Label priceLabel = new Label
-                {
-                    Text = $"${item.Price:0.00}",
-                    Location = new Point(210, 10),
-                    Font = new Font("Arial", 10),
-                    AutoSize = true
-                };
+                    Label priceLabel = new Label
+                    {
+                        Text = $"${item.Price:0.00}",
+                        Location = new Point(210, 10),
+                        Font = new Font("Arial", 10),
+                        AutoSize = true
+                    };
 
-                // Панель управления количеством
-                Panel quantityPanel = new Panel
-                {
-                    Size = new Size(90, 25),
-                    Location = new Point(80, 40)
-                };
+                    Panel quantityPanel = new Panel
+                    {
+                        Size = new Size(90, 25),
+                        Location = new Point(80, 40)
+                    };
 
-                // Кнопка уменьшения
-                Button btnMinus = new Button
-                {
-                    Text = "-",
-                    Size = new Size(25, 25),
-                    Location = new Point(0, 0),
-                    Font = new Font("Arial", 10, FontStyle.Bold),
-                    FlatStyle = FlatStyle.Flat,
-                    Tag = item
-                };
-                btnMinus.Click += (s, e) => UpdateItemQuantity(item, -1);
+                    Button btnMinus = new Button
+                    {
+                        Text = "-",
+                        Size = new Size(25, 25),
+                        Location = new Point(0, 0),
+                        Font = new Font("Arial", 10, FontStyle.Bold),
+                        FlatStyle = FlatStyle.Flat,
+                        Tag = item
+                    };
+                    btnMinus.Click += (s, e) => UpdateItemQuantity(item, -1);
 
-                // Кнопка увеличения
-                Button btnPlus = new Button
-                {
-                    Text = "+",
-                    Size = new Size(25, 25),
-                    Location = new Point(65, 0),
-                    Font = new Font("Arial", 10, FontStyle.Bold),
-                    FlatStyle = FlatStyle.Flat,
-                    Tag = item
-                };
-                btnPlus.Click += (s, e) => UpdateItemQuantity(item, 1);
+                    Button btnPlus = new Button
+                    {
+                        Text = "+",
+                        Size = new Size(25, 25),
+                        Location = new Point(65, 0),
+                        Font = new Font("Arial", 10, FontStyle.Bold),
+                        FlatStyle = FlatStyle.Flat,
+                        Tag = item
+                    };
+                    btnPlus.Click += (s, e) => UpdateItemQuantity(item, 1);
 
-                // Отображение количества
-                Label quantityLabel = new Label
-                {
-                    Text = item.Quantity.ToString(),
-                    Size = new Size(40, 25),
-                    Location = new Point(25, 0),
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font("Arial", 10)
-                };
+                    Label quantityLabel = new Label
+                    {
+                        Text = item.Quantity.ToString(),
+                        Size = new Size(40, 25),
+                        Location = new Point(25, 0),
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Font = new Font("Arial", 10)
+                    };
 
-                // Кнопка удаления с оригинальной картинкой
-                Button btnRemove = new Button
-                {
-                    Size = new Size(25, 25),
-                    Location = new Point(300, 5),
-                    FlatStyle = FlatStyle.Flat,
-                    BackgroundImage = Properties.Resources.free_icon_font_trash_xmark__2_, // Ваша оригинальная картинка
-                    BackgroundImageLayout = ImageLayout.Zoom,
-                    Tag = item
-                };
-                btnRemove.Click += (s, e) => {
-                    cart.Remove(item);
-                    UpdateCartDisplay();
-                };
+                    Button btnRemove = new Button
+                    {
+                        Size = new Size(25, 25),
+                        Location = new Point(itemPanel.Width - 35, 5),
+                        FlatStyle = FlatStyle.Flat,
+                        BackgroundImage = Properties.Resources.free_icon_font_trash_xmark__2_,
+                        BackgroundImageLayout = ImageLayout.Zoom,
+                        Tag = item
+                    };
+                    btnRemove.Click += (s, e) => {
+                        cart.Remove(item);
+                        UpdateCartDisplay();
+                    };
 
-                // Добавляем элементы
-                quantityPanel.Controls.Add(btnMinus);
-                quantityPanel.Controls.Add(quantityLabel);
-                quantityPanel.Controls.Add(btnPlus);
+                    quantityPanel.Controls.Add(btnMinus);
+                    quantityPanel.Controls.Add(quantityLabel);
+                    quantityPanel.Controls.Add(btnPlus);
 
-                itemPanel.Controls.Add(picBox);
-                itemPanel.Controls.Add(nameLabel);
-                itemPanel.Controls.Add(priceLabel);
-                itemPanel.Controls.Add(quantityPanel);
-                itemPanel.Controls.Add(btnRemove);
+                    itemPanel.Controls.Add(picBox);
+                    itemPanel.Controls.Add(nameLabel);
+                    itemPanel.Controls.Add(priceLabel);
+                    itemPanel.Controls.Add(quantityPanel);
+                    itemPanel.Controls.Add(btnRemove);
 
-                flowLayoutPanelCart.Controls.Add(itemPanel);
+                    flowLayoutPanelCart.Controls.Add(itemPanel);
+                }
             }
 
             UpdateDiscountDisplay();
@@ -940,9 +955,15 @@ namespace Project
                     labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "00" : expireYear;
                 }
 
+                if (cartItemPanelTemplate != null)
+                {
+                    cartItemPanelTemplate.Visible = false;
+                }
+
+                buttonAdminPanel.Visible = Auth.IsAdmin;
+
                 LoadUserImage(Auth.UserId);
                 LoadMenuItems();
-                buttonAdminPanel.Visible = Auth.IsAdmin;
                 LoadCartPanel();
             }
             finally

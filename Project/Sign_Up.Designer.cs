@@ -170,6 +170,7 @@
             this.textBoxUserEmailR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUserEmailR.BulletIndent = 1;
             this.textBoxUserEmailR.CornerRadius = 20;
+            this.textBoxUserEmailR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxUserEmailR.ForeColor = System.Drawing.SystemColors.Menu;
             this.textBoxUserEmailR.Location = new System.Drawing.Point(17, 191);
             this.textBoxUserEmailR.Margin = new System.Windows.Forms.Padding(4);
@@ -185,6 +186,7 @@
             this.textBoxPswR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPswR.BulletIndent = 1;
             this.textBoxPswR.CornerRadius = 20;
+            this.textBoxPswR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPswR.ForeColor = System.Drawing.SystemColors.Menu;
             this.textBoxPswR.Location = new System.Drawing.Point(17, 268);
             this.textBoxPswR.Margin = new System.Windows.Forms.Padding(4);
@@ -200,6 +202,7 @@
             this.textBoxConfirmPswR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxConfirmPswR.BulletIndent = 1;
             this.textBoxConfirmPswR.CornerRadius = 20;
+            this.textBoxConfirmPswR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxConfirmPswR.ForeColor = System.Drawing.SystemColors.Menu;
             this.textBoxConfirmPswR.Location = new System.Drawing.Point(17, 355);
             this.textBoxConfirmPswR.Margin = new System.Windows.Forms.Padding(4);
@@ -216,6 +219,7 @@
             this.textBoxLoginR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxLoginR.BulletIndent = 1;
             this.textBoxLoginR.CornerRadius = 20;
+            this.textBoxLoginR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLoginR.ForeColor = System.Drawing.SystemColors.Menu;
             this.textBoxLoginR.Location = new System.Drawing.Point(17, 104);
             this.textBoxLoginR.Margin = new System.Windows.Forms.Padding(4);

@@ -23,25 +23,23 @@ namespace Project
             this.userName = userName;
             this.userId = userId;
             InitializeCustomComponents();
+            SetupEventHandlers();
         }
 
         private void InitializeCustomComponents()
         {
-            // Настройка основной формы
             this.BackColor = Color.FromArgb(48, 57, 76);
             this.ClientSize = new Size(1280, 720);
             this.FormBorderStyle = FormBorderStyle.None;
 
-            // Создаем и настраиваем график
             revenueChart = new Chart
             {
                 Dock = DockStyle.Fill,
                 BackColor = Color.White,
-                Margin = new Padding(20, 100, 20, 20) // Увеличили верхний отступ
+                Margin = new Padding(20, 100, 20, 20)
             };
             this.Controls.Add(revenueChart);
 
-            // Панель управления с кнопками (слева)
             var controlPanel = new Panel
             {
                 Dock = DockStyle.Top,
@@ -50,21 +48,19 @@ namespace Project
                 Padding = new Padding(20, 15, 20, 15)
             };
 
-            // Контейнер для элементов выбора дат (теперь слева и шире)
             var datePanel = new Panel
             {
                 Dock = DockStyle.Left,
-                Width = 600,  // Увеличили ширину
+                Width = 780,
                 BackColor = Color.Transparent
             };
 
-            // Метки "С:" и "По:" - увеличенные и жирные
             var labelFrom = new Label
             {
                 Text = "Период с:",
                 ForeColor = Color.White,
-                Font = new Font("Arial", 14, FontStyle.Bold), // Увеличили шрифт
-                Location = new Point(20, 20),
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                Location = new Point(225, 20),
                 AutoSize = true
             };
 
@@ -72,45 +68,35 @@ namespace Project
             {
                 Text = "по:",
                 ForeColor = Color.White,
-                Font = new Font("Arial", 14, FontStyle.Bold), // Увеличили шрифт
-                Location = new Point(320, 20), // Сдвинули правее
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                Location = new Point(545, 20),
                 AutoSize = true
             };
 
-            // Поля выбора дат - увеличенные
             dateFromPicker = new DateTimePicker
             {
-                Width = 200,  // Увеличили ширину
-                Height = 35,   // Увеличили высоту
-                Location = new Point(120, 18), // Сдвинули правее
+                Width = 200,
+                Height = 35,
+                Location = new Point(335, 18),
                 Format = DateTimePickerFormat.Short,
-                Font = new Font("Arial", 12) // Увеличили шрифт
+                Font = new Font("Arial", 12)
             };
 
             dateToPicker = new DateTimePicker
             {
                 Width = 200,
                 Height = 35,
-                Location = new Point(360, 18), // Сдвинули правее
+                Location = new Point(585, 18),
                 Format = DateTimePickerFormat.Short,
                 Value = DateTime.Today,
-                Font = new Font("Arial", 12) // Увеличили шрифт
+                Font = new Font("Arial", 12)
             };
 
-            // Кнопка - увеличенная и стилизованная
-            var loadButton = new Button
-            {
-                Text = "ПОКАЗАТЬ",
-                BackColor = Color.SeaGreen,
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Size = new Size(150, 40), // Увеличили размер
-                Location = new Point(580, 15), // Сдвинули правее
-                Font = new Font("Arial", 12, FontStyle.Bold) // Увеличили шрифт
-            };
-            loadButton.Click += (s, e) => LoadRevenueData(dateFromPicker.Value, dateToPicker.Value);
+            // Используем кнопку из дизайнера
+            loadButton.Size = new Size(220, 40);
+            loadButton.ForeColor = Color.White;
+            loadButton.FlatStyle = FlatStyle.Flat;
 
-            // Добавляем элементы в панель
             datePanel.Controls.Add(labelFrom);
             datePanel.Controls.Add(dateFromPicker);
             datePanel.Controls.Add(labelTo);
@@ -120,8 +106,17 @@ namespace Project
             controlPanel.Controls.Add(datePanel);
             this.Controls.Add(controlPanel);
 
-            // Инициализация графика
             InitializeChart();
+        }
+
+        private void SetupEventHandlers()
+        {
+            loadButton.Click += LoadButton_Click;
+        }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            LoadRevenueData(dateFromPicker.Value, dateToPicker.Value);
         }
 
         private void InitializeChart()
@@ -129,18 +124,15 @@ namespace Project
             revenueChart.ChartAreas.Clear();
             revenueChart.Series.Clear();
 
-            // Настройка области графика
             ChartArea chartArea = new ChartArea("MainArea")
             {
-                AxisX =
-                {
+                AxisX = {
                     Title = "Дата",
                     TitleFont = new Font("Arial", 12, FontStyle.Bold),
                     Interval = 1,
                     LabelStyle = { Angle = -45, Format = "dd.MM", Font = new Font("Arial", 10) }
                 },
-                AxisY =
-                {
+                AxisY = {
                     Title = "Сумма ($)",
                     TitleFont = new Font("Arial", 12, FontStyle.Bold),
                     LabelStyle = { Format = "C0", Font = new Font("Arial", 10) }
@@ -149,7 +141,6 @@ namespace Project
             };
             revenueChart.ChartAreas.Add(chartArea);
 
-            // Добавление серии данных
             Series series = new Series("Revenue")
             {
                 ChartType = SeriesChartType.Column,
@@ -204,7 +195,6 @@ namespace Project
                     new Font("Arial", 14, FontStyle.Bold),
                     Color.Black));
 
-                // Автомасштабирование
                 revenueChart.ChartAreas["MainArea"].RecalculateAxesScale();
             }
             catch (Exception ex)
@@ -221,7 +211,6 @@ namespace Project
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            // Загрузка данных за последние 30 дней по умолчанию
             dateFromPicker.Value = DateTime.Today.AddDays(-30);
             dateToPicker.Value = DateTime.Today;
             LoadRevenueData(dateFromPicker.Value, dateToPicker.Value);
@@ -229,9 +218,9 @@ namespace Project
 
         private void quit_Click(object sender, EventArgs e)
         {
-            this.Hide();
             form1 = new Form1(userName, userId);
             form1.Show();
+            this.Hide();
         }
     }
 }

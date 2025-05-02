@@ -46,6 +46,7 @@ namespace Project
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.loadButton = new RoundedButton();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -247,12 +248,27 @@ namespace Project
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
+            // loadButton
+            // 
+            this.loadButton.BackColor = System.Drawing.SystemColors.MenuText;
+            this.loadButton.BorderRadius = 10;
+            this.loadButton.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loadButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadButton.Location = new System.Drawing.Point(798, 18);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(131, 26);
+            this.loadButton.TabIndex = 33;
+            this.loadButton.Text = "SHOW";
+            this.loadButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.loadButton.UseVisualStyleBackColor = false;
+            // 
             // Revenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.loadButton);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
@@ -295,5 +311,6 @@ namespace Project
         private Label label4;
         private Label label5;
         private Panel LeftPanel;
+        private RoundedButton loadButton;
     }
 }

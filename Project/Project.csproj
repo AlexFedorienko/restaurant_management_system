@@ -363,5 +363,11 @@
   <ItemGroup>
     <None Include="Resources\iconFee_green-64px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-trash-xmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-trash-xmark %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

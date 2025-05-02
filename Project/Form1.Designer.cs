@@ -57,6 +57,14 @@ namespace Project
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.applyTextBox = new Project.Form1.RightRoundedButton();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.productPictureBox = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSearchF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -83,9 +91,9 @@ namespace Project
             this.totalTextLabel = new System.Windows.Forms.Label();
             this.labelCardYear = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.promoTextBox = new RoundedRichTextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.promoTextBox = new RoundedRichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
@@ -93,6 +101,9 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanelCart.SuspendLayout();
+            this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.flowLayoutPanelMyOrders.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -141,7 +152,7 @@ namespace Project
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.Location = new System.Drawing.Point(81, 600);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 29);
+            this.label7.Size = new System.Drawing.Size(114, 36);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
             // 
@@ -152,7 +163,7 @@ namespace Project
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(82, 542);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 29);
+            this.label6.Size = new System.Drawing.Size(116, 36);
             this.label6.TabIndex = 19;
             this.label6.Text = "Gallery";
             // 
@@ -163,7 +174,7 @@ namespace Project
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(82, 481);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 29);
+            this.label5.Size = new System.Drawing.Size(94, 36);
             this.label5.TabIndex = 18;
             this.label5.Text = "News";
             // 
@@ -175,7 +186,7 @@ namespace Project
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(81, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 29);
+            this.label4.Size = new System.Drawing.Size(128, 36);
             this.label4.TabIndex = 17;
             this.label4.Text = "Finance";
             // 
@@ -201,14 +212,14 @@ namespace Project
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
             this.label3.Location = new System.Drawing.Point(81, 367);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 29);
+            this.label3.Size = new System.Drawing.Size(170, 36);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // fifthIcon
             // 
-            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
+            this.fifthIcon.Image = ((System.Drawing.Image)(resources.GetObject("fifthIcon.Image")));
             this.fifthIcon.Location = new System.Drawing.Point(26, 602);
             this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
             this.fifthIcon.Name = "fifthIcon";
@@ -219,7 +230,7 @@ namespace Project
             // 
             // fourthIcon
             // 
-            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
+            this.fourthIcon.Image = ((System.Drawing.Image)(resources.GetObject("fourthIcon.Image")));
             this.fourthIcon.Location = new System.Drawing.Point(26, 542);
             this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
             this.fourthIcon.Name = "fourthIcon";
@@ -230,7 +241,7 @@ namespace Project
             // 
             // thirdIcon
             // 
-            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
+            this.thirdIcon.Image = ((System.Drawing.Image)(resources.GetObject("thirdIcon.Image")));
             this.thirdIcon.Location = new System.Drawing.Point(26, 481);
             this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
             this.thirdIcon.Name = "thirdIcon";
@@ -241,7 +252,7 @@ namespace Project
             // 
             // secondIcon
             // 
-            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_white;
+            this.secondIcon.Image = ((System.Drawing.Image)(resources.GetObject("secondIcon.Image")));
             this.secondIcon.Location = new System.Drawing.Point(26, 422);
             this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
             this.secondIcon.Name = "secondIcon";
@@ -254,7 +265,7 @@ namespace Project
             // 
             this.firstIcon.BackColor = System.Drawing.Color.White;
             this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_green1;
+            this.firstIcon.Image = ((System.Drawing.Image)(resources.GetObject("firstIcon.Image")));
             this.firstIcon.Location = new System.Drawing.Point(26, 367);
             this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
             this.firstIcon.Name = "firstIcon";
@@ -352,7 +363,7 @@ namespace Project
             this.labelName.Location = new System.Drawing.Point(104, 275);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(34, 30);
+            this.labelName.Size = new System.Drawing.Size(41, 37);
             this.labelName.TabIndex = 3;
             this.labelName.Text = "...";
             // 
@@ -364,7 +375,7 @@ namespace Project
             this.label2.Location = new System.Drawing.Point(142, 245);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 30);
+            this.label2.Size = new System.Drawing.Size(96, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hello,";
             // 
@@ -377,7 +388,7 @@ namespace Project
             this.label1.Location = new System.Drawing.Point(80, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 36);
+            this.label1.Size = new System.Drawing.Size(265, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
@@ -389,7 +400,7 @@ namespace Project
             "Log out"});
             this.comboBox.Location = new System.Drawing.Point(1723, 59);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(150, 28);
+            this.comboBox.Size = new System.Drawing.Size(150, 33);
             this.comboBox.TabIndex = 3;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -420,10 +431,97 @@ namespace Project
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
+            this.flowLayoutPanelCart.Controls.Add(this.Panel);
             this.flowLayoutPanelCart.Location = new System.Drawing.Point(3, 158);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
             this.flowLayoutPanelCart.Size = new System.Drawing.Size(341, 354);
             this.flowLayoutPanelCart.TabIndex = 7;
+            // 
+            // Panel
+            // 
+            this.Panel.Controls.Add(this.btnRemove);
+            this.Panel.Controls.Add(this.lblPrice);
+            this.Panel.Controls.Add(this.lblName);
+            this.Panel.Controls.Add(this.btnPlus);
+            this.Panel.Controls.Add(this.btnMinus);
+            this.Panel.Controls.Add(this.lblQuantity);
+            this.Panel.Controls.Add(this.productPictureBox);
+            this.Panel.Location = new System.Drawing.Point(3, 3);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(336, 80);
+            this.Panel.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.btnRemove.AutoSize = true;
+            this.btnRemove.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRemove.BackColor = System.Drawing.Color.Azure;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Image = global::Project.Properties.Resources.free_icon_font_trash_xmark__2_;
+            this.btnRemove.Location = new System.Drawing.Point(294, 19);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(30, 30);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(239, 24);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(54, 25);
+            this.lblPrice.TabIndex = 5;
+            this.lblPrice.Text = "Price";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.Location = new System.Drawing.Point(78, 25);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(71, 23);
+            this.lblName.TabIndex = 4;
+            this.lblName.Text = "Name";
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Location = new System.Drawing.Point(210, 23);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(25, 25);
+            this.btnPlus.TabIndex = 3;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Location = new System.Drawing.Point(155, 23);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(25, 25);
+            this.btnMinus.TabIndex = 2;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(186, 23);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(20, 25);
+            this.lblQuantity.TabIndex = 1;
+            this.lblQuantity.Text = "..";
+            // 
+            // productPictureBox
+            // 
+            this.productPictureBox.Location = new System.Drawing.Point(4, 5);
+            this.productPictureBox.Name = "productPictureBox";
+            this.productPictureBox.Size = new System.Drawing.Size(68, 68);
+            this.productPictureBox.TabIndex = 0;
+            this.productPictureBox.TabStop = false;
             // 
             // label8
             // 
@@ -434,7 +532,7 @@ namespace Project
             this.label8.Location = new System.Drawing.Point(406, 131);
             this.label8.Margin = new System.Windows.Forms.Padding(188, 0, 188, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(483, 41);
+            this.label8.Size = new System.Drawing.Size(611, 51);
             this.label8.TabIndex = 8;
             this.label8.Text = "What would you like to eat?";
             // 
@@ -454,7 +552,7 @@ namespace Project
             this.label9.Font = new System.Drawing.Font("Century Gothic", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(406, 40);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 39);
+            this.label9.Size = new System.Drawing.Size(163, 49);
             this.label9.TabIndex = 10;
             this.label9.Text = "Search";
             // 
@@ -510,13 +608,13 @@ namespace Project
             this.timeTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeTextBox.Location = new System.Drawing.Point(62, 13);
             this.timeTextBox.Name = "timeTextBox";
-            this.timeTextBox.Size = new System.Drawing.Size(84, 21);
+            this.timeTextBox.Size = new System.Drawing.Size(108, 28);
             this.timeTextBox.TabIndex = 1;
             this.timeTextBox.Text = "9:20 AM";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Project.Properties.Resources.e_64px;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
@@ -539,13 +637,13 @@ namespace Project
             this.adressTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adressTextBox.Location = new System.Drawing.Point(62, 11);
             this.adressTextBox.Name = "adressTextBox";
-            this.adressTextBox.Size = new System.Drawing.Size(113, 21);
+            this.adressTextBox.Size = new System.Drawing.Size(145, 28);
             this.adressTextBox.TabIndex = 2;
             this.adressTextBox.Text = "your adress";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Project.Properties.Resources.iconRegion_green_64px;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(3, 1);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
@@ -568,13 +666,13 @@ namespace Project
             this.staywarmTextBox.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staywarmTextBox.Location = new System.Drawing.Point(62, 10);
             this.staywarmTextBox.Name = "staywarmTextBox";
-            this.staywarmTextBox.Size = new System.Drawing.Size(220, 21);
+            this.staywarmTextBox.Size = new System.Drawing.Size(285, 28);
             this.staywarmTextBox.TabIndex = 3;
             this.staywarmTextBox.Text = "Orders must stay warm!";
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Project.Properties.Resources.iconFee_green_64px;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(3, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
@@ -611,7 +709,7 @@ namespace Project
             this.couponcodeTextBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.couponcodeTextBox.Location = new System.Drawing.Point(20, 248);
             this.couponcodeTextBox.Name = "couponcodeTextBox";
-            this.couponcodeTextBox.Size = new System.Drawing.Size(101, 17);
+            this.couponcodeTextBox.Size = new System.Drawing.Size(115, 20);
             this.couponcodeTextBox.TabIndex = 24;
             this.couponcodeTextBox.Text = "coupon code";
             // 
@@ -623,7 +721,7 @@ namespace Project
             this.labelCardNumber.ForeColor = System.Drawing.Color.White;
             this.labelCardNumber.Location = new System.Drawing.Point(23, 109);
             this.labelCardNumber.Name = "labelCardNumber";
-            this.labelCardNumber.Size = new System.Drawing.Size(291, 32);
+            this.labelCardNumber.Size = new System.Drawing.Size(364, 40);
             this.labelCardNumber.TabIndex = 22;
             this.labelCardNumber.Text = "1111 2222 3333 4444";
             this.labelCardNumber.Click += new System.EventHandler(this.labelCardNumber_Click);
@@ -636,7 +734,7 @@ namespace Project
             this.labeli.ForeColor = System.Drawing.Color.White;
             this.labeli.Location = new System.Drawing.Point(116, 141);
             this.labeli.Name = "labeli";
-            this.labeli.Size = new System.Drawing.Size(17, 20);
+            this.labeli.Size = new System.Drawing.Size(22, 26);
             this.labeli.TabIndex = 2;
             this.labeli.Text = "/";
             // 
@@ -649,7 +747,7 @@ namespace Project
             this.labelName2.Location = new System.Drawing.Point(18, 182);
             this.labelName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(21, 27);
+            this.labelName2.Size = new System.Drawing.Size(27, 34);
             this.labelName2.TabIndex = 21;
             this.labelName2.Text = "...";
             // 
@@ -659,7 +757,7 @@ namespace Project
             this.totalAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalAmountLabel.Location = new System.Drawing.Point(241, 166);
             this.totalAmountLabel.Name = "totalAmountLabel";
-            this.totalAmountLabel.Size = new System.Drawing.Size(0, 29);
+            this.totalAmountLabel.Size = new System.Drawing.Size(0, 36);
             this.totalAmountLabel.TabIndex = 3;
             // 
             // labelCardMonth
@@ -670,7 +768,7 @@ namespace Project
             this.labelCardMonth.ForeColor = System.Drawing.Color.White;
             this.labelCardMonth.Location = new System.Drawing.Point(93, 141);
             this.labelCardMonth.Name = "labelCardMonth";
-            this.labelCardMonth.Size = new System.Drawing.Size(23, 20);
+            this.labelCardMonth.Size = new System.Drawing.Size(30, 26);
             this.labelCardMonth.TabIndex = 1;
             this.labelCardMonth.Text = "__";
             // 
@@ -692,7 +790,7 @@ namespace Project
             this.totalTextLabel.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.totalTextLabel.Location = new System.Drawing.Point(3, 289);
             this.totalTextLabel.Name = "totalTextLabel";
-            this.totalTextLabel.Size = new System.Drawing.Size(87, 36);
+            this.totalTextLabel.Size = new System.Drawing.Size(112, 45);
             this.totalTextLabel.TabIndex = 1;
             this.totalTextLabel.Text = "Total:";
             // 
@@ -704,7 +802,7 @@ namespace Project
             this.labelCardYear.ForeColor = System.Drawing.Color.White;
             this.labelCardYear.Location = new System.Drawing.Point(132, 141);
             this.labelCardYear.Name = "labelCardYear";
-            this.labelCardYear.Size = new System.Drawing.Size(23, 20);
+            this.labelCardYear.Size = new System.Drawing.Size(30, 26);
             this.labelCardYear.TabIndex = 3;
             this.labelCardYear.Text = "__";
             this.labelCardYear.Click += new System.EventHandler(this.labelCardYear_Click);
@@ -712,13 +810,29 @@ namespace Project
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Project.Properties.Resources.card2;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(-31, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(402, 210);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            // 
+            // promoTextBox
+            // 
+            this.promoTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.promoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.promoTextBox.BulletIndent = 1;
+            this.promoTextBox.CornerRadius = 20;
+            this.promoTextBox.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.promoTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.promoTextBox.Location = new System.Drawing.Point(6, 239);
+            this.promoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.promoTextBox.MaximumSize = new System.Drawing.Size(100000, 100000);
+            this.promoTextBox.Name = "promoTextBox";
+            this.promoTextBox.Size = new System.Drawing.Size(182, 35);
+            this.promoTextBox.TabIndex = 25;
+            this.promoTextBox.Text = "";
             // 
             // exitButton
             // 
@@ -743,22 +857,6 @@ namespace Project
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
-            // promoTextBox
-            // 
-            this.promoTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.promoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.promoTextBox.BulletIndent = 1;
-            this.promoTextBox.CornerRadius = 20;
-            this.promoTextBox.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.promoTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.promoTextBox.Location = new System.Drawing.Point(6, 239);
-            this.promoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.promoTextBox.MaximumSize = new System.Drawing.Size(100000, 100000);
-            this.promoTextBox.Name = "promoTextBox";
-            this.promoTextBox.Size = new System.Drawing.Size(182, 35);
-            this.promoTextBox.TabIndex = 25;
-            this.promoTextBox.Text = "";
             // 
             // Form1
             // 
@@ -789,6 +887,10 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanelCart.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanelMyOrders.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -863,6 +965,14 @@ namespace Project
         private RightRoundedButton applyTextBox;
         private Label couponcodeTextBox;
         private RoundedRichTextBox promoTextBox;
+        private Panel Panel;
+        private Label lblQuantity;
+        private PictureBox productPictureBox;
+        private Button btnPlus;
+        private Button btnMinus;
+        private Label lblName;
+        private Label lblPrice;
+        private Button btnRemove;
     }
 }
 

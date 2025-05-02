@@ -139,7 +139,7 @@ namespace Project
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(9, 260);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
+            this.button6.Name = "btnRemove";
             this.button6.Size = new System.Drawing.Size(188, 41);
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = false;

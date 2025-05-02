@@ -574,69 +574,191 @@ namespace Project
             checkoutButton.Click += CheckoutButton_Click;
         }
 
+        private void LoadProductImage(string productName, PictureBox pictureBox)
+        {
+            try
+            {
+                dataBase.openConnection();
+                string query = "SELECT Image FROM Menu WHERE Name = @ProductName";
+                SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+                command.Parameters.AddWithValue("@ProductName", productName);
+
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    byte[] imageData = (byte[])result;
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        pictureBox.Image = Image.FromStream(ms);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки изображения: {ex.Message}");
+            }
+            finally
+            {
+                dataBase.closeConnection();
+            }
+        }
+
         private void UpdateCartDisplay()
         {
             flowLayoutPanelCart.Controls.Clear();
-
             currentTotal = cart.Sum(item => item.Price * item.Quantity);
-            decimal discountedTotal = Math.Round(currentTotal, 2); // Округляем исходную сумму
 
-            if (discountApplied)
-            {
-                discountedTotal = Math.Round(currentTotal * (1 - discountPercent / 100), 0);
+            decimal discountedTotal = discountApplied
+                ? Math.Round(currentTotal * (1 - discountPercent / 100), 2)
+                : currentTotal;
 
-                originalTotalLabel = new Label();
-                originalTotalLabel.Text = $"${currentTotal.ToString("0")}"; // Форматируем с 2 знаками
-                originalTotalLabel.Font = new Font("Arial", 12, FontStyle.Strikeout);
-                originalTotalLabel.ForeColor = Color.Red;
-                originalTotalLabel.Location = new Point(145, 300);
-                originalTotalLabel.TextAlign = ContentAlignment.MiddleCenter;
-                flowLayoutPanelPayment.Controls.Add(originalTotalLabel);
-
-                totalAmountLabel.Location = new Point(220, 295);
-            }
-
-            totalAmountLabel.Text = $"${discountedTotal.ToString("0.00")}"; // Форматируем с 2 знаками
+            totalAmountLabel.Text = $"${discountedTotal:0.00}";
 
             foreach (CartItem item in cart)
             {
-                decimal itemTotal = Math.Round(item.Price * item.Quantity, 2);
-                Panel itemPanel = new Panel();
-                itemPanel.Size = new Size(270, 100);
-                itemPanel.Margin = new Padding(20);
-                itemPanel.BackColor = Color.Gainsboro;
+                Panel itemPanel = new Panel
+                {
+                    Size = new Size(330, 80),
+                    BackColor = Color.Transparent,
+                    Margin = new Padding(5),
+                    BorderStyle = BorderStyle.FixedSingle
+                };
 
-                Label labelName = new Label();
-                labelName.Text = $"{item.Name}";
-                labelName.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-                labelName.Size = new Size(200, 30);
-                labelName.Location = new Point(15, 10);
+                // Изображение товара
+                PictureBox picBox = new PictureBox
+                {
+                    Size = new Size(60, 60),
+                    Location = new Point(10, 10),
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    BorderStyle = BorderStyle.FixedSingle
+                };
+                LoadProductImage(item.Name, picBox);
 
-                Label labelQuantity = new Label();
-                labelQuantity.Text = $"Количество: {item.Quantity}";
-                labelQuantity.Font = new Font("Arial", 10);
-                labelQuantity.Size = new Size(200, 30);
-                labelQuantity.Location = new Point(15, labelName.Bottom + 5);
+                // Название товара
+                Label nameLabel = new Label
+                {
+                    Text = item.Name,
+                    Location = new Point(80, 10),
+                    AutoSize = true,
+                    Font = new Font("Arial", 10, FontStyle.Bold),
+                    MaximumSize = new Size(120, 40)
+                };
 
-                Label labelPrice = new Label();
-                labelPrice.Text = $"Цена: ${item.Price}";
-                labelPrice.Font = new Font("Arial", 10);
-                labelPrice.Size = new Size(200, 30);
-                labelPrice.Location = new Point(15, labelQuantity.Bottom + 5);
+                // Цена товара
+                Label priceLabel = new Label
+                {
+                    Text = $"${item.Price:0.00}",
+                    Location = new Point(210, 10),
+                    Font = new Font("Arial", 10),
+                    AutoSize = true
+                };
 
-                Label labelTotal = new Label();
-                labelTotal.Text = $"Итого: ${item.Price * item.Quantity}";
-                labelTotal.Font = new Font("Arial", 10);
-                labelTotal.Size = new Size(200, 30);
-                labelTotal.Location = new Point(15, labelPrice.Bottom + 5);
+                // Панель управления количеством
+                Panel quantityPanel = new Panel
+                {
+                    Size = new Size(90, 25),
+                    Location = new Point(80, 40)
+                };
 
-                itemPanel.Controls.Add(labelName);
-                itemPanel.Controls.Add(labelQuantity);
-                itemPanel.Controls.Add(labelPrice);
-                itemPanel.Controls.Add(labelTotal);
+                // Кнопка уменьшения
+                Button btnMinus = new Button
+                {
+                    Text = "-",
+                    Size = new Size(25, 25),
+                    Location = new Point(0, 0),
+                    Font = new Font("Arial", 10, FontStyle.Bold),
+                    FlatStyle = FlatStyle.Flat,
+                    Tag = item
+                };
+                btnMinus.Click += (s, e) => UpdateItemQuantity(item, -1);
+
+                // Кнопка увеличения
+                Button btnPlus = new Button
+                {
+                    Text = "+",
+                    Size = new Size(25, 25),
+                    Location = new Point(65, 0),
+                    Font = new Font("Arial", 10, FontStyle.Bold),
+                    FlatStyle = FlatStyle.Flat,
+                    Tag = item
+                };
+                btnPlus.Click += (s, e) => UpdateItemQuantity(item, 1);
+
+                // Отображение количества
+                Label quantityLabel = new Label
+                {
+                    Text = item.Quantity.ToString(),
+                    Size = new Size(40, 25),
+                    Location = new Point(25, 0),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Font = new Font("Arial", 10)
+                };
+
+                // Кнопка удаления с оригинальной картинкой
+                Button btnRemove = new Button
+                {
+                    Size = new Size(25, 25),
+                    Location = new Point(300, 5),
+                    FlatStyle = FlatStyle.Flat,
+                    BackgroundImage = Properties.Resources.free_icon_font_trash_xmark__2_, // Ваша оригинальная картинка
+                    BackgroundImageLayout = ImageLayout.Zoom,
+                    Tag = item
+                };
+                btnRemove.Click += (s, e) => {
+                    cart.Remove(item);
+                    UpdateCartDisplay();
+                };
+
+                // Добавляем элементы
+                quantityPanel.Controls.Add(btnMinus);
+                quantityPanel.Controls.Add(quantityLabel);
+                quantityPanel.Controls.Add(btnPlus);
+
+                itemPanel.Controls.Add(picBox);
+                itemPanel.Controls.Add(nameLabel);
+                itemPanel.Controls.Add(priceLabel);
+                itemPanel.Controls.Add(quantityPanel);
+                itemPanel.Controls.Add(btnRemove);
 
                 flowLayoutPanelCart.Controls.Add(itemPanel);
             }
+
+            UpdateDiscountDisplay();
+        }
+
+        private void UpdateDiscountDisplay()
+        {
+            // Удаляем старую метку скидки если есть
+            if (originalTotalLabel != null)
+            {
+                flowLayoutPanelPayment.Controls.Remove(originalTotalLabel);
+                originalTotalLabel = null;
+            }
+
+            if (discountApplied)
+            {
+                originalTotalLabel = new Label
+                {
+                    Text = $"${currentTotal:0.00}",
+                    Font = new Font("Arial", 12, FontStyle.Strikeout),
+                    ForeColor = Color.Red,
+                    Location = new Point(145, 300),
+                    AutoSize = true
+                };
+                flowLayoutPanelPayment.Controls.Add(originalTotalLabel);
+                totalAmountLabel.Location = new Point(220, 295);
+            }
+            else
+            {
+                totalAmountLabel.Location = new Point(180, 295);
+            }
+        }
+
+        private void UpdateItemQuantity(CartItem item, int change)
+        {
+            item.Quantity += change;
+            if (item.Quantity <= 0) cart.Remove(item);
+            UpdateCartDisplay();
         }
 
         private void CheckoutButton_Click(object sender, EventArgs e)
@@ -720,7 +842,6 @@ namespace Project
         {
             string productName = productRow["Name"].ToString();
             decimal productPrice = Convert.ToDecimal(productRow["Price"]);
-            lblPrice.Text = productPrice.ToString("$");
             string productCategory = productRow.Table.Columns.Contains("Category") ? productRow["Category"].ToString() : "Unknown";
 
             // Проверка, если товар уже есть в корзине
@@ -744,29 +865,6 @@ namespace Project
 
             // Обновляем отображение корзины
             UpdateCartDisplay();
-        }
-        public Image ProductImage
-        {
-            get => productPictureBox.Image;
-            set => productPictureBox.Image = value;
-        }
-        public string ProductName
-        {
-            get => lblName.Text;
-            set => lblName.Text = value;
-        }
-        public int Quantity
-        {
-            get => int.Parse(lblQuantity.Text);
-            set => lblQuantity.Text = value.ToString();
-        }
-        private void btnPlus_Click(object sender, EventArgs e)
-        {
-            Quantity++;
-        }
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            if (Quantity > 0) Quantity--;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -929,20 +1027,5 @@ namespace Project
         {
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            // Найти родительский Panel и удалить текущий элемент (UserControl)
-            var parent = this.Parent as Panel;
-            if (parent != null)
-            {
-                parent.Controls.Remove(this);
-                this.Dispose(); // Очистка памяти
-            }
-        }
     }
 }

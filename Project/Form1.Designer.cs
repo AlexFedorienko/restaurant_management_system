@@ -231,7 +231,6 @@ namespace Project
             this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // fifthIcon
             // 
@@ -359,7 +358,6 @@ namespace Project
             this.button1.Size = new System.Drawing.Size(352, 61);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -641,7 +639,6 @@ namespace Project
             this.flowLayoutPanelMyOrders.Name = "flowLayoutPanelMyOrders";
             this.flowLayoutPanelMyOrders.Size = new System.Drawing.Size(340, 149);
             this.flowLayoutPanelMyOrders.TabIndex = 12;
-            this.flowLayoutPanelMyOrders.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMyOrders_Paint);
             // 
             // panel4
             // 
@@ -749,7 +746,6 @@ namespace Project
             this.flowLayoutPanelPayment.Name = "flowLayoutPanelPayment";
             this.flowLayoutPanelPayment.Size = new System.Drawing.Size(339, 386);
             this.flowLayoutPanelPayment.TabIndex = 11;
-            this.flowLayoutPanelPayment.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelPayment_Paint);
             // 
             // couponcodeTextBox
             // 
@@ -774,7 +770,6 @@ namespace Project
             this.labelCardNumber.Size = new System.Drawing.Size(291, 32);
             this.labelCardNumber.TabIndex = 22;
             this.labelCardNumber.Text = "1111 2222 3333 4444";
-            this.labelCardNumber.Click += new System.EventHandler(this.labelCardNumber_Click);
             // 
             // labeli
             // 
@@ -855,7 +850,6 @@ namespace Project
             this.labelCardYear.Size = new System.Drawing.Size(23, 20);
             this.labelCardYear.TabIndex = 3;
             this.labelCardYear.Text = "__";
-            this.labelCardYear.Click += new System.EventHandler(this.labelCardYear_Click);
             // 
             // pictureBox2
             // 

@@ -605,10 +605,8 @@ namespace Project
 
         private void UpdateCartDisplay()
         {
-            // Очищаем панель корзины
             flowLayoutPanelCart.Controls.Clear();
 
-            // Рассчитываем общую сумму
             currentTotal = cart.Sum(item => item.Price * item.Quantity);
             decimal discountedTotal = discountApplied
                 ? Math.Round(currentTotal * (1 - discountPercent / 100), 2)
@@ -616,33 +614,28 @@ namespace Project
 
             totalAmountLabel.Text = $"${discountedTotal:0.00}";
 
-            // Настраиваем расположение элементов
             flowLayoutPanelCart.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelCart.WrapContents = false;
             flowLayoutPanelCart.AutoScroll = true;
 
             if (cart.Count == 0)
             {
-                // Показываем элементы пустой корзины
                 emptyCartPictureBox.Visible = true;
                 emptyCartLabel1.Visible = true;
                 emptyCartLabel2.Visible = true;
 
-                // Создаем контейнер для центрирования
                 Panel centerPanel = new Panel
                 {
                     Size = new Size(flowLayoutPanelCart.Width, 250),
                     Dock = DockStyle.Top
                 };
 
-                // Центрируем иконку
                 emptyCartPictureBox.Size = new Size(120, 120);
                 emptyCartPictureBox.Location = new Point(
                     (centerPanel.Width - emptyCartPictureBox.Width) / 2,
                     20);
                 emptyCartPictureBox.Anchor = AnchorStyles.None;
 
-                // Настраиваем надписи
                 emptyCartLabel1.Text = "КОРЗИНА ПУСТА";
                 emptyCartLabel1.Font = new Font("Arial", 14, FontStyle.Bold);
                 emptyCartLabel1.ForeColor = Color.Gray;
@@ -663,22 +656,18 @@ namespace Project
                     emptyCartLabel1.Bottom + 5);
                 emptyCartLabel2.Anchor = AnchorStyles.None;
 
-                // Добавляем элементы в контейнер
                 centerPanel.Controls.Add(emptyCartPictureBox);
                 centerPanel.Controls.Add(emptyCartLabel1);
                 centerPanel.Controls.Add(emptyCartLabel2);
 
-                // Добавляем контейнер в панель корзины
                 flowLayoutPanelCart.Controls.Add(centerPanel);
             }
             else
             {
-                // Скрываем элементы пустой корзины
                 emptyCartPictureBox.Visible = false;
                 emptyCartLabel1.Visible = false;
                 emptyCartLabel2.Visible = false;
 
-                // Отображаем товары в корзине
                 foreach (CartItem item in cart)
                 {
                     Panel itemPanel = new Panel
@@ -689,7 +678,6 @@ namespace Project
                         BorderStyle = BorderStyle.FixedSingle
                     };
 
-                    // Изображение товара
                     PictureBox picBox = new PictureBox
                     {
                         Size = new Size(60, 60),
@@ -699,7 +687,6 @@ namespace Project
                     };
                     LoadProductImage(item.Name, picBox);
 
-                    // Название товара
                     Label nameLabel = new Label
                     {
                         Text = item.Name,
@@ -709,7 +696,6 @@ namespace Project
                         MaximumSize = new Size(120, 40)
                     };
 
-                    // Цена товара
                     Label priceLabel = new Label
                     {
                         Text = $"${item.Price:0.00}",
@@ -718,14 +704,12 @@ namespace Project
                         AutoSize = true
                     };
 
-                    // Панель управления количеством
                     Panel quantityPanel = new Panel
                     {
                         Size = new Size(90, 25),
                         Location = new Point(80, 40)
                     };
 
-                    // Кнопка уменьшения
                     Button btnMinus = new Button
                     {
                         Text = "-",
@@ -737,7 +721,6 @@ namespace Project
                     };
                     btnMinus.Click += (s, e) => UpdateItemQuantity(item, -1);
 
-                    // Кнопка увеличения
                     Button btnPlus = new Button
                     {
                         Text = "+",
@@ -749,7 +732,6 @@ namespace Project
                     };
                     btnPlus.Click += (s, e) => UpdateItemQuantity(item, 1);
 
-                    // Отображение количества
                     Label quantityLabel = new Label
                     {
                         Text = item.Quantity.ToString(),
@@ -759,7 +741,6 @@ namespace Project
                         Font = new Font("Arial", 10)
                     };
 
-                    // Кнопка удаления
                     Button btnRemove = new Button
                     {
                         Size = new Size(25, 25),
@@ -774,7 +755,6 @@ namespace Project
                         UpdateCartDisplay();
                     };
 
-                    // Добавляем элементы
                     quantityPanel.Controls.Add(btnMinus);
                     quantityPanel.Controls.Add(quantityLabel);
                     quantityPanel.Controls.Add(btnPlus);
@@ -794,7 +774,6 @@ namespace Project
 
         private void UpdateDiscountDisplay()
         {
-            // Удаляем старую метку скидки если есть
             if (originalTotalLabel != null)
             {
                 flowLayoutPanelPayment.Controls.Remove(originalTotalLabel);
@@ -866,7 +845,6 @@ namespace Project
 
             decimal totalAmount = cart.Sum(item => item.Price * item.Quantity);
 
-            // Apply discount if available
             if (discountApplied)
             {
                 totalAmount = Math.Round(totalAmount * (1 - discountPercent / 100), 2);
@@ -894,7 +872,6 @@ namespace Project
 
             dataBase.closeConnection();
 
-            // Reset cart and discount
             cart.Clear();
             discountApplied = false;
             discountPercent = 0;
@@ -910,12 +887,11 @@ namespace Project
             decimal productPrice = Convert.ToDecimal(productRow["Price"]);
             string productCategory = productRow.Table.Columns.Contains("Category") ? productRow["Category"].ToString() : "Unknown";
 
-            // Проверка, если товар уже есть в корзине
             CartItem existingItem = cart.FirstOrDefault(item => item.Name == productName && item.Category == productCategory);
 
             if (existingItem != null)
             {
-                existingItem.Quantity++; // Увеличиваем количество товара
+                existingItem.Quantity++;
             }
             else
             {
@@ -926,10 +902,9 @@ namespace Project
                     Quantity = 1,
                     Category = productCategory
                 };
-                cart.Add(newItem); // Добавляем новый товар
+                cart.Add(newItem);
             }
 
-            // Обновляем отображение корзины
             UpdateCartDisplay();
         }
 
@@ -962,10 +937,8 @@ namespace Project
             if (string.IsNullOrEmpty(cardNumber) || cardNumber == "0")
                 return "0";
 
-            // Удаляем все пробелы (если они есть)
             string cleanNumber = cardNumber.Replace(" ", "");
 
-            // Разбиваем на группы по 4 цифры
             StringBuilder formattedNumber = new StringBuilder();
             for (int i = 0; i < cleanNumber.Length; i += 4)
             {
@@ -981,7 +954,7 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataBase.openConnection();  // Open connection first
+            dataBase.openConnection();
 
             try
             {
@@ -1019,7 +992,7 @@ namespace Project
             }
             finally
             {
-                dataBase.closeConnection();  // Close connection in finally block
+                dataBase.closeConnection();
             }
         }
 
@@ -1032,7 +1005,7 @@ namespace Project
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
                 Rectangle rect = this.ClientRectangle;
-                int radius = 30; // радиус скругления
+                int radius = 30;
 
                 GraphicsPath path = new GraphicsPath();
 
@@ -1062,42 +1035,5 @@ namespace Project
             auth.Show();
             this.Hide();
         }
-
-        private void labelCardYear_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void flowLayoutPanelMyOrders_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void labelCardNumber_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void roundedTextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void flowLayoutPanelPayment_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
     }
 }

@@ -38,21 +38,14 @@ namespace Project
             this.label4 = new System.Windows.Forms.Label();
             this.buttonAdminPanel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.fifthIcon = new System.Windows.Forms.PictureBox();
-            this.fourthIcon = new System.Windows.Forms.PictureBox();
-            this.thirdIcon = new System.Windows.Forms.PictureBox();
-            this.secondIcon = new System.Windows.Forms.PictureBox();
-            this.firstIcon = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Button();
             this.textBoxCardNumberF = new System.Windows.Forms.TextBox();
             this.textBoxCardMonthF = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,27 +69,38 @@ namespace Project
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.fifthIcon = new System.Windows.Forms.PictureBox();
+            this.fourthIcon = new System.Windows.Forms.PictureBox();
+            this.thirdIcon = new System.Windows.Forms.PictureBox();
+            this.secondIcon = new System.Windows.Forms.PictureBox();
+            this.firstIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -199,65 +203,6 @@ namespace Project
             this.label3.TabIndex = 16;
             this.label3.Text = "Dashboard";
             // 
-            // fifthIcon
-            // 
-            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
-            this.fifthIcon.Location = new System.Drawing.Point(26, 608);
-            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fifthIcon.Name = "fifthIcon";
-            this.fifthIcon.Size = new System.Drawing.Size(30, 30);
-            this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fifthIcon.TabIndex = 15;
-            this.fifthIcon.TabStop = false;
-            // 
-            // fourthIcon
-            // 
-            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
-            this.fourthIcon.Location = new System.Drawing.Point(26, 547);
-            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.fourthIcon.Name = "fourthIcon";
-            this.fourthIcon.Size = new System.Drawing.Size(30, 30);
-            this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fourthIcon.TabIndex = 14;
-            this.fourthIcon.TabStop = false;
-            // 
-            // thirdIcon
-            // 
-            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
-            this.thirdIcon.Location = new System.Drawing.Point(26, 487);
-            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.thirdIcon.Name = "thirdIcon";
-            this.thirdIcon.Size = new System.Drawing.Size(30, 30);
-            this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.thirdIcon.TabIndex = 13;
-            this.thirdIcon.TabStop = false;
-            // 
-            // secondIcon
-            // 
-            this.secondIcon.BackColor = System.Drawing.Color.White;
-            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_green;
-            this.secondIcon.Location = new System.Drawing.Point(26, 428);
-            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.secondIcon.Name = "secondIcon";
-            this.secondIcon.Size = new System.Drawing.Size(30, 30);
-            this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.secondIcon.TabIndex = 12;
-            this.secondIcon.TabStop = false;
-            // 
-            // firstIcon
-            // 
-            this.firstIcon.BackColor = System.Drawing.Color.SeaGreen;
-            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_white1;
-            this.firstIcon.Location = new System.Drawing.Point(26, 367);
-            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.firstIcon.Name = "firstIcon";
-            this.firstIcon.Size = new System.Drawing.Size(30, 30);
-            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.firstIcon.TabIndex = 11;
-            this.firstIcon.TabStop = false;
-            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
@@ -328,16 +273,6 @@ namespace Project
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -375,22 +310,10 @@ namespace Project
             this.label1.TabIndex = 1;
             this.label1.Text = "Food Delivery";
             // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Transparent;
-            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitButton.Image = ((System.Drawing.Image)(resources.GetObject("exitButton.Image")));
-            this.exitButton.Location = new System.Drawing.Point(1862, 9);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(35, 20);
-            this.exitButton.TabIndex = 5;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
-            // 
             // textBoxCardNumberF
             // 
             this.textBoxCardNumberF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardNumberF.Location = new System.Drawing.Point(1169, 446);
+            this.textBoxCardNumberF.Location = new System.Drawing.Point(33, 133);
             this.textBoxCardNumberF.Multiline = true;
             this.textBoxCardNumberF.Name = "textBoxCardNumberF";
             this.textBoxCardNumberF.Size = new System.Drawing.Size(367, 34);
@@ -402,7 +325,7 @@ namespace Project
             // textBoxCardMonthF
             // 
             this.textBoxCardMonthF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardMonthF.Location = new System.Drawing.Point(1186, 525);
+            this.textBoxCardMonthF.Location = new System.Drawing.Point(50, 212);
             this.textBoxCardMonthF.Multiline = true;
             this.textBoxCardMonthF.Name = "textBoxCardMonthF";
             this.textBoxCardMonthF.Size = new System.Drawing.Size(37, 34);
@@ -413,7 +336,7 @@ namespace Project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(1229, 528);
+            this.label8.Location = new System.Drawing.Point(93, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 31);
             this.label8.TabIndex = 9;
@@ -422,7 +345,7 @@ namespace Project
             // textBoxCardYearF
             // 
             this.textBoxCardYearF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardYearF.Location = new System.Drawing.Point(1257, 525);
+            this.textBoxCardYearF.Location = new System.Drawing.Point(121, 212);
             this.textBoxCardYearF.Multiline = true;
             this.textBoxCardYearF.Name = "textBoxCardYearF";
             this.textBoxCardYearF.Size = new System.Drawing.Size(37, 34);
@@ -432,7 +355,7 @@ namespace Project
             // textBoxCardCvvF
             // 
             this.textBoxCardCvvF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCardCvvF.Location = new System.Drawing.Point(1493, 528);
+            this.textBoxCardCvvF.Location = new System.Drawing.Point(317, 216);
             this.textBoxCardCvvF.Multiline = true;
             this.textBoxCardCvvF.Name = "textBoxCardCvvF";
             this.textBoxCardCvvF.Size = new System.Drawing.Size(59, 34);
@@ -445,7 +368,7 @@ namespace Project
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(1490, 512);
+            this.label9.Location = new System.Drawing.Point(295, 200);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 13);
             this.label9.TabIndex = 12;
@@ -468,7 +391,7 @@ namespace Project
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label12.Location = new System.Drawing.Point(1211, 500);
+            this.label12.Location = new System.Drawing.Point(75, 187);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 13);
             this.label12.TabIndex = 16;
@@ -626,7 +549,7 @@ namespace Project
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1169, 424);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(33, 111);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(63, 15);
             this.guna2HtmlLabel4.TabIndex = 29;
@@ -693,13 +616,27 @@ namespace Project
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.guna2Panel1.Controls.Add(this.guna2RadioButton2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2Panel1.Controls.Add(this.guna2RadioButton1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel7);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel10);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel11);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel1.Location = new System.Drawing.Point(1169, 94);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(264, 181);
+            this.guna2Panel1.Size = new System.Drawing.Size(485, 181);
             this.guna2Panel1.TabIndex = 34;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(17, 145);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(36, 20);
+            this.guna2HtmlLabel9.TabIndex = 37;
+            this.guna2HtmlLabel9.Text = "Total";
             // 
             // guna2HtmlLabel7
             // 
@@ -721,21 +658,11 @@ namespace Project
             this.guna2HtmlLabel8.TabIndex = 36;
             this.guna2HtmlLabel8.Text = "Shippng";
             // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(17, 145);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(36, 20);
-            this.guna2HtmlLabel9.TabIndex = 37;
-            this.guna2HtmlLabel9.Text = "Total";
-            // 
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(1509, 119);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(340, 25);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(11, 20);
             this.guna2HtmlLabel10.TabIndex = 35;
@@ -745,7 +672,7 @@ namespace Project
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(1509, 239);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(340, 145);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(11, 20);
             this.guna2HtmlLabel11.TabIndex = 36;
@@ -759,7 +686,7 @@ namespace Project
             this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(1452, 167);
+            this.guna2RadioButton1.Location = new System.Drawing.Point(283, 67);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.Size = new System.Drawing.Size(146, 17);
             this.guna2RadioButton1.TabIndex = 37;
@@ -777,7 +704,7 @@ namespace Project
             this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(1452, 207);
+            this.guna2RadioButton2.Location = new System.Drawing.Point(283, 115);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.Size = new System.Drawing.Size(145, 17);
             this.guna2RadioButton2.TabIndex = 38;
@@ -790,26 +717,29 @@ namespace Project
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.guna2Panel2.Controls.Add(this.pictureBox4);
+            this.guna2Panel2.Controls.Add(this.pictureBox3);
+            this.guna2Panel2.Controls.Add(this.pictureBox2);
+            this.guna2Panel2.Controls.Add(this.materialRadioButton2);
             this.guna2Panel2.Controls.Add(this.materialRadioButton1);
+            this.guna2Panel2.Controls.Add(this.textBoxCardNumberF);
+            this.guna2Panel2.Controls.Add(this.textBoxCardMonthF);
+            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.textBoxCardYearF);
+            this.guna2Panel2.Controls.Add(this.textBoxCardCvvF);
+            this.guna2Panel2.Controls.Add(this.label9);
+            this.guna2Panel2.Controls.Add(this.label12);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel2.Location = new System.Drawing.Point(1169, 304);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(435, 68);
+            this.guna2Panel2.Size = new System.Drawing.Size(598, 407);
             this.guna2Panel2.TabIndex = 39;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2Panel3.Controls.Add(this.materialRadioButton2);
-            this.guna2Panel3.Location = new System.Drawing.Point(1169, 643);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(435, 68);
-            this.guna2Panel3.TabIndex = 41;
             // 
             // materialRadioButton1
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(17, 16);
+            this.materialRadioButton1.Location = new System.Drawing.Point(17, 26);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -825,7 +755,7 @@ namespace Project
             // 
             this.materialRadioButton2.AutoSize = true;
             this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Location = new System.Drawing.Point(17, 17);
+            this.materialRadioButton2.Location = new System.Drawing.Point(17, 330);
             this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -837,24 +767,128 @@ namespace Project
             this.materialRadioButton2.Text = "PayPal";
             this.materialRadioButton2.UseVisualStyleBackColor = true;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Transparent;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitButton.Image = ((System.Drawing.Image)(resources.GetObject("exitButton.Image")));
+            this.exitButton.Location = new System.Drawing.Point(1862, 9);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(35, 20);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
+            // 
+            // fifthIcon
+            // 
+            this.fifthIcon.Image = global::Project.Properties.Resources.logout_white;
+            this.fifthIcon.Location = new System.Drawing.Point(26, 608);
+            this.fifthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fifthIcon.Name = "fifthIcon";
+            this.fifthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fifthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fifthIcon.TabIndex = 15;
+            this.fifthIcon.TabStop = false;
+            // 
+            // fourthIcon
+            // 
+            this.fourthIcon.Image = global::Project.Properties.Resources.gallery_white;
+            this.fourthIcon.Location = new System.Drawing.Point(26, 547);
+            this.fourthIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.fourthIcon.Name = "fourthIcon";
+            this.fourthIcon.Size = new System.Drawing.Size(30, 30);
+            this.fourthIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fourthIcon.TabIndex = 14;
+            this.fourthIcon.TabStop = false;
+            // 
+            // thirdIcon
+            // 
+            this.thirdIcon.Image = global::Project.Properties.Resources.news_white;
+            this.thirdIcon.Location = new System.Drawing.Point(26, 487);
+            this.thirdIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.thirdIcon.Name = "thirdIcon";
+            this.thirdIcon.Size = new System.Drawing.Size(30, 30);
+            this.thirdIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.thirdIcon.TabIndex = 13;
+            this.thirdIcon.TabStop = false;
+            // 
+            // secondIcon
+            // 
+            this.secondIcon.BackColor = System.Drawing.Color.White;
+            this.secondIcon.Image = global::Project.Properties.Resources.creditcards_green;
+            this.secondIcon.Location = new System.Drawing.Point(26, 428);
+            this.secondIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.secondIcon.Name = "secondIcon";
+            this.secondIcon.Size = new System.Drawing.Size(30, 30);
+            this.secondIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.secondIcon.TabIndex = 12;
+            this.secondIcon.TabStop = false;
+            // 
+            // firstIcon
+            // 
+            this.firstIcon.BackColor = System.Drawing.Color.SeaGreen;
+            this.firstIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firstIcon.Image = global::Project.Properties.Resources.dashboard_white1;
+            this.firstIcon.Location = new System.Drawing.Point(26, 367);
+            this.firstIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.firstIcon.Name = "firstIcon";
+            this.firstIcon.Size = new System.Drawing.Size(30, 30);
+            this.firstIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstIcon.TabIndex = 11;
+            this.firstIcon.TabStop = false;
+            this.firstIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 94);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Project.Properties.Resources.cardstransparent;
+            this.pictureBox4.Location = new System.Drawing.Point(154, -23);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(361, 156);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 45;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Project.Properties.Resources.Paypalpng;
+            this.pictureBox3.Location = new System.Drawing.Point(334, 317);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(95, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Project.Properties.Resources.vector_credit_card_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(459, 151);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
             // Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2RadioButton2);
-            this.Controls.Add(this.guna2RadioButton1);
-            this.Controls.Add(this.guna2HtmlLabel11);
-            this.Controls.Add(this.guna2HtmlLabel10);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.materialCheckbox2);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.materialCheckbox1);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -864,16 +898,10 @@ namespace Project
             this.Controls.Add(this.textBoxFullMail);
             this.Controls.Add(this.textBoxFullAdressA);
             this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.buttonSaveChangesF);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxCardCvvF);
-            this.Controls.Add(this.textBoxCardYearF);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxCardMonthF);
-            this.Controls.Add(this.textBoxCardNumberF);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -883,18 +911,19 @@ namespace Project
             this.Load += new System.EventHandler(this.Finance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fifthIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourthIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,9 +983,11 @@ namespace Project
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
         private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }
 

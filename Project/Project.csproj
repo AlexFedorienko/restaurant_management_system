@@ -375,5 +375,14 @@
   <ItemGroup>
     <None Include="Resources\emptyCart2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-credit-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paypalpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardstransparent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

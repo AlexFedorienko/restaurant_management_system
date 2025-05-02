@@ -647,5 +647,15 @@ namespace Project
                 guna2TextBox1.ForeColor = Color.Black;
             }
         }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

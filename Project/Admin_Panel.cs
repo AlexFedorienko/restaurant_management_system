@@ -16,7 +16,7 @@ namespace Project
         private byte[] imageBytes;
         private Panel previewPanel;
         private Label labelPreview;
-         
+
         public Admin_Panel()
         {
             InitializeComponent();
@@ -61,45 +61,59 @@ namespace Project
             adapter.Fill(table);
             MenuList.DataSource = table;
 
-            MenuList.DefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
-            MenuList.Columns["Name"].Width = 150;
-            MenuList.Columns["Image"].Width = 200;
-            MenuList.RowTemplate.Height = 150;
+            // Стилизация таблицы
+            MenuList.BackgroundColor = Color.FromArgb(48, 57, 76);
+            MenuList.GridColor = Color.FromArgb(70, 80, 100);
+            MenuList.BorderStyle = BorderStyle.None;
+            MenuList.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            MenuList.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            MenuList.EnableHeadersVisualStyles = false;
+            MenuList.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 50);
+            MenuList.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            MenuList.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 15, FontStyle.Bold);
+            MenuList.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            MenuList.DefaultCellStyle.BackColor = Color.FromArgb(60, 70, 90);
+            MenuList.DefaultCellStyle.ForeColor = Color.White;
+            MenuList.DefaultCellStyle.SelectionBackColor = Color.FromArgb(90, 110, 130);
+            MenuList.DefaultCellStyle.SelectionForeColor = Color.White;
+            MenuList.DefaultCellStyle.Font = new Font("Century Gothic", 14, FontStyle.Bold);
+            MenuList.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            MenuList.RowHeadersVisible = false;
+            MenuList.AllowUserToAddRows = false;
+            MenuList.AllowUserToResizeRows = false;
+            MenuList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             if (MenuList.Columns.Contains("id"))
-            {
                 MenuList.Columns["id"].Visible = false;
-            }
 
             comboBoxNames.Items.Clear();
             foreach (DataRow row in table.Rows)
-            {
                 comboBoxNames.Items.Add(row["Name"].ToString());
-            }
 
             if (!MenuList.Columns.Contains("Image"))
             {
-                DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
-                imgCol.Name = "Image";
-                imgCol.HeaderText = "Image";
-                imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                DataGridViewImageColumn imgCol = new DataGridViewImageColumn
+                {
+                    Name = "Image",
+                    HeaderText = "Image",
+                    ImageLayout = DataGridViewImageCellLayout.Zoom
+                };
                 MenuList.Columns.Add(imgCol);
             }
 
             foreach (DataGridViewRow row in MenuList.Rows)
             {
-                if (row.Cells["Image"].Value != null && row.Cells["Image"].Value is byte[] imageData)
+                if (row.Cells["Image"].Value is byte[] imageData)
                 {
                     using (MemoryStream ms = new MemoryStream(imageData))
                     {
                         Image originalImage = Image.FromStream(ms);
-                        int desiredWidth = 200;
-                        int desiredHeight = 150;
-                        row.Cells["Image"].Value = originalImage.GetThumbnailImage(desiredWidth, desiredHeight, null, IntPtr.Zero);
+                        row.Cells["Image"].Value = originalImage.GetThumbnailImage(200, 150, null, IntPtr.Zero);
                     }
                 }
             }
 
+            MenuList.RowTemplate.Height = 150;
             dataBase.closeConnection();
         }
 
@@ -150,39 +164,34 @@ namespace Project
             {
                 labelPreview.Visible = false;
             }
-
         }
 
         private void buttonSelectImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp"
+            };
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string imagePath = openFileDialog.FileName;
-                imageBytes = File.ReadAllBytes(imagePath);
+                imageBytes = File.ReadAllBytes(openFileDialog.FileName);
                 UpdatePreview();
             }
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
-            string description = textBoxDescription.Text;
-            double price = double.Parse(textBoxPrice.Text);
-
             if (imageBytes == null)
             {
                 MessageBox.Show("Please select an image.");
                 return;
             }
 
-            string query = "INSERT INTO Menu (Name, Description, Price, Image) VALUES (@Name, @Description, @Price, @Image)";
-            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
-            command.Parameters.AddWithValue("@Name", name);
-            command.Parameters.AddWithValue("@Description", description);
-            command.Parameters.AddWithValue("@Price", price);
+            SqlCommand command = new SqlCommand("INSERT INTO Menu (Name, Description, Price, Image) VALUES (@Name, @Description, @Price, @Image)", dataBase.getConnection());
+            command.Parameters.AddWithValue("@Name", textBoxName.Text);
+            command.Parameters.AddWithValue("@Description", textBoxDescription.Text);
+            command.Parameters.AddWithValue("@Price", double.Parse(textBoxPrice.Text));
             command.Parameters.AddWithValue("@Image", imageBytes);
 
             dataBase.openConnection();
@@ -200,11 +209,8 @@ namespace Project
                 return;
             }
 
-            string name = comboBoxNames.SelectedItem.ToString();
-
-            string deleteQuery = "DELETE FROM Menu WHERE Name = @Name";
-            SqlCommand deleteCommand = new SqlCommand(deleteQuery, dataBase.getConnection());
-            deleteCommand.Parameters.AddWithValue("@Name", name);
+            SqlCommand deleteCommand = new SqlCommand("DELETE FROM Menu WHERE Name = @Name", dataBase.getConnection());
+            deleteCommand.Parameters.AddWithValue("@Name", comboBoxNames.SelectedItem.ToString());
 
             dataBase.openConnection();
             deleteCommand.ExecuteNonQuery();
@@ -213,15 +219,9 @@ namespace Project
             LoadMenuItems();
         }
 
-        private void textBoxName_TextChanged(object sender, EventArgs e)
-        {
-            UpdatePreview();
-        }
+        private void textBoxName_TextChanged(object sender, EventArgs e) => UpdatePreview();
 
-        private void textBoxPrice_TextChanged(object sender, EventArgs e)
-        {
-            UpdatePreview();
-        }
+        private void textBoxPrice_TextChanged(object sender, EventArgs e) => UpdatePreview();
 
         private void PreviewPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -233,30 +233,26 @@ namespace Project
 
         private void buttonActiveOrdersAP_Click(object sender, EventArgs e)
         {
-            Orders_Panel orders_Panel = new Orders_Panel(userName, userId);
-            orders_Panel.Show();
+            new Orders_Panel(userName, userId).Show();
             this.Hide();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
             form1 = new Form1(userName, userId);
-
             form1.Show();
             this.Hide();
         }
 
         private void buttonBookingAP_Click(object sender, EventArgs e)
         {
-            UsersList usersList = new UsersList(userName, userId);  
-            usersList.Show();   
+            new UsersList(userName, userId).Show();
             this.Hide();
         }
 
         private void buttonMoneyCostAP_Click(object sender, EventArgs e)
         {
-            Revenue revenue = new Revenue(userName, userId);
-            revenue.Show();
+            new Revenue(userName, userId).Show();
             this.Hide();
         }
     }

@@ -159,6 +159,9 @@ namespace Project
             this.label7.Size = new System.Drawing.Size(93, 29);
             this.label7.TabIndex = 20;
             this.label7.Text = "Logout";
+            this.label7.Click += new System.EventHandler(this.button5_Click);
+            this.label7.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.label7.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
             // label6
             // 
@@ -170,6 +173,9 @@ namespace Project
             this.label6.Size = new System.Drawing.Size(96, 29);
             this.label6.TabIndex = 19;
             this.label6.Text = "Gallery";
+            this.label6.Click += new System.EventHandler(this.button4_Click);
+            this.label6.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // label5
             // 
@@ -181,6 +187,9 @@ namespace Project
             this.label5.Size = new System.Drawing.Size(79, 29);
             this.label5.TabIndex = 18;
             this.label5.Text = "News";
+            this.label5.Click += new System.EventHandler(this.button3_Click);
+            this.label5.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.label5.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // label4
             // 

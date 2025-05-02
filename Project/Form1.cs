@@ -605,7 +605,10 @@ namespace Project
 
         private void UpdateCartDisplay()
         {
+            // Очищаем панель корзины
             flowLayoutPanelCart.Controls.Clear();
+
+            // Рассчитываем общую сумму
             currentTotal = cart.Sum(item => item.Price * item.Quantity);
             decimal discountedTotal = discountApplied
                 ? Math.Round(currentTotal * (1 - discountPercent / 100), 2)
@@ -613,30 +616,69 @@ namespace Project
 
             totalAmountLabel.Text = $"${discountedTotal:0.00}";
 
+            // Настраиваем расположение элементов
             flowLayoutPanelCart.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelCart.WrapContents = false;
             flowLayoutPanelCart.AutoScroll = true;
 
             if (cart.Count == 0)
             {
+                // Показываем элементы пустой корзины
                 emptyCartPictureBox.Visible = true;
                 emptyCartLabel1.Visible = true;
                 emptyCartLabel2.Visible = true;
 
-                emptyCartPictureBox.Top = 20;
-                emptyCartLabel1.Top = emptyCartPictureBox.Bottom + 10;
-                emptyCartLabel2.Top = emptyCartLabel1.Bottom + 5;
+                // Создаем контейнер для центрирования
+                Panel centerPanel = new Panel
+                {
+                    Size = new Size(flowLayoutPanelCart.Width, 250),
+                    Dock = DockStyle.Top
+                };
 
-                flowLayoutPanelCart.Controls.Add(emptyCartPictureBox);
-                flowLayoutPanelCart.Controls.Add(emptyCartLabel1);
-                flowLayoutPanelCart.Controls.Add(emptyCartLabel2);
+                // Центрируем иконку
+                emptyCartPictureBox.Size = new Size(120, 120);
+                emptyCartPictureBox.Location = new Point(
+                    (centerPanel.Width - emptyCartPictureBox.Width) / 2,
+                    20);
+                emptyCartPictureBox.Anchor = AnchorStyles.None;
+
+                // Настраиваем надписи
+                emptyCartLabel1.Text = "КОРЗИНА ПУСТА";
+                emptyCartLabel1.Font = new Font("Arial", 14, FontStyle.Bold);
+                emptyCartLabel1.ForeColor = Color.Gray;
+                emptyCartLabel1.AutoSize = true;
+                emptyCartLabel1.TextAlign = ContentAlignment.MiddleCenter;
+                emptyCartLabel1.Location = new Point(
+                    (centerPanel.Width - emptyCartLabel1.Width) / 2,
+                    emptyCartPictureBox.Bottom + 10);
+                emptyCartLabel1.Anchor = AnchorStyles.None;
+
+                emptyCartLabel2.Text = "Добавьте товары из меню";
+                emptyCartLabel2.Font = new Font("Arial", 12);
+                emptyCartLabel2.ForeColor = Color.Gray;
+                emptyCartLabel2.AutoSize = true;
+                emptyCartLabel2.TextAlign = ContentAlignment.MiddleCenter;
+                emptyCartLabel2.Location = new Point(
+                    (centerPanel.Width - emptyCartLabel2.Width) / 2,
+                    emptyCartLabel1.Bottom + 5);
+                emptyCartLabel2.Anchor = AnchorStyles.None;
+
+                // Добавляем элементы в контейнер
+                centerPanel.Controls.Add(emptyCartPictureBox);
+                centerPanel.Controls.Add(emptyCartLabel1);
+                centerPanel.Controls.Add(emptyCartLabel2);
+
+                // Добавляем контейнер в панель корзины
+                flowLayoutPanelCart.Controls.Add(centerPanel);
             }
             else
             {
+                // Скрываем элементы пустой корзины
                 emptyCartPictureBox.Visible = false;
                 emptyCartLabel1.Visible = false;
                 emptyCartLabel2.Visible = false;
 
+                // Отображаем товары в корзине
                 foreach (CartItem item in cart)
                 {
                     Panel itemPanel = new Panel
@@ -647,6 +689,7 @@ namespace Project
                         BorderStyle = BorderStyle.FixedSingle
                     };
 
+                    // Изображение товара
                     PictureBox picBox = new PictureBox
                     {
                         Size = new Size(60, 60),
@@ -656,6 +699,7 @@ namespace Project
                     };
                     LoadProductImage(item.Name, picBox);
 
+                    // Название товара
                     Label nameLabel = new Label
                     {
                         Text = item.Name,
@@ -665,6 +709,7 @@ namespace Project
                         MaximumSize = new Size(120, 40)
                     };
 
+                    // Цена товара
                     Label priceLabel = new Label
                     {
                         Text = $"${item.Price:0.00}",
@@ -673,12 +718,14 @@ namespace Project
                         AutoSize = true
                     };
 
+                    // Панель управления количеством
                     Panel quantityPanel = new Panel
                     {
                         Size = new Size(90, 25),
                         Location = new Point(80, 40)
                     };
 
+                    // Кнопка уменьшения
                     Button btnMinus = new Button
                     {
                         Text = "-",
@@ -690,6 +737,7 @@ namespace Project
                     };
                     btnMinus.Click += (s, e) => UpdateItemQuantity(item, -1);
 
+                    // Кнопка увеличения
                     Button btnPlus = new Button
                     {
                         Text = "+",
@@ -701,6 +749,7 @@ namespace Project
                     };
                     btnPlus.Click += (s, e) => UpdateItemQuantity(item, 1);
 
+                    // Отображение количества
                     Label quantityLabel = new Label
                     {
                         Text = item.Quantity.ToString(),
@@ -710,6 +759,7 @@ namespace Project
                         Font = new Font("Arial", 10)
                     };
 
+                    // Кнопка удаления
                     Button btnRemove = new Button
                     {
                         Size = new Size(25, 25),
@@ -724,6 +774,7 @@ namespace Project
                         UpdateCartDisplay();
                     };
 
+                    // Добавляем элементы
                     quantityPanel.Controls.Add(btnMinus);
                     quantityPanel.Controls.Add(quantityLabel);
                     quantityPanel.Controls.Add(btnPlus);

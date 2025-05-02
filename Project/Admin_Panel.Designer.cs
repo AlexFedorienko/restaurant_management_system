@@ -297,6 +297,7 @@ namespace Project
             this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Revenue";
+            this.label2.Click += new System.EventHandler(this.buttonMoneyCostAP_Click);
             // 
             // label3
             // 
@@ -310,6 +311,7 @@ namespace Project
             this.label3.Size = new System.Drawing.Size(71, 23);
             this.label3.TabIndex = 21;
             this.label3.Text = "Orders";
+            this.label3.Click += new System.EventHandler(this.buttonActiveOrdersAP_Click);
             // 
             // label4
             // 
@@ -323,6 +325,7 @@ namespace Project
             this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 22;
             this.label4.Text = "Settings";
+            this.label4.Click += new System.EventHandler(this.buttonBookingAP_Click);
             // 
             // label5
             // 

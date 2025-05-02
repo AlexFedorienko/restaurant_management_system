@@ -13,7 +13,7 @@ namespace Project
         DataBase dataBase = new DataBase();
         Auth auth = new Auth();
         Admin_Panel adminPanel = new Admin_Panel();
-
+        private byte[] attachedReviewImage;
         private string userName;
         private int userId;
 
@@ -353,6 +353,165 @@ namespace Project
         private void News_Load(object sender, EventArgs e)
         {
             buttonAdminPanel.Visible = Auth.IsAdmin;
+            textBoxArticle.Visible = Auth.IsAdmin;
+            textBoxNewsText.Visible = Auth.IsAdmin;
+            buttonAttachPhoto.Visible = Auth.IsAdmin;
+            pictureBoxReview.Visible = Auth.IsAdmin;
+            buttonSend.Visible = Auth.IsAdmin;
+            LoadNews();
+        }
+
+        private void pictureBoxReview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAttachPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                attachedReviewImage = File.ReadAllBytes(imagePath);
+
+                using (Image original = Image.FromFile(imagePath))
+                {
+                    pictureBoxReview.Image = new Bitmap(original, pictureBoxReview.Width, pictureBoxReview.Height);
+                    pictureBoxReview.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+            }
+        }
+
+        private void buttonSend_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxArticle.Text) ||
+                string.IsNullOrWhiteSpace(textBoxNewsText.Text) ||
+                attachedReviewImage == null)
+            {
+                MessageBox.Show("Будь ласка, заповніть всі поля та додайте фото.");
+                return;
+            }
+
+            string query = "INSERT INTO News (NewsArticle, NewsText, NewsDate, NewsPhoto) " +
+                           "VALUES (@article, @text, @date, @photo)";
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+            command.Parameters.AddWithValue("@article", textBoxArticle.Text);
+            command.Parameters.AddWithValue("@text", textBoxNewsText.Text);
+            command.Parameters.AddWithValue("@date", DateTime.Now);
+            command.Parameters.AddWithValue("@photo", attachedReviewImage);
+
+            dataBase.openConnection();
+
+            if (command.ExecuteNonQuery() > 0)
+            {
+                MessageBox.Show("Новину додано!");
+                LoadNews(); // Перезавантажити стрічку
+            }
+            else
+            {
+                MessageBox.Show("Помилка при додаванні.");
+            }
+
+            dataBase.closeConnection();
+        }
+        private void LoadNews()
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            string query = "SELECT NewsArticle, NewsText, NewsDate, NewsPhoto FROM News ORDER BY NewsDate DESC";
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+
+            dataBase.openConnection();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string article = reader["NewsArticle"].ToString();
+                string text = reader["NewsText"].ToString();
+                string date = Convert.ToDateTime(reader["NewsDate"]).ToString("dd.MM.yyyy HH:mm");
+                byte[] imageData = (byte[])reader["NewsPhoto"];
+
+                Image newsImage = ByteArrayToImage(imageData); // ← Ось тут створюється зображення
+
+                Panel newsPanel = new Panel
+                {
+                    Width = 550,
+                    AutoSize = true,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Margin = new Padding(10),
+                    BackColor = Color.White
+                };
+
+                Label labelTitle = new Label
+                {
+                    Text = article,
+                    Font = new Font("Arial", 16, FontStyle.Bold),
+                    ForeColor = Color.Black,
+                    AutoSize = true,
+                    Padding = new Padding(10, 10, 10, 5),
+                    Dock = DockStyle.Top
+                };
+
+                PictureBox pictureBox = new PictureBox
+                {
+                    Image = newsImage,
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    Size = new Size(500, 250),
+                    Margin = new Padding(10, 5, 10, 5)
+                };
+
+                Label labelText = new Label
+                {
+                    Text = text,
+                    Font = new Font("Arial", 12),
+                    AutoSize = true,
+                    Padding = new Padding(10, 0, 10, 10)
+                };
+
+                Label labelDate = new Label
+                {
+                    Text = date,
+                    Font = new Font("Arial", 9, FontStyle.Italic),
+                    ForeColor = Color.Gray,
+                    AutoSize = true,
+                    Dock = DockStyle.Bottom,
+                    Padding = new Padding(10, 0, 10, 5)
+                };
+
+                newsPanel.Controls.Add(labelDate);
+                newsPanel.Controls.Add(labelText);
+                newsPanel.Controls.Add(pictureBox);
+                newsPanel.Controls.Add(labelTitle);
+
+                flowLayoutPanel1.Controls.Add(newsPanel);
+            }
+
+            reader.Close();
+            dataBase.closeConnection();
+        }
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+
+
+        private void textBoxNewsText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -131,5 +131,26 @@ namespace Project
             form1.Show();
             this.Close();
         }
+
+        private void buttonMoneyCostAP_Click(object sender, EventArgs e)
+        {
+            Revenue revenue = new Revenue(userName, userId);
+            revenue.Show();
+            this.Hide();
+        }
+
+        private void buttonActiveOrdersAP_Click(object sender, EventArgs e)
+        {
+            Orders_Panel ordersPanel = new Orders_Panel(userName, userId);
+            ordersPanel.Show();
+            this.Hide();
+        }
+
+        private void quit_Click_1(object sender, EventArgs e)
+        {
+            form1 = new Form1(userName, userId);
+            form1.Show();
+            this.Close();
+        }
     }
 }

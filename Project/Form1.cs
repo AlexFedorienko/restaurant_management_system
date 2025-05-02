@@ -720,6 +720,7 @@ namespace Project
         {
             string productName = productRow["Name"].ToString();
             decimal productPrice = Convert.ToDecimal(productRow["Price"]);
+            lblPrice.Text = productPrice.ToString("$");
             string productCategory = productRow.Table.Columns.Contains("Category") ? productRow["Category"].ToString() : "Unknown";
 
             // Проверка, если товар уже есть в корзине
@@ -743,6 +744,29 @@ namespace Project
 
             // Обновляем отображение корзины
             UpdateCartDisplay();
+        }
+        public Image ProductImage
+        {
+            get => productPictureBox.Image;
+            set => productPictureBox.Image = value;
+        }
+        public string ProductName
+        {
+            get => lblName.Text;
+            set => lblName.Text = value;
+        }
+        public int Quantity
+        {
+            get => int.Parse(lblQuantity.Text);
+            set => lblQuantity.Text = value.ToString();
+        }
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            Quantity++;
+        }
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            if (Quantity > 0) Quantity--;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -792,42 +816,42 @@ namespace Project
         }
 
         private void Form1_Load(object sender, EventArgs e)
-{
-    dataBase.openConnection();  // Open connection first
-
-    try
-    {
-        string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
-        SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
-        commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
-
-        using (SqlDataReader reader = commandPaymentInfo.ExecuteReader())
         {
-            string cardNumber = "0", expireMonth = "0", expireYear = "0", cvv = "0";
+            dataBase.openConnection();  // Open connection first
 
-            if (reader.Read())
+            try
             {
-                cardNumber = reader["card_number"]?.ToString();
-                expireMonth = reader["expire_month"]?.ToString();
-                expireYear = reader["expire_year"]?.ToString();
-                cvv = reader["cvv"]?.ToString();
+                string queryPaymentInfo = "SELECT card_number, expire_month, expire_year, cvv, user_adress FROM Auth WHERE id = @UserId";
+                SqlCommand commandPaymentInfo = new SqlCommand(queryPaymentInfo, dataBase.getConnection());
+                commandPaymentInfo.Parameters.AddWithValue("@UserId", userId);
+
+                using (SqlDataReader reader = commandPaymentInfo.ExecuteReader())
+                {
+                    string cardNumber = "0", expireMonth = "0", expireYear = "0", cvv = "0";
+
+                    if (reader.Read())
+                    {
+                        cardNumber = reader["card_number"]?.ToString();
+                        expireMonth = reader["expire_month"]?.ToString();
+                        expireYear = reader["expire_year"]?.ToString();
+                        cvv = reader["cvv"]?.ToString();
+                    }
+
+                    labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0000 0000 0000 0000" : FormatCardNumber(cardNumber);
+                    labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "00" : expireMonth;
+                    labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "00" : expireYear;
+                }
+
+                LoadUserImage(Auth.UserId);
+                LoadMenuItems();
+                buttonAdminPanel.Visible = Auth.IsAdmin;
+                LoadCartPanel();
             }
-
-            labelCardNumber.Text = string.IsNullOrEmpty(cardNumber) ? "0000 0000 0000 0000" : FormatCardNumber(cardNumber);
-            labelCardMonth.Text = string.IsNullOrEmpty(expireMonth) ? "00" : expireMonth;
-            labelCardYear.Text = string.IsNullOrEmpty(expireYear) ? "00" : expireYear;
+            finally
+            {
+                dataBase.closeConnection();  // Close connection in finally block
+            }
         }
-
-        LoadUserImage(Auth.UserId);
-        LoadMenuItems();
-        buttonAdminPanel.Visible = Auth.IsAdmin;
-        LoadCartPanel();
-    }
-    finally
-    {
-        dataBase.closeConnection();  // Close connection in finally block
-    }
-}
 
         public class RightRoundedButton : Button
         {
@@ -905,5 +929,20 @@ namespace Project
         {
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            // Найти родительский Panel и удалить текущий элемент (UserControl)
+            var parent = this.Parent as Panel;
+            if (parent != null)
+            {
+                parent.Controls.Remove(this);
+                this.Dispose(); // Очистка памяти
+            }
+        }
     }
 }

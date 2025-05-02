@@ -203,6 +203,26 @@ namespace Project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_font_trash_xmark {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-font-trash-xmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_font_trash_xmark__2_ {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-font-trash-xmark (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gallery_green {
             get {
                 object obj = ResourceManager.GetObject("gallery_green", resourceCulture);

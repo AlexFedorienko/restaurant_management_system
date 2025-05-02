@@ -223,5 +223,26 @@ namespace Project
             form1.Show();
             this.Hide();
         }
+
+        private void buttonBookingAP_Click(object sender, EventArgs e)
+        {
+            UsersList usersList = new UsersList(userName, userId);
+            usersList.Show();
+            this.Hide();
+        }
+
+        private void buttonActiveOrdersAP_Click(object sender, EventArgs e)
+        {
+            Orders_Panel orders_Panel = new Orders_Panel(userName, userId);
+            orders_Panel.Show();
+            this.Hide();
+        }
+
+        private void buttonDashBoardAP_Click(object sender, EventArgs e)
+        {
+            Admin_Panel admin_Panel = new Admin_Panel(userName, userId);
+            admin_Panel.Show();
+            this.Hide();
+        }
     }
 }

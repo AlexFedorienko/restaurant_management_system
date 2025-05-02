@@ -31,6 +31,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersList));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDashBoardAP = new System.Windows.Forms.Button();
             this.buttonActiveOrdersAP = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@ namespace Project
             this.buttonActiveOrdersAP.Size = new System.Drawing.Size(188, 41);
             this.buttonActiveOrdersAP.TabIndex = 3;
             this.buttonActiveOrdersAP.UseVisualStyleBackColor = false;
+            this.buttonActiveOrdersAP.Click += new System.EventHandler(this.buttonActiveOrdersAP_Click);
             // 
             // buttonBookingAP
             // 
@@ -125,10 +127,12 @@ namespace Project
             this.buttonMoneyCostAP.TabIndex = 5;
             this.buttonMoneyCostAP.Text = "\r\n";
             this.buttonMoneyCostAP.UseVisualStyleBackColor = false;
+            this.buttonMoneyCostAP.Click += new System.EventHandler(this.buttonMoneyCostAP_Click);
             // 
             // quit
             // 
-            this.quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.quit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quit.BackgroundImage")));
+            this.quit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.quit.Location = new System.Drawing.Point(14, 677);
             this.quit.Margin = new System.Windows.Forms.Padding(0);
@@ -136,6 +140,7 @@ namespace Project
             this.quit.Size = new System.Drawing.Size(32, 23);
             this.quit.TabIndex = 0;
             this.quit.UseVisualStyleBackColor = true;
+            this.quit.Click += new System.EventHandler(this.quit_Click_1);
             // 
             // label2
             // 

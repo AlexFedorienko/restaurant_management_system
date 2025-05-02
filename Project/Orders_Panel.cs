@@ -182,5 +182,22 @@ namespace Project
         {
 
         }
+
+        
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            UsersList usersList = new UsersList(userName, userId);
+
+            usersList.Show();
+            this.Hide();
+        }
+
+        private void buttonRevenue_Click(object sender, EventArgs e)
+        {
+            Revenue revenue = new Revenue(userName, userId);
+            revenue.Show();
+            this.Hide();
+        }
     }
 }
